@@ -1,6 +1,5 @@
-import React, { useRef, useState } from 'react'
+import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next';
-import NavBox from '../../ReusableComponents/navbox/NavBox';
 import { Checkbox, FormControl, FormControlLabel } from '@mui/material';
 import vacData from './VacancyData.json'
 import { pink, yellow } from '@mui/material/colors';
@@ -8,6 +7,7 @@ import './vacancy.scss'
 
 const Vacancy = () => {
     const { t } = useTranslation();
+    const [selectedVacancies, setSelectedVacancies] = useState([]);
     const [active, setActive] = useState([]);
     const handleClick = (num) => {
         setActive(prevState =>
@@ -15,6 +15,13 @@ const Vacancy = () => {
                 ? prevState.filter(item => item !== num)
                 : [...prevState, num]
         );
+    };
+    const handleCheckboxChange = (vacancyId) => {
+        if (selectedVacancies.includes(vacancyId)) {
+            setSelectedVacancies(selectedVacancies.filter(id => id !== vacancyId));
+        } else {
+            setSelectedVacancies([...selectedVacancies, vacancyId]);
+        }
     };
     const filteredVacancies = vacData.filter(vacancy => active.includes(vacancy.type));
     return (
@@ -134,27 +141,57 @@ const Vacancy = () => {
 
             </div>
             <div className='filter_bottom'>
-                {filteredVacancies.map((vacancy) => (
-                    vacancy.industries && (
-                        Object.keys(vacancy.industries).map((industryKey) => (
-                            <FormControl className='vacancy_filter' component={'fieldset'} key={industryKey}>
-                                <p>{vacancy.parent}</p>
-                                <p className='quantity'>{vacancy.industries[industryKey].quantity}</p>
-                                <FormControlLabel
-                                    value={vacancy.industries[industryKey].name}
-                                    control={<Checkbox sx={{
-                                        color: pink[800],
-                                        '&.Mui-checked': {
-                                            color: pink[600],
-                                        },
-                                    }} onClick={() => { handleClick(8) }} />}
-                                    label={vacancy.industries[industryKey].name}
-                                    labelPlacement="start"
-                                />
-                            </FormControl>
-                        ))
-                    )
-                ))}
+                <div style={{ width: '90%', display: 'flex', flexWrap: 'wrap' }}>
+
+                    {filteredVacancies.map((vacancy) => (
+                        vacancy.industries && (
+                            Object.keys(vacancy.industries).map((industryKey) => (
+                                <FormControl className='vacancy_filter' component={'fieldset'} key={industryKey}>
+                                    <p>{vacancy.parent}</p>
+                                    <p className='quantity'>{vacancy.industries[industryKey].quantity}</p>
+                                    <FormControlLabel
+                                        value={t(`${vacancy.industries[industryKey].name}`)}
+                                        control={<Checkbox sx={{
+                                            color: pink[800],
+                                            '&.Mui-checked': {
+                                                color: pink[600],
+                                            },
+                                        }} onClick={() => { handleCheckboxChange(vacancy.industries[industryKey]) }}
+                                        />}
+                                        label={t(`${vacancy.industries[industryKey].name}`)}
+                                        labelPlacement="start"
+                                    />
+                                </FormControl>
+                            ))
+                        )
+
+                    ))}
+
+                </div>
+            </div>
+            <div className='w-100 mt-5' style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                {
+                    selectedVacancies.map((vac) => {
+                        return (
+                            Object.values(vac.vacancies).map((v, index) => {
+                                return (<div key={index} className='vacancy'>
+                                    <img src='https://picsum.photos/100' alt='...' />
+                                    <div className='one'>
+                                        <h2>{v.Position}</h2>
+                                        <section>
+                                            <p className='sal'><i className='fa-solid fa-coins'></i>{v.Salary}</p>
+                                            <p><i className='fa-solid fa-location'></i>{v.Location}</p>
+                                        </section>
+                                    </div>
+                                    <div className="two">
+                                        <p>განაკვეთი : {v.Shift}</p>
+                                    </div>
+                                </div>)
+                            })
+                        )
+                    })
+
+                }
             </div>
 
         </div>
