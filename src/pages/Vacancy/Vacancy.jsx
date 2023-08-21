@@ -4,6 +4,7 @@ import { Checkbox, FormControl, FormControlLabel } from '@mui/material';
 import vacData from './VacancyData.json'
 import { pink, yellow } from '@mui/material/colors';
 import './vacancy.scss'
+import Breadcrumbs from '../../ReusableComponents/breadcrumbs/Breadcrumbs';
 
 const Vacancy = () => {
     const { t } = useTranslation();
@@ -26,6 +27,7 @@ const Vacancy = () => {
     const filteredVacancies = vacData.filter(vacancy => active.includes(vacancy.type));
     return (
         <div className='vacancy_wrapper'>
+            <Breadcrumbs />
             <div className='vacancy_container' style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
                 <FormControl className='filter_main' component={'fieldset'} >
                     <FormControlLabel

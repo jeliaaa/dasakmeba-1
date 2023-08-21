@@ -8,7 +8,7 @@ const BaseInfo = () => {
     return (
         <Container style={{backgroundColor: '#fff', padding: '20px 20px', borderRadius: '8px'}}>
 
-        <Breadcrumbs forbread={1}></Breadcrumbs>
+        <Breadcrumbs></Breadcrumbs>
             <div className='p-5 mt-3'>
                 <h4>lor</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore sed quaerat consequatur dolore! Dolore voluptas iusto atque provident consequuntur quo sed, distinctio quae incidunt temporibus voluptatibus assumenda labore, harum sit?</p>
