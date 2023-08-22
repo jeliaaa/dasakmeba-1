@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useMemo, useRef, useState } from 'react'
 import Navbar from 'react-bootstrap/Navbar';
 import Brand from '../../assets/logo.png'
 import { Link, useLocation } from 'react-router-dom';
@@ -30,36 +30,30 @@ const MenuOfNav = (props) => {
     const navLink5 = useRef(null);
     const navLink6 = useRef(null);
     const navLink7 = useRef(null);
-    const navLinks = [
+    const navLinks = useMemo(() => [
         navLink1, navLink2, navLink3, navLink4, navLink5, navLink6, navLink7
-    ]
-    const handleMain = () => {
-        navLinks.forEach((navlink) => {
-            navlink.current.classList.remove('active')
-        })
-    }
+    ], []);
     useEffect(() => {
-        if (location.pathname === '/main') {
-            handleMain()
-        }
-    }, [ location, handleMain ])
-    useEffect(() => {
-        if(location.pathname === '/about'){
+        if (location.pathname === '/about') {
             navLink1.current.classList.add('active')
-        } else if(location.pathname === '/services'){
+        } else if (location.pathname === '/services') {
             navLink2.current.classList.add('active')
-        }else if(location.pathname === '/blog'){
+        } else if (location.pathname === '/blog') {
             navLink3.current.classList.add('active')
-        }else if(location.pathname === '/media'){
+        } else if (location.pathname === '/media') {
             navLink4.current.classList.add('active')
-        }else if(location.pathname === '/vacancy'){
+        } else if (location.pathname === '/vacancy') {
             navLink5.current.classList.add('active')
-        }else if(location.pathname === '/qA'){
+        } else if (location.pathname === '/qA') {
             navLink6.current.classList.add('active')
-        }else if(location.pathname === '/pubInfo'){
+        } else if (location.pathname === '/pubInfo') {
             navLink7.current.classList.add('active')
+        } else {
+            navLinks.forEach((navLink) => {
+                navLink.current.classList.remove('active');
+            })
         }
-    }, [])
+    }, [location, navLinks])
     const handleChange = (e) => {
         navLinks.forEach((navlink) => {
             navlink.current.classList.remove('active')
@@ -110,7 +104,7 @@ const MenuOfNav = (props) => {
                 >
                     <i className="fa-solid fa-bars"></i>
                 </IconButton>
-                <Navbar.Brand className='brand' onClick={handleMain}>
+                <Navbar.Brand className='brand' >
                     <Link to={'/main'}>
                         <img src={Brand} alt='logo' />
                     </Link>

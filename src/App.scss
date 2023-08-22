@@ -20,28 +20,44 @@
     width: 90% !important;
 }
 
-@media screen and (min-width: 2000px) {
+@media screen and (min-width: 1600px) {
     .site_container {
-        width: 50vw;
+        width: 75vw;
 
         .app_wrapper {
             padding: 50px 0;
-
         }
     }
 
-    footer {
+    .bottom_footer {
+        padding-left: 12vw !important;
+        padding-right: 12vw !important
+    }
+
+    .nav_wrapper {
+        width: 75% !important;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    .site_container {
+        width: 50vw !important;
+        .app_wrapper {
+            padding: 50px 0;
+        }
+    }
+
+    .bottom_footer {
         padding-left: 25vw !important;
         padding-right: 25vw !important
     }
 
     .nav_wrapper {
-        width: 50vw !important;
+        width: 50% !important;
     }
 }
 
 .app_wrapper {
-    width: 80vw;
     padding: 50px 0px;
 }
 
@@ -64,8 +80,18 @@
 @media screen and (max-width: 1000px) {
     .site_container {
         width: 100vw !important;
-        .app_wrapper{
+
+        .app_wrapper {
             width: 100% !important;
+        }
+    }
+}
+@media screen and (max-width: 1440px) {
+    .site_container {
+        width: 90vw !important;
+
+        .app_wrapper {
+            width: 90% !important;
         }
     }
 }

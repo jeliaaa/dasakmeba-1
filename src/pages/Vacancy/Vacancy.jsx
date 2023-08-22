@@ -8,7 +8,7 @@ import Breadcrumbs from '../../ReusableComponents/breadcrumbs/Breadcrumbs';
 
 const Vacancy = () => {
     const { t } = useTranslation();
-    const [selectedVacancies, setSelectedVacancies] = useState([]);
+    const [selectedIndustries, setSelectedIndustries] = useState([]);
     const [active, setActive] = useState([]);
     const handleClick = (num) => {
         setActive(prevState =>
@@ -16,12 +16,13 @@ const Vacancy = () => {
                 ? prevState.filter(item => item !== num)
                 : [...prevState, num]
         );
+        active.includes(num) && setSelectedIndustries([])
     };
     const handleCheckboxChange = (vacancyId) => {
-        if (selectedVacancies.includes(vacancyId)) {
-            setSelectedVacancies(selectedVacancies.filter(id => id !== vacancyId));
+        if (selectedIndustries.includes(vacancyId)) {
+            setSelectedIndustries(selectedIndustries.filter(id => id !== vacancyId));
         } else {
-            setSelectedVacancies([...selectedVacancies, vacancyId]);
+            setSelectedIndustries([...selectedIndustries, vacancyId]);
         }
     };
     const filteredVacancies = vacData.filter(vacancy => active.includes(vacancy.type));
@@ -158,10 +159,11 @@ const Vacancy = () => {
                                             '&.Mui-checked': {
                                                 color: pink[600],
                                             },
-                                        }} onClick={() => { handleCheckboxChange(vacancy.industries[industryKey]) }}
+                                        }} onChange={() => { handleCheckboxChange(vacancy.industries[industryKey]) }}
                                         />}
                                         label={t(`${vacancy.industries[industryKey].name}`)}
                                         labelPlacement="start"
+                                        
                                     />
                                 </FormControl>
                             ))
@@ -173,7 +175,7 @@ const Vacancy = () => {
             </div>
             <div className='w-100 mt-5' style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                 {
-                    selectedVacancies.map((vac) => {
+                    selectedIndustries.map((vac) => {
                         return (
                             Object.values(vac.vacancies).map((v, index) => {
                                 return (<div key={index} className='vacancy'>
@@ -192,7 +194,6 @@ const Vacancy = () => {
                             })
                         )
                     })
-
                 }
             </div>
 

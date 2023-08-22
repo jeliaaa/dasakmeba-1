@@ -43,6 +43,7 @@ import Volunteering from './pages/Vacancy/volunteering/Volunteering'
 import QnA from "./pages/QnA/QnA";
 import Guide from './pages/QnA/Guide/Guide'
 import PublicInformation from './pages/publicInfromation/PublicInformation'
+import Contact from "./pages/contactUs/Contact";
 
 
 
@@ -121,6 +122,8 @@ function App() {
             <Route path="/qA/guide" element={<Guide />} />
             { /* pubInfo */}
             <Route path="/pubInfo" element={<PublicInformation />} />
+            {/* contact */}
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </div>
         <div className="videos_wrapper">

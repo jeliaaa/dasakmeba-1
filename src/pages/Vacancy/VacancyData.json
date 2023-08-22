@@ -93,7 +93,9 @@
         }
     },
     {
+        "id" : 3,
         "parent": "ოჯახში დასაქმება",
+        "type" : 3,
         "industries": {
             "industry1": {
                 "name": "ინდუსტრია1",
@@ -129,10 +131,6 @@
     },
     {
         "id": 4,
-        "Position": "მასწავლებელი",
-        "Location": "ჩაქვი",
-        "Salary": "25000",
-        "Shift": "ნახევარი",
         "type": 4,
         "parent": "სტაჟირება",
         "industries": {
@@ -164,10 +162,6 @@
     },
     {
         "id": 5,
-        "Position": "სპაიდერმენი",
-        "Location": "ჩაქვი",
-        "Salary": "25000",
-        "Shift": "ნახევარი",
         "type": 5,
         "parent": "საგანმანათლებლო",
         "industries": {

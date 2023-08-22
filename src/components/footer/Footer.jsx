@@ -10,21 +10,53 @@ const Footer = () => {
     ]
     return (
         <footer>
-            <div className='col-md-4 brand'>
-                <img src={logo} alt='HR' />
-            </div>
-            <div className='col-md-4 rights'>
-                <p>All rights reserved &copy;</p>
-                <h6>hralek@gmail.com</h6>
-            </div>
-            <div className="col-md-4 socials">
-                {socials.map((social) => (
-                    <Link key={social.id} to={social.link}>
-                        <i className={`fa-brands fa-${social.name} fa-2xl `}></i>
+            <div className='upper_footer'>
+                <div className='col-md-4 brand'>
+                    <img src={logo} alt='HR' />
+                </div>
+                <div className='links col-md-4'>
+                    <h3>Useful links</h3>
+                    <ul>
+                        <li><Link to={'https://jobs.hrajara.gov.ge/'}>somelink</Link></li>
+                        <li><Link to={'https://jobs.hrajara.gov.ge/'}>somelink</Link></li>
+                        <li><Link to={'https://jobs.hrajara.gov.ge/'}>somelink</Link></li>
+                    </ul>
+                </div>
+                <div className='contact col-md-4'>
+                    <Link to={'/contact'}>
+                        <div>
+                            <h3>Contact us</h3>
+                            <p>info</p>
+                            <p>info</p>
+                            <p>info</p>
+                            <p>info</p>
+                            <p>info</p>
+                            <p>info</p>
+                            <p>info</p>
+                        </div>
                     </Link>
-
-                ))}
+                </div>
             </div>
+            <div className="bottom_footer">
+                <div className='col-md-4 copy'>
+                    <h6>&copy;2023 hradjara.gov.ge</h6>
+                </div>
+                <div className="col-md-4 socials">
+                    <div>
+                        {socials.map((social) => (
+                            <Link key={social.id} to={social.link}>
+                                <i className={`fa-brands fa-${social.name} fa-2xl `}></i>
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+                <div className='col-md-4 rights'>
+                    <p>All rights reserved &copy;</p>
+                    <h6>hralek@gmail.com</h6>
+                </div>
+
+            </div>
+
         </footer>
     )
 }
