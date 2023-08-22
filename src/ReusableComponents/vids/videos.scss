@@ -17,3 +17,11 @@
         flex-direction: column;
     }
 }
+@media screen and (max-width: 1080px) {
+    .videos{
+        img{
+            width: 30vw;
+        }
+        flex-direction: column;
+    }
+}
