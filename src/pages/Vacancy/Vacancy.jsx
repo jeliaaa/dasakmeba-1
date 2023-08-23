@@ -148,8 +148,8 @@ const Vacancy = () => {
 
                     {filteredVacancies.map((vacancy) => (
                         vacancy.industries && (
-                            Object.keys(vacancy.industries).map((industryKey) => (
-                                <FormControl className='vacancy_filter' component={'fieldset'} key={industryKey}>
+                            Object.keys(vacancy.industries).map((industryKey,index) => (
+                                <FormControl className={`vacancy_filter ${index}`} component={'fieldset'} key={industryKey}>
                                     <p>{vacancy.parent}</p>
                                     <p className='quantity'>{vacancy.industries[industryKey].quantity}</p>
                                     <FormControlLabel
@@ -163,7 +163,6 @@ const Vacancy = () => {
                                         />}
                                         label={t(`${vacancy.industries[industryKey].name}`)}
                                         labelPlacement="start"
-                                        
                                     />
                                 </FormControl>
                             ))

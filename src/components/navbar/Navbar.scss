@@ -1,17 +1,21 @@
 @import "../../variables";
+
 @media screen and (max-width: 490px) {
     .navBar {
         padding: 15px 0px !important;
         gap: 0px !important;
     }
 }
-.nav_wrapper{
+
+.nav_wrapper {
     width: 100%;
 }
-.nav-side{
-    li{
+
+.nav-side {
+    li {
         padding: 0px;
-        a{
+
+        a {
             width: 100%;
             height: 100%;
             text-decoration: none;
@@ -19,10 +23,12 @@
             padding: 20px;
         }
     }
-    li:hover{
+
+    li:hover {
         background-color: $primary-color-gray;
     }
 }
+
 .navBar {
     width: 100%;
     display: flex;
@@ -115,14 +121,25 @@
 
     .search {
         display: flex;
+        position: relative;
+
+        .search-icon {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            font-size: 18px;
+            color: #999;
+            pointer-events: none;
+        }
     }
 
     input {
         border: none;
+        padding-right: 30px;
         width: 250px;
         background-color: $primary-color-gray;
         border-radius: 20px;
-        transform: rotate(180deg);
     }
 
     .search::after {
@@ -140,6 +157,9 @@
 
     @media screen and (max-width: 620px) {
         input {
+            display: none;
+        }
+        .search-icon{
             display: none;
         }
 
@@ -192,26 +212,31 @@
 .modal-backdrop {
     z-index: 1300;
 }
+
 @media screen and (max-width: 1200px) {
-    .nav{
+    .nav {
         display: none;
     }
 }
-.nav-link{
+
+.nav-link {
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: $primary-color-blue !important;
     border: none !important;
-    a{
+
+    a {
         width: 100%;
         height: 100%;
     }
 }
-.nav-tabs{
-    border: none!important;
-    .active{
+
+.nav-tabs {
+    border: none !important;
+
+    .active {
         background-color: #ebedff !important;
         color: black !important;
     }
