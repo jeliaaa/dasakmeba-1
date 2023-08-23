@@ -114,7 +114,8 @@ const MenuOfNav = (props) => {
                     <span>{t('versionForBlind')}</span>
                 </span>
                 <div className='search'>
-                    <input type="text" placeholder='    &#9740;' />
+                    <input type="text"/>
+                    <span className="search-icon">&#128269;</span>
                 </div>
                 <section>
                     <div className="sign_up" style={{ display: "flex" }}>

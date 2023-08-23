@@ -29,7 +29,7 @@
         }
     }
 
-    .bottom_footer {
+    .bottom_footer, .upper_footer {
         padding-left: 12vw !important;
         padding-right: 12vw !important
     }
@@ -46,14 +46,13 @@
             padding: 50px 0;
         }
     }
-
-    .bottom_footer {
-        padding-left: 25vw !important;
-        padding-right: 25vw !important
-    }
-
     .nav_wrapper {
         width: 50% !important;
+    }
+    
+    .bottom_footer, .upper_footer {
+        padding-left: 25vw !important;
+        padding-right: 25vw !important
     }
 }
 
