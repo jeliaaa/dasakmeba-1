@@ -13,10 +13,18 @@ const Breadcrumbs = () => {
             <Breadcrumb>
                 <Breadcrumb.Item><Link to={'/main'}>{t('main')}</Link></Breadcrumb.Item>
                 {crumbs.map((crumb, index) => (
-                    <Breadcrumb.Item active >
-                        {index === 0 ? (<Link to={`/${crumb}`}>{t(crumb)}</Link>) : (t(crumb))}
+                    <Breadcrumb.Item key={index} active={index === crumbs.length - 1}>
+                        {crumbs.length === 3 && index === 0 ? (
+                            <Link to={`/${crumb}`}>{t(crumb)}</Link>
+                        ) : crumbs.length === 3 && index === 1 ? (
+                            <Link to={`/${crumbs[0]}/${crumb}`}>{t(crumb)}</Link>
+                        ) : crumbs.length === 2 && index === 0 ? (
+                            <Link to={`/${crumb}`}>{t(crumb)}</Link>
+                        ) : t(crumb)}
+
                     </Breadcrumb.Item>
                 ))}
+
             </Breadcrumb>
         </>
     )
