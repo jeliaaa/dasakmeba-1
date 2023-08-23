@@ -102,6 +102,9 @@ const resources = {
       lectures: 'სემინარები',
       professional: 'პროფესიული სასწავლებელი',
       trainings: 'ტრენინგები',
+      forOrgs : 'ორგანიზაციებისთვის',
+      statistics: 'სტატისტიკა',
+      contact: 'კონტაქტი',
       //mainpage
       companies: "კომპანია",
       seekers: "მაძიებელი",

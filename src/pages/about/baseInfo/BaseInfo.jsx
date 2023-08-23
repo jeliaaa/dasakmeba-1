@@ -1,30 +1,43 @@
 import React from 'react'
 import { Container } from 'react-bootstrap';
+import Breadcrumbs from '../../../ReusableComponents/breadcrumbs/Breadcrumbs';
+
 // import { useTranslation } from 'react-i18next';
 import './baseInfo.scss'
-import Breadcrumbs from '../../../ReusableComponents/breadcrumbs/Breadcrumbs';
 const BaseInfo = () => {
     // const { t } = useTranslation();
     return (
-        <Container style={{backgroundColor: '#fff', padding: '20px 20px', borderRadius: '8px'}}>
-
-        <Breadcrumbs></Breadcrumbs>
+        <Container style={{ backgroundColor: '#fff', padding: '20px 20px', borderRadius: '8px' }}>
+            <Breadcrumbs></Breadcrumbs>
             <div className='p-5 mt-3'>
-                <h4>lor</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore sed quaerat consequatur dolore! Dolore voluptas iusto atque provident consequuntur quo sed, distinctio quae incidunt temporibus voluptatibus assumenda labore, harum sit?</p>
-                <h4>lor</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, neque facilis vitae cupiditate quam impedit quas autem fugiat nihil rerum repellat, fugit animi veritatis et consectetur, totam sunt dolore voluptate.</p>
-                <h4>lor</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, neque facilis vitae cupiditate quam impedit quas autem fugiat nihil rerum repellat, fugit animi veritatis et consectetur, totam sunt dolore voluptate.</p>
-                <h4>lor</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, neque facilis vitae cupiditate quam impedit quas autem fugiat nihil rerum repellat, fugit animi veritatis et consectetur, totam sunt dolore voluptate.</p>
-                <h4>lor</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, neque facilis vitae cupiditate quam impedit quas autem fugiat nihil rerum repellat, fugit animi veritatis et consectetur, totam sunt dolore voluptate.</p>
-                <h4>lor</h4>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam, ad sunt sequi porro nisi eveniet corrupti, sint eius autem, fugit consectetur quis quos eligendi nulla similique modi veritatis quidem voluptate.</p>
-                <h4>lor</h4>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam, ad sunt sequi porro nisi eveniet corrupti, sint eius autem, fugit consectetur quis quos eligendi nulla similique modi veritatis quidem voluptate.</p>
+                <h4>სააგენტოს  შექმნის  საფუძველი</h4>
+                <p>აჭარის ავტონომიური რესპუბლიკის დასაქმების სააგენტო არის საჯარო სამართლის იურიდიულ პირი, რომელიც შეიქმნა აჭარის ავტონომიური რესპუბლიკის მთავრობის    2011 წლის N43 დადგენილების საფუძველზე და შედის აჭარის ავტონომიური რესპუბლიკის ჯანმრთელობისა და სოციალური დაცვის სამინისტროს სისტემაში.</p>
+                <h4>მიზანი</h4>
+                <p>ჩვენი მიზანია  აჭარის ავტონომიურ რესპუბლიკაში დასაქმების სისტემისა და მექანიზმების განვითარების ხელშეწყობა.</p>
+                <h4>ხედვა</h4>
+                <p>სააგენტოს ხედვაა- ინოვაციური მექანიზმების დანერგვით  არსებული სერვისების სრულყოფა/განვითარება, სერვისით მოსარგებლეებზე ორიენტირებული სისტემის ჩამოყალიბება და მათთვის მომსახურების მაღალი ხარისხის მიწოდება, რაც  ხელს შეუწყობს უმუშევრობის შემცირებას.</p>
+                <h4>მისია</h4>
+                <p>სააგენტოს  მისიაა- შრომის ბაზრის ეფექტური ფუნქციონირებისათვის, ადამიანური რესურსის უნარ-ჩვევების ხარისხის ამაღლებისა და კარიერული ზრდისთვის,  დასაქმების მხარდაჭერისა და უმუშევრობის შემცირებისათვის მიზანმიმართული და შედეგზე ორიენტირებული  ღონისძიებების ორგანიზება/გატარება, რაც იქცევა რეგიონის სოციალურ-ეკონომიკური განვითარების ერთ-ერთ წინაპირობად და უზრუნველყოფს შრომის ბაზარზე ჯანსაღი კონკურენციის განვითარებას.</p>
 
+                <h4>ჩვენი ფუნდამენტური ღირებულებებია:</h4>
+                <ul>
+                    <h5>ინდივიდუალური მიდგომა</h5>
+                    <p>ჩვენთვის ინდივიდუალური მიდგომა ეფექტური მომსახურების მნიშვნელოვან წინაპირობას წარმოადგენს. აღნიშნული  შესაძლებლობას გვაძლევს ჩვენი სერვისებით მოსარგებლეების ინტერესებისა და პიროვნული უნარ-ჩვევების გათვალისწინებით, შევძლოთ მათ მოთხოვნებსა და საჭიროებებზე მორგებული მაღალი ხარისხის მომსახურების მიწოდება.</p>
+
+                    <h5>ინოვაციური  მიდგომა</h5>
+                    <p>ჩვენ გამუდმებით ვმუშაობთ ინოვაციური სერვისების განვითარებაზე, საუკეთესო საერთაშორისო პრაქტიკის, სოციალურ-ეკონომიკური და გარემო პირობების განვითარების გათვალისწინებით და ამ პროცესებზე ეფექტური რეაგირების გზით.</p>
+
+                    <h5>პროფესიონალიზმი</h5>
+                    <p>სასურველი შედეგების მიღწევასა  და თანამედროვე სტანდარტების შესაბამისი მომსახურების დანერგვაში ჩვენ თანამშრომელთა მაღალკვალიფიციურობა და პროფესიონალიზმი გვეხმარება. აქედან გამომდინარე სააგენტო მუდმივად ცდილობს ხელი შეუწყოს თანამშრომელთა უწყვეტ პროფესიულ განვითარებას და კარიერულ ზრდას.</p>
+                
+                    <h5>გუნდური მუშაობა</h5>
+                    <p>ჩვენ გუნდურ მუშაობას წარმატების უმნიშვნელოვანეს წინაპირობად მივიჩნევთ და  განვიხილავთ მას, როგორც სხვადასხვა უნარების და გამოცდილების მქონე პროფესიონალთა ჯგუფის ძალისხმევის გაერთიანებას საერთო მიზნის მისაღწევად.</p>
+
+                    <h5>გამჭვირვალობა</h5>
+                    <p>საზოგადოებრივი ნდობის მოპოვების ფუნდამენტს ჩვენთვის გამჭვირვალობა წარმოადგენს, აქედან გამომდინარე ვიღწვით, რომ საქმიანობის განხორციელებისას ვიყოთ ღია და სანდო პარტნიორი თქვენთვის.</p>
+                
+                
+                </ul>
             </div>
         </Container>
 
