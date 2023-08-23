@@ -8,7 +8,6 @@ const Breadcrumbs = () => {
     var p = window.location.pathname;
     var crumbs = p.split('/');
     crumbs.splice(0, 1);
-    console.log(crumbs)
     return (
         <>
             <Breadcrumb>
