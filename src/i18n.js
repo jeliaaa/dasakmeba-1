@@ -79,7 +79,7 @@ const resources = {
       services: "სერვისები",
       grants: "გრანტები და პროგრამები",
       migration: "მიგრაცია",
-      blog: "ბლოგი",
+      blog: "შემეცნებითი ბლოგი",
       forOrg: "ორგანიზაციებს",
       forUsers: "მაძიებელს",
       articles: "სტატიები",
