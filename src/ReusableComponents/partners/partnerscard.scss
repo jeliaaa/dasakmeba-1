@@ -1,24 +1,49 @@
-.partners_card{
+.partners_card {
     width: 200px;
     position: relative;
     background-color: gray;
-    .info{
+    border: 1px solid gray;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 200px;
+    cursor: pointer;
+    .thumb_img {
+        border-radius: 10px 10px 0 0;
+    }
+
+    .info {
         position: relative;
-        background-image: #fff;
-        .info_img_wrapper{
+        background-color: #fff;
+        border-radius: 0 0 10px 10px;
+        padding: 15px;
+        padding-top: 40px;
+        height: 50%;
+
+        .info_img_wrapper {
+            position: absolute;
             width: 70px;
+            top: -35px;
+            left: 15px;
             aspect-ratio: 1/1;
             border-radius: 50%;
             background-color: #fff;
             display: flex;
             justify-content: center;
             align-items: center;
-            img{
-                width: 80%;
-                height: 80%;
+            transition: top 0.3s ease-in-out;
+
+            img {
+                width: 100%;
                 border-radius: 50%;
-                object-fit: cover;
             }
+        }
+    }
+
+    .info:hover {
+        .info_img_wrapper {
+            top: -50px;
         }
     }
 }
