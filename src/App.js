@@ -27,6 +27,7 @@ import Articles from './pages/blog/articles/Articles'
 import Calendar from './pages/blog/calendar/Calendar'
 import Classification from './pages/blog/profClassification/Classification'
 import Profesiograma from './pages/blog/profesiograma/Profesiograma'
+import ProfesiogramaSingle from './ReusableComponents/profesiograma/ProfesiogramaSingle'
 import VideoLessons from './pages/blog/videoLessons/VideoLessons'
 import Media from "./pages/media/Media";
 import Gallery from "./pages/media/gallery/Gallery";
@@ -97,7 +98,7 @@ function App() {
             <Route path="/blog/calendar" element={<Calendar />} />
             <Route path="/blog/classification" element={<Classification />} />
             <Route path="/blog/profesiograma" element={<Profesiograma />} />
-
+            <Route path="/blog/profesiograma/:id" element={<ProfesiogramaSingle />} />
             <Route path="/blog/researches" element={<Researches/>} />
             <Route path="/blog/vid-lessons" element={<VideoLessons />} />
             {/* media */}

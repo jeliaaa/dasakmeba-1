@@ -1,0 +1,27 @@
+.map_wrapper{
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    margin-bottom: 150px;
+    img{
+        width: 100%;
+    }
+    .building_img_wrapper{
+        background-image: url('https://lh3.googleusercontent.com/p/AF1QipNhu-KdiZ4_JK43V_8grAN3f0vm8X_8Vo7usI1-=s680-w680-h510');
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 400px;
+        aspect-ratio: 1/1;
+        position: absolute;
+        top: 65%;
+        left: 5%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        p{
+            width: 40%;
+            font-size: 0.8rem;
+            color: white;
+        }
+    }
+}
