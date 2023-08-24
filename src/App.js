@@ -32,14 +32,6 @@ import Media from "./pages/media/Media";
 import Gallery from "./pages/media/gallery/Gallery";
 import News from './pages/media/news/News'
 import Vacancy from "./pages/Vacancy/Vacancy";
-import Conference from './pages/Vacancy/conference/Conference'
-import Employement from './pages/Vacancy/employement/Employement'
-import FamilyWork from './pages/Vacancy/familyWork/FamilyWork'
-import Internship from './pages/Vacancy/internship/Internship'
-import Lecture from './pages/Vacancy/lecture/Lecture'
-import Professional from './pages/Vacancy/professional/Professional'
-import Trainings from './pages/Vacancy/trainings/Trainings'
-import Volunteering from './pages/Vacancy/volunteering/Volunteering'
 import QnA from "./pages/QnA/QnA";
 import Guide from './pages/QnA/Guide/Guide'
 import PublicInformation from './pages/publicInfromation/PublicInformation'
@@ -114,14 +106,6 @@ function App() {
             <Route path="/media/news" element={<News />} />
             {/* vacancy */}
             <Route path="/vacancy" element={<Vacancy />} />
-            <Route path="/vacancy/conference" element={<Conference />} />
-            <Route path="/vacancy/employement" element={<Employement />} />
-            <Route path="/vacancy/familyWork" element={<FamilyWork />} />
-            <Route path="/vacancy/internship" element={<Internship />} />
-            <Route path="/vacancy/lectures" element={<Lecture/>} />
-            <Route path="/vacancy/professional" element={<Professional />} />
-            <Route path="/vacancy/trainings" element={<Trainings/>} />
-            <Route path="/vacancy/volunteering" element={<Volunteering />} />
             {/* QnA */}
             <Route path="/qA" element={<QnA />} />
             <Route path="/qA/guide" element={<Guide />} />

@@ -48,10 +48,8 @@ const MenuOfNav = (props) => {
             navLink6.current.classList.add('active')
         } else if (location.pathname === '/pubInfo') {
             navLink7.current.classList.add('active')
-        } else {
-            navLinks.forEach((navLink) => {
-                navLink.current.classList.remove('active');
-            })
+        } else if(location.pathname === '/main'){
+            navLinks.map((navLink) => navLink.current.classList.remove('active'))
         }
     }, [location, navLinks])
     const handleChange = (e) => {
