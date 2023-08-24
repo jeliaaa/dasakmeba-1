@@ -1,21 +1,22 @@
 .partners_card {
-    width: 200px;
+    width: 300px;
+    height: 200px;
     position: relative;
     background-color: gray;
-    border: 1px solid gray;
+    border: none;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    height: 200px;
     cursor: pointer;
     .thumb_img {
         border-radius: 10px 10px 0 0;
+        height: 50%;
     }
 
     .info {
         position: relative;
-        background-color: #fff;
+        background-color: #ebedff;
         border-radius: 0 0 10px 10px;
         padding: 15px;
         padding-top: 40px;
