@@ -1,0 +1,24 @@
+.partners_card{
+    width: 200px;
+    position: relative;
+    background-color: gray;
+    .info{
+        position: relative;
+        background-image: #fff;
+        .info_img_wrapper{
+            width: 70px;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                width: 80%;
+                height: 80%;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+    }
+}
