@@ -105,6 +105,8 @@ const resources = {
       forOrgs : 'ორგანიზაციებისთვის',
       statistics: 'სტატისტიკა',
       contact: 'კონტაქტი',
+      Registered: 'ავტორიზირებული',
+      NonRegistered: 'გარეშე პარტნიორები',
       //mainpage
       companies: "კომპანია",
       seekers: "მაძიებელი",
