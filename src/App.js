@@ -44,6 +44,8 @@ import QnA from "./pages/QnA/QnA";
 import Guide from './pages/QnA/Guide/Guide'
 import PublicInformation from './pages/publicInfromation/PublicInformation'
 import Contact from "./pages/contactUs/Contact";
+import Registered from "./pages/about/partners/registered/Registrered";
+import NonRegistered from "./pages/about/partners/nonRegistered/NonRegistered";
 
 
 
@@ -84,6 +86,8 @@ function App() {
             <Route path="/about/baseInfo" element={<BaseInfo />} />
             <Route path="/about/brand" element={<Brand />} />
             <Route path="/about/partners" element={<Partners />} />
+            <Route path="/about/partners/registered" element={<Registered />} />
+            <Route path="/about/partners/nonRegistered" element={<NonRegistered />} />
             <Route path="/about/structure" element={<Structure />} />
             <Route path="/about/statistics" element={<Statistics />} />
             <Route path="/about/structure/worker/:id" element={<WorkerSingle />} />
@@ -93,14 +97,15 @@ function App() {
             <Route path="/services/grants" element={<Grants />} />
             <Route path="/services/projects" element={<Projects />} />
             <Route path="/services/migration" element={<Migration />} />
-            <Route path="services/ourServices/forOrgs" element={<ForOrgs />} />
-            <Route path="services/ourServices/forUsers" element={<ForUsers />} />
+            <Route path="/services/ourServices/forOrgs" element={<ForOrgs />} />
+            <Route path="/services/ourServices/forUsers" element={<ForUsers />} />
             {/* blog */}
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/articles" element={<Articles />} />
             <Route path="/blog/calendar" element={<Calendar />} />
             <Route path="/blog/classification" element={<Classification />} />
             <Route path="/blog/profesiograma" element={<Profesiograma />} />
+
             <Route path="/blog/researches" element={<Researches/>} />
             <Route path="/blog/vid-lessons" element={<VideoLessons />} />
             {/* media */}
