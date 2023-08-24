@@ -3,12 +3,12 @@
 .profesiograma {
     display: flex;
     position: relative;
-    width: 300px;
     height: 200px;
     flex-direction: column;
     justify-content: flex-end;
     z-index: 0;
     overflow: hidden;
+    width: 23%;
     /* Hide overflowing content */
 
     a {

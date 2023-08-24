@@ -1,9 +1,12 @@
 import React from 'react'
 import './partnerscard.scss'
 
-const PartnersCard = ({ thumb, img, name }) => {
+const PartnersCard = ({ thumb, img, name, link }) => {
+    const navigate = () => {
+        window.location.href = link
+    }
     return (
-        <div className='card partners_card'>
+        <div className='card partners_card' onClick={navigate}>
             <img className='thumb_img' src={thumb} alt="..." />
             <div className='info'>
                 <div className='info_img_wrapper' >
