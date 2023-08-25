@@ -15,15 +15,15 @@ const WorkerSingle = () => {
             .catch(err => console.error(err))
     })
     return (
-        <Container style={{backgroundColor: '#fff', padding: '20px 20px', borderRadius: '8px'}}>
-                <Breadcrumbs forbread={1} />
+        <Container style={{ backgroundColor: '#fff', padding: '20px 20px', borderRadius: '8px' }}>
+            <Breadcrumbs />
             <Container className='p-4'>
                 <div className='worker_card'>
                     <img src='https://placehold.co/400' alt='...' />
-                    <div className='col-md-7 h-100'>
+                    <div className='col-md-7 h-100 info'>
                         <h4>{t('nameSurname')} : {worker.name}</h4>
                         <h4>{t('username')} : {worker.username}</h4>
-                        <Accordion defaultActiveKey="0" flush style={{width:'80%'}}>
+                        <Accordion defaultActiveKey="0" flush style={{ width: '80%' }}>
                             <Accordion.Item eventKey="0">
                                 <Accordion.Header>გამოცდილება</Accordion.Header>
                                 <Accordion.Body>
@@ -36,6 +36,8 @@ const WorkerSingle = () => {
                                     culpa qui officia deserunt mollit anim id est laborum.
                                 </Accordion.Body>
                             </Accordion.Item>
+                        </Accordion>
+                        <Accordion defaultActiveKey="0" flush style={{ width: '80%' }}>
                             <Accordion.Item eventKey="1">
                                 <Accordion.Header>გამოცდილება</Accordion.Header>
                                 <Accordion.Body>

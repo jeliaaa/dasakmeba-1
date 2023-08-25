@@ -39,6 +39,7 @@ import PublicInformation from './pages/publicInfromation/PublicInformation'
 import Contact from "./pages/contactUs/Contact";
 import Registered from "./pages/about/partners/registered/Registrered";
 import NonRegistered from "./pages/about/partners/nonRegistered/NonRegistered";
+import Register from "./pages/Register/Register";
 
 
 
@@ -83,7 +84,7 @@ function App() {
             <Route path="/about/partners/nonRegistered" element={<NonRegistered />} />
             <Route path="/about/structure" element={<Structure />} />
             <Route path="/about/statistics" element={<Statistics />} />
-            <Route path="/about/structure/worker/:id" element={<WorkerSingle />} />
+            <Route path="/about/structure/:id" element={<WorkerSingle />} />
             {/* services */}
             <Route path="/services" element={<Services />} />
             <Route path="/services/ourServices" element={<OurServices />} />
@@ -114,6 +115,8 @@ function App() {
             <Route path="/pubInfo" element={<PublicInformation />} />
             {/* contact */}
             <Route path="/contact" element={<Contact />} />
+            {/* register */}
+            <Route path="/register"element={<Register />}/>
           </Routes>
         </div>
         <div className="videos_wrapper">
