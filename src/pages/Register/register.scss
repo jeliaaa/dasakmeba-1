@@ -1,0 +1,51 @@
+@import '../../variables';
+.register_wrapper {
+    padding: 80px 10px;
+
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: center;
+    }
+
+    .email {
+        width: 80%;
+    }
+
+    .fullname {
+        width: 80%;
+    }
+
+    .pass,
+    .repeat {
+        width: 40%;
+    }
+    .register_submit_wrapper{
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        button{
+            background-color: $primary-color-blue;
+            color: $primary-color-gray;
+            padding: 10px 15px;
+            border: none;
+            font-size: 1.3rem;
+            border-radius: 15px;
+            &:disabled{
+                background-color: $primary-color-gray;
+                color: $primary-color-blue;
+            }
+        }
+    }
+}
+@media screen and (max-width: 600px) {
+    .pass, .repeat{
+        width: 80% !important;
+    }
+    .register_submit_wrapper{
+        flex-direction: column;
+        gap: 20px;
+    }
+}

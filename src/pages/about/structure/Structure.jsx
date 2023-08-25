@@ -37,7 +37,7 @@ const Structure = () => {
                                     <td>{worker.id}</td>
                                     <td>{worker.address.city}</td>
                                     <td>{worker.email}</td>
-                                    <td><Link to={`worker/${worker.id}`}>{worker.name}</Link></td>
+                                    <td><Link to={`${worker.id}`}>{worker.name}</Link></td>
                                 </tr>
                             )
                         })}
