@@ -150,7 +150,7 @@ const MenuOfNav = (props) => {
                                             <Form.Control type="password" placeholder="Password" />
                                         </Col>
                                     </Form.Group>
-                                    <Link to={'/register'} className='text-center '>Register</Link>
+                                    <Link to={'/register'} className='text-center' onClick={() => setShow(false)}>Register</Link>
                                 </Form>
                             </Modal.Body>
                         </Modal>

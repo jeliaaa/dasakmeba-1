@@ -1,11 +1,11 @@
 import React from 'react'
 import './profesiogramacard.scss'
 import { Link } from 'react-router-dom'
-const ProfesiogramaCard = ({ img, name, id }) => {
+const ProfesiogramaCard = ({ click, a, img, name, id }) => {
 
     return (
-        <div className='card profesiograma'>
-            <Link to={`${id}`}></Link>
+        <div className='card profesiograma' onClick={click}>
+            {a ? <Link to={`${id}`}></Link> : '' }
             <img src={img} alt="..." />
             <div className='profesiograma_info'>
                 <h4>{name}</h4>
