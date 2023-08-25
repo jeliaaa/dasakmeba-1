@@ -9,6 +9,7 @@
     flex-direction: column;
     justify-content: flex-end;
     cursor: pointer;
+
     .thumb_img {
         border-radius: 10px 10px 0 0;
         height: 50%;
@@ -42,9 +43,10 @@
         }
     }
 
-    .info:hover {
-        .info_img_wrapper {
-            top: -50px;
-        }
+}
+
+.partners_card:hover {
+    .info_img_wrapper {
+        top: -50px;
     }
 }
