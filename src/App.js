@@ -40,6 +40,9 @@ import Contact from "./pages/contactUs/Contact";
 import Registered from "./pages/about/partners/registered/Registrered";
 import NonRegistered from "./pages/about/partners/nonRegistered/NonRegistered";
 import Register from "./pages/Register/Register";
+import Jan from "./pages/blog/calendar/months/Jan";
+import Feb from "./pages/blog/calendar/months/Feb";
+import Mar from "./pages/blog/calendar/months/Mar";
 
 
 
@@ -97,6 +100,12 @@ function App() {
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/articles" element={<Articles />} />
             <Route path="/blog/calendar" element={<Calendar />} />
+            {/* ----> calendar */}
+            <Route path="/blog/calendar/jan" element={<Jan />} />
+            <Route path="/blog/calendar/feb" element={<Feb />} />
+            <Route path="/blog/calendar/mar" element={<Mar />} />
+
+            
             <Route path="/blog/classification" element={<Classification />} />
             <Route path="/blog/profesiograma" element={<Profesiograma />} />
             <Route path="/blog/profesiograma/:id" element={<ProfesiogramaSingle />} />

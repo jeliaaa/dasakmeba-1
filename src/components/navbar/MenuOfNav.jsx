@@ -48,10 +48,12 @@ const MenuOfNav = (props) => {
             navLink6.current.classList.add('active')
         } else if (location.pathname === '/pubInfo') {
             navLink7.current.classList.add('active')
-        } else if(location.pathname === '/main'){
+        } else if (location.pathname === '/main') {
             navLinks.map((navLink) => navLink.current.classList.remove('active'))
+        } else {
+            return;
         }
-    }, [location, navLinks])
+    }, [location])
     const handleChange = (e) => {
         navLinks.forEach((navlink) => {
             navlink.current.classList.remove('active')
@@ -112,7 +114,7 @@ const MenuOfNav = (props) => {
                     <span>{t('versionForBlind')}</span>
                 </span>
                 <div className='search'>
-                    <input type="text"/>
+                    <input type="text" />
                     <span className="search-icon">&#128269;</span>
                 </div>
                 <section>
