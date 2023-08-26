@@ -18,7 +18,7 @@ const Structure = () => {
 
     return (
         <Container style={{ backgroundColor: '#fff', padding: '20px 20px', borderRadius: '8px' }}>
-            <Breadcrumbs forbread={0} />
+            <Breadcrumbs />
             <Container>
                 <Table responsive>
                     <thead>
