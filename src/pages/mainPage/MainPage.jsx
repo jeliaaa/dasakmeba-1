@@ -13,18 +13,19 @@ import slide3 from "../../assets/BannerAssets/Banner3.jpg"
 import photo1 from "../../assets/mainPageAssets/pic1.jpg"
 import photo2 from "../../assets/mainPageAssets/pic2.jpg"
 import photo3 from "../../assets/mainPageAssets/pic3.jpg"
+import { Link } from 'react-router-dom';
 
 
 
 const MainPage = () => {
   const { t } = useTranslation();
-  const HeroBox = ({ heading, text, image }) => {
+  const HeroBox = ({ heading, text, image, to }) => {
     return (
       <div className='hero_box'>
         <div style={{ width: '55%', display: 'flex', flexDirection: 'column', gap: '10px' }}>
           <h3>{heading}</h3>
           <p>{text}</p>
-          <button type='button'>გაიგე მეტი</button>
+          <Link to={to} style={{ color: 'white' }}><button type='button'>გაიგე მეტი</button></Link>
         </div>
         <img src={image} alt="..." />
 
@@ -73,18 +74,18 @@ const MainPage = () => {
           </Swiper>
         </Col>
         <Col xs={6} md={5} className='vacancy_hero_col'>
-          <HeroBox  heading={t('vacancy')} image={photo1} text={'აქ იქნება აღწერა ვაკანსიის ველის შესახებ'} />
+          <HeroBox to={'/vacancy'} heading={t('vacancy')} image={photo1} text={'აქ იქნება აღწერა ვაკანსიის ველის შესახებ'} />
         </Col>
       </Row>
       <Row className='justify-content-around mt-4' >
         <Col xs={12} md={6} className='vacancy_hero_col' style={{ paddingLeft: 0 }}>
-          <HeroBox heading={t('news')} image={photo2} text={'აქაც ასევე იქნება აღწერა ნიუსების გვერდის შესახებ'} />
+          <HeroBox to={'/media/news'} heading={t('news')} image={photo2} text={'აქაც ასევე იქნება აღწერა ნიუსების გვერდის შესახებ'} />
         </Col>
         <Col xs={12} md={6} className='vacancy_hero_col'>
-          <HeroBox heading={t('projects')} image={photo3} text={'აქაც ასევე იქნება რაღაც ტექსტი ახლა არის სატესტოდ რომ დავინახოთ როგორ ჩანს სხვადასხვა ზომის ტექსტები ამ ველში'} />
+          <HeroBox to={'/services/projects'} heading={t('projects')} image={photo3} text={'აქაც ასევე იქნება რაღაც ტექსტი ახლა არის სატესტოდ რომ დავინახოთ როგორ ჩანს სხვადასხვა ზომის ტექსტები ამ ველში'} />
         </Col>
       </Row>
- 
+
     </div >
   )
 }
