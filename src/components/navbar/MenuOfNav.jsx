@@ -53,7 +53,7 @@ const MenuOfNav = (props) => {
         } else {
             return;
         }
-    }, [location])
+    }, [navLinks,location])
     const handleChange = (e) => {
         navLinks.forEach((navlink) => {
             navlink.current.classList.remove('active')

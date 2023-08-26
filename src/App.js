@@ -12,7 +12,7 @@ import About from "./pages/about/About";
 import Brand from "./pages/about/brand/Brand";
 import Partners from "./pages/about/partners/Partners";
 import Structure from "./pages/about/structure/Structure";
-import WorkerSingle from './pages/about/structure/WorkerSingle'
+import WorkerSingle from "./pages/about/structure/WorkerSingle";
 import Statistics from "./pages/about/statistics/Statistics";
 import Services from "./pages/services/Services";
 import OurServices from "./pages/services/ourServices/OurServices";
@@ -23,19 +23,19 @@ import Grants from "./pages/services/grants/Grants";
 import Projects from "./pages/services/projects/Projects";
 import Blog from "./pages/blog/Blog";
 import Researches from "./pages/blog/researches/Researches";
-import Articles from './pages/blog/articles/Articles'
-import Calendar from './pages/blog/calendar/Calendar'
-import Classification from './pages/blog/profClassification/Classification'
-import Profesiograma from './pages/blog/profesiograma/Profesiograma'
-import ProfesiogramaSingle from './ReusableComponents/profesiograma/ProfesiogramaSingle'
-import VideoLessons from './pages/blog/videoLessons/VideoLessons'
+import Articles from "./pages/blog/articles/Articles";
+import Calendar from "./pages/blog/calendar/Calendar";
+import Classification from "./pages/blog/profClassification/Classification";
+import Profesiograma from "./pages/blog/profesiograma/Profesiograma";
+import ProfesiogramaSingle from "./ReusableComponents/profesiograma/ProfesiogramaSingle";
+import VideoLessons from "./pages/blog/videoLessons/VideoLessons";
 import Media from "./pages/media/Media";
 import Gallery from "./pages/media/gallery/Gallery";
-import News from './pages/media/news/News'
+import News from "./pages/media/news/News";
 import Vacancy from "./pages/Vacancy/Vacancy";
 import QnA from "./pages/QnA/QnA";
-import Guide from './pages/QnA/Guide/Guide'
-import PublicInformation from './pages/publicInfromation/PublicInformation'
+import Guide from "./pages/QnA/Guide/Guide";
+import PublicInformation from "./pages/publicInfromation/PublicInformation";
 import Contact from "./pages/contactUs/Contact";
 import Registered from "./pages/about/partners/registered/Registrered";
 import NonRegistered from "./pages/about/partners/nonRegistered/NonRegistered";
@@ -43,8 +43,6 @@ import Register from "./pages/Register/Register";
 import Jan from "./pages/blog/calendar/months/Jan";
 import Feb from "./pages/blog/calendar/months/Feb";
 import Mar from "./pages/blog/calendar/months/Mar";
-
-
 
 function App() {
   const { i18n } = useTranslation();
@@ -63,7 +61,11 @@ function App() {
       setIsOpen(false);
     }
   }, [location]);
-
+  var Scroll = require("react-scroll");
+  var scroll = Scroll.animateScroll;
+  useEffect(() => {
+    scroll.scrollToTop();
+  }, [scroll, location]);
   return (
     <div
       style={{
@@ -84,7 +86,10 @@ function App() {
             <Route path="/about/brand" element={<Brand />} />
             <Route path="/about/partners" element={<Partners />} />
             <Route path="/about/partners/registered" element={<Registered />} />
-            <Route path="/about/partners/nonRegistered" element={<NonRegistered />} />
+            <Route
+              path="/about/partners/nonRegistered"
+              element={<NonRegistered />}
+            />
             <Route path="/about/structure" element={<Structure />} />
             <Route path="/about/statistics" element={<Statistics />} />
             <Route path="/about/structure/:id" element={<WorkerSingle />} />
@@ -95,7 +100,10 @@ function App() {
             <Route path="/services/projects" element={<Projects />} />
             <Route path="/services/migration" element={<Migration />} />
             <Route path="/services/ourServices/forOrgs" element={<ForOrgs />} />
-            <Route path="/services/ourServices/forUsers" element={<ForUsers />} />
+            <Route
+              path="/services/ourServices/forUsers"
+              element={<ForUsers />}
+            />
             {/* blog */}
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/articles" element={<Articles />} />
@@ -105,11 +113,13 @@ function App() {
             <Route path="/blog/calendar/feb" element={<Feb />} />
             <Route path="/blog/calendar/mar" element={<Mar />} />
 
-            
             <Route path="/blog/classification" element={<Classification />} />
             <Route path="/blog/profesiograma" element={<Profesiograma />} />
-            <Route path="/blog/profesiograma/:id" element={<ProfesiogramaSingle />} />
-            <Route path="/blog/researches" element={<Researches/>} />
+            <Route
+              path="/blog/profesiograma/:id"
+              element={<ProfesiogramaSingle />}
+            />
+            <Route path="/blog/researches" element={<Researches />} />
             <Route path="/blog/vid-lessons" element={<VideoLessons />} />
             {/* media */}
             <Route path="/media" element={<Media />} />
@@ -120,12 +130,12 @@ function App() {
             {/* QnA */}
             <Route path="/qA" element={<QnA />} />
             <Route path="/qA/guide" element={<Guide />} />
-            { /* pubInfo */}
+            {/* pubInfo */}
             <Route path="/pubInfo" element={<PublicInformation />} />
             {/* contact */}
             <Route path="/contact" element={<Contact />} />
             {/* register */}
-            <Route path="/register"element={<Register />}/>
+            <Route path="/register" element={<Register />} />
           </Routes>
         </div>
         <div className="videos_wrapper">
@@ -144,4 +154,3 @@ function App() {
 }
 
 export default App;
- 
