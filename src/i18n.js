@@ -57,7 +57,16 @@ const resources = {
       worker: 'Team member',
       position : "Position",
       nameSurname: "Name, Surname",
-      username: "Username"
+      username: "Username",
+      //months
+      jan:'January',
+      feb:'February',
+      mar:'March',
+      apr:'April',
+      may:'May',
+      jun:'June',
+      jul:'July',
+
     },
   },
   ge: {
@@ -120,7 +129,15 @@ const resources = {
       worker: 'გუნდის წევრი',
       position : "პოზიცია",
       nameSurname: "სახელი, გვარი",
-      username: "მეტსახელი"
+      username: "მეტსახელი",
+      //months
+      jan:'იანვარი',
+      feb:'თებერვალი',
+      mar:'მარტი',
+      apr:'აპრილი',
+      may:'მაისი',
+      jun:'ივნისი',
+      jul:'ივლისი',
     },
   },
   // Add more languages and translations as needed

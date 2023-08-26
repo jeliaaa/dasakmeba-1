@@ -10,14 +10,14 @@ const Mar = () => {
       <Breadcrumbs />
       <Accordion defaultActiveKey="0" flush style={{ width: '80%', border: '1px solid black' }}>
         <Accordion.Item eventKey="0">
-          <Accordion.Header>6 {t('mar')}</Accordion.Header>
+          <Accordion.Header>3 {t('mar')}</Accordion.Header>
           <Accordion.Body>
             ქართული თეატრის დღეს საფუძველი ჩაეყარა 1850 წლის 14 იანვარს, როდესაც თბილისში პირველი სპექტაკლი გიორგი ერისთავის „გაყრა“ დაიდგა.
             ეს იყო პირველი და იმ დროისთვის ერთადერათი პროფესიული თეატრი საქართველოში.
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey='1'>
-          <Accordion.Header>9 {t('mar')}</Accordion.Header>
+          <Accordion.Header>6 {t('mar')}</Accordion.Header>
           <Accordion.Body>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -29,7 +29,7 @@ const Mar = () => {
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey='2'>
-          <Accordion.Header>11 {t('mar')}</Accordion.Header>
+          <Accordion.Header>9 {t('mar')}</Accordion.Header>
           <Accordion.Body>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -41,7 +41,31 @@ const Mar = () => {
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey='3'>
-          <Accordion.Header>13 {t('mar')}</Accordion.Header>
+          <Accordion.Header>21 {t('mar')}</Accordion.Header>
+          <Accordion.Body>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+            minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </Accordion.Body>
+        </Accordion.Item>
+        <Accordion.Item eventKey='4'>
+          <Accordion.Header>22 {t('mar')}</Accordion.Header>
+          <Accordion.Body>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+            minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </Accordion.Body>
+        </Accordion.Item>
+        <Accordion.Item eventKey='5'>
+          <Accordion.Header>27 {t('mar')}</Accordion.Header>
           <Accordion.Body>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
