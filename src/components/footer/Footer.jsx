@@ -3,11 +3,6 @@ import './footer.scss'
 import logo from '../../assets/footer_logo.png'
 import { Link } from 'react-router-dom'
 const Footer = () => {
-    const socials = [
-        { id: 1, name: 'facebook', link: 'https://facebook.com' },
-        { id: 2, name: 'instagram', link: 'https://instagram.com' },
-        { id: 3, name: 'linkedin', link: 'https://linkedin.com' }
-    ]
     return (
         <footer>
             <div className='upper_footer'>

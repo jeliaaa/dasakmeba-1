@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Button, Container, Modal } from 'react-bootstrap';
+import { Container, Modal } from 'react-bootstrap';
 import Breadcrumbs from '../../../ReusableComponents/breadcrumbs/Breadcrumbs';
 import ProfesiogramaCard from '../../../ReusableComponents/profesiograma/ProfesiogramaCard';
 import './gallery.scss'
