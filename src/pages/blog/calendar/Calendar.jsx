@@ -17,7 +17,7 @@ const Calendar = () => {
   return (
     <Container style={{ backgroundColor: '#fff', padding: '20px 20px', borderRadius: '8px' }}>
       <Breadcrumbs />
-      <div style={{ display: "flex",  flexWrap: 'wrap', gap: '30px 4%'}}>
+      <div style={{ display: "flex", justifyContent:'center',  flexWrap: 'wrap', gap: '30px 4%'}}>
         <PartnersCard name={t('იანვარი')} thumb={jan} img={jan} link={'jan'} />
         <PartnersCard name={t('თებერვალი')} thumb={feb} img={feb}  link={'feb'} />
         <PartnersCard name={t('მარტი')} thumb={mar} img={mar} link={'mar'} />

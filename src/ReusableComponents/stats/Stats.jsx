@@ -18,12 +18,26 @@ const Stats = () => {
             spaceBetween={100}
             className="owl"
         >
-            {[1, 2, 3, 4].map((item) => (
-                <SwiperSlide key={item}>
-                    <h1>12020</h1>
-                    <h3>MEN</h3>
-                </SwiperSlide>
-            ))}
+            <SwiperSlide>
+                <h1>120</h1>
+                <h3>კომპანია</h3>
+            </SwiperSlide>
+            <SwiperSlide>
+                <h1>1200</h1>
+                <h3>დასაქმებული</h3>
+            </SwiperSlide>
+            <SwiperSlide>
+                <h1>3521</h1>
+                <h3>მიიღეს რჩევა</h3>
+            </SwiperSlide>
+            <SwiperSlide>
+                <h1>1178</h1>
+                <h3>ორგანიზაცია</h3>
+            </SwiperSlide>
+            <SwiperSlide>
+                <h1>3010</h1>
+                <h3>მაძიებელი</h3>
+            </SwiperSlide>
         </Swiper>
     )
 }

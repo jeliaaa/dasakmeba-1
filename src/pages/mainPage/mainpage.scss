@@ -104,14 +104,16 @@ h2 {
             object-fit: cover;
 
         }
-
+        a{
+            width: 70%;
+        }
         button {
             background-color: $primary-color-blue;
             color: $primary-color-gray;
             border: none;
             border-radius: 5px;
             padding: 5px 10px;
-            width: 70%;
+            width: 100%;
         }
     }
 
