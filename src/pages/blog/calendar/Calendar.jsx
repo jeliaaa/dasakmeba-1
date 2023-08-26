@@ -4,18 +4,37 @@ import Breadcrumbs from '../../../ReusableComponents/breadcrumbs/Breadcrumbs';
 import PartnersCard from '../../../ReusableComponents/partners/PartnersCard';
 import { useTranslation } from 'react-i18next';
 
+import jan from "../../../assets/months/jan.png"
+import feb from "../../../assets/months/feb.png"
+import mar from "../../../assets/months/mar.png"
+import apr from "../../../assets/months/Apr.png"
+import may from "../../../assets/months/may.png"
+
+
+
 const Calendar = () => {
   const { t } = useTranslation();
   return (
     <Container style={{ backgroundColor: '#fff', padding: '20px 20px', borderRadius: '8px' }}>
       <Breadcrumbs />
-      <div style={{ display: "flex", gap: "25px", flexWrap: 'wrap' }}>
-        <PartnersCard name={t('jan')} img={'https://www.nbi.org.za/wp-content/uploads/2020/07/SPAR-logo.jpg'} link={'jan'} />
-        <PartnersCard name={t('feb')} img={'https://play-lh.googleusercontent.com/XAjt3ZFyNvfIXuK1MDD9Q9Bpoy6JerpJM1S1Ae-SEEPEkb7JTh_CkJDYw0-WxeIjpVA'} link={'feb'} />
-        <PartnersCard name={t('mar')} img={'https://scontent.ftbs6-2.fna.fbcdn.net/v/t39.30808-6/336644755_617276933549041_4395470823678384315_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=tFD1rjEs1-wAX9LZJcc&_nc_ht=scontent.ftbs6-2.fna&oh=00_AfBhh5uGdaQPAUY5vvlbGvvwpuKGxruFN-zBQajlpg-nFQ&oe=64ED3BD1'} link={'mar'} />
+      <div style={{ display: "flex",  flexWrap: 'wrap', gap: '30px 4%'}}>
+        <PartnersCard name={t('იანვარი')} thumb={jan} img={jan} link={'jan'} />
+        <PartnersCard name={t('თებერვალი')} thumb={feb} img={feb}  link={'feb'} />
+        <PartnersCard name={t('მარტი')} thumb={mar} img={mar} link={'mar'} />
+        <PartnersCard name={t('აპრილი')} thumb={apr} img={apr} link={'Apr'} />
+        <PartnersCard name={t('მაისი')} thumb={may} img={may} link={'May'} />
+        <PartnersCard name={t('ივნისი')} thumb={jan} img={jan} link={'June'} />
+        <PartnersCard name={t('ივლისი')} thumb={feb} img={feb} link={'July'} />
+
+
+        <PartnersCard name={t('აგვისტო')} thumb={mar} img={mar} link={'May'} />
+        <PartnersCard name={t('სექტემბერი')} thumb={apr} img={apr} link={'May'} />
+        <PartnersCard name={t('ოქტომბერი')} thumb={may} img={may} link={'May'} />
+        <PartnersCard name={t('ნოემბერი')} thumb={may} img={may} link={'May'} />
+        <PartnersCard name={t('დეკემბერი')} thumb={may} img={may} link={'May'} />
       </div>
     </Container>
   )
 }
 
-export default Calendar  
+export default Calendar           

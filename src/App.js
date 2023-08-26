@@ -43,6 +43,12 @@ import Register from "./pages/Register/Register";
 import Jan from "./pages/blog/calendar/months/Jan";
 import Feb from "./pages/blog/calendar/months/Feb";
 import Mar from "./pages/blog/calendar/months/Mar";
+import Apr from "./pages/blog/calendar/months/Apr";
+import May from "./pages/blog/calendar/months/May";
+import June from "./pages/blog/calendar/months/June";
+import July from "./pages/blog/calendar/months/July";
+
+
 
 
 
@@ -104,8 +110,13 @@ function App() {
             <Route path="/blog/calendar/jan" element={<Jan />} />
             <Route path="/blog/calendar/feb" element={<Feb />} />
             <Route path="/blog/calendar/mar" element={<Mar />} />
+            <Route path="/blog/calendar/apr" element={<Apr />} />
+            <Route path="/blog/calendar/may" element={<May />} />
+            <Route path="/blog/calendar/june" element={<June />} />
+            <Route path="/blog/calendar/july" element={<July />} />
 
-            
+
+
             <Route path="/blog/classification" element={<Classification />} />
             <Route path="/blog/profesiograma" element={<Profesiograma />} />
             <Route path="/blog/profesiograma/:id" element={<ProfesiogramaSingle />} />
