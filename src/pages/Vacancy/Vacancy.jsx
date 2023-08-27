@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next';
 import { Checkbox, FormControl, FormControlLabel } from '@mui/material';
 import vacData from './VacancyData.json'
@@ -8,8 +8,10 @@ import Breadcrumbs from '../../ReusableComponents/breadcrumbs/Breadcrumbs';
 
 const Vacancy = () => {
     const { t } = useTranslation();
+    const vacFilter = useRef(null);
     const [selectedIndustries, setSelectedIndustries] = useState([]);
     const [active, setActive] = useState([]);
+
     const handleClick = (num) => {
         setActive(prevState =>
             prevState.includes(num)
@@ -17,6 +19,9 @@ const Vacancy = () => {
                 : [...prevState, num]
         );
         active.includes(num) && setSelectedIndustries([])
+
+            let childrenOfVacFilter = Array.from(vacFilter.current.children);
+            active.includes(num) && childrenOfVacFilter.forEach((child) => child.classList.remove('active'));
     };
     const handleCheckboxChange = (vacancyId) => {
         if (selectedIndustries.includes(vacancyId)) {
@@ -29,8 +34,8 @@ const Vacancy = () => {
     return (
         <div className='vacancy_wrapper'>
             <Breadcrumbs />
-            <div className='vacancy_container' style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
-                <FormControl className='filter_main' component={'fieldset'} >
+            <div className='vacancy_container' style={{ alignSelf: 'center', display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap', width: '90%' }}>
+                {/* <FormControl className='filter_main' component={'fieldset'} >
                     <FormControlLabel
                         value={t('conference')}
                         control={<Checkbox sx={{
@@ -139,32 +144,49 @@ const Vacancy = () => {
                         labelPlacement="start"
 
                     />
-                </FormControl>
+                </FormControl> */}
+                <div className='filter_upper' onClick={(e) => { handleClick(1); e.target.classList.toggle('active') }}>{t('conference')}</div>
+                <div className='filter_upper' onClick={(e) => { handleClick(2); e.target.classList.toggle('active') }}>{t('employement')}</div>
+                <div className='filter_upper' onClick={(e) => { handleClick(3); e.target.classList.toggle('active') }}>{t('familyWork')}</div>
+                <div className='filter_upper' onClick={(e) => { handleClick(4); e.target.classList.toggle('active') }}>{t('internship')}</div>
+                <div className='filter_upper' onClick={(e) => { handleClick(5); e.target.classList.toggle('active') }}>{t('lectures')}</div>
+                <div className='filter_upper' onClick={(e) => { handleClick(6); e.target.classList.toggle('active') }}>{t('professional')}</div>
+                <div className='filter_upper' onClick={(e) => { handleClick(7); e.target.classList.toggle('active') }}>{t('trainings')}</div>
+                <div className='filter_upper' onClick={(e) => { handleClick(8); e.target.classList.toggle('active') }}>{t('volunteering')}</div>
 
 
             </div>
             <div className='filter_bottom'>
-                <div style={{ width: '90%', display: 'flex', flexWrap: 'wrap' }}>
+                <div ref={vacFilter} style={{ width: '90%', display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
 
                     {filteredVacancies.map((vacancy) => (
                         vacancy.industries && (
                             Object.keys(vacancy.industries).map((industryKey) => (
-                                <FormControl className='vacancy_filter' component={'fieldset'} key={industryKey}>
-                                    <p>{vacancy.parent}</p>
-                                    <p className='quantity'>{vacancy.industries[industryKey].quantity}</p>
-                                    <FormControlLabel
-                                        value={t(`${vacancy.industries[industryKey].name}`)}
-                                        control={<Checkbox sx={{
-                                            color: pink[800],
-                                            '&.Mui-checked': {
-                                                color: pink[600],
-                                            },
-                                        }} onChange={() => { handleCheckboxChange(vacancy.industries[industryKey]) }}
-                                        />}
-                                        label={t(`${vacancy.industries[industryKey].name}`)}
-                                        labelPlacement="start"
-                                    />
-                                </FormControl>
+                                // <FormControl className='vacancy_filter' component={'fieldset'} key={industryKey}>
+                                //     <p>{vacancy.parent}</p>
+                                //     <p className='quantity'>{vacancy.industries[industryKey].quantity}</p>
+                                //     <FormControlLabel
+                                //         value={t(`${vacancy.industries[industryKey].name}`)}
+                                //         control={<Checkbox sx={{
+                                //             color: pink[800],
+                                //             '&.Mui-checked': {
+                                //                 color: pink[600],
+                                //             },
+                                //         }} onChange={() => { handleCheckboxChange(vacancy.industries[industryKey]) }}
+                                //         />}
+                                //         label={t(`${vacancy.industries[industryKey].name}`)}
+                                //         labelPlacement="start"
+                                //     />
+                                // </FormControl>
+                                <div className='vacancy_filter' onClick={(e) => { handleCheckboxChange(vacancy.industries[industryKey]); e.currentTarget.classList.toggle('active') }}>
+                                    <h6>{vacancy.industries[industryKey].name}</h6>
+                                    <div style={{ width: '100%', display: 'flex', justifyContent: 'space-between' }}>
+                                        <p>{vacancy.parent}</p>
+                                        <p className='quantity'>{vacancy.industries[industryKey].quantity}</p>
+
+                                    </div>
+                                </div>
+
                             ))
                         )
 
