@@ -7,6 +7,7 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import './tabs.scss'
+
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
 
@@ -40,7 +41,7 @@ function a11yProps(index) {
     };
 }
 
-export default function TabMenu() {
+const TabMenu = ({ tabs }) => {
     const theme = useTheme();
     const [value, setValue] = React.useState(0);
 
@@ -48,39 +49,30 @@ export default function TabMenu() {
         setValue(newValue);
     };
 
-    const handleChangeIndex = (index) => {
-        setValue(index);
-    };
-
     return (
-        <Box sx={{ bgcolor: 'background.paper', width: '100%' }}>
-            <AppBar position="static">
-                <Tabs
-                    value={value}
-                    onChange={handleChange}
-                    indicatorColor="secondary"
-                    textColor="inherit"
-                    variant="fullWidth"
-                    aria-label="full width tabs example"
-                >
-                    <Tab label="Item One" {...a11yProps(0)} />
-                    <Tab label="Item Two" {...a11yProps(1)} />
-                    <Tab label="Item Three" {...a11yProps(2)} />
-                    <Tab label="Item Four" {...a11yProps(3)} />
-                </Tabs>
-            </AppBar>
-                <TabPanel value={value} index={0} dir={theme.direction}>
-                    Item One
-                </TabPanel>
-                <TabPanel value={value} index={1} dir={theme.direction}>
-                    Item Two
-                </TabPanel>
-                <TabPanel value={value} index={2} dir={theme.direction}>
-                    Item Three
-                </TabPanel>
-                <TabPanel value={value} index={3} dir={theme.direction}>
-                    Item Four
-                </TabPanel>
-        </Box>
+        <div className='tabs_wrapper'>
+            <Box sx={{ bgcolor: 'background.paper', width: '100%' }}>
+                <AppBar position="static">
+                    <Tabs
+                        value={value}
+                        onChange={handleChange}
+                        indicatorColor="secondary"
+                        textColor="inherit"
+                        variant="fullWidth"
+                        aria-label="full width tabs example"
+                    >
+                        {tabs.map((tab) => (
+                            <Tab key={tab.id} label={tab.label} {...a11yProps(tab.id - 1)} />
+                        ))}
+                    </Tabs>
+                </AppBar>
+                {tabs.map((tab) => (
+                    <TabPanel key={tab.id} value={value} index={tab.id - 1} dir={theme.direction}>
+                        {tab.text}
+                    </TabPanel>
+                ))}
+            </Box>
+        </div>
     );
 }
+export default TabMenu
