@@ -49,6 +49,10 @@ import June from "./pages/blog/calendar/months/June";
 import July from "./pages/blog/calendar/months/July";
 import TabMenu from "./ReusableComponents/tabMenu/TabMenu";
 import Test from "./Test";
+import NewsSingle from "./pages/media/news/NewsSingle";
+import ArticlesSingle from "./pages/blog/articles/ArticlesSingle";
+import VideoLessonsSingle from "./pages/blog/videoLessons/VideoLessonsSingle";
+import ResearchSingle from "./pages/blog/researches/ResearchSingle";
 
 
 
@@ -115,6 +119,7 @@ function App() {
             {/* blog */}
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/articles" element={<Articles />} />
+            <Route path="/blog/articles/:id" element={<ArticlesSingle />} />
             <Route path="/blog/calendar" element={<Calendar />} />
             {/* ----> calendar */}
             <Route path="/blog/calendar/jan" element={<Jan />} />
@@ -134,11 +139,14 @@ function App() {
               element={<ProfesiogramaSingle />}
             />
             <Route path="/blog/researches" element={<Researches />} />
+            <Route path="/blog/researches/:id" element={<ResearchSingle />} />
             <Route path="/blog/vid-lessons" element={<VideoLessons />} />
+            <Route path="/blog/vid-lessons/:id" element={<VideoLessonsSingle />} />
             {/* media */}
             <Route path="/media" element={<Media />} />
             <Route path="/media/gallery" element={<Gallery />} />
             <Route path="/media/news" element={<News />} />
+            <Route path="/media/news/:id" element={<NewsSingle />} />
             {/* vacancy */}
             <Route path="/vacancy" element={<Vacancy />} />
             {/* QnA */}
