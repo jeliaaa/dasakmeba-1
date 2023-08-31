@@ -1,0 +1,14 @@
+@import '../../variables';
+
+header{
+    background-color: $primary-color-gray !important;
+    color: $primary-color-blue !important
+}
+.Mui-selected{
+    background-color: $primary-color-blue !important;
+    color: white !important;
+    
+}
+span{
+    display: none !important;
+}

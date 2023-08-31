@@ -47,6 +47,7 @@ import Apr from "./pages/blog/calendar/months/Apr";
 import May from "./pages/blog/calendar/months/May";
 import June from "./pages/blog/calendar/months/June";
 import July from "./pages/blog/calendar/months/July";
+import TabMenu from "./ReusableComponents/tabMenu/TabMenu";
 
 
 
@@ -148,6 +149,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             {/* register */}
             <Route path="/register" element={<Register />} />
+            <Route path="/test" element={<TabMenu />} />
           </Routes>
         </div>
         <div className="videos_wrapper">
