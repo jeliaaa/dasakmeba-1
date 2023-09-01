@@ -5,6 +5,7 @@ import vacData from './VacancyData.json'
 import { pink, yellow } from '@mui/material/colors';
 import './vacancy.scss'
 import Breadcrumbs from '../../ReusableComponents/breadcrumbs/Breadcrumbs';
+import { Link } from 'react-router-dom';
 
 const Vacancy = () => {
     const { t } = useTranslation();
@@ -20,8 +21,8 @@ const Vacancy = () => {
         );
         active.includes(num) && setSelectedIndustries([])
 
-            let childrenOfVacFilter = Array.from(vacFilter.current.children);
-            active.includes(num) && childrenOfVacFilter.forEach((child) => child.classList.remove('active'));
+        let childrenOfVacFilter = Array.from(vacFilter.current.children);
+        active.includes(num) && childrenOfVacFilter.forEach((child) => child.classList.remove('active'));
     };
     const handleCheckboxChange = (vacancyId) => {
         if (selectedIndustries.includes(vacancyId)) {
@@ -35,116 +36,6 @@ const Vacancy = () => {
         <div className='vacancy_wrapper'>
             <Breadcrumbs />
             <div className='vacancy_container' style={{ alignSelf: 'center', display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap', width: '90%' }}>
-                {/* <FormControl className='filter_main' component={'fieldset'} >
-                    <FormControlLabel
-                        value={t('conference')}
-                        control={<Checkbox sx={{
-                            color: yellow[800],
-                            '&.Mui-checked': {
-                                color: yellow[600],
-                            },
-                        }}
-                            onClick={() => handleClick(1)} />}
-                        label={t('conference')}
-                        labelPlacement="start"
-                    />
-                </FormControl>
-                <FormControl className='filter_main' component={'fieldset'}>
-                    <FormControlLabel
-                        value={t('employement')}
-                        control={<Checkbox sx={{
-                            color: yellow[800],
-                            '&.Mui-checked': {
-                                color: yellow[600],
-                            },
-                        }} onClick={() => { handleClick(2) }} />}
-                        label={t('employement')}
-                        labelPlacement="start"
-
-                    />
-                </FormControl>
-                <FormControl className='filter_main' component={'fieldset'}>
-                    <FormControlLabel
-                        value={t('familyWork')}
-                        control={<Checkbox sx={{
-                            color: yellow[800],
-                            '&.Mui-checked': {
-                                color: yellow[600],
-                            },
-                        }} onClick={() => { handleClick(3) }} />}
-                        label={t('familyWork')}
-                        labelPlacement="start"
-                    />
-                </FormControl>
-                <FormControl className='filter_main' component={'fieldset'}>
-                    <FormControlLabel
-                        value={t('internship')}
-                        control={<Checkbox sx={{
-                            color: yellow[800],
-                            '&.Mui-checked': {
-                                color: yellow[600],
-                            },
-                        }} onClick={() => { handleClick(4) }} />}
-                        label={t('internship')}
-                        labelPlacement="start"
-                    />
-                </FormControl>
-                <FormControl className='filter_main' component={'fieldset'}>
-                    <FormControlLabel
-                        value={t('lectures')}
-                        control={<Checkbox sx={{
-                            color: yellow[800],
-                            '&.Mui-checked': {
-                                color: yellow[600],
-                            },
-                        }} onClick={() => { handleClick(5) }} />}
-                        label={t('lectures')}
-                        labelPlacement="start"
-
-                    />
-                </FormControl>
-                <FormControl className='filter_main' component={'fieldset'}>
-                    <FormControlLabel
-                        value={t('professional')}
-                        control={<Checkbox sx={{
-                            color: yellow[800],
-                            '&.Mui-checked': {
-                                color: yellow[600],
-                            },
-                        }} onClick={() => { handleClick(6) }} />}
-                        label={t('professional')}
-                        labelPlacement="start"
-
-                    />
-                </FormControl>
-                <FormControl className='filter_main' component={'fieldset'}>
-                    <FormControlLabel
-                        value={t('trainings')}
-                        control={<Checkbox sx={{
-                            color: yellow[800],
-                            '&.Mui-checked': {
-                                color: yellow[600],
-                            },
-                        }} onClick={() => { handleClick(7) }} />}
-                        label={t('trainings')}
-                        labelPlacement="start"
-
-                    />
-                </FormControl>
-                <FormControl className='filter_main' component={'fieldset'}>
-                    <FormControlLabel
-                        value={t('volunteering')}
-                        control={<Checkbox sx={{
-                            color: yellow[800],
-                            '&.Mui-checked': {
-                                color: yellow[600],
-                            },
-                        }} onClick={() => { handleClick(8) }} />}
-                        label={t('volunteering')}
-                        labelPlacement="start"
-
-                    />
-                </FormControl> */}
                 <div className='filter_upper' onClick={(e) => { handleClick(1); e.target.classList.toggle('active') }}>{t('conference')}</div>
                 <div className='filter_upper' onClick={(e) => { handleClick(2); e.target.classList.toggle('active') }}>{t('employement')}</div>
                 <div className='filter_upper' onClick={(e) => { handleClick(3); e.target.classList.toggle('active') }}>{t('familyWork')}</div>
@@ -162,22 +53,6 @@ const Vacancy = () => {
                     {filteredVacancies.map((vacancy) => (
                         vacancy.industries && (
                             Object.keys(vacancy.industries).map((industryKey) => (
-                                // <FormControl className='vacancy_filter' component={'fieldset'} key={industryKey}>
-                                //     <p>{vacancy.parent}</p>
-                                //     <p className='quantity'>{vacancy.industries[industryKey].quantity}</p>
-                                //     <FormControlLabel
-                                //         value={t(`${vacancy.industries[industryKey].name}`)}
-                                //         control={<Checkbox sx={{
-                                //             color: pink[800],
-                                //             '&.Mui-checked': {
-                                //                 color: pink[600],
-                                //             },
-                                //         }} onChange={() => { handleCheckboxChange(vacancy.industries[industryKey]) }}
-                                //         />}
-                                //         label={t(`${vacancy.industries[industryKey].name}`)}
-                                //         labelPlacement="start"
-                                //     />
-                                // </FormControl>
                                 <div className='vacancy_filter' onClick={(e) => { handleCheckboxChange(vacancy.industries[industryKey]); e.currentTarget.classList.toggle('active') }}>
                                     <h6>{vacancy.industries[industryKey].name}</h6>
                                     <div style={{ width: '100%', display: 'flex', justifyContent: 'space-between' }}>
@@ -199,19 +74,22 @@ const Vacancy = () => {
                     selectedIndustries.map((vac) => {
                         return (
                             Object.values(vac.vacancies).map((v, index) => {
-                                return (<div key={index} className='vacancy'>
-                                    <img src='https://picsum.photos/100' alt='...' />
-                                    <div className='one'>
-                                        <h2>{v.Position}</h2>
-                                        <section>
-                                            <p className='sal'><i className='fa-solid fa-coins'></i>{v.Salary}</p>
-                                            <p><i className='fa-solid fa-location'></i>{v.Location}</p>
-                                        </section>
-                                    </div>
-                                    <div className="two">
-                                        <p>განაკვეთი : {v.Shift}</p>
-                                    </div>
-                                </div>)
+                                return (
+                                    <Link className='vacancy_wrapper_a' to={`${v.id}`}>
+                                        <div key={index} className='vacancy'>
+                                            <img src='https://picsum.photos/100' alt='...' />
+                                            <div className='one'>
+                                                <h2>{v.Position}</h2>
+                                                <section>
+                                                    <p className='sal'><i className='fa-solid fa-coins'></i>{v.Salary}</p>
+                                                    <p><i className='fa-solid fa-location'></i>{v.Location}</p>
+                                                </section>
+                                            </div>
+                                            <div className="two">
+                                                <p>განაკვეთი : {v.Shift}</p>
+                                            </div>
+                                        </div>
+                                    </Link>)
                             })
                         )
                     })

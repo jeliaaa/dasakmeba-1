@@ -53,6 +53,7 @@ import NewsSingle from "./pages/media/news/NewsSingle";
 import ArticlesSingle from "./pages/blog/articles/ArticlesSingle";
 import VideoLessonsSingle from "./pages/blog/videoLessons/VideoLessonsSingle";
 import ResearchSingle from "./pages/blog/researches/ResearchSingle";
+import VacancySingle from "./pages/Vacancy/VacancySingle";
 
 
 
@@ -149,6 +150,7 @@ function App() {
             <Route path="/media/news/:id" element={<NewsSingle />} />
             {/* vacancy */}
             <Route path="/vacancy" element={<Vacancy />} />
+            <Route path="/vacancy/:id" element={<VacancySingle />} />
             {/* QnA */}
             <Route path="/qA" element={<QnA />} />
             <Route path="/qA/guide" element={<Guide />} />
