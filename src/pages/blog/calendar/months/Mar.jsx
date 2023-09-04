@@ -2,6 +2,9 @@ import React from 'react'
 import { Accordion, Container } from 'react-bootstrap';
 import Breadcrumbs from '../../../../ReusableComponents/breadcrumbs/Breadcrumbs';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
+import '../calendar.scss'
+
 
 const Mar = () => {
   const { t } = useTranslation();
@@ -14,6 +17,7 @@ const Mar = () => {
           <Accordion.Body>
             ქართული თეატრის დღეს საფუძველი ჩაეყარა 1850 წლის 14 იანვარს, როდესაც თბილისში პირველი სპექტაკლი გიორგი ერისთავის „გაყრა“ დაიდგა.
             ეს იყო პირველი და იმ დროისთვის ერთადერათი პროფესიული თეატრი საქართველოში.
+            <Link to={'1'}>ვრცლად</Link>
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey='1'>
@@ -26,6 +30,7 @@ const Mar = () => {
             reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
+            <Link to={'2'}>ვრცლად</Link>
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey='2'>
@@ -38,6 +43,7 @@ const Mar = () => {
             reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
+            <Link to={'3'}>ვრცლად</Link>
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey='3'>
@@ -50,6 +56,7 @@ const Mar = () => {
             reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
+            <Link to={'4'}>ვრცლად</Link>
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey='4'>
@@ -62,6 +69,7 @@ const Mar = () => {
             reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
+            <Link to={'5'}>ვრცლად</Link>
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey='5'>
@@ -74,6 +82,7 @@ const Mar = () => {
             reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
+            <Link to={'6'}>ვრცლად</Link>
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>

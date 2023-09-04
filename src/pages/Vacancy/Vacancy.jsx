@@ -1,8 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next';
-import { Checkbox, FormControl, FormControlLabel } from '@mui/material';
 import vacData from './VacancyData.json'
-import { pink, yellow } from '@mui/material/colors';
 import './vacancy.scss'
 import Breadcrumbs from '../../ReusableComponents/breadcrumbs/Breadcrumbs';
 import { Link } from 'react-router-dom';

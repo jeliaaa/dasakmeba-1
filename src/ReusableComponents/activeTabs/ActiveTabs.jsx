@@ -1,5 +1,5 @@
 
-import { AppBar, Box, Tab, Tabs, Typography, useTheme } from '@mui/material';
+import { AppBar, Box, Tab, Tabs, useTheme } from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react'
 import './activeTabs.scss'

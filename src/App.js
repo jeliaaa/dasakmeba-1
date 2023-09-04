@@ -47,7 +47,6 @@ import Apr from "./pages/blog/calendar/months/Apr";
 import May from "./pages/blog/calendar/months/May";
 import June from "./pages/blog/calendar/months/June";
 import July from "./pages/blog/calendar/months/July";
-import TabMenu from "./ReusableComponents/tabMenu/TabMenu";
 import Test from "./Test";
 import NewsSingle from "./pages/media/news/NewsSingle";
 import ArticlesSingle from "./pages/blog/articles/ArticlesSingle";

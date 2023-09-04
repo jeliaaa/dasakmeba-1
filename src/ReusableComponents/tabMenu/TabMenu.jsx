@@ -2,8 +2,6 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import { useTheme } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import './tabs.scss'
@@ -35,21 +33,11 @@ TabPanel.propTypes = {
     value: PropTypes.number.isRequired,
 };
 
-function a11yProps(index) {
-    return {
-        id: `full-width-tab-${index}`,
-        'aria-controls': `full-width-tabpanel-${index}`,
-    };
-}
-
-const TabMenu = ({ tabs }) => {
+const TabMenu = () => {
     const theme = useTheme();
     const [value, setValue] = React.useState('');
     const [valueOfMonth, setValueOfMonth] = React.useState('');
 
-    const handleChange = (event, newValue) => {
-        setValue(newValue);
-    };
 
     return (
         <div className='tabs_wrapper'>
