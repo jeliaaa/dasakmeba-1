@@ -10,3 +10,16 @@ a{
     color: $primary-color-blue;
     text-decoration: none;
 }
+.breadcrumbs_wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    nav{
+        display: flex;
+        align-items: center;
+        ol{
+            margin: 0 !important;
+        }
+    }
+}

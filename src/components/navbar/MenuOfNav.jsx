@@ -114,7 +114,7 @@ const MenuOfNav = (props) => {
                     <span>{t('versionForBlind')}</span>
                 </span>
                 <div className='search'>
-                    <input type="text" />
+                    <input type="text" placeholder='  შეიყვანეთ საძიებო სიტყვა' />
                     <span className="search-icon">&#128269;</span>
                 </div>
                 <section>
