@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
-
+import './back.scss'
 const BackBtn = () => {
     const pathObj = useLocation();
     const path = pathObj.pathname;
@@ -15,7 +15,7 @@ const BackBtn = () => {
     }
     return (
         <Link to={`/${pathArr}`} >
-            <button>BACK</button>
+            <button className='back'>BACK</button>
         </Link>
     )
 }

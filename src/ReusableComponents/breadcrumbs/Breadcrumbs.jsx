@@ -3,13 +3,14 @@ import { Breadcrumb } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import './breadcrumbs.scss'
 import { useTranslation } from 'react-i18next'
+import BackBtn from '../backBtn/BackBtn'
 const Breadcrumbs = () => {
     const { t } = useTranslation();
     var p = window.location.pathname;
     var crumbs = p.split('/');
     crumbs.splice(0, 1);
     return (
-        <>
+        <nav className='breadcrumbs_wrapper'>
             <Breadcrumb>
                 <Breadcrumb.Item><Link to={'/main'}>{t('main')}</Link></Breadcrumb.Item>
                 {crumbs.map((crumb, index) => (
@@ -24,9 +25,9 @@ const Breadcrumbs = () => {
 
                     </Breadcrumb.Item>
                 ))}
-
             </Breadcrumb>
-        </>
+            <BackBtn />
+        </nav>
     )
 }
 
