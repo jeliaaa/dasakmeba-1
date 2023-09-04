@@ -3,14 +3,11 @@ import { Container } from 'react-bootstrap';
 import Breadcrumbs from '../../../ReusableComponents/breadcrumbs/Breadcrumbs';
 import PartnersCard from '../../../ReusableComponents/partners/PartnersCard';
 import { useTranslation } from 'react-i18next';
-
 import jan from "../../../assets/months/jan.png"
 import feb from "../../../assets/months/feb.png"
 import mar from "../../../assets/months/mar.png"
 import apr from "../../../assets/months/Apr.png"
 import may from "../../../assets/months/may.png"
-
-
 
 const Calendar = () => {
   const { t } = useTranslation();
