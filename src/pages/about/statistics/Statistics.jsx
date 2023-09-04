@@ -3,6 +3,7 @@ import Breadcrumbs from '../../../ReusableComponents/breadcrumbs/Breadcrumbs';
 import { Container, Table } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import TabMenu from '../../../ReusableComponents/tabMenu/TabMenu';
 
 const statsData = [
   { id: 1, name: 'ხარჯთაღრიცხვა N1', to: '/dummy.pdf' , date: '12.01.2021'},
@@ -21,7 +22,7 @@ const Statistics = () => {
   return (
     <Container style={{ backgroundColor: '#fff', padding: '20px 20px', borderRadius: '8px' }}>
       <Breadcrumbs></Breadcrumbs>
-      <Container>
+      {/* <Container>
         <Table responsive>
           <thead>
             <tr>
@@ -42,7 +43,9 @@ const Statistics = () => {
             ))}
           </tbody>
         </Table>
-      </Container>
+      </Container> */}
+
+      <TabMenu />
 
     </Container>
 
