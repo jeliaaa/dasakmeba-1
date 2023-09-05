@@ -16,7 +16,7 @@ import WorkerSingle from "./pages/about/structure/WorkerSingle";
 import Statistics from "./pages/about/statistics/Statistics";
 import Services from "./pages/services/Services";
 import OurServices from "./pages/services/ourServices/OurServices";
-import ForOrgs from "./pages/services/ourServices/forOrgs/ForOrgs";
+import ForOrgs from "./pages/services/ourServices/forOrgs/forOrgs";
 import ForUsers from "./pages/services/ourServices/forUsers/ForUsers";
 import Migration from "./pages/services/migration/Migration";
 import Grants from "./pages/services/grants/Grants";
@@ -121,6 +121,7 @@ function App() {
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/articles" element={<Articles />} />
             <Route path="/blog/articles/:id" element={<ArticlesSingle />} />
+
             <Route path="/blog/calendar" element={<Calendar />} />
             {/* ----> calendar */}
             <Route path="/blog/calendar/jan" element={<Jan />} />
