@@ -121,7 +121,6 @@ function App() {
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/articles" element={<Articles />} />
             <Route path="/blog/articles/:id" element={<ArticlesSingle />} />
-            <Route path="/blog/articles/marketing/" element={<Marketing />} />
 
             <Route path="/blog/calendar" element={<Calendar />} />
             {/* ----> calendar */}
