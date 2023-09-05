@@ -66,7 +66,8 @@ const resources = {
       may:'May',
       jun:'June',
       jul:'July',
-
+      //back
+      back: 'Back'
     },
   },
   ge: {
@@ -138,6 +139,8 @@ const resources = {
       may:'მაისი',
       jun:'ივნისი',
       jul:'ივლისი',
+      //back
+      back: 'უკან'
     },
   },
   // Add more languages and translations as needed
