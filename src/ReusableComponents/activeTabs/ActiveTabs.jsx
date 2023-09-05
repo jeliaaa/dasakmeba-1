@@ -1,5 +1,5 @@
 
-import { AppBar, Box, Tab, Tabs, Typography, useTheme } from '@mui/material';
+import { AppBar, Box, Tab, Tabs, useTheme } from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react'
 import './activeTabs.scss'
@@ -15,7 +15,7 @@ function TabPanel(props) {
             {...other}
         >
             {value === index && (
-                <Box sx={{ p: 3, display: 'flex', flexDirection: 'row', justifyContent: 'center', flexWrap: 'wrap', gap: '3%' }}>
+                <Box sx={{ p: 3, display: 'flex', flexDirection: 'row', justifyContent: 'space-between', flexWrap: 'wrap'}}>
                     {children}
                 </Box>
             )}
@@ -44,7 +44,7 @@ const ActiveTabs = ({ tabs }) => {
     console.log(value);
     return (
         <div className='active_tabs_wrapper'>
-            <Box sx={{ bgcolor: 'background.paper', width: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+            <Box sx={{ bgcolor: 'background.paper', width: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', rowGap: '20px' }}>
                 <AppBar position="static">
                     <Tabs
                         value={value}

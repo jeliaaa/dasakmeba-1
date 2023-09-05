@@ -6,7 +6,7 @@ import './vacancy.scss'
 const VacancySingle = () => {
     const { id } = useParams();
     return (
-        <Container style={{ backgroundColor: '#fff' }}>
+        <Container className='vac_con' style={{ backgroundColor: '#fff' }}>
             <Breadcrumbs />
             <div className='vacancy_single_wrapper'>
                 <div className='vacancy_single_left'>
@@ -37,7 +37,7 @@ const VacancySingle = () => {
                     </div>
                     <h4 className='address'>I.javakshishvili str. N62</h4>
                     <div className='description'>
-                        <Container>
+                        <Container className='vac_con'>
                             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad sapiente odio ullam quia explicabo iure voluptatem id veritatis esse fugit ipsam quibusdam amet, delectus perferendis nemo neque vero ab saepe?
                             <li>als</li>
                             <li>als</li>

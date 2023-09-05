@@ -3,7 +3,7 @@ import './partnerscard.scss'
 import { Link } from 'react-router-dom'
 const PartnersCard = ({ thumb, img, name, link }) => {
     return (
-        <Link to={link}>
+        <Link className='partner_card_link' to={link}>
             <div className='card partners_card'>
                 {thumb && <img className='thumb_img' src={thumb} alt="..." />}
                 <div className='info'>

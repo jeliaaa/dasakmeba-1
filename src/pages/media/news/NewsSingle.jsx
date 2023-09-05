@@ -13,7 +13,7 @@ const NewsSingle = () => {
                 <div>
                     <h2>satauri satauri satauri</h2>
                     <h6>21.05.2023</h6>
-                    <p></p>
+                    <p>{id}</p>
                 </div>
             </div>
             <div>

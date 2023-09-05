@@ -9,8 +9,8 @@ const VideoLessons = () => {
   return (
     <Container style={{ backgroundColor: '#fff', padding: '20px 20px', borderRadius: '8px' }}>
       <Breadcrumbs></Breadcrumbs>
-      <div className='profesiograma_wrapper' style={{ display: 'flex', justifyContent: 'flex-start', gap: '20px', flexWrap: 'wrap' }}>
-        <ProfesiogramaCard a={true} img={"https://picsum.photos/id/10/300/200"} name={t('მიმართულება 1')} id={1} />
+      <div className='profesiograma_wrapper' style={{ display: 'flex', justifyContent: 'flex-start', gap:'20px 1%', flexWrap: 'wrap' }}>
+        <ProfesiogramaCard a={true} img={"https://picsum.photos/id/10/300/200"} name={t('მიმართულება 1')}id={1} />
         <ProfesiogramaCard a={true} img={"https://picsum.photos/id/11/300/200"} name={t('მიმართულება 2')} id={2} />
         <ProfesiogramaCard a={true} img={"https://picsum.photos/id/12/300/200"} name={t('მიმართულება 3')} id={3} />
         <ProfesiogramaCard a={true} img={"https://picsum.photos/id/13/300/200"} name={t('მიმართულება 4')} id={4} />
