@@ -27,7 +27,6 @@ import Articles from "./pages/blog/articles/Articles";
 import Calendar from "./pages/blog/calendar/Calendar";
 import Classification from "./pages/blog/profClassification/Classification";
 import Profesiograma from "./pages/blog/profesiograma/Profesiograma";
-import ProfesiogramaSingle from "./ReusableComponents/profesiograma/ProfesiogramaSingle";
 import VideoLessons from "./pages/blog/videoLessons/VideoLessons";
 import Media from "./pages/media/Media";
 import Gallery from "./pages/media/gallery/Gallery";
@@ -53,15 +52,17 @@ import ArticlesSingle from "./pages/blog/articles/ArticlesSingle";
 import VideoLessonsSingle from "./pages/blog/videoLessons/VideoLessonsSingle";
 import ResearchSingle from "./pages/blog/researches/ResearchSingle";
 import VacancySingle from "./pages/Vacancy/VacancySingle";
+import ProfesiogramaTypeSingle from "./pages/blog/profesiograma/ProfesiogramaTypeSingle";
+import ProfesiogramaSingle from "./pages/blog/profesiograma/ProfesiogramaSingle";
 
 
 
 function App() {
   const { i18n } = useTranslation();
   const selectedLanguage = i18n.language;
-  let fontPrimary = "--font-primary-ge"; // Default font
+  let fontPrimary = "Noto Sans Georgian"; // Default font
   if (selectedLanguage === "en") {
-    fontPrimary = "--font-primary-en";
+    fontPrimary = "Poppins";
   }
   const [isOpen, setIsOpen] = useState(true);
   const location = useLocation();
@@ -136,6 +137,10 @@ function App() {
             <Route path="/blog/profesiograma" element={<Profesiograma />} />
             <Route
               path="/blog/profesiograma/:id"
+              element={<ProfesiogramaTypeSingle />}
+            />
+            <Route
+              path="/blog/profesiograma/:id/singles/:id"
               element={<ProfesiogramaSingle />}
             />
             <Route path="/blog/researches" element={<Researches />} />
@@ -169,9 +174,7 @@ function App() {
             </>
           )}
         </div>
-        <></>
       </div>
-
       <Footer />
     </div>
   );

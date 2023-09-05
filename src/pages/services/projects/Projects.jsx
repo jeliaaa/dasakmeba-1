@@ -30,10 +30,6 @@ const Projects = () => {
       <Breadcrumbs></Breadcrumbs>
       <div className='news_wrapper'>
         <ActiveTabs tabs={tabs} />
-        {/* 
-        <InfoCard date={'აგვ. 23, 2023'} heading={'პროექტები 1'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />
-        <InfoCard date={'ივლ. 12, 2023'} heading={'პროექტები 2'} thumbText={'გამოაგზავნოთ დოკუმენტაცია მოთხოვნილი ფორმით და ელექტრონული ფოსტის სათაურის ველში მიუთითოთ'} />
-        <InfoCard date={'მაი. 05, 2023'} heading={'პროექტები 3'} thumbText={'პროფესიული განათლებისთვის“ ფარგლებში და მიზნად ისახავს კიბერუსაფრთხოების დარგში კვალიფიციური'} /> */}
       </div>
     </Container>
 
