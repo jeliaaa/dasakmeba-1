@@ -64,13 +64,13 @@ const MenuOfNav = (props) => {
     const drawer = (
         <div className='nav-side'>
             <List>
-                <ListItem><Link to={'/about'}>{t('about')}</Link></ListItem>
-                <ListItem><Link to={'/services'}>{t('services')}</Link></ListItem>
-                <ListItem><Link to={'/blog'}>{t('blog')}</Link></ListItem>
-                <ListItem><Link to={'/media'}>{t('media')}</Link></ListItem>
-                <ListItem><Link to={'/vacancy'}>{t('vacancy')}</Link></ListItem>
-                <ListItem><Link to={'/qA'}>{t('qA')}</Link></ListItem>
-                <ListItem><Link to={'/pubInfo'}>{t('pubInfo')}</Link></ListItem>
+                <ListItem onClick={handleDrawerToggle}><Link to={'/about'}>{t('about')}</Link></ListItem>
+                <ListItem onClick={handleDrawerToggle}><Link to={'/services'}>{t('services')}</Link></ListItem>
+                <ListItem onClick={handleDrawerToggle}><Link to={'/blog'}>{t('blog')}</Link></ListItem>
+                <ListItem onClick={handleDrawerToggle}><Link to={'/media'}>{t('media')}</Link></ListItem>
+                <ListItem onClick={handleDrawerToggle}><Link to={'/vacancy'}>{t('vacancy')}</Link></ListItem>
+                <ListItem onClick={handleDrawerToggle}><Link to={'/qA'}>{t('qA')}</Link></ListItem>
+                <ListItem onClick={handleDrawerToggle}><Link to={'/pubInfo'}>{t('pubInfo')}</Link></ListItem>
             </List>
         </div>
     );

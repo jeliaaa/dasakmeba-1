@@ -3,6 +3,7 @@ import './register.scss'
 import { Container } from 'react-bootstrap'
 import { Checkbox, FormControl, FormControlLabel, FormHelperText, Input, InputLabel } from '@mui/material'
 import { Link } from 'react-router-dom'
+import Breadcrumbs from '../../ReusableComponents/breadcrumbs/Breadcrumbs'
 const Register = () => {
     const [agree, setAgree] = useState(false);
     const changeAgree = () => {
@@ -10,6 +11,7 @@ const Register = () => {
     }
     return (
         <Container className='register_wrapper' style={{ backgroundColor: 'white' }}>
+            <Breadcrumbs />
             <form style={{ width: '100%' }}>
                 <FormControl className='email' required>
                     <InputLabel>Email address</InputLabel>
