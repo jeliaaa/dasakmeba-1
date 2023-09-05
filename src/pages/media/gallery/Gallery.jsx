@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { Container, Modal } from 'react-bootstrap';
 import Breadcrumbs from '../../../ReusableComponents/breadcrumbs/Breadcrumbs';
 import ProfesiogramaCard from '../../../ReusableComponents/profesiograma/ProfesiogramaCard';
@@ -6,7 +6,7 @@ import './gallery.scss'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/scrollbar';
-import { Scrollbar, Keyboard } from 'swiper/modules';
+import { Scrollbar, Keyboard, Navigation } from 'swiper/modules';
 const Gallery = () => {
   function MyVerticallyCenteredModal(props) {
     return (
@@ -27,13 +27,22 @@ const Gallery = () => {
                 hide: true,
               }}
               keyboard={true}
-              modules={[Scrollbar, Keyboard]}
+              navigation={true}
+              modules={[Scrollbar, Keyboard, Navigation]}
               className="mySwiper"
               loop
             >
               <SwiperSlide><img src={`https://picsum.photos/id/1${props.id}/2000/1500`} alt='...' /></SwiperSlide>
               <SwiperSlide><img src={`https://picsum.photos/id/2${props.id}/2000/1500`} alt='...' /></SwiperSlide>
-              <SwiperSlide><img src={`https://picsum.photos/id/3${props.id}/2000/1500`} alt='...' /></SwiperSlide>
+              <SwiperSlide>
+                <iframe
+                  src="//vjs.zencdn.net/v/oceans.mp4"
+                  className='vidOfGallery'
+                  width={'2000'}
+                  allowFullScreen
+                  title="Embedded Video"
+                ></iframe>
+              </SwiperSlide>
               <SwiperSlide><img src={`https://picsum.photos/id/4${props.id}/2000/1500`} alt='...' /></SwiperSlide>
             </Swiper>
           </div>

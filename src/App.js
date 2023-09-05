@@ -16,7 +16,7 @@ import WorkerSingle from "./pages/about/structure/WorkerSingle";
 import Statistics from "./pages/about/statistics/Statistics";
 import Services from "./pages/services/Services";
 import OurServices from "./pages/services/ourServices/OurServices";
-import ForOrgs from "./pages/services/ourServices/forOrgs/forOrgs";
+import ForOrgs from "./pages/services/ourServices/forOrgs/ForOrgs";
 import ForUsers from "./pages/services/ourServices/forUsers/ForUsers";
 import Migration from "./pages/services/migration/Migration";
 import Grants from "./pages/services/grants/Grants";

@@ -13,7 +13,10 @@ const Articles = () => {
       <Breadcrumbs></Breadcrumbs>
       <div className='news_wrapper'>
         <ProfesiogramaCard a={true} img={'https://picsum.photos/300/200'} name={t('Marketing')} id={1} />
-
+        <ProfesiogramaCard a={true} img={'https://picsum.photos/300/200'} name={t('IT')} id={2} />
+        <ProfesiogramaCard a={true} img={'https://picsum.photos/300/200'} name={t('Journalist')} id={3} />
+        <ProfesiogramaCard a={true} img={'https://picsum.photos/300/200'} name={t('Journalist')} id={4} />
+        <ProfesiogramaCard a={true} img={'https://picsum.photos/300/200'} name={t('Journalist')} id={5} />
       </div>
     </Container>
   )
