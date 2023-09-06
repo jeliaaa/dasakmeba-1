@@ -34,26 +34,28 @@ const MenuOfNav = (props) => {
         navLink1, navLink2, navLink3, navLink4, navLink5, navLink6, navLink7
     ], []);
     useEffect(() => {
-        if (location.pathname === '/about') {
+        let path = location.pathname.split('/');
+        console.log(path);
+        if (path[1] === 'about') {
             navLink1.current.classList.add('active')
-        } else if (location.pathname === '/services') {
+        } else if (path[1] === 'services') {
             navLink2.current.classList.add('active')
-        } else if (location.pathname === '/blog') {
+        } else if (path[1] === 'blog') {
             navLink3.current.classList.add('active')
-        } else if (location.pathname === '/media') {
+        } else if (path[1] === 'media') {
             navLink4.current.classList.add('active')
-        } else if (location.pathname === '/vacancy') {
+        } else if (path[1] === 'vacancy') {
             navLink5.current.classList.add('active')
-        } else if (location.pathname === '/qA') {
+        } else if (path[1] === 'guide') {
             navLink6.current.classList.add('active')
-        } else if (location.pathname === '/pubInfo') {
+        } else if (path[1] === 'pubInfo') {
             navLink7.current.classList.add('active')
-        } else if (location.pathname === '/main') {
+        } else if (path[1] === 'main') {
             navLinks.map((navLink) => navLink.current.classList.remove('active'))
         } else {
             return;
         }
-    }, [navLinks,location])
+    }, [[],navLinks,location])
     const handleChange = (e) => {
         navLinks.forEach((navlink) => {
             navlink.current.classList.remove('active')
