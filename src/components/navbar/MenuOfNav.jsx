@@ -69,7 +69,7 @@ const MenuOfNav = (props) => {
                 <ListItem onClick={handleDrawerToggle}><Link to={'/blog'}>{t('blog')}</Link></ListItem>
                 <ListItem onClick={handleDrawerToggle}><Link to={'/media'}>{t('media')}</Link></ListItem>
                 <ListItem onClick={handleDrawerToggle}><Link to={'/vacancy'}>{t('vacancy')}</Link></ListItem>
-                <ListItem onClick={handleDrawerToggle}><Link to={'/qA'}>{t('qA')}</Link></ListItem>
+                <ListItem onClick={handleDrawerToggle}><Link to={'/guide'}>{t('guide')}</Link></ListItem>
                 <ListItem onClick={handleDrawerToggle}><Link to={'/pubInfo'}>{t('pubInfo')}</Link></ListItem>
             </List>
         </div>
@@ -180,7 +180,7 @@ const MenuOfNav = (props) => {
                     <Link ref={navLink5} onClick={handleChange} className='nav-link' to={'/vacancy'}>{t('vacancy')}</Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Link ref={navLink6} onClick={handleChange} className='nav-link' to={'/qA'}>{t('qA')}</Link>
+                    <Link ref={navLink6} onClick={handleChange} className='nav-link' to={'/guide'}>{t('guide')}</Link>
                 </Nav.Item>
                 <Nav.Item>
                     <Link ref={navLink7} onClick={handleChange} className='nav-link' to={'/pubInfo'}>{t('pubInfo')}</Link>

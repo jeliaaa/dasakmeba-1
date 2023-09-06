@@ -8,7 +8,7 @@ const VideoLessonsSingle = () => {
     return (
     <Container style={{backgroundColor:"#fff"}}>
         <Breadcrumbs />
-        <div>{id}</div>
+        <div>VideoLessons {id}</div>
     </Container>
   )
 }
