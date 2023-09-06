@@ -155,7 +155,7 @@ function App() {
               element={<ProfesiogramaTypeSingle />}
             />
             <Route
-              path="/blog/profesiograma/:id/singles/:id"
+              path="/blog/profesiograma/:id/:id"
               element={<ProfesiogramaSingle />}
             />
             <Route path="/blog/researches" element={<Researches />} />

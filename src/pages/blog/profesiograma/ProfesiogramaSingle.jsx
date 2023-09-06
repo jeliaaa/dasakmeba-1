@@ -1,10 +1,14 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
+import Breadcrumbs from '../../../ReusableComponents/breadcrumbs/Breadcrumbs';
 
 const ProfesiogramaSingle = () => {
-    const {id} = useParams();
+  const { id } = useParams();
   return (
-    <div>ProfesiogramaSingle {id}</div>
+    <div>
+      <Breadcrumbs />
+      ProfesiogramaSingle {id}
+    </div>
   )
 }
 

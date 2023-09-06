@@ -12,11 +12,11 @@ const Articles = () => {
     <Container style={{ backgroundColor: '#fff', padding: '20px 20px', borderRadius: '8px' }}>
       <Breadcrumbs></Breadcrumbs>
       <div className='news_wrapper'>
-        <ProfesiogramaCard a={true} img={'https://picsum.photos/300/200'} name={t('Marketing')} id={1} />
-        <ProfesiogramaCard a={true} img={'https://picsum.photos/300/200'} name={t('IT')} id={2} />
-        <ProfesiogramaCard a={true} img={'https://picsum.photos/300/200'} name={t('Journalist')} id={3} />
-        <ProfesiogramaCard a={true} img={'https://picsum.photos/300/200'} name={t('Journalist')} id={4} />
-        <ProfesiogramaCard a={true} img={'https://picsum.photos/300/200'} name={t('Journalist')} id={5} />
+        <ProfesiogramaCard a={true} img={'https://picsum.photos/300/200'} name={t('Marketing')} id={'type1'} />
+        <ProfesiogramaCard a={true} img={'https://picsum.photos/300/200'} name={t('IT')} id={'type2'} />
+        <ProfesiogramaCard a={true} img={'https://picsum.photos/300/200'} name={t('Journalist')} id={'type3'} />
+        <ProfesiogramaCard a={true} img={'https://picsum.photos/300/200'} name={t('Journalist')} id={'type4'} />
+        <ProfesiogramaCard a={true} img={'https://picsum.photos/300/200'} name={t('Journalist')} id={'type5'} />
       </div>
     </Container>
   )
