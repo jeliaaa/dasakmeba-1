@@ -32,8 +32,8 @@ import Media from "./pages/media/Media";
 import Gallery from "./pages/media/gallery/Gallery";
 import News from "./pages/media/news/News";
 import Vacancy from "./pages/Vacancy/Vacancy";
-import QnA from "./pages/QnA/QnA";
-import Guide from "./pages/QnA/Guide/Guide";
+import QnA from "./pages/QnA/Guide";
+import Guide from "./pages/QnA/Guide/QnA";
 import PublicInformation from "./pages/publicInfromation/PublicInformation";
 import Contact from "./pages/contactUs/Contact";
 import Registered from "./pages/about/partners/registered/Registrered";
@@ -54,6 +54,13 @@ import ResearchSingle from "./pages/blog/researches/ResearchSingle";
 import VacancySingle from "./pages/Vacancy/VacancySingle";
 import ProfesiogramaTypeSingle from "./pages/blog/profesiograma/ProfesiogramaTypeSingle";
 import ProfesiogramaSingle from "./pages/blog/profesiograma/ProfesiogramaSingle";
+import ProjectsSingle from "./pages/services/projects/ProjectsSingle";
+import GrantsSingle from "./pages/services/grants/GrantsSingle";
+import PartnerSingle from "./pages/about/partners/PartnerSingle";
+import MigrationSIngle from "./pages/services/migration/MigrationSIngle";
+import Article from "./pages/blog/articles/Article";
+import CalendarSingle from "./pages/blog/calendar/CalendarSingle";
+import ClassificationSingle from "./pages/blog/profClassification/ClassificationSingle";
 
 
 
@@ -98,6 +105,8 @@ function App() {
             <Route path="/about/baseInfo" element={<BaseInfo />} />
             <Route path="/about/brand" element={<Brand />} />
             <Route path="/about/partners" element={<Partners />} />
+            <Route path="/about/partners/registered/:id" element={<PartnerSingle />} />
+            <Route path="/about/partners/nonRegistered/:id" element={<PartnerSingle />} />
             <Route path="/about/partners/registered" element={<Registered />} />
             <Route
               path="/about/partners/nonRegistered"
@@ -110,8 +119,11 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/services/ourServices" element={<OurServices />} />
             <Route path="/services/grants" element={<Grants />} />
+            <Route path="/services/grants/:id" element={<GrantsSingle />} />
             <Route path="/services/projects" element={<Projects />} />
+            <Route path="/services/projects/:id" element={<ProjectsSingle />} />
             <Route path="/services/migration" element={<Migration />} />
+            <Route path="/services/migration/:id" element={<MigrationSIngle />} />
             <Route path="/services/ourServices/forOrgs" element={<ForOrgs />} />
             <Route
               path="/services/ourServices/forUsers"
@@ -121,10 +133,11 @@ function App() {
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/articles" element={<Articles />} />
             <Route path="/blog/articles/:id" element={<ArticlesSingle />} />
-
+            <Route path="/blog/articles/:id/:aritcleId" element={<Article />} />
             <Route path="/blog/calendar" element={<Calendar />} />
             {/* ----> calendar */}
             <Route path="/blog/calendar/jan" element={<Jan />} />
+            <Route path="/blog/calendar/:month/:id" element={<CalendarSingle />} />
             <Route path="/blog/calendar/feb" element={<Feb />} />
             <Route path="/blog/calendar/mar" element={<Mar />} />
             <Route path="/blog/calendar/apr" element={<Apr />} />
@@ -135,6 +148,7 @@ function App() {
 
 
             <Route path="/blog/classification" element={<Classification />} />
+            <Route path="/blog/classification/:id" element={<ClassificationSingle />} />
             <Route path="/blog/profesiograma" element={<Profesiograma />} />
             <Route
               path="/blog/profesiograma/:id"
@@ -157,8 +171,8 @@ function App() {
             <Route path="/vacancy" element={<Vacancy />} />
             <Route path="/vacancy/:id" element={<VacancySingle />} />
             {/* QnA */}
-            <Route path="/qA" element={<QnA />} />
-            <Route path="/qA/guide" element={<Guide />} />
+            <Route path="/guide" element={<Guide />} />
+            <Route path="/guide/qA" element={<QnA />} />
             {/* pubInfo */}
             <Route path="/pubInfo" element={<PublicInformation />} />
             {/* contact */}
