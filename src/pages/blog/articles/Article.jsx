@@ -1,8 +1,9 @@
 import React from 'react'
+import Breadcrumbs from '../../../ReusableComponents/breadcrumbs/Breadcrumbs'
 
 const Article = () => {
   return (
-    <div>Article</div>
+    <div><Breadcrumbs></Breadcrumbs></div>
   )
 }
 

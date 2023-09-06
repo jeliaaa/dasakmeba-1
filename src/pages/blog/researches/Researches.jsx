@@ -1,7 +1,6 @@
 import React from 'react'
 import { Container, Table } from 'react-bootstrap';
 import Breadcrumbs from '../../../ReusableComponents/breadcrumbs/Breadcrumbs';
-import InfoCard from '../../../ReusableComponents/infocard/InfoCard';
 import "../../media/news/News.scss"
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';

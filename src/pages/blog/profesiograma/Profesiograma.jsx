@@ -16,11 +16,11 @@ const Profesiograma = () => {
     <Container style={{ backgroundColor: '#fff', padding: '20px 20px', borderRadius: '8px' }}>
       <Breadcrumbs></Breadcrumbs>
       <div className='profesiograma_wrapper' style={{ display: 'flex', justifyContent: 'flex-start', gap: '20px 1%', flexWrap: 'wrap' }}>
-        <ProfesiogramaCard a={true} img={itPhoto} name={t('it')} id={1} />
-        <ProfesiogramaCard a={true} img={construction} name={t('physical')} id={2} />
-        <ProfesiogramaCard a={true} img={servicing} name={t('servicing')} id={3} />
-        <ProfesiogramaCard a={true} img={'https://picsum.photos/300/200'} name={t('lorem')} id={4} />
-        <ProfesiogramaCard a={true} img={'https://picsum.photos/300/200'} name={t('ipsum')} id={5} />
+        <ProfesiogramaCard a={true} img={itPhoto} name={t('it')} id={'type1'} />
+        <ProfesiogramaCard a={true} img={construction} name={t('physical')} id={'type2'} />
+        <ProfesiogramaCard a={true} img={servicing} name={t('servicing')} id={'type3'} />
+        <ProfesiogramaCard a={true} img={'https://picsum.photos/300/200'} name={t('lorem')} id={'type4'} />
+        <ProfesiogramaCard a={true} img={'https://picsum.photos/300/200'} name={t('ipsum')} id={'type5'} />
       </div>
     </Container>
 

@@ -1,7 +1,6 @@
 import React from 'react'
 import { Accordion, Container } from 'react-bootstrap';
 import Breadcrumbs from '../../../../ReusableComponents/breadcrumbs/Breadcrumbs';
-import InfoCard from '../../../../ReusableComponents/infocard/InfoCard';
 import "../../../media/news/News.scss"
 import { Typography } from '@mui/material';
 

@@ -1,8 +1,9 @@
-@import '../../variables';
 .owl{
     width: 100%;
     margin-top: 50px;
+    background-color: #fff;
     .swiper-slide{
+        background-color: #fff;
         display: flex;
         flex-direction: column;
         justify-content: center;

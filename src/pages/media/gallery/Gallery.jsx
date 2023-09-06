@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useState } from 'react'
 import { Container, Modal } from 'react-bootstrap';
 import Breadcrumbs from '../../../ReusableComponents/breadcrumbs/Breadcrumbs';
 import ProfesiogramaCard from '../../../ReusableComponents/profesiograma/ProfesiogramaCard';
