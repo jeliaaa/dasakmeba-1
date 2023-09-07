@@ -61,6 +61,7 @@ import MigrationSIngle from "./pages/services/migration/MigrationSIngle";
 import Article from "./pages/blog/articles/Article";
 import CalendarSingle from "./pages/blog/calendar/CalendarSingle";
 import ClassificationSingle from "./pages/blog/profClassification/ClassificationSingle";
+import VideoLesson from "./pages/blog/videoLessons/VideoLesson";
 
 
 
@@ -132,8 +133,8 @@ function App() {
             {/* blog */}
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/articles" element={<Articles />} />
-            <Route path="/blog/articles/:id" element={<ArticlesSingle />} />
-            <Route path="/blog/articles/:id/:aritcleId" element={<Article />} />
+            <Route path="/blog/articles/:type" element={<ArticlesSingle />} />
+            <Route path="/blog/articles/:type/:id" element={<Article />} />
             <Route path="/blog/calendar" element={<Calendar />} />
             {/* ----> calendar */}
             <Route path="/blog/calendar/jan" element={<Jan />} />
@@ -161,7 +162,8 @@ function App() {
             <Route path="/blog/researches" element={<Researches />} />
             <Route path="/blog/researches/:id" element={<ResearchSingle />} />
             <Route path="/blog/vid-lessons" element={<VideoLessons />} />
-            <Route path="/blog/vid-lessons/:id" element={<VideoLessonsSingle />} />
+            <Route path="/blog/vid-lessons/:type" element={<VideoLessonsSingle />} />
+            <Route path="/blog/vid-lessons/:type/:id" element={<VideoLesson />} />
             {/* media */}
             <Route path="/media" element={<Media />} />
             <Route path="/media/gallery" element={<Gallery />} />
