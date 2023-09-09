@@ -9,7 +9,7 @@ const VideoLessonsSingle = () => {
   return (
     <Container style={{ backgroundColor: "#fff", padding: 30 }}>
       <Breadcrumbs />
-        <div className="profesiogramaTypeSingle_wrapper">
+        <div className="cards_wrap">
           <PartnersCard link={'1'} name={'vid1'} img={'https://picsum.photos/200'} thumb={'https://picsum.photos/300/150'}  />
           <PartnersCard link={'2'} name={'vid2'} img={'https://picsum.photos/200'} thumb={'https://picsum.photos/300/150'}  />
           <PartnersCard link={'3'} name={'vid3'} img={'https://picsum.photos/200'} thumb={'https://picsum.photos/300/150'}  />
