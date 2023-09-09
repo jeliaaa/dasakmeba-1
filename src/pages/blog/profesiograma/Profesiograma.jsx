@@ -15,7 +15,7 @@ const Profesiograma = () => {
   return (
     <Container style={{ backgroundColor: '#fff', padding: '20px 20px', borderRadius: '8px' }}>
       <Breadcrumbs></Breadcrumbs>
-      <div className='profesiograma_wrapper' style={{ display: 'flex', justifyContent: 'flex-start', gap: '20px 1%', flexWrap: 'wrap' }}>
+      <div className='cards_wrap'>
         <ProfesiogramaCard a={true} img={itPhoto} name={t('it')} id={'type1'} />
         <ProfesiogramaCard a={true} img={construction} name={t('physical')} id={'type2'} />
         <ProfesiogramaCard a={true} img={servicing} name={t('servicing')} id={'type3'} />

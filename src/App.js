@@ -62,7 +62,7 @@ import Article from "./pages/blog/articles/Article";
 import CalendarSingle from "./pages/blog/calendar/CalendarSingle";
 import ClassificationSingle from "./pages/blog/profClassification/ClassificationSingle";
 import VideoLesson from "./pages/blog/videoLessons/VideoLesson";
-
+import './cardAlignment.scss'
 
 
 function App() {

@@ -2,6 +2,7 @@
 
 .info_card_wrapper {
     width: 30%;
+
     .info_card {
         width: 100%;
         aspect-ratio: 1/1.5;
@@ -53,5 +54,56 @@
         img {
             transform: scale(1.2);
         }
+    }
+}
+
+.card_wrap {
+    width: 30% !important;
+}
+
+@media screen and (max-width: 1250px) {
+    .info_card_wrapper {
+        width: 49% !important;
+    }
+
+    .tab_wrap {
+        .card_wrap {
+            width: 49% !important;
+
+            .info_card_wrapper {
+                width: 100% !important;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+
+    .info_card_wrapper {
+        width: 80% !important;
+    }
+
+    .tab_wrap {
+        .card_wrap {
+            width: 80% !important;
+
+            .info_card_wrapper {
+                width: 100% !important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .info_card_heading {
+        p {
+            display: none;
+        }
+    }
+
+    .info_card {
+        aspect-ratio: unset !important;
+        height: fit-content !important;
     }
 }

@@ -53,7 +53,7 @@ const Vacancy = () => {
                             Object.keys(vacancy.industries).map((industryKey) => (
                                 <div className='vacancy_filter' onClick={(e) => { handleCheckboxChange(vacancy.industries[industryKey]); e.currentTarget.classList.toggle('active') }}>
                                     <h6>{vacancy.industries[industryKey].name}</h6>
-                                    <div style={{ width: '100%', display: 'flex', justifyContent: 'space-between' }}>
+                                    <div style={{ width: '100%', display: 'flex', justifyContent: 'space-between', alignItems:'center' }}>
                                         <p>{vacancy.parent}</p>
                                         <p className='quantity'>{vacancy.industries[industryKey].quantity}</p>
 

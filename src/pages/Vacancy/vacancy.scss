@@ -7,17 +7,6 @@
 }
 
 
-@media screen and (max-width: 800px) {
-    .filter_upper {
-        width: 45% !important;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    .filter_upper {
-        font-size: 0.7rem;
-    }
-}
 
 .filter_bottom {
     display: flex;
@@ -46,6 +35,7 @@
             padding: 5px 10px;
             border: none;
             color: $primary-color-gray;
+            height: fit-content;
         }
 
         p {
@@ -124,21 +114,6 @@
     }
 }
 
-@media screen and (max-width:700px) {
-    .vacancy {
-        padding: 20px !important;
-
-        .two {
-            display: none;
-        }
-
-        .one {
-            .sal {
-                display: none;
-            }
-        }
-    }
-}
 
 .filter_upper {
     border-radius: 18px;
@@ -178,7 +153,7 @@
     background-color: #fff;
     border: 1px solid $primary-color-gray;
     width: 23%;
-    height: 100px;
+    height: 150px;
     text-align: center;
     padding: 40px;
     display: flex;
@@ -297,8 +272,29 @@
         }
     }
 }
-
+@media screen and (max-width: 1350px) {
+    .vacancy_filter{
+        div{
+            flex-direction: column;
+            p{
+                text-align: center;
+                width: 100% !important;
+            }
+        }
+    }
+}
 @media screen and (max-width: 1000px) {
+    .vacancy_filter{
+        width: 45% !important;
+    }
+    .filter_upper {
+        width: 45% !important;
+    }
+    .vacancy{
+        h2{
+            font-size: 1.2rem;
+        }
+    }
     .vacancy_single_wrapper {
         flex-direction: column;
         align-items: center;
@@ -364,6 +360,22 @@
 
     }
 }
+@media screen and (max-width:700px) {
+    .vacancy {
+        padding: 20px !important;
+
+        .two {
+            display: none;
+        }
+
+        .one {
+            .sal {
+                display: none;
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 630px) {
     .vacancy_single_left{
         width: 100% !important; 
@@ -375,6 +387,34 @@
             .container{
                 width: 100% !important;
             }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .filter_upper {
+        width: 70% !important;
+    }
+    .vacancy_filter {
+        width: 70% !important;
+    }
+    .vacancy{
+        img{
+            display: none;
+        }
+        .one{
+            width: 100%;
+        }
+    }
+}
+@media screen and (max-width: 400px) {
+    .filter_upper{
+        flex-direction: column;
+    }
+    
+    .vacancy_filter {
+        p{
+            font-size: 0.8rem;
         }
     }
 }

@@ -57,7 +57,7 @@ const Gallery = () => {
   return (
     <Container style={{ backgroundColor: '#fff', padding: '20px 20px', borderRadius: '8px' }}>
       <Breadcrumbs></Breadcrumbs>
-      <div className='gallery_wrapper'>
+      <div className='cards_wrap'>
         <ProfesiogramaCard click={() => setModalShow1(true)} a={false} img={'https://picsum.photos/id/1/200/100'} />
         <ProfesiogramaCard click={() => setModalShow2(true)} a={false} img={'https://picsum.photos/id/2/200/100'} />
         <ProfesiogramaCard click={() => setModalShow3(true)} a={false} img={'https://picsum.photos/id/3/200/100'} />

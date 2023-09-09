@@ -1,8 +1,4 @@
 @import '../../variables';
-.card_wrap{
-    width: 30% !important;
-}
-
 .active_tabs_wrapper {
     header {
         background-color: $primary-color-gray !important;
@@ -17,5 +13,13 @@
 
     span {
         display: none !important;
+    }
+}
+@media screen and (max-width: 800px) {
+    .tab_wrap{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center !important;
+        gap: 25px;
     }
 }
