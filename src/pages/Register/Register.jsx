@@ -35,7 +35,7 @@ const Register = () => {
                     <FormControlLabel
                         value="start"
                         control={<Checkbox />}
-                        label={<Link style={{ textDecoration: "underline" }} to={'/privacy'}>I agree to the terms of policy</Link>}
+                        label={<Link style={{ textDecoration: "underline" }} to={'privacy'}>I agree to the terms of policy</Link>}
                         checked={agree}
                         onClick={changeAgree}
                     />

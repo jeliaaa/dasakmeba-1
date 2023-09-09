@@ -63,6 +63,7 @@ import CalendarSingle from "./pages/blog/calendar/CalendarSingle";
 import ClassificationSingle from "./pages/blog/profClassification/ClassificationSingle";
 import VideoLesson from "./pages/blog/videoLessons/VideoLesson";
 import './cardAlignment.scss'
+import Privacy from "./pages/privacy/Privacy";
 
 
 function App() {
@@ -181,6 +182,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             {/* register */}
             <Route path="/register" element={<Register />} />
+            <Route path="/register/privacy" element={<Privacy />} />
             <Route path="/test" element={<Test />} />
           </Routes>
         </div>
