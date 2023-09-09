@@ -1,5 +1,6 @@
 @import '../../variables';
 .active_tabs_wrapper {
+    width: 100% ;
     header {
         background-color: $primary-color-gray !important;
         color: $primary-color-blue !important;
@@ -15,10 +16,14 @@
         display: none !important;
     }
 }
+.tab_wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 20px;
+}
 @media screen and (max-width: 800px) {
     .tab_wrap{
-        display: flex;
-        flex-wrap: wrap;
         justify-content: center !important;
         gap: 25px;
     }
