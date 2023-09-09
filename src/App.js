@@ -64,6 +64,7 @@ import ClassificationSingle from "./pages/blog/profClassification/Classification
 import VideoLesson from "./pages/blog/videoLessons/VideoLesson";
 import './cardAlignment.scss'
 import Privacy from "./pages/privacy/Privacy";
+import GallerySingle from "./pages/media/gallery/GallerySingle";
 
 
 function App() {
@@ -168,6 +169,7 @@ function App() {
             {/* media */}
             <Route path="/media" element={<Media />} />
             <Route path="/media/gallery" element={<Gallery />} />
+            <Route path="/media/gallery/:id" element={<GallerySingle />} />
             <Route path="/media/news" element={<News />} />
             <Route path="/media/news/:id" element={<NewsSingle />} />
             {/* vacancy */}
