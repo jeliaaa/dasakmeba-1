@@ -11,8 +11,8 @@ const Partners = () => {
     <Container style={{ backgroundColor: '#fff', padding: '20px 20px', borderRadius: '8px' }}>
       <Breadcrumbs></Breadcrumbs>
       <div className='services_wrapper' style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
-        <NavBox name={t('დამსაქმებელი ორგანიზაციები')} to={'/about/partners/Registered'} />
-        <NavBox name={t('პარტნიორი ორგანიზაციები')} to={'/about/partners/nonRegistered'} />
+        <NavBox name={t('დამსაქმებელი ორგანიზაციები')} to={'employers'} />
+        <NavBox name={t('პარტნიორი ორგანიზაციები')} to={'ourPartners'} />
       </div>
     </Container>
 

@@ -1,10 +1,9 @@
 import React from 'react'
-import { Accordion, Container } from 'react-bootstrap';
-import { QuestionMark } from '@mui/icons-material';
-import './guide.scss'
-import Breadcrumbs from '../../ReusableComponents/breadcrumbs/Breadcrumbs';
+import { Accordion, Container } from 'react-bootstrap'
+import Breadcrumbs from '../../../ReusableComponents/breadcrumbs/Breadcrumbs'
+import { QuestionMark } from '@mui/icons-material'
 
-const Guide = () => {
+const QnA = () => {
   return (
     <Container style={{ backgroundColor: '#fff', padding: '20px 20px', borderRadius: '8px' }}>
       <Breadcrumbs />
@@ -86,8 +85,7 @@ const Guide = () => {
         </Accordion>
       </div>
     </Container>
-
   )
 }
 
-export default Guide
+export default QnA
