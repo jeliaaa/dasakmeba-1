@@ -1,12 +1,10 @@
-import React, { useState } from 'react'
-import { Container, Modal } from 'react-bootstrap';
+import React from 'react'
+import { Container } from 'react-bootstrap';
 import Breadcrumbs from '../../../ReusableComponents/breadcrumbs/Breadcrumbs';
 import ProfesiogramaCard from '../../../ReusableComponents/profesiograma/ProfesiogramaCard';
 import './gallery.scss'
-import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/scrollbar';
-import { Scrollbar, Keyboard, Navigation } from 'swiper/modules';
 const Gallery = () => {
   // function MyVerticallyCenteredModal(props) {
   //   return (

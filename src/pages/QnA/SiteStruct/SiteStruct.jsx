@@ -3,9 +3,6 @@ import Breadcrumbs from '../../../ReusableComponents/breadcrumbs/Breadcrumbs';
 import { useTranslation } from 'react-i18next';
 import { Container } from 'react-bootstrap';
 
-
-
-
 const SiteStruct = () => {
     const { t } = useTranslation();
 
