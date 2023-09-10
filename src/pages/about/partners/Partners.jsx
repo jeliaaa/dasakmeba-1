@@ -13,7 +13,6 @@ const Partners = () => {
       <div className='services_wrapper' style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
         <NavBox name={t('დამსაქმებელი ორგანიზაციები')} to={'/about/partners/Registered'} />
         <NavBox name={t('პარტნიორი ორგანიზაციები')} to={'/about/partners/nonRegistered'} />
-
       </div>
     </Container>
 

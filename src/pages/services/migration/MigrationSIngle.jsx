@@ -6,7 +6,7 @@ import { QuestionMark } from '@mui/icons-material'
 
 const MigrationSIngle = () => {
   return (
-    <div className='cards_wrap'>
+    <Container style={{backgroundColor: '#fff', padding: 30}}>
       <Breadcrumbs />
       <Container className='p-5'>
         <Typography>
@@ -67,7 +67,7 @@ const MigrationSIngle = () => {
           </Accordion.Item>
         </Accordion>
       </div>
-    </div>
+    </Container>
   )
 }
 
