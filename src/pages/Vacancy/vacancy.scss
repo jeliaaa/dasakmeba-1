@@ -327,6 +327,11 @@
 
                 .accountant_info {
                     width: 90%;
+                    p{
+                        p{
+                            word-break: break-all;
+                        }
+                    }
                 }
             }
 
@@ -406,6 +411,9 @@
             width: 100%;
         }
     }
+    .interested_btn{
+        width: 80% !important;
+    }
 }
 @media screen and (max-width: 400px) {
     .filter_upper{
@@ -416,5 +424,11 @@
         p{
             font-size: 0.8rem;
         }
+    }
+    .vacancy_single_wrapper{
+        padding: 0 !important;
+    }
+    .vac_con{
+        padding: 0 !important;
     }
 }
