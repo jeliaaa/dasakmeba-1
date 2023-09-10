@@ -16,7 +16,7 @@ import WorkerSingle from "./pages/about/structure/WorkerSingle";
 import Statistics from "./pages/about/statistics/Statistics";
 import Services from "./pages/services/Services";
 import OurServices from "./pages/services/ourServices/OurServices";
-import ForOrgs from "./pages/services/ourServices/forOrgs/ForOrgs";
+import ForOrgs from "./pages/services/ourServices/forOrgs/forOrgs";
 import ForUsers from "./pages/services/ourServices/forUsers/ForUsers";
 import Migration from "./pages/services/migration/Migration";
 import Grants from "./pages/services/grants/Grants";
@@ -65,6 +65,9 @@ import VideoLesson from "./pages/blog/videoLessons/VideoLesson";
 import './cardAlignment.scss'
 import Privacy from "./pages/privacy/Privacy";
 import GallerySingle from "./pages/media/gallery/GallerySingle";
+import SiteStruct from "./pages/QnA/SiteStruct/SiteStruct";
+import UserManual from "./pages/QnA/UserManual/UserManual";
+
 
 
 function App() {
@@ -148,8 +151,6 @@ function App() {
             <Route path="/blog/calendar/june" element={<June />} />
             <Route path="/blog/calendar/july" element={<July />} />
 
-
-
             <Route path="/blog/classification" element={<Classification />} />
             <Route path="/blog/classification/:id" element={<ClassificationSingle />} />
             <Route path="/blog/profesiograma" element={<Profesiograma />} />
@@ -176,8 +177,8 @@ function App() {
             <Route path="/vacancy" element={<Vacancy />} />
             <Route path="/vacancy/:id" element={<VacancySingle />} />
             {/* QnA */}
-            <Route path="/guide" element={<Guide />} />
-            <Route path="/guide/qA" element={<QnA />} />
+            <Route path="/qA" element={<QnA />} />
+            <Route path="/qA/guide" element={<Guide />} />
             {/* pubInfo */}
             <Route path="/pubInfo" element={<PublicInformation />} />
             {/* contact */}
