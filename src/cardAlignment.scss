@@ -1,0 +1,15 @@
+.cards_wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    background-color: #fff;
+    padding: 20px;
+}
+
+@media screen and (max-width: 800px) {
+    .cards_wrap {
+        justify-content: center;
+        gap: 20px;
+    }
+}

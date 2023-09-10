@@ -1,11 +1,19 @@
-@import '../../variables';
 .owl{
+    height: 200px !important;
     width: 100%;
+    height: fit-content;
     margin-top: 50px;
+    background-color: #fff;
+    h3{
+        text-align: center;
+    }
     .swiper-slide{
+        height: 200px !important;
+        background-color: #fff;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        height: fit-content;
     }
 }

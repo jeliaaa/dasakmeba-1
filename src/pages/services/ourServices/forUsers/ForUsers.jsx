@@ -1,7 +1,6 @@
 import React from 'react'
 import { Accordion, Container } from 'react-bootstrap';
 import Breadcrumbs from '../../../../ReusableComponents/breadcrumbs/Breadcrumbs';
-import InfoCard from '../../../../ReusableComponents/infocard/InfoCard';
 import "../../../media/news/News.scss"
 import { Typography } from '@mui/material';
 
@@ -10,7 +9,7 @@ const ForUsers = () => {
     <Container style={{ backgroundColor: '#fff', padding: '20px 20px', borderRadius: '8px' }}>
       <Breadcrumbs></Breadcrumbs>
       <div className='news_wrapper' style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 50 }}>
-        <Container style={{ width: '80%' }}>
+        <Container style={{ width: '80%', padding: 30 }}>
           <Typography>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod cum pariatur magni et modi placeat tempora quas neque architecto nulla fugiat rerum quaerat, ratione a culpa ad voluptatibus magnam debitis?
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod cum pariatur magni et modi placeat tempora quas neque architecto nulla fugiat rerum quaerat, ratione a culpa ad voluptatibus magnam debitis?

@@ -46,3 +46,17 @@
         }
     }
 }
+@media screen and (max-width : 750px) {
+    .nav-box {
+        h3{
+            font-size: 1.1rem;
+        }
+    }
+}
+@media screen and (max-width : 400px) {
+    .nav-box {
+        h3{
+            font-size: 0.9rem;
+        }
+    }
+}

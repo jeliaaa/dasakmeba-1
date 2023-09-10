@@ -15,7 +15,7 @@ function TabPanel(props) {
             {...other}
         >
             {value === index && (
-                <Box sx={{ p: 3, display: 'flex', flexDirection: 'row', justifyContent: 'space-between', flexWrap: 'wrap'}}>
+                <Box sx={{ p: 3, display: 'flex', flexDirection: 'row', justifyContent: 'space-between', flexWrap: 'wrap' }}>
                     {children}
                 </Box>
             )}
@@ -61,9 +61,11 @@ const ActiveTabs = ({ tabs }) => {
                 </AppBar>
                 {tabs.map((tab, index) => (
                     <TabPanel key={index} value={value} index={tab.id - 1} dir={theme.direction}>
-                        {tab.children.map((child, index) => (
-                            <div className='card_wrap' key={index}>{child}</div>
-                        ))}
+                        <div className='tab_wrap'>
+                            {tab.children.map((child, index) => (
+                                <div className='card_wrap' key={index}>{child}</div>
+                            ))}
+                        </div>
                     </TabPanel>
                 ))}
             </Box>

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useState } from 'react'
 import { Container, Modal } from 'react-bootstrap';
 import Breadcrumbs from '../../../ReusableComponents/breadcrumbs/Breadcrumbs';
 import ProfesiogramaCard from '../../../ReusableComponents/profesiograma/ProfesiogramaCard';
@@ -8,61 +8,62 @@ import 'swiper/css';
 import 'swiper/css/scrollbar';
 import { Scrollbar, Keyboard, Navigation } from 'swiper/modules';
 const Gallery = () => {
-  function MyVerticallyCenteredModal(props) {
-    return (
-      <Modal
-        {...props}
-        size="xl"
-        aria-labelledby="contained-modal-title-vcenter"
-        centered
-        fullscreen
-      >
-        <Modal.Header closeButton>
+  // function MyVerticallyCenteredModal(props) {
+  //   return (
+  //     <Modal
+  //       {...props}
+  //       size="xl"
+  //       aria-labelledby="contained-modal-title-vcenter"
+  //       centered
+  //       fullscreen
+  //     >
+  //       <Modal.Header closeButton>
 
-        </Modal.Header>
-        <Modal.Body>
-          <div className='gallery_scroll'>
-            <Swiper
-              scrollbar={{
-                hide: true,
-              }}
-              keyboard={true}
-              navigation={true}
-              modules={[Scrollbar, Keyboard, Navigation]}
-              className="mySwiper"
-              loop
-            >
-              <SwiperSlide><img src={`https://picsum.photos/id/1${props.id}/2000/1500`} alt='...' /></SwiperSlide>
-              <SwiperSlide><img src={`https://picsum.photos/id/2${props.id}/2000/1500`} alt='...' /></SwiperSlide>
-              <SwiperSlide>
-                <iframe
-                  src="//vjs.zencdn.net/v/oceans.mp4"
-                  className='vidOfGallery'
-                  width={'2000'}
-                  allowFullScreen
-                  title="Embedded Video"
-                ></iframe>
-              </SwiperSlide>
-              <SwiperSlide><img src={`https://picsum.photos/id/4${props.id}/2000/1500`} alt='...' /></SwiperSlide>
-            </Swiper>
-          </div>
-        </Modal.Body>
-      </Modal>
-    );
-  }
+  //       </Modal.Header>
+  //       <Modal.Body>
+  //         <div className='gallery_scroll'>
+  //           <Swiper
+  //             scrollbar={{
+  //               hide: true,
+  //             }}
+  //             keyboard={true}
+  //             navigation={true}
+  //             modules={[Scrollbar, Keyboard, Navigation]}
+  //             className="mySwiper"
+  //             loop
+  //           >
+  //             <SwiperSlide><img src={`https://picsum.photos/id/1${props.id}/2000/1500`} alt='...' /></SwiperSlide>
+  //             <SwiperSlide><img src={`https://picsum.photos/id/2${props.id}/2000/1500`} alt='...' /></SwiperSlide>
+  //             <SwiperSlide>
+  //               <iframe
+  //                 src="//vjs.zencdn.net/v/oceans.mp4"
+  //                 className='vidOfGallery'
+  //                 width={'2000'}
+  //                 allowFullScreen
+  //                 title="Embedded Video"
+  //               ></iframe>
+  //             </SwiperSlide>
+  //             <SwiperSlide><img src={`https://picsum.photos/id/4${props.id}/2000/1500`} alt='...' /></SwiperSlide>
+  //           </Swiper>
+  //         </div>
+  //       </Modal.Body>
+  //     </Modal>
+  //   );
+  // }
 
-  const [modalShow1, setModalShow1] = useState(false);
-  const [modalShow2, setModalShow2] = useState(false);
-  const [modalShow3, setModalShow3] = useState(false);
+  // const [modalShow1, setModalShow1] = useState(false);
+  // const [modalShow2, setModalShow2] = useState(false);
+  // const [modalShow3, setModalShow3] = useState(false);
   return (
     <Container style={{ backgroundColor: '#fff', padding: '20px 20px', borderRadius: '8px' }}>
       <Breadcrumbs></Breadcrumbs>
-      <div className='gallery_wrapper'>
-        <ProfesiogramaCard click={() => setModalShow1(true)} a={false} img={'https://picsum.photos/id/1/200/100'} />
-        <ProfesiogramaCard click={() => setModalShow2(true)} a={false} img={'https://picsum.photos/id/2/200/100'} />
-        <ProfesiogramaCard click={() => setModalShow3(true)} a={false} img={'https://picsum.photos/id/3/200/100'} />
+      <div className='cards_wrap'>
+        <ProfesiogramaCard a={true} id={'1'} img={'https://picsum.photos/id/1/200/100'} />
+        <ProfesiogramaCard a={true} id={'2'} img={'https://picsum.photos/id/2/200/100'} />
+        <ProfesiogramaCard a={true} id={'3'} img={'https://picsum.photos/id/3/200/100'} />
+        <ProfesiogramaCard a={true} id={'4'} img={'https://picsum.photos/id/4/200/100'} />
       </div>
-      <MyVerticallyCenteredModal
+      {/* <MyVerticallyCenteredModal
         show={modalShow1}
         onHide={() => setModalShow1(false)}
         id={2}
@@ -76,7 +77,7 @@ const Gallery = () => {
         show={modalShow3}
         onHide={() => setModalShow3(false)}
         id={4}
-      />
+      /> */}
     </Container>
 
   )

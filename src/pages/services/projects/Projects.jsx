@@ -21,6 +21,7 @@ const Projects = () => {
           <InfoCard id={4} date={'აგვ. 23, 2023'} heading={'პროექტები 4'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
           <InfoCard id={5} date={'აგვ. 23, 2023'} heading={'პროექტები 5'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
           <InfoCard id={6} date={'აგვ. 23, 2023'} heading={'პროექტები 6'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
+          <InfoCard id={7} date={'აგვ. 23, 2023'} heading={'პროექტები 7'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />
         ]
     },
 
@@ -28,7 +29,7 @@ const Projects = () => {
   return (
     <Container style={{ backgroundColor: '#fff', padding: '20px 20px', borderRadius: '8px' }}>
       <Breadcrumbs></Breadcrumbs>
-      <div className='news_wrapper'>
+      <div className='cards_wrap'>
         <ActiveTabs tabs={tabs} />
       </div>
     </Container>

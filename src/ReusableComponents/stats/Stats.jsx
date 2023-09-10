@@ -17,6 +17,20 @@ const Stats = () => {
             slidesPerView={4}
             spaceBetween={100}
             className="owl"
+            breakpoints={{
+                1440:{
+                    slidesPerView: 4
+                },
+                1000:{
+                    slidesPerView: 3
+                },
+                500:{
+                    slidesPerView: 2
+                },
+                300:{
+                    slidesPerView: 1
+                }
+            }}
         >
             <SwiperSlide>
                 <h1>120</h1>
