@@ -16,7 +16,7 @@ import WorkerSingle from "./pages/about/structure/WorkerSingle";
 import Statistics from "./pages/about/statistics/Statistics";
 import Services from "./pages/services/Services";
 import OurServices from "./pages/services/ourServices/OurServices";
-import ForOrgs from "./pages/services/ourServices/forOrgs/forOrgs";
+import ForOrgs from "./pages/services/ourServices/forOrgs/ForOrgs";
 import ForUsers from "./pages/services/ourServices/forUsers/ForUsers";
 import Migration from "./pages/services/migration/Migration";
 import Grants from "./pages/services/grants/Grants";
@@ -177,8 +177,8 @@ function App() {
             <Route path="/vacancy" element={<Vacancy />} />
             <Route path="/vacancy/:id" element={<VacancySingle />} />
             {/* QnA */}
-            <Route path="/qA" element={<QnA />} />
-            <Route path="/qA/guide" element={<Guide />} />
+            <Route path="/guide" element={<Guide />} />
+            <Route path="/guide/qA" element={<QnA />} />
             {/* pubInfo */}
             <Route path="/pubInfo" element={<PublicInformation />} />
             {/* contact */}
