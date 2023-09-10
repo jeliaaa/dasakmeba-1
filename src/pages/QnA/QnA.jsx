@@ -10,7 +10,9 @@ const QnA = () => {
         <Container style={{ backgroundColor: '#fff', padding: '20px 20px', borderRadius: '8px' }}>
             <Breadcrumbs></Breadcrumbs>
             <div className='services_wrapper' style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
-                <NavBox name={t('guide')} to={'/qA/guide'} />
+                <NavBox name={t('SiteStruct')} to={'/QnA/SiteStruct'} />
+                <NavBox name={t('UserManual')} to={'/QnA/UserManual'} />
+                <NavBox name={t('QnA')} to={'/qA/guide'} />
             </div>
         </Container>
 

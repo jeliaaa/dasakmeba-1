@@ -16,7 +16,7 @@ import WorkerSingle from "./pages/about/structure/WorkerSingle";
 import Statistics from "./pages/about/statistics/Statistics";
 import Services from "./pages/services/Services";
 import OurServices from "./pages/services/ourServices/OurServices";
-import ForOrgs from "./pages/services/ourServices/forOrgs/ForOrgs";
+import ForOrgs from "./pages/services/ourServices/forOrgs/forOrgs";
 import ForUsers from "./pages/services/ourServices/forUsers/ForUsers";
 import Migration from "./pages/services/migration/Migration";
 import Grants from "./pages/services/grants/Grants";
@@ -54,6 +54,9 @@ import ResearchSingle from "./pages/blog/researches/ResearchSingle";
 import VacancySingle from "./pages/Vacancy/VacancySingle";
 import ProfesiogramaTypeSingle from "./pages/blog/profesiograma/ProfesiogramaTypeSingle";
 import ProfesiogramaSingle from "./pages/blog/profesiograma/ProfesiogramaSingle";
+import SiteStruct from "./pages/QnA/SiteStruct/SiteStruct";
+import UserManual from "./pages/QnA/UserManual/UserManual";
+
 
 
 
@@ -132,8 +135,6 @@ function App() {
             <Route path="/blog/calendar/june" element={<June />} />
             <Route path="/blog/calendar/july" element={<July />} />
 
-
-
             <Route path="/blog/classification" element={<Classification />} />
             <Route path="/blog/profesiograma" element={<Profesiograma />} />
             <Route
@@ -159,6 +160,10 @@ function App() {
             {/* QnA */}
             <Route path="/qA" element={<QnA />} />
             <Route path="/qA/guide" element={<Guide />} />
+            <Route path="/QnA/SiteStruct" element={<SiteStruct />} />
+            <Route path="/QnA/UserManual" element={<UserManual />} />
+
+
             {/* pubInfo */}
             <Route path="/pubInfo" element={<PublicInformation />} />
             {/* contact */}
