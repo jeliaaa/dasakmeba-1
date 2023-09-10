@@ -32,8 +32,6 @@ import Media from "./pages/media/Media";
 import Gallery from "./pages/media/gallery/Gallery";
 import News from "./pages/media/news/News";
 import Vacancy from "./pages/Vacancy/Vacancy";
-import QnA from "./pages/QnA/Guide";
-import Guide from "./pages/QnA/Guide/QnA";
 import PublicInformation from "./pages/publicInfromation/PublicInformation";
 import Contact from "./pages/contactUs/Contact";
 import Registered from "./pages/about/partners/registered/Registrered";
@@ -50,7 +48,6 @@ import Test from "./Test";
 import NewsSingle from "./pages/media/news/NewsSingle";
 import ArticlesSingle from "./pages/blog/articles/ArticlesSingle";
 import VideoLessonsSingle from "./pages/blog/videoLessons/VideoLessonsSingle";
-import ResearchSingle from "./pages/blog/researches/ResearchSingle";
 import VacancySingle from "./pages/Vacancy/VacancySingle";
 import ProfesiogramaTypeSingle from "./pages/blog/profesiograma/ProfesiogramaTypeSingle";
 import ProfesiogramaSingle from "./pages/blog/profesiograma/ProfesiogramaSingle";
@@ -65,8 +62,10 @@ import VideoLesson from "./pages/blog/videoLessons/VideoLesson";
 import './cardAlignment.scss'
 import Privacy from "./pages/privacy/Privacy";
 import GallerySingle from "./pages/media/gallery/GallerySingle";
-import SiteStruct from "./pages/QnA/SiteStruct/SiteStruct";
-import UserManual from "./pages/QnA/UserManual/UserManual";
+import Guide from "./pages/Guide/Guide";
+import QnA from "./pages/Guide/QnA/QnA";
+import Manual from "./pages/Guide/userManual/Manual";
+import StructureOfSite from "./pages/Guide/siteStruct/StructureOfSite";
 
 
 
@@ -111,11 +110,11 @@ function App() {
             <Route path="/about/baseInfo" element={<BaseInfo />} />
             <Route path="/about/brand" element={<Brand />} />
             <Route path="/about/partners" element={<Partners />} />
-            <Route path="/about/partners/registered/:id" element={<PartnerSingle />} />
-            <Route path="/about/partners/nonRegistered/:id" element={<PartnerSingle />} />
-            <Route path="/about/partners/registered" element={<Registered />} />
+            <Route path="/about/partners/employers/:id" element={<PartnerSingle />} />
+            <Route path="/about/partners/ourPartners/:id" element={<PartnerSingle />} />
+            <Route path="/about/partners/employers" element={<Registered />} />
             <Route
-              path="/about/partners/nonRegistered"
+              path="/about/partners/ourPartners"
               element={<NonRegistered />}
             />
             <Route path="/about/structure" element={<Structure />} />
@@ -163,7 +162,6 @@ function App() {
               element={<ProfesiogramaSingle />}
             />
             <Route path="/blog/researches" element={<Researches />} />
-            <Route path="/blog/researches/:id" element={<ResearchSingle />} />
             <Route path="/blog/vid-lessons" element={<VideoLessons />} />
             <Route path="/blog/vid-lessons/:type" element={<VideoLessonsSingle />} />
             <Route path="/blog/vid-lessons/:type/:id" element={<VideoLesson />} />
@@ -179,6 +177,9 @@ function App() {
             {/* QnA */}
             <Route path="/guide" element={<Guide />} />
             <Route path="/guide/qA" element={<QnA />} />
+            <Route path="/guide/userManual" element={<Manual />} />
+            <Route path="/guide/siteStructure" element={<StructureOfSite />} />
+
             {/* pubInfo */}
             <Route path="/pubInfo" element={<PublicInformation />} />
             {/* contact */}
