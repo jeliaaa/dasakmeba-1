@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/dasakmeba-1/static/css/main.845eb953.css",
-    "main.js": "/dasakmeba-1/static/js/main.9c7d15fd.js",
+    "main.css": "/dasakmeba-1/static/css/main.ee2e3c71.css",
+    "main.js": "/dasakmeba-1/static/js/main.7120d9bc.js",
     "static/js/787.2e958377.chunk.js": "/dasakmeba-1/static/js/787.2e958377.chunk.js",
     "static/media/Servicing.jpg": "/dasakmeba-1/static/media/Servicing.5c9b63afd956a891d12b.jpg",
     "static/media/IT.jpg": "/dasakmeba-1/static/media/IT.543727164ec6c930d3ff.jpg",
@@ -21,12 +21,12 @@
     "static/media/bpg_extrasquare_mtavruli_2009.ttf": "/dasakmeba-1/static/media/bpg_extrasquare_mtavruli_2009.e30b36e07745bf1d0bfa.ttf",
     "static/media/logo.png": "/dasakmeba-1/static/media/logo.4b1fb2dd5f9b98be7bd9.png",
     "index.html": "/dasakmeba-1/index.html",
-    "main.845eb953.css.map": "/dasakmeba-1/static/css/main.845eb953.css.map",
-    "main.9c7d15fd.js.map": "/dasakmeba-1/static/js/main.9c7d15fd.js.map",
+    "main.ee2e3c71.css.map": "/dasakmeba-1/static/css/main.ee2e3c71.css.map",
+    "main.7120d9bc.js.map": "/dasakmeba-1/static/js/main.7120d9bc.js.map",
     "787.2e958377.chunk.js.map": "/dasakmeba-1/static/js/787.2e958377.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.845eb953.css",
-    "static/js/main.9c7d15fd.js"
+    "static/css/main.ee2e3c71.css",
+    "static/js/main.7120d9bc.js"
   ]
 }
