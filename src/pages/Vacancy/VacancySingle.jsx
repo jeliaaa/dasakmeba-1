@@ -16,9 +16,9 @@ const VacancySingle = () => {
                             <h3>Company Company</h3>
                         </div>
                         <div className="accountant_info">
-                            <p><i className='fa-solid fa-phone' />555-54-78-36</p>
-                            <p><i className='fa-solid fa-envelope' />lorem.picsum@gmail.com</p>
-                            <p><i className='fa-solid fa-address-book' />John Doe</p>
+                            <p><i className='fa-solid fa-phone' /><p>555-54-78-36</p></p>
+                            <p><i className='fa-solid fa-envelope' /><p>lorem.picsum@gmail.com</p></p>
+                            <p><i className='fa-solid fa-address-book' /><p>John Doe</p></p>
                         </div>
                     </div>
                     <button onClick={() => alert('successfully submitted')} className='interested_btn'>Interested !</button>
