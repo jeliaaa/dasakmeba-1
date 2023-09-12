@@ -10,6 +10,7 @@ const ProfesiogramaSingle = () => {
       <Breadcrumbs />
       <div className='classification_single_wrapper'>
         <img src="https://picsum.photos/300/100" alt="" />
+        <h4>SATAURI</h4>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque aperiam quaerat mollitia voluptates similique ipsam voluptatum, laborum at omnis quia, veniam magni alias fugiat ut repellendus iste minima obcaecati tempore.
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ad iusto nesciunt sapiente eveniet ducimus, obcaecati repudiandae est delectus eius! Cum repellendus harum accusamus quidem ducimus delectus voluptatibus consequuntur assumenda!

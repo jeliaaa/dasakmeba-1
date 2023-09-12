@@ -72,7 +72,9 @@ const resources = {
       back: 'Back',
       //some other things
       employers: 'Employers',
-      ourPartners: 'Our Partners'
+      ourPartners: 'Our Partners',
+      employement: "Employement",
+      educational : "Educational"
     },
   },
   ge: {
@@ -150,7 +152,9 @@ const resources = {
       back: 'უკან',
       //some other things
       employers: 'დამსაქემებელი',
-      ourPartners: 'ჩვენი პარტნიორები'
+      ourPartners: 'ჩვენი პარტნიორები',
+      employement: "დასაქმება",
+      educational : "საგანმანათლებლო"
     },
   },
   // Add more languages and translations as needed
