@@ -34,15 +34,20 @@ const Vacancy = () => {
         <div className='vacancy_wrapper'>
             <Breadcrumbs />
             <div className='vacancy_container' style={{ alignSelf: 'center', display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap', width: '90%' }}>
-                <div className='filter_upper' onClick={(e) => { handleClick(1); e.target.classList.toggle('active') }}>{t('conference')}</div>
-                <div className='filter_upper' onClick={(e) => { handleClick(2); e.target.classList.toggle('active') }}>{t('employement')}</div>
-                <div className='filter_upper' onClick={(e) => { handleClick(3); e.target.classList.toggle('active') }}>{t('familyWork')}</div>
-                <div className='filter_upper' onClick={(e) => { handleClick(4); e.target.classList.toggle('active') }}>{t('internship')}</div>
-                <div className='filter_upper' onClick={(e) => { handleClick(5); e.target.classList.toggle('active') }}>{t('lectures')}</div>
-                <div className='filter_upper' onClick={(e) => { handleClick(6); e.target.classList.toggle('active') }}>{t('professional')}</div>
-                <div className='filter_upper' onClick={(e) => { handleClick(7); e.target.classList.toggle('active') }}>{t('trainings')}</div>
-                <div className='filter_upper' onClick={(e) => { handleClick(8); e.target.classList.toggle('active') }}>{t('volunteering')}</div>
-
+                <h3>{t('employement')}</h3>
+                <div>
+                    <div className='filter_upper' onClick={(e) => { handleClick(1); e.target.classList.toggle('active') }}>{t('conference')}</div>
+                    <div className='filter_upper' onClick={(e) => { handleClick(2); e.target.classList.toggle('active') }}>{t('employement')}</div>
+                    <div className='filter_upper' onClick={(e) => { handleClick(3); e.target.classList.toggle('active') }}>{t('familyWork')}</div>
+                    <div className='filter_upper' onClick={(e) => { handleClick(4); e.target.classList.toggle('active') }}>{t('internship')}</div>
+                </div>
+                <h3>{t('educational')}</h3>
+                <div>
+                    <div className='filter_upper' onClick={(e) => { handleClick(5); e.target.classList.toggle('active') }}>{t('lectures')}</div>
+                    <div className='filter_upper' onClick={(e) => { handleClick(6); e.target.classList.toggle('active') }}>{t('professional')}</div>
+                    <div className='filter_upper' onClick={(e) => { handleClick(7); e.target.classList.toggle('active') }}>{t('trainings')}</div>
+                    <div className='filter_upper' onClick={(e) => { handleClick(8); e.target.classList.toggle('active') }}>{t('volunteering')}</div>
+                </div>
 
             </div>
             <div className='filter_bottom'>
@@ -53,7 +58,7 @@ const Vacancy = () => {
                             Object.keys(vacancy.industries).map((industryKey) => (
                                 <div className='vacancy_filter' onClick={(e) => { handleCheckboxChange(vacancy.industries[industryKey]); e.currentTarget.classList.toggle('active') }}>
                                     <h6>{vacancy.industries[industryKey].name}</h6>
-                                    <div style={{ width: '100%', display: 'flex', justifyContent: 'space-between', alignItems:'center' }}>
+                                    <div style={{ width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                                         <p>{vacancy.parent}</p>
                                         <p className='quantity'>{vacancy.industries[industryKey].quantity}</p>
 
@@ -67,7 +72,7 @@ const Vacancy = () => {
 
                 </div>
             </div>
-            <div className='w-100 mt-5' style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <div className='w-100 mt-5' style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 25 }}>
                 {
                     selectedIndustries.map((vac) => {
                         return (
