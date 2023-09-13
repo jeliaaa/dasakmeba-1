@@ -53,21 +53,25 @@ const MainPage = () => {
               height: '350px',  // Set the desired height
               width: '95%',    // Maintain the width of the container
               objectFit: 'cover', // Crop the image to cover the container while maintaining aspect ratio
-            }}><img src={slide1} alt="" /></SwiperSlide>
+            }}>
+              <Link to={'/services/projects/1'}><img src={slide1} alt="" /></Link>
+            </SwiperSlide>
 
             <SwiperSlide style={{
               height: '350px',  // Set the desired height
               width: '95%',    // Maintain the width of the container
               objectFit: 'cover', // Crop the image to cover the container while maintaining aspect ratio
             }}>
-              <img src={slide2} alt="" /></SwiperSlide>
+              <Link to={'/services/projects/2'}><img src={slide2} alt="" /></Link>
+            </SwiperSlide>
 
             <SwiperSlide style={{
               height: '350px',  // Set the desired height
               width: '95%',    // Maintain the width of the container
               objectFit: 'cover', // Crop the image to cover the container while maintaining aspect ratio
             }}>
-              <img src={slide3} alt="" /></SwiperSlide>
+              <Link to={'/services/projects/3'}><img src={slide3} alt="" /></Link>
+            </SwiperSlide>
 
 
 
