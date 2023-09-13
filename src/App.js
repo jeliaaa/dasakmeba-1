@@ -66,6 +66,7 @@ import Guide from "./pages/Guide/Guide";
 import QnA from "./pages/Guide/QnA/QnA";
 import Manual from "./pages/Guide/userManual/Manual";
 import StructureOfSite from "./pages/Guide/siteStruct/StructureOfSite";
+import GrantsTypeSingle from "./pages/services/grants/GrantsTypeSingle";
 
 
 
@@ -124,7 +125,8 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/services/ourServices" element={<OurServices />} />
             <Route path="/services/grants" element={<Grants />} />
-            <Route path="/services/grants/:id" element={<GrantsSingle />} />
+            <Route path="/services/grants/:type" element={<GrantsTypeSingle />} />
+            <Route path="/services/grants/:type/:id" element={<GrantsSingle />} />
             <Route path="/services/projects" element={<Projects />} />
             <Route path="/services/projects/:id" element={<ProjectsSingle />} />
             <Route path="/services/migration" element={<Migration />} />

@@ -36,25 +36,13 @@ TabPanel.propTypes = {
 const TabMenu = () => {
     const theme = useTheme();
     const [value, setValue] = React.useState('');
-    const [valueOfMonth, setValueOfMonth] = React.useState('');
+    const [valueOfMonth, setValueOfMonth] = React.useState('201804');
 
 
     return (
         <div className='tabs_wrapper'>
             <Box sx={{ bgcolor: 'background.paper', width: '100%', display: 'flex', flexDirection:'column', justifyContent: 'center' }}>
                 <AppBar position="static" className='dropsMenu'>
-                    {/* <Tabs
-                        value={value}
-                        onChange={handleChange}
-                        indicatorColor="secondary"
-                        textColor="inherit"
-                        variant="fullWidth"
-                        aria-label="full width tabs example"
-                    >
-                        {tabs.map((tab) => (
-                            <Tab key={tab.id} label={tab.label} {...a11yProps(tab.id - 1)} />
-                        ))}
-                    </Tabs> */}
                     <Dropdown>
                         <Dropdown.Toggle>
                             {value ? value : 'წელი' }
@@ -113,11 +101,7 @@ const TabMenu = () => {
                         </Dropdown.Menu>
                     </Dropdown>
                 </AppBar>
-                {/* {tabs.map((tab) => (
-                    <TabPanel key={tab.id} value={value} index={tab.id - 1} dir={theme.direction}>
-                        {tab.text}
-                    </TabPanel>
-                ))} */}
+
                 <TabPanel value={valueOfMonth} index={'2016'} dir={theme.direction}>
                     2016
                 </TabPanel>

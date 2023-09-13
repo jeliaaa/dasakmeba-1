@@ -8,9 +8,14 @@ const ProfesiogramaSingle = () => {
   return (
     <Container style={{ backgroundColor: '#fff', padding: 30 }}>
       <Breadcrumbs />
-      <div className='classification_single_wrapper'>
-        <img src="https://picsum.photos/300/100" alt="" />
-        <h4>SATAURI</h4>
+      <div className='profesiograma_single_wrapper'>
+        <div className='upper'>
+          <img src="https://picsum.photos/400/300" alt="" />
+          <div>
+            <h4>დასახელება პროფესიოგრამისა</h4>
+            <p>პროფესიოგრამის აღწერა, პრეზენტაცია აცაოცკმლაკდვნლსნვლსნფლნსბნნლდნფსდლვ სლ სდლდვნს</p>
+          </div>
+        </div>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque aperiam quaerat mollitia voluptates similique ipsam voluptatum, laborum at omnis quia, veniam magni alias fugiat ut repellendus iste minima obcaecati tempore.
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ad iusto nesciunt sapiente eveniet ducimus, obcaecati repudiandae est delectus eius! Cum repellendus harum accusamus quidem ducimus delectus voluptatibus consequuntur assumenda!
