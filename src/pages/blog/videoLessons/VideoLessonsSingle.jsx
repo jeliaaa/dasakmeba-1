@@ -11,9 +11,9 @@ const VideoLessonsSingle = () => {
     <Container style={{ backgroundColor: "#fff", padding: 30 }}>
       <Breadcrumbs />
       <CardsWrap>
-        <PartnersCard link={'1'} name={'vid1'} img={'https://picsum.photos/200'} thumb={'https://picsum.photos/300/150'} />
-        <PartnersCard link={'2'} name={'vid2'} img={'https://picsum.photos/200'} thumb={'https://picsum.photos/300/150'} />
-        <PartnersCard link={'3'} name={'vid3'} img={'https://picsum.photos/200'} thumb={'https://picsum.photos/300/150'} />
+        <PartnersCard link={'1'} name={'vid1'} imgShow={false} thumb={'https://picsum.photos/300/150'} />
+        <PartnersCard link={'2'} name={'vid2'} imgShow={false} thumb={'https://picsum.photos/300/150'} />
+        <PartnersCard link={'3'} name={'vid3'} imgShow={false} thumb={'https://picsum.photos/300/150'} />
       </CardsWrap>
     </Container>
   )

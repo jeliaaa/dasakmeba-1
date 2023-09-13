@@ -1,0 +1,15 @@
+.video_lesson{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .upper_description{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .description{
+        padding: 15px;
+        width: 90%;
+    }
+}
