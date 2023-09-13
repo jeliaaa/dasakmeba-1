@@ -59,7 +59,7 @@ import Article from "./pages/blog/articles/Article";
 import CalendarSingle from "./pages/blog/calendar/CalendarSingle";
 import ClassificationSingle from "./pages/blog/profClassification/ClassificationSingle";
 import VideoLesson from "./pages/blog/videoLessons/VideoLesson";
-import './cardAlignment.scss'
+// import './cardAlignment.scss'
 import Privacy from "./pages/privacy/Privacy";
 import GallerySingle from "./pages/media/gallery/GallerySingle";
 import Guide from "./pages/Guide/Guide";

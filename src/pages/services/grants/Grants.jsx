@@ -4,6 +4,7 @@ import Breadcrumbs from '../../../ReusableComponents/breadcrumbs/Breadcrumbs';
 import InfoCard from '../../../ReusableComponents/infocard/InfoCard';
 import "../../media/news/News.scss"
 import ActiveTabs from '../../../ReusableComponents/activeTabs/ActiveTabs';
+import CardsWrap from '../../../ReusableComponents/CardsWrap/CardsWrap';
 const tabs = [
   {
     id: 1, label: 'აქტიური', children:
@@ -27,9 +28,9 @@ const Grants = () => {
   return (
     <Container style={{ backgroundColor: '#fff', padding: '20px 20px', borderRadius: '8px' }}>
       <Breadcrumbs></Breadcrumbs>
-      <div className='news_wrapper'>
+      <CardsWrap>
         <ActiveTabs tabs={tabs} />
-      </div>
+      </CardsWrap>
     </Container>
 
   )
