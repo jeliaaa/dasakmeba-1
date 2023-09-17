@@ -14,7 +14,7 @@ const VacancySingle = () => {
                     <div className="infos">
                         <div className='company_info'>
                             <h3>Company Company</h3>
-                            <img src='https://picsum.photos/200' alt='...' />
+                            <img src='https://picsum.photos/150' alt='...' />
                         </div>
 
                         {interest &&
@@ -39,7 +39,7 @@ const VacancySingle = () => {
                             <p>განაკვეთი : Shift</p>
                         </div>
                     </div>
-                    <h4 className='address'>I.javakshishvili str. N62</h4>
+                    <h4 className='address'>I.javakshishvili str. N62  /  Industry</h4>
                     <div className='description'>
                         <Container className='vac_con'>
                             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad sapiente odio ullam quia explicabo iure voluptatem id veritatis esse fugit ipsam quibusdam amet, delectus perferendis nemo neque vero ab saepe?

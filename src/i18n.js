@@ -60,6 +60,10 @@ const resources = {
       position : "Position",
       nameSurname: "Name, Surname",
       username: "Username",
+      //researches
+      name: 'Name',
+      view: 'View',
+      date : 'Date',
       //months
       jan:'January',
       feb:'February',
@@ -74,7 +78,8 @@ const resources = {
       employers: 'Employers',
       ourPartners: 'Our Partners',
       employement: "Employement",
-      educational : "Educational"
+      educational : "Educational",
+      
     },
   },
   ge: {
@@ -140,6 +145,10 @@ const resources = {
       position : "პოზიცია",
       nameSurname: "სახელი, გვარი",
       username: "მეტსახელი",
+      //researches
+      name: 'სახელი',
+      view: 'ნახვა',
+      date : 'თარიღი',
       //months
       jan:'იანვარი',
       feb:'თებერვალი',
