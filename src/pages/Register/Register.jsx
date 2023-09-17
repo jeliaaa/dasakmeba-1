@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './register.scss'
 import { Container } from 'react-bootstrap'
-import { Checkbox, FormControl, FormControlLabel, FormHelperText, Input, InputLabel } from '@mui/material'
+import { Checkbox, FormControl, FormControlLabel, FormHelperText, Input, InputLabel, NativeSelect } from '@mui/material'
 import { Link } from 'react-router-dom'
 import Breadcrumbs from '../../ReusableComponents/breadcrumbs/Breadcrumbs'
 const Register = () => {
@@ -13,33 +13,56 @@ const Register = () => {
         <Container className='register_wrapper' style={{ backgroundColor: 'white' }}>
             <Breadcrumbs />
             <form style={{ width: '100%' }}>
-                <FormControl className='email' required>
-                    <InputLabel>Email address</InputLabel>
-                    <Input aria-describedby="my-helper-text" />
-                    <FormHelperText id="my-helper-text">We'll never share your email.</FormHelperText>
+                <FormControl required>
+                    <InputLabel>პირადი ნომერი</InputLabel>
+                    <Input type='number'/>
                 </FormControl>
-                <FormControl className='fullname' required>
-                    <InputLabel>Full name</InputLabel>
-                    <Input type='text' aria-describedby="my-helper-text" />
+                <FormControl required>
+                    <InputLabel>დაბადების თარიღი</InputLabel>
+                    <Input style={{ marginTop: '40px' }} type='date' />
                 </FormControl>
-                <FormControl className='pass' required>
-                    <InputLabel>Enter Your Password:</InputLabel>
+                <FormControl fullWidth>
+                    <InputLabel variant="standard" htmlFor="uncontrolled-native">
+                        მუნიციპალიტეტი
+                    </InputLabel>
+                    <NativeSelect
+                        defaultValue={0}
+                        inputProps={{
+                            name: 'მუნიციპალიტეტი',
+                            id: 'uncontrolled-native',
+                        }}
+                    >
+                        <option value={0}></option>
+                        <option value={20}>Twenty</option>
+                        <option value={30}>Thirty</option>
+                        <option value={10}>Ten</option>
+                        <option value={20}>Twenty</option>
+                        <option value={30}>Thirty</option>
+                    </NativeSelect>
+                </FormControl>
+                <FormControl>
+                    <InputLabel>ელექტრონული ფოსტა</InputLabel>
+                    <Input type='email'/>
+                </FormControl>
+                <FormControl required>
+                    <InputLabel>მომხმარებლის სახელი</InputLabel>
+                    <Input />
+                </FormControl>
+                <FormControl required>
+                    <InputLabel>პაროლი</InputLabel>
                     <Input type='password' aria-describedby="my-helper-text" />
                 </FormControl>
-                <FormControl className='repeat' required>
-                    <InputLabel >Repeat Your Password</InputLabel>
-                    <Input type='password' aria-describedby="my-helper-text" />
-                </FormControl>
-
                 <div className='register_submit_wrapper'>
                     <FormControlLabel
                         value="start"
                         control={<Checkbox />}
-                        label={<Link style={{ textDecoration: "underline" }} to={'privacy'}>I agree to the terms of policy</Link>}
+                        label={<Link style={{ textDecoration: "underline" }} to={'privacy'}>ვეთანხმები პირობებს</Link>}
                         checked={agree}
                         onClick={changeAgree}
                     />
-                    <button type='submit' className='register' disabled={!agree}>Register</button>
+                    <button type='submit' className='register' disabled={!agree}>
+                        {agree ? <Link to={'verify'}>რეგისტრაცია</Link> : 'რეგისტრაცია'}
+                    </button>
                 </div>
             </form>
 
