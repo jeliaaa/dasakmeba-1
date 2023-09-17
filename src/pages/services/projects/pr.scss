@@ -1,5 +1,41 @@
+@import '../../../variables';
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.pr {
+  .cards_wrap {
+    width: 100%;
+
+    header {
+      background-color: $primary-color-gray !important;
+      color: $primary-color-blue !important;
+    }
+
+    .Mui-selected {
+      background-color: $primary-color-blue !important;
+      color: white !important;
+
+    }
+
+    span {
+      display: none !important;
+    }
+  }
+}
+
+.tab_wrap {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  .tab_wrap {
+    justify-content: center !important;
+    gap: 25px;
+  }
 }

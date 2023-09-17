@@ -51,10 +51,21 @@
 
     .detailed_info {
         display: flex;
-        justify-content: center;
-
-        .accordion {
-            width: 50%;
+        flex-direction: column;
+        
+        .accordions_group{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .accordion {
+                border: 1px solid gainsboro;
+                width: 49%;
+                height: fit-content !important;
+                li{
+                    word-break: break-all;
+                }
+            }
         }
     }
 }
@@ -104,7 +115,13 @@
         }
     }
 }
-
+@media screen and (max-width: 800px) {
+    .accordions_group{
+        .accordion{
+            width: 80%;
+        }
+    }
+}
 @media screen and (max-width: 500px) {
     .worker_card {
         .img_wrap {
@@ -114,6 +131,11 @@
             img {
                 width: 70% !important;
             }
+        }
+    }
+    .accordion{
+        button{
+            word-break: break-all;
         }
     }
 }

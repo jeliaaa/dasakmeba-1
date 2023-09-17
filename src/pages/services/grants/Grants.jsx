@@ -4,6 +4,9 @@ import Breadcrumbs from '../../../ReusableComponents/breadcrumbs/Breadcrumbs';
 import InfoCard from '../../../ReusableComponents/infocard/InfoCard';
 import "../../media/news/News.scss"
 import ActiveTabs from '../../../ReusableComponents/activeTabs/ActiveTabs';
+import CardsWrap from '../../../ReusableComponents/CardsWrap/CardsWrap';
+import { useTranslation } from 'react-i18next';
+import ProfesiogramaCard from '../../../ReusableComponents/profesiograma/ProfesiogramaCard';
 const tabs = [
   {
     id: 1, label: 'აქტიური', children:
@@ -24,12 +27,15 @@ const tabs = [
 
 ]
 const Grants = () => {
+  const {t} = useTranslation();
   return (
     <Container style={{ backgroundColor: '#fff', padding: '20px 20px', borderRadius: '8px' }}>
       <Breadcrumbs></Breadcrumbs>
-      <div className='news_wrapper'>
-        <ActiveTabs tabs={tabs} />
-      </div>
+      <CardsWrap>
+        <ProfesiogramaCard a={true} img={'https://picsum.photos/300/200'} name={t('სახელმწიფო')} id={'type1'} />
+        <ProfesiogramaCard a={true} img={'https://picsum.photos/300/200'} name={t('საგანმანათლებლო')} id={'type2'} />
+        <ProfesiogramaCard a={true} img={'https://picsum.photos/300/200'} name={t('რაღაც')} id={'type3'} />
+      </CardsWrap>
     </Container>
 
   )

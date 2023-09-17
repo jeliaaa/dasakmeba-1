@@ -8,13 +8,14 @@ import feb from "../../../assets/months/feb.png"
 import mar from "../../../assets/months/mar.png"
 import apr from "../../../assets/months/Apr.png"
 import may from "../../../assets/months/may.png"
+import CardsWrap from '../../../ReusableComponents/CardsWrap/CardsWrap';
 
 const Calendar = () => {
   const { t } = useTranslation();
   return (
     <Container style={{ backgroundColor: '#fff', padding: '20px 20px', borderRadius: '8px' }}>
       <Breadcrumbs />
-      <div className='cards_wrap' >
+      <CardsWrap>
         <PartnersCard name={t('იანვარი')} thumb={jan} img={jan} link={'jan'} />
         <PartnersCard name={t('თებერვალი')} thumb={feb} img={feb}  link={'feb'} />
         <PartnersCard name={t('მარტი')} thumb={mar} img={mar} link={'mar'} />
@@ -27,7 +28,7 @@ const Calendar = () => {
         <PartnersCard name={t('ოქტომბერი')} thumb={may} img={may} link={'May'} />
         <PartnersCard name={t('ნოემბერი')} thumb={may} img={may} link={'May'} />
         <PartnersCard name={t('დეკემბერი')} thumb={may} img={may} link={'May'} />
-      </div>
+      </CardsWrap>
     </Container>
   )
 }
