@@ -8,7 +8,8 @@ const Videos = () => {
       {vidLength.map(vid => (
         <Link key={vid} to={`/media/news/${vid+1}`}>
           <img src='https://picsum.photos/300/200' alt='...'></img>
-          <h3>News {vid +1}</h3>
+          <h3>სამუშაო შეხვედრაa შეხვედრაa შეხვედრაaშეხვედრაa {vid +1}</h3>
+          <p>25 მაისი</p>
         </Link>
       ))}
     </div>
