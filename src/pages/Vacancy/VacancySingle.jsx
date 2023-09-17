@@ -13,67 +13,45 @@ const VacancySingle = () => {
                     <div className="infos">
                         <div className='company_info'>
                             <img src='https://picsum.photos/200' alt='...' />
-                            <h3>Company Company</h3>
+                            <h3>კომპანიის სახელი</h3>
                         </div>
                         <div className="accountant_info">
                             <div><i className='fa-solid fa-phone' /><p>555-54-78-36</p></div>
                             <div><i className='fa-solid fa-envelope' /><p>lorem.picsum@gmail.com</p></div>
-                            <div><i className='fa-solid fa-address-book' /><p>John Doe</p></div>
+                            <div><i className='fa-solid fa-address-book' /><p>საელი გვარი</p></div>
                         </div>
                     </div>
-                    <button onClick={() => alert('successfully submitted')} className='interested_btn'>Interested !</button>
+                    <button onClick={() => alert('successfully submitted')} className='interested_btn'>დაინტერესება</button>
                 </div>
                 <div className='vacancy_single_right'>
                     <div className='vacancy'>
-                        <h2>Position</h2>
+                        <h2>პოზიცია</h2>
                         <section>
-                            <p className='sal'><i className='fa-solid fa-coins'></i>Salary</p>
-                            <p><i className='fa-solid fa-location'></i>Location</p>
+                            <p className='sal'><i className='fa-solid fa-coins'></i>ხელფასი</p>
+                            <p><i className='fa-solid fa-location'></i>ლოკაცია</p>
                         </section>
                         <div className="two">
-                            <span>N {id}</span>
-                            <p>განაკვეთი : Shift</p>
+                            <span>ID:{id}</span>
+                            <p></p>
+                            <p>განაკვეთი</p>
                         </div>
                     </div>
-                    <h4 className='address'>I.javakshishvili str. N62</h4>
+                    <h4 className='address'>ქ.ბათუმი ჯავახიშვილის 94</h4>
                     <div className='description'>
                         <Container className='vac_con'>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad sapiente odio ullam quia explicabo iure voluptatem id veritatis esse fugit ipsam quibusdam amet, delectus perferendis nemo neque vero ab saepe?
-                            <li>als</li>
-                            <li>als</li>
-                            <li>als</li>
-                            <li>als</li>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur odit reiciendis ad quia, aliquam quis quisquam unde debitis cumque quas commodi eius culpa quidem, voluptatum quos provident est neque veniam.s
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad sapiente odio ullam quia explicabo iure voluptatem id veritatis esse fugit ipsam quibusdam amet, delectus perferendis nemo neque vero ab saepe?
-                            <li>als</li>
-                            <li>als</li>
-                            <li>als</li>
-                            <li>als</li>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur odit reiciendis ad quia, aliquam quis quisquam unde debitis cumque quas commodi eius culpa quidem, voluptatum quos provident est neque veniam.s
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad sapiente odio ullam quia explicabo iure voluptatem id veritatis esse fugit ipsam quibusdam amet, delectus perferendis nemo neque vero ab saepe?
-                            <li>als</li>
-                            <li>als</li>
-                            <li>als</li>
-                            <li>als</li>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur odit reiciendis ad quia, aliquam quis quisquam unde debitis cumque quas commodi eius culpa quidem, voluptatum quos provident est neque veniam.s
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad sapiente odio ullam quia explicabo iure voluptatem id veritatis esse fugit ipsam quibusdam amet, delectus perferendis nemo neque vero ab saepe?
-                            <li>als</li>
-                            <li>als</li>
-                            <li>als</li>
-                            <li>als</li>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur odit reiciendis ad quia, aliquam quis quisquam unde debitis cumque quas commodi eius culpa quidem, voluptatum quos provident est neque veniam.s
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad sapiente odio ullam quia explicabo iure voluptatem id veritatis esse fugit ipsam quibusdam amet, delectus perferendis nemo neque vero ab saepe?
-                            <li>als</li>
-                            <li>als</li>
-                            <li>als</li>
-                            <li>als</li>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur odit reiciendis ad quia, aliquam quis quisquam unde debitis cumque quas commodi eius culpa quidem, voluptatum quos provident est neque veniam.s
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad sapiente odio ullam quia explicabo iure voluptatem id veritatis esse fugit ipsam quibusdam amet, delectus perferendis nemo neque vero ab saepe?
-                            <li>als</li>
-                            <li>als</li>
-                            <li>als</li>
-                            <li>als</li>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur odit reiciendis ad quia, aliquam quis quisquam unde debitis cumque quas commodi eius culpa quidem, voluptatum quos provident est neque veniam.s
+                            სატესტო ტექსტი სატესტო სატესტო ტექსტი სატესტო სატესტო ტექსტი სატესტო სატესტო ტექსტი სატესტო სატესტო ტექსტი სატესტო
+                            <li>მოთხოვნილება 1</li>
+                            <li>მოთხოვნილება 2</li>
+                            <li>მოთხოვნილება 3</li>
+                            რაღაც ტექსტი სიტყვების მიმდევრობა, სიტყვების მიმდევრობა. აუცილებელია რაღაც სიტყვები! ტექსტი სიტყვების მიმდევრობა, სიტყვების ტექსტი სიტყვების მიმდევრობა, სიტყვებისტექსტი სიტყვების მიმდევრობა, სიტყვების  
+                            <li>მოთხოვნილება 1</li>
+                            <li>მოთხოვნილება 2</li>
+                            <li>მოთხოვნილება 3</li>
+                            <li>მოთხოვნილება 2</li>
+                            <li>მოთხოვნილება 3</li>                
+                            რაღაც ტექსტი სიტყვების მიმდევრობა, სიტყვების მიმდევრობა. აუცილებელია რაღაც სიტყვები! ტექსტი სიტყვების მიმდევრობა, სიტყვების ტექსტი სიტყვების მიმდევრობა, სიტყვებისტექსტი სიტყვების მიმდევრობა, სიტყვების  
+                           
+                            რაღაც ტექსტი სიტყვების მიმდევრობა, სიტყვების მიმდევრობა. აუცილებელია რაღაც სიტყვები! ტექსტი სიტყვების მიმდევრობა, სიტყვების ტექსტი სიტყვების მიმდევრობა, სიტყვებისტექსტი სიტყვების მიმდევრობა, სიტყვების  
 
                         </Container>
                     </div>
