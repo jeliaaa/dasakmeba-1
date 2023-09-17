@@ -6,7 +6,7 @@ import { QuestionMark } from '@mui/icons-material'
 
 const MigrationSIngle = () => {
   return (
-    <Container style={{backgroundColor: '#fff', padding: 30}}>
+    <Container style={{backgroundColor: '#fff', padding: 20}}>
       <Breadcrumbs />
       <Container className='p-5'>
         <Typography>

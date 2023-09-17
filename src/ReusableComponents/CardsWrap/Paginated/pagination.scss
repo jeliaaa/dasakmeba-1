@@ -1,0 +1,23 @@
+.pagination {
+    .next:hover {
+        background-color: darkslategray;
+
+        i {
+            color: white;
+        }
+    }
+
+    button {
+        border: none;
+        padding: 5px 10px;
+        margin: 5px;
+    }
+
+    .active {
+        border: 1px solid black;
+    }
+
+    button:hover {
+        cursor: pointer;
+    }
+}

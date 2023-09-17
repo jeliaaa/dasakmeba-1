@@ -1,0 +1,9 @@
+.paginated_cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    .cards_wrap{
+        width: 100% !important;
+    }
+}

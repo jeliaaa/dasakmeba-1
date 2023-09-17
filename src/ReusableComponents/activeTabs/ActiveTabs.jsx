@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import React from 'react'
 import './activeTabs.scss'
 import CardsWrap from '../CardsWrap/CardsWrap';
+import NonPaginated from '../CardsWrap/NonPaginated';
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
 
