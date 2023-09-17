@@ -17,22 +17,22 @@ const GallerySingle = () => {
             description: 'Image 2',
         },
         {
-            original: 'https://picsum.photos/300',
-            thumbnail: 'https://picsum.photos/300',
+            original: 'https://picsum.photos/100',
+            thumbnail: 'https://picsum.photos/100',
             description: 'Image 3',
         },
         {
-            original: 'https://picsum.photos/300',
-            thumbnail: 'https://picsum.photos/300',
+            original: 'https://picsum.photos/100',
+            thumbnail: 'https://picsum.photos/100',
             description: 'Image 4',
         },
         {
             original: '//vjs.zencdn.net/v/oceans.mp4', // Video URL
             description: 'Video 1',
             controls: 'false',
-            thumbnail: 'https://picsum.photos/300',
+            thumbnail: 'https://picsum.photos/100',
             renderItem: ({ original }) => (
-                <ReactPlayer url={original} controls={true} width="100%" height="auto" />
+                <ReactPlayer url={original} controls={true} width="70%" height="auto" />
             ),
         },
         // Add more images as needed

@@ -2,6 +2,7 @@ import React from 'react'
 import './infocard.scss'
 import { Card } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import ParagraphComponent from '../ParagraphComponent'
 
 const InfoCard = ({ date, heading, thumbText,id, active }) => {
     return (
@@ -15,7 +16,7 @@ const InfoCard = ({ date, heading, thumbText,id, active }) => {
                     <p>{date}</p>
                     <h3>{heading}</h3>
                     <hr />
-                    <p>{thumbText}</p>
+                    <ParagraphComponent text={thumbText} />
                 </div>
             </Card>
         </Link>
