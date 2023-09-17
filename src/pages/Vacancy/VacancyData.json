@@ -13,7 +13,8 @@
                         "Position": "მიმტანი",
                         "Location": "ბათუმი",
                         "Salary": "1300",
-                        "Shift": "სრული"
+                        "Shift": "სრული",
+                        "industry": "ინდუსტრია1"
                         
                     },
                     "vacancy2": {
@@ -21,7 +22,8 @@
                         "Position": "მგელი",
                         "Location": "მახინჯაური",
                         "Salary": "13000",
-                        "Shift": "სრული"
+                        "Shift": "სრული",
+                        "industry": "ინდუსტრია2"
                     }
                 }
             },
@@ -34,7 +36,8 @@
                         "Position": "ბარმენი",
                         "Location": "მახინჯაური",
                         "Salary": "13000",
-                        "Shift": "ნახევარი"
+                        "Shift": "ნახევარი",
+                        "industry": "ინდუსტრია3"
                     }
                 }
             },
@@ -47,7 +50,8 @@
                         "Position": "მზარეული",
                         "Location": "მახინჯაური",
                         "Salary": "130000",
-                        "Shift": "ნახევარი"
+                        "Shift": "ნახევარი",
+                        "industry": "ინდუსტრია4"
                     }
                 }
             }
@@ -67,14 +71,16 @@
                         "Position": "მძღოლი",
                         "Location": "ქედა",
                         "Salary": "205",
-                        "Shift": "მთელი"
+                        "Shift": "მთელი",
+                        "industry": "ინდუსტრია5"
                     },
                     "vacancy2": {
                         "id": 6,
                         "Position": "დისტრიბუტორი",
                         "Location": "ხულო",
                         "Salary": "2050",
-                        "Shift": "მთელი"
+                        "Shift": "მთელი",
+                        "industry": "ინდუსტრია6"
                     }
                 }
             },
@@ -87,14 +93,16 @@
                         "Position": "გემწამყვანი",
                         "Location": "ბათუმი",
                         "Salary": "20500",
-                        "Shift": "მთელი"
+                        "Shift": "მთელი",
+                        "industry": "ინდუსტრია7"
                     },
                     "vacancy2": {
                         "id": 8,
                         "Position": "მექანიკოსი",
                         "Location": "ერგე",
                         "Salary": "150",
-                        "Shift": "მთელი"
+                        "Shift": "მთელი",
+                        "industry": "ინდუსტრია8"
                     }
                 }
             }
@@ -114,28 +122,33 @@
                         "Position": "მძღოლი",
                         "Location": "ქედა",
                         "Salary": "205",
-                        "Shift": "მთელი"
+                        "Shift": "მთელი",
+                        "industry": "ინდუსტრია9"
+                        
                     },
                     "vacancy2": {
                         "id": 10,
                         "Position": "ანიმატორი",
                         "Location": "ხულო",
                         "Salary": "2050",
-                        "Shift": "მთელი"
+                        "Shift": "მთელი",
+                        "industry": "ინდუსტრია10"
                     },
                     "vacancy3": {
                         "id": 11,
                         "Position": "კურიერი",
                         "Location": "ბათუმი",
                         "Salary": "2050",
-                        "Shift": "მთელი"
+                        "Shift": "მთელი",
+                        "industry": "ინდუსტრია11"
                     },
                     "vacancy4": {
                         "id": 12,
                         "Position": "დამლაგებელი",
                         "Location": "ბათუმი",
                         "Salary": "2050",
-                        "Shift": "მთელი"
+                        "Shift": "მთელი",
+                        "industry": "ინდუსტრია12"
                     }
                 }
             }
@@ -155,21 +168,24 @@
                         "Position": "მძღოლი",
                         "Location": "ქედა",
                         "Salary": "1111",
-                        "Shift": "მთელი"
+                        "Shift": "მთელი",
+                        "industry": "ინდუსტრია13"
                     },
                     "vacancy2": {
                         "id": 14,
                         "Position": "შეფი",
                         "Location": "ხულო",
                         "Salary": "2222",
-                        "Shift": "მთელი"
+                        "Shift": "მთელი",
+                        "industry": "ინდუსტრია14"
                     },
                     "vacancy3": {
                         "id": 15,
                         "Position": "კურიერი",
                         "Location": "ბათუმი",
                         "Salary": "2050",
-                        "Shift": "მთელი"
+                        "Shift": "მთელი",
+                        "industry": "ინდუსტრია15"
                     }
                 }
             }
@@ -189,35 +205,40 @@
                         "Position": "რესეფშენი",
                         "Location": "ბათუმი",
                         "Salary": "541",
-                        "Shift": "მთელი"
+                        "Shift": "მთელი",
+                        "industry": "ინდუსტრია16"
                     },
                     "vacancy2": {
                         "id": 17,
                         "Position": "მენეჯერი",
                         "Location": "ბათუმი",
                         "Salary": "2222",
-                        "Shift": "მთელი"
+                        "Shift": "მთელი",
+                        "industry": "ინდუსტრია17"
                     },
                     "vacancy3": {
                         "id": 18,
                         "Position": "მასწავლებელი",
                         "Location": "ბათუმი",
                         "Salary": "1250",
-                        "Shift": "მთელი"
+                        "Shift": "მთელი",
+                        "industry": "ინდუსტრია18"
                     },
                     "vacancy4": {
                         "id": 19,
                         "Position": "მანგალშიკი",
                         "Location": "ბათუმი",
                         "Salary": "850",
-                        "Shift": "მთელი"
+                        "Shift": "მთელი",
+                        "industry": "ინდუსტრია19"
                     },
                     "vacancy5": {
                         "id": 20,
                         "Position": "მცხობელი",
                         "Location": "ჩაქვი",
                         "Salary": "250",
-                        "Shift": "მთელი"
+                        "Shift": "მთელი",
+                        "industry": "ინდუსტრია20"
                     }
                 }
             }
