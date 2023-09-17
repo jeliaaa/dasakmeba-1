@@ -68,6 +68,7 @@ import Manual from "./pages/Guide/userManual/Manual";
 import StructureOfSite from "./pages/Guide/siteStruct/StructureOfSite";
 import GrantsTypeSingle from "./pages/services/grants/GrantsTypeSingle";
 import ResearchSingle from "./pages/blog/researches/ResearchSingle";
+import Verify from "./pages/Register/Verify";
 
 
 
@@ -190,6 +191,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             {/* register */}
             <Route path="/register" element={<Register />} />
+            <Route path="/register/verify" element={<Verify  />} />
             <Route path="/register/privacy" element={<Privacy />} />
             <Route path="/test" element={<Test />} />
           </Routes>
