@@ -7,6 +7,7 @@ import ActiveTabs from '../../../ReusableComponents/activeTabs/ActiveTabs';
 import { AppBar, Box, Tab, Tabs, useTheme } from '@mui/material';
 import PropTypes from 'prop-types';
 import CardsWrap from '../../../ReusableComponents/CardsWrap/CardsWrap';
+import NonPaginated from '../../../ReusableComponents/CardsWrap/NonPaginated';
 
 const tabs = [
   {
@@ -16,6 +17,10 @@ const tabs = [
         <InfoCard id={2} date={'აგვ. 23, 2023'} heading={'პროექტები 2'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
         <InfoCard id={3} date={'აგვ. 23, 2023'} heading={'პროექტები 3'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
         <InfoCard id={3} date={'აგვ. 23, 2023'} heading={'პროექტები 3'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
+        <InfoCard id={2} date={'აგვ. 23, 2023'} heading={'პროექტები 2'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
+        <InfoCard id={3} date={'აგვ. 23, 2023'} heading={'პროექტები 3'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
+        <InfoCard id={3} date={'აგვ. 23, 2023'} heading={'პროექტები 3'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
+        
       ]
   },
   {
@@ -62,9 +67,12 @@ const yearsFilterTabs = [
         <InfoCard id={31} date={'აგვ. 23, 2016'} heading={'პროექტები 1'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
         <InfoCard id={32} date={'აგვ. 23, 2016'} heading={'პროექტები 2'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
         <InfoCard id={33} date={'აგვ. 23, 2016'} heading={'პროექტები 3'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
-        <InfoCard id={34} date={'აგვ. 23, 2016'} heading={'პროექტები 3'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
-        <InfoCard id={35} date={'აგვ. 23, 2016'} heading={'პროექტები 3'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
-        <InfoCard id={36} date={'აგვ. 23, 2016'} heading={'პროექტები 3'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
+        <InfoCard id={34} date={'აგვ. 23, 2016'} heading={'პროექტები 4'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
+        <InfoCard id={35} date={'აგვ. 23, 2016'} heading={'პროექტები 5'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
+        <InfoCard id={36} date={'აგვ. 23, 2016'} heading={'პროექტები 6'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
+        <InfoCard id={34} date={'აგვ. 23, 2016'} heading={'პროექტები 7'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
+        <InfoCard id={35} date={'აგვ. 23, 2016'} heading={'პროექტები 8'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
+        <InfoCard id={36} date={'აგვ. 23, 2016'} heading={'პროექტები 9'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
       ]
   }
 ]
@@ -78,9 +86,10 @@ function TabPanel(props) {
       id={`full-width-tabpanel-${index}`}
       aria-labelledby={`full-width-tab-${index}`}
       {...other}
+      style={{width: '100%'}}
     >
       {value === index && (
-        <Box sx={{ rowGap: '20px', p: 3, display: 'flex', flexDirection: 'row', justifyContent: 'space-between', flexWrap: 'wrap' }}>
+        <Box sx={{ rowGap: '20px', p: 3, display: 'flex', flexDirection: 'row', justifyContent: 'space-between', flexWrap: 'wrap', width: '100%' }}>
           {children}
         </Box>
       )}
@@ -109,7 +118,7 @@ const Projects = () => {
   return (
     <Container className='pr' style={{ backgroundColor: '#fff', padding: '20px 20px', borderRadius: '8px' }}>
       <Breadcrumbs></Breadcrumbs>
-      <CardsWrap>
+      <NonPaginated>
         <Box sx={{ bgcolor: 'background.paper', width: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', rowGap: '20px' }}>
           <AppBar position="static">
             <Tabs
@@ -127,17 +136,17 @@ const Projects = () => {
           </AppBar>
           <div className='tab_wrap'>
             <TabPanel value={value} index={0} dir={theme.direction}>
-              {tabs[0].children.map((child, index) => (
+              <CardsWrap>{tabs[0].children.map((child, index) => (
                 <div className='card_wrap' key={index}>{child}</div>
-              ))}
+              ))}</CardsWrap>
             </TabPanel>
             <TabPanel value={value} index={1} dir={theme.direction}>
-                <ActiveTabs tabs={yearsFilterTabs} />
+              <ActiveTabs tabs={yearsFilterTabs} />
             </TabPanel>
           </div>
         </Box>
         {/* <ActiveTabs tabs={tabs} /> */}
-      </CardsWrap>
+      </NonPaginated>
     </Container>
 
   )
