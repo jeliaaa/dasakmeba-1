@@ -16,13 +16,13 @@ const VacancySingle = () => {
                             <img src='https://picsum.photos/200' alt='...' />
                             <h3>კომპანიის სახელი</h3>
                         </div>
-                        <div className="accountant_info">
+                        {interest && <div className="accountant_info">
                             <div><i className='fa-solid fa-phone' /><p>555-54-78-36</p></div>
                             <div><i className='fa-solid fa-envelope' /><p>lorem.picsum@gmail.com</p></div>
                             <div><i className='fa-solid fa-address-book' /><p>საელი გვარი</p></div>
-                        </div>
+                        </div>}
                     </div>
-                    <button onClick={() => alert('successfully submitted')} className='interested_btn'>დაინტერესება</button>
+                    <button onClick={() => {alert('successfully submitted'); setInterest(true)}} className='interested_btn'>დაინტერესება</button>
                 </div>
                 <div className='vacancy_single_right'>
                     <div className='vacancy'>
