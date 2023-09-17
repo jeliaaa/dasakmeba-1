@@ -86,7 +86,7 @@ const Vacancy = () => {
                                                 <section>
                                                     <p className='sal'><i className='fa-solid fa-coins'></i>{v.Salary}</p>
                                                     <p><i className='fa-solid fa-location'></i>{v.Location}</p>
-                                                    <p>{v.industry}</p>
+                                                    <p className='industryTxt'>{v.industry}</p>
                                                 </section>
                                             </div>
                                             <div className="two">

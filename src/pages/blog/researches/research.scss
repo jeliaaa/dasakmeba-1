@@ -1,0 +1,12 @@
+@import '../../../variables';
+
+.pdf_download {
+    background-color: $primary-color-blue;
+    padding: 5px 10px;
+    border: none;
+    margin-top: 40px;
+    a {
+        font-family: "Mtavruli";
+        color: $primary-color-gray;
+    }
+}

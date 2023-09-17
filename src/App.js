@@ -67,6 +67,7 @@ import QnA from "./pages/Guide/QnA/QnA";
 import Manual from "./pages/Guide/userManual/Manual";
 import StructureOfSite from "./pages/Guide/siteStruct/StructureOfSite";
 import GrantsTypeSingle from "./pages/services/grants/GrantsTypeSingle";
+import ResearchSingle from "./pages/blog/researches/ResearchSingle";
 
 
 
@@ -164,6 +165,7 @@ function App() {
               element={<ProfesiogramaSingle />}
             />
             <Route path="/blog/researches" element={<Researches />} />
+            <Route path="/blog/researches/:id" element={<ResearchSingle />} />
             <Route path="/blog/vid-lessons" element={<VideoLessons />} />
             <Route path="/blog/vid-lessons/:type" element={<VideoLessonsSingle />} />
             <Route path="/blog/vid-lessons/:type/:id" element={<VideoLesson />} />
