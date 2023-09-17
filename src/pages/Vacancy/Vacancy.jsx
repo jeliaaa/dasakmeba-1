@@ -80,12 +80,13 @@ const Vacancy = () => {
                                 return (
                                     <Link className='vacancy_wrapper_a' to={`${v.id}`}>
                                         <div key={index} className='vacancy'>
-                                            <img src='https://picsum.photos/100' alt='...' />
+                                            <img src={`https://picsum.photos/id/${v.id}/100`} alt='...' />
                                             <div className='one'>
                                                 <h2>{v.Position}</h2>
                                                 <section>
                                                     <p className='sal'><i className='fa-solid fa-coins'></i>{v.Salary}</p>
                                                     <p><i className='fa-solid fa-location'></i>{v.Location}</p>
+                                                    <p className='industryTxt'>{v.industry}</p>
                                                 </section>
                                             </div>
                                             <div className="two">

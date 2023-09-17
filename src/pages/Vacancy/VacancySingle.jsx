@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Container } from 'react-bootstrap';
 import { useParams } from 'react-router-dom'
 import Breadcrumbs from '../../ReusableComponents/breadcrumbs/Breadcrumbs';
 import './vacancy.scss'
 const VacancySingle = () => {
     const { id } = useParams();
+    const [interest, setInterest] = useState(false);
     return (
         <Container className='vac_con' style={{ backgroundColor: '#fff' }}>
             <Breadcrumbs />

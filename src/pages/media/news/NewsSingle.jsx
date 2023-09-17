@@ -3,6 +3,7 @@ import { Container } from 'react-bootstrap';
 import { useParams } from 'react-router-dom'
 import Breadcrumbs from '../../../ReusableComponents/breadcrumbs/Breadcrumbs';
 import './News.scss'
+import FacebookShareButton from '../../../ReusableComponents/fbShare/FacebookSharingButton';
 const NewsSingle = () => {
     const { id } = useParams();
     return (
@@ -13,7 +14,6 @@ const NewsSingle = () => {
                 <div>
                     <h2>satauri satauri satauri</h2>
                     <h6>21.05.2023</h6>
-                    <p>{id}</p>
                 </div>
             </div>
             <div>
@@ -23,8 +23,6 @@ const NewsSingle = () => {
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam eveniet, molestiae, et nemo ducimus sequi voluptate minima libero quod aut consectetur fugiat sed perspiciatis doloremque. Pariatur ut dolore et!
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam eveniet, molestiae, et nemo ducimus sequi voluptate minima libero quod aut consectetur fugiat sed perspiciatis doloremque. Pariatur ut dolore et!
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto totam eveniet, molestiae, et nemo ducimus sequi voluptate minima libero quod aut consectetur fugiat sed perspiciatis doloremque. Pariatur ut dolore et!
-                
-                
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae quo nobis, maiores, recusandae veniam sequi repellendus ipsam eos eius voluptatem id facilis ut laudantium iste adipisci enim architecto ea quaerat?
                 </p>
                 <p>
@@ -33,6 +31,7 @@ const NewsSingle = () => {
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione eaque officiis impedit architecto in ipsa laboriosam, animi vero necessitatibus, commodi beatae enim labore eveniet esse? Neque corrupti odio fuga aut.
                 </p>
             </div>
+            <FacebookShareButton url={'https://hrajara.gov.ge'} />
         </Container>
     )
 }
