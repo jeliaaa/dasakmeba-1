@@ -37,7 +37,7 @@ const VacancySingle = () => {
                             <p>განაკვეთი</p>
                         </div>
                     </div>
-                    <h4 className='address'>ქ.ბათუმი ჯავახიშვილის 94</h4>
+                    <h4 className='address'>ქ.ბათუმი ჯავახიშვილის 94  /  ინდუსტრია</h4>
                     <div className='description'>
                         <Container className='vac_con'>
                             სატესტო ტექსტი სატესტო სატესტო ტექსტი სატესტო სატესტო ტექსტი სატესტო სატესტო ტექსტი სატესტო სატესტო ტექსტი სატესტო
