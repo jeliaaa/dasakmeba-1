@@ -1,3 +1,4 @@
+@import '../../variables';
 .map_wrapper{
     width: 100%;
     height: fit-content;
@@ -6,22 +7,80 @@
     img{
         width: 100%;
     }
-    .building_img_wrapper{
-        background-image: url('https://picsum.photos/300');
-        background-position: center;
-        background-repeat: no-repeat;
-        width: 300px;
-        aspect-ratio: 1/1;
-        position: absolute;
-        top: 65%;
-        left: 5%;
+}
+
+.region_details{
+    display: flex;
+    background-color: $primary-color-blue;
+    color: $primary-color-gray;
+    width: 100%;
+    font-family: 'MTAVRULI';
+    padding: 20px;
+    .address{
         display: flex;
-        align-items: flex-end;
-        justify-content: flex-end;
+        align-items: center;
+        width: 32%;
+        flex-wrap: wrap;
+    }
+    .time{
+        width: 32%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 5px;
+        justify-content: center;
         p{
-            width: 40%;
-            font-size: 0.8rem;
-            color: white;
+            margin: 0 !important;
+        }
+    }
+    .contacts{
+        width: 32%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 5px;
+        p{
+            width: 90%;
+            margin: 0 !important;
+        }
+    }
+}   
+
+
+@media screen and (max-width: 800px) {
+    .tab-panel{
+        display: flex;
+        justify-content: center;
+        width: 95%  !important;
+        .MuiBox-root{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            gap: 20px;
+        }
+    }
+    .region_details{
+        flex-direction: column;
+        align-items: center !important;
+        width: 90% !important;
+        gap: 25px;
+        h5{
+            text-align: center;
+        }
+        div{
+            width: 90% !important;
+            justify-content: center;
+            p{
+                word-wrap: break-word;
+            }
+        }
+    }
+}
+@media screen and (max-width: 600px) {
+    .map_wrapper{
+        img{
+            height: 300px !important;
+            object-fit: cover;
         }
     }
 }

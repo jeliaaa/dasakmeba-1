@@ -37,10 +37,9 @@ const resources = {
       familyWork: 'Work in families',
       guide: "Guide",
       instructions: "Instructions",
-      qA: "Guide",
-      QnA:"Q&A",
-      SiteStruct:"Site Structure",
-      UserManual:"User Manual",
+      qA:"Q&A",
+      userManual: 'User Manual',
+      siteStructure: 'Stie Structure',
       contacts: "Contact us",
       pubInfo: "Public info",
       conference: 'Conference',
@@ -70,7 +69,12 @@ const resources = {
       jun:'June',
       jul:'July',
       //back
-      back: 'Back'
+      back: 'Back',
+      //some other things
+      employers: 'Employers',
+      ourPartners: 'Our Partners',
+      employement: "Employement",
+      educational : "Educational"
     },
   },
   ge: {
@@ -108,10 +112,9 @@ const resources = {
       familyWork: 'ოჯახში დასაქმება',
       guide: "გზამკვლევი",
       instructions: "ინსტრუქციები",
-      qA: "გზამკვლევი",
-      QnA:"კითხვა-პასუხი",
-      SiteStruct:"საიტის სტრუქტურა",
-      UserManual:"სარგებლობის ინსტრუქცია",
+      qA:"კითხვა-პასუხი",
+      siteStructure: 'საიტის სტრუქტურა',
+      userManual: 'სარგებლობის ინსტრუქცია',
       contacts: "კონტაქტები",
       pubInfo: "საჯარო ინფორმაცია",
       conference: 'კონფერენცია',
@@ -146,7 +149,12 @@ const resources = {
       jun:'ივნისი',
       jul:'ივლისი',
       //back
-      back: 'უკან'
+      back: 'უკან',
+      //some other things
+      employers: 'დამსაქემებელი',
+      ourPartners: 'ჩვენი პარტნიორები',
+      employement: "დასაქმება",
+      educational : "საგანმანათლებლო"
     },
   },
   // Add more languages and translations as needed

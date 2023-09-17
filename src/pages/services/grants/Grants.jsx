@@ -4,6 +4,9 @@ import Breadcrumbs from '../../../ReusableComponents/breadcrumbs/Breadcrumbs';
 import InfoCard from '../../../ReusableComponents/infocard/InfoCard';
 import "../../media/news/News.scss"
 import ActiveTabs from '../../../ReusableComponents/activeTabs/ActiveTabs';
+import CardsWrap from '../../../ReusableComponents/CardsWrap/CardsWrap';
+import { useTranslation } from 'react-i18next';
+import ProfesiogramaCard from '../../../ReusableComponents/profesiograma/ProfesiogramaCard';
 const tabs = [
   {
     id: 1, label: 'აქტიური', children:
@@ -24,15 +27,15 @@ const tabs = [
 
 ]
 const Grants = () => {
+  const {t} = useTranslation();
   return (
     <Container style={{ backgroundColor: '#fff', padding: '20px 20px', borderRadius: '8px' }}>
       <Breadcrumbs></Breadcrumbs>
-      <div className='news_wrapper'>
-        <ActiveTabs tabs={tabs} />
-        {/* <InfoCard date={'აგვ. 23, 2023'} heading={'საგრანტო პროგრამა 1'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />
-        <InfoCard date={'ივლ. 12, 2023'} heading={'საგრანტო პროგრამა 2'} thumbText={'გამოაგზავნოთ დოკუმენტაცია მოთხოვნილი ფორმით და ელექტრონული ფოსტის სათაურის ველში მიუთითოთ'} />
-        <InfoCard date={'მაი. 05, 2023'} heading={'საგრანტო პროგრამა 3'} thumbText={'პროფესიული განათლებისთვის“ ფარგლებში და მიზნად ისახავს კიბერუსაფრთხოების დარგში კვალიფიციური'} /> */}
-      </div>
+      <CardsWrap>
+        <ProfesiogramaCard a={true} img={'https://picsum.photos/300/200'} name={t('სახელმწიფო')} id={'type1'} />
+        <ProfesiogramaCard a={true} img={'https://picsum.photos/300/200'} name={t('საგანმანათლებლო')} id={'type2'} />
+        <ProfesiogramaCard a={true} img={'https://picsum.photos/300/200'} name={t('რაღაც')} id={'type3'} />
+      </CardsWrap>
     </Container>
 
   )

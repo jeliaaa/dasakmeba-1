@@ -21,8 +21,15 @@ const Breadcrumbs = () => {
                             <Link to={`/${crumbs[0]}/${crumb}`}>{t(crumb)}</Link>
                         ) : crumbs.length === 2 && index === 0 ? (
                             <Link to={`/${crumb}`}>{t(crumb)}</Link>
+                        ): crumbs.length === 4 && index === 0 ? (
+                            <Link to={`/${crumb}`}>{t(crumb)}</Link>
+                        ) : crumbs.length === 4 && index === 1 ? (
+                            <Link to={`/${crumbs[0]}/${crumb}`}>{t(crumb)}</Link>
+                        ) : crumbs.length === 4 && index === 2 ? (
+                            <Link to={`/${crumbs[0]}/${crumbs[1]}/${crumb}`}>{t(crumb)}</Link>
+                        ) : index >= 3 ? (
+                            ''
                         ) : t(crumb)}
-
                     </Breadcrumb.Item>
                 ))}
             </Breadcrumb>

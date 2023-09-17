@@ -4,23 +4,19 @@
     align-items: center;
     justify-content: center;
     gap: 20px;
-    img{
+    a{
         width: 30vw;
+    }
+    img{
+        width: 100%;
         border-radius: 15px;
     }
 }
-@media screen and (max-width: 700px) {
-    .videos{
-        img{
-            width: 80vw;
-        }
-        flex-direction: column;
-    }
-}
+
 @media screen and (max-width: 1080px) {
     .videos{
-        img{
-            width: 30vw;
+        a{
+            width: 60vw !important;
         }
         flex-direction: column;
     }

@@ -3,6 +3,7 @@ import { AppBar, Box, Tab, Tabs, useTheme } from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react'
 import './activeTabs.scss'
+import CardsWrap from '../CardsWrap/CardsWrap';
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
 
@@ -15,7 +16,7 @@ function TabPanel(props) {
             {...other}
         >
             {value === index && (
-                <Box sx={{ p: 3, display: 'flex', flexDirection: 'row', justifyContent: 'space-between', flexWrap: 'wrap'}}>
+                <Box sx={{ p: 3, display: 'flex', flexDirection: 'row', justifyContent: 'space-between', flexWrap: 'wrap' }}>
                     {children}
                 </Box>
             )}
@@ -61,9 +62,11 @@ const ActiveTabs = ({ tabs }) => {
                 </AppBar>
                 {tabs.map((tab, index) => (
                     <TabPanel key={index} value={value} index={tab.id - 1} dir={theme.direction}>
-                        {tab.children.map((child, index) => (
-                            <div className='card_wrap' key={index}>{child}</div>
-                        ))}
+                        <CardsWrap>
+                            {tab.children.map((child, index) => (
+                                <div className='card_wrap' key={index}>{child}</div>
+                            ))}
+                        </CardsWrap>
                     </TabPanel>
                 ))}
             </Box>
