@@ -33,6 +33,13 @@ import Gallery from "./pages/media/gallery/Gallery";
 import News from "./pages/media/news/News";
 import Vacancy from "./pages/Vacancy/Vacancy";
 import PublicInformation from "./pages/publicInfromation/PublicInformation";
+import Law from "./pages/publicInfromation/law/Law";
+import Kanonebi from "./pages/publicInfromation/law/Kanonebi";
+import Dadgenilebebi from "./pages/publicInfromation/law/Dadgenilebebi";
+import Konvenciebi from "./pages/publicInfromation/law/Kovenciebi";
+import Brdzanebebi from "./pages/publicInfromation/law/Brdzanebebi";
+import Information from "./pages/publicInfromation/information/Information";
+
 import Contact from "./pages/contactUs/Contact";
 import Registered from "./pages/about/partners/registered/Registrered";
 import NonRegistered from "./pages/about/partners/nonRegistered/NonRegistered";
@@ -187,6 +194,14 @@ function App() {
 
             {/* pubInfo */}
             <Route path="/pubInfo" element={<PublicInformation />} />
+            <Route path="/publicInformation/law" element={<Law/>} />
+            <Route path="/publicInformation/law/Kanonebi" element={<Kanonebi/>} />
+            <Route path="/publicInformation/law/Dadgenilebebi" element={<Dadgenilebebi/>} />
+            <Route path="/publicInformation/law/Konvenciebi" element={<Konvenciebi/>} />
+            <Route path="/publicInformation/law/Brdzanebebi" element={<Brdzanebebi/>} />
+
+            <Route path="/publicInformation/information" element={<Information/>} />
+
             {/* contact */}
             <Route path="/contact" element={<Contact />} />
             {/* register */}
