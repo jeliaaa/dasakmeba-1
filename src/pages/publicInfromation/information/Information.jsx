@@ -11,10 +11,10 @@ const Information = () => {
         <Container style={{ backgroundColor: '#fff', padding: '20px 20px', borderRadius: '8px' }}>
             <Breadcrumbs></Breadcrumbs>
             <div className='services_wrapper' style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
-                <NavBox name={t('აქ')} to={'/publicInformation/law/kanonebi'} />
-                <NavBox name={t('არის')} to={'/publicInformation/law/konvenciebi'} />
-                <NavBox name={t('მოსაფიქრებელი')} to={'/publicInformation/law/dadgenilebebi'} />
-                <NavBox name={t('რა უნდა ვქნათ')} to={'/publicInformation/law/brdzanebebi'} />
+                <NavBox name={t('აქ')} to={'/pubInfo/law/kanonebi'} />
+                <NavBox name={t('არის')} to={'/pubInfo/law/konvenciebi'} />
+                <NavBox name={t('მოსაფიქრებელი')} to={'/pubInfo/law/dadgenilebebi'} />
+                <NavBox name={t('რა უნდა ვქნათ')} to={'/pubInfo/law/brdzanebebi'} />
 
 
             </div>

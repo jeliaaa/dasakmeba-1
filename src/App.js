@@ -194,11 +194,11 @@ function App() {
 
             {/* pubInfo */}
             <Route path="/pubInfo" element={<PublicInformation />} />
-            <Route path="/publicInformation/law" element={<Law/>} />
-            <Route path="/publicInformation/law/Kanonebi" element={<Kanonebi/>} />
-            <Route path="/publicInformation/law/Dadgenilebebi" element={<Dadgenilebebi/>} />
-            <Route path="/publicInformation/law/Konvenciebi" element={<Konvenciebi/>} />
-            <Route path="/publicInformation/law/Brdzanebebi" element={<Brdzanebebi/>} />
+            <Route path="/pubInfo/law" element={<Law/>} />
+            <Route path="/pubInfo/law/Kanonebi" element={<Kanonebi/>} />
+            <Route path="/pubInfo/law/Dadgenilebebi" element={<Dadgenilebebi/>} />
+            <Route path="/pubInfo/law/Konvenciebi" element={<Konvenciebi/>} />
+            <Route path="/pubInfo/law/Brdzanebebi" element={<Brdzanebebi/>} />
 
             <Route path="/publicInformation/information" element={<Information/>} />
 

@@ -53,36 +53,47 @@ input::-webkit-inner-spin-button {
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 20px;
-    h1{
+
+    h1 {
         width: 100%;
         text-align: center;
         font-family: 'Mtavruli';
     }
-    .code{
+
+    .code {
         width: 100%;
-        display: flex;justify-content: space-between;
+        display: flex;
+        justify-content: space-between;
+        h3{
+            text-align: center;
+        }
     }
-    .time{
+
+    .time {
         width: 100%;
         display: flex;
         justify-content: center;
         gap: 20px;
-        button{
+
+        button {
             background-color: $primary-color-blue;
             color: $primary-color-gray;
             border-radius: 8px;
             border: none;
         }
     }
-    .next{
+
+    .next {
         margin-top: 20%;
         width: 100%;
         text-align: end;
-        button{
+
+        button {
             background-color: $primary-color-blue;
             border-radius: 8px;
             border: none;
-            a{
+
+            a {
                 color: $primary-color-gray;
                 padding: 5px 10px;
             }
@@ -91,9 +102,34 @@ input::-webkit-inner-spin-button {
 
 }
 
+.register_wrapper {
+    .wrapper {
+        width: 100%;
+        background-color: $primary-color-gray !important;
+        color: $primary-color-blue !important;
+        font-size: large !important;
+        .Mui-selected {
+            background-color: $primary-color-blue !important;
+            color: white !important;
+        }
+
+        span {
+            display: none !important;
+        }
+    }
+}
+
 @media screen and (max-width: 600px) {
     .register_submit_wrapper {
         flex-direction: column;
         gap: 20px;
+    }
+    .code{
+        flex-direction: column;
+        align-items: center;
+    }
+    .time{
+        flex-direction: column;
+        align-items: center;
     }
 }

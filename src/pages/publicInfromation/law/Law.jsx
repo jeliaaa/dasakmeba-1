@@ -10,10 +10,10 @@ const Law = () => {
         <Container style={{ backgroundColor: '#fff', padding: '20px 20px', borderRadius: '8px' }}>
             <Breadcrumbs></Breadcrumbs>
             <div className='services_wrapper' style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
-                <NavBox name={t('kanonebi')} to={'/publicInformation/law/kanonebi'} />
-                <NavBox name={t('konvenciebi')} to={'/publicInformation/law/konvenciebi'} />
-                <NavBox name={t('dadgenilebebi')} to={'/publicInformation/law/dadgenilebebi'} />
-                <NavBox name={t('brdzanebebi')} to={'/publicInformation/law/brdzanebebi'} />
+                <NavBox name={t('kanonebi')} to={'/pubInfo/law/kanonebi'} />
+                <NavBox name={t('konvenciebi')} to={'/pubInfo/law/konvenciebi'} />
+                <NavBox name={t('dadgenilebebi')} to={'/pubInfo/law/dadgenilebebi'} />
+                <NavBox name={t('brdzanebebi')} to={'/pubInfo/law/brdzanebebi'} />
 
 
             </div>

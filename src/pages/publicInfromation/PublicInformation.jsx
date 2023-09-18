@@ -10,8 +10,8 @@ const PublicInformation = () => {
     <Container style={{ backgroundColor: '#fff', padding: '20px 20px', borderRadius: '8px' }}>
       <Breadcrumbs />
       <div className='services_wrapper' style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
-        <NavBox name={t('Law')} to={'/publicInformation/law'} />
-        <NavBox name={t('Information')} to={'/publicInformation/information'} />
+        <NavBox name={t('Law')} to={'/pubInfo/law'} />
+        <NavBox name={t('Information')} to={'/pubInfo/information'} />
       </div>
     </Container>
 
