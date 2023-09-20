@@ -87,6 +87,10 @@ const resources = {
       ourPartners: 'Our Partners',
       employement: "Employement",
       educational : "Educational",
+      //user
+      user: 'User',
+      profile: 'Profile',
+      cabinet: 'Cabinet'
       
     },
   },
@@ -179,7 +183,11 @@ const resources = {
       employers: 'დამსაქემებელი',
       ourPartners: 'ჩვენი პარტნიორები',
       employement: "დასაქმება",
-      educational : "საგანმანათლებლო"
+      educational : "საგანმანათლებლო",
+      //user
+      user: 'მომხმარებელი',
+      profile: 'პროფილი',
+      cabinet: 'კაბინეტი'
     },
   },
   // Add more languages and translations as needed

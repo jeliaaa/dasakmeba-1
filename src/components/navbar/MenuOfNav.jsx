@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react'
+import React, { useContext, useEffect, useMemo, useRef, useState } from 'react'
 import Navbar from 'react-bootstrap/Navbar';
 import Brand from '../../assets/logo.png'
 import { Link, useLocation } from 'react-router-dom';
@@ -9,7 +9,10 @@ import IconButton from '@mui/material/IconButton';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import { Button, Col, Form, Modal, Nav, Row } from 'react-bootstrap';
+import { AuthenticationContext } from '../../AuthenticationContext';
 const MenuOfNav = (props) => {
+    const { signIn, isAuthenticated } = useContext(AuthenticationContext);
+    console.log(isAuthenticated);
     const { t, i18n } = useTranslation();
     const [val, setVal] = useState('');
     const [show, setShow] = useState(false);
@@ -23,6 +26,19 @@ const MenuOfNav = (props) => {
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
     };
+    const check = (e) => {
+        if (userName.current.value === 'aleko' && userPass.current.value === '123123') {
+            signIn({
+                userame: userName.current.value,
+                userPassword: userPass.current.value
+            });
+            setShow(false);
+        } else {
+            alert('არ არის სწორი');
+        }
+    } 
+    const userName = useRef(null);
+    const userPass = useRef(null);
     const navLink1 = useRef(null);
     const navLink2 = useRef(null);
     const navLink3 = useRef(null);
@@ -55,7 +71,7 @@ const MenuOfNav = (props) => {
         } else {
             return;
         }
-    }, [navLinks,location])
+    }, [navLinks, location])
     const handleChange = (e) => {
         navLinks.forEach((navlink) => {
             navlink.current.classList.remove('active')
@@ -121,9 +137,14 @@ const MenuOfNav = (props) => {
                 </div>
                 <section>
                     <div className="sign_up" style={{ display: "flex" }}>
-                        <Button variant="primary" onClick={() => setShow(true)}>
-                            Sign in
-                        </Button>
+                        {!isAuthenticated ?
+                            <Button variant="primary" onClick={() => setShow(true)}>
+                                შესვლა
+                            </Button> :
+                            <Button variant="primary" className='profile'>
+                                <Link className='wrap' to={'/user'}><p>პროფილი</p></Link>
+                            </Button>
+                        }
                         <Modal
                             show={show}
                             onHide={() => setShow(false)}
@@ -133,27 +154,30 @@ const MenuOfNav = (props) => {
                         >
                             <Modal.Header closeButton className='text-center'>
                                 <Modal.Title id="example-custom-modal-styling-title" className='text-center'>
-                                    Sign in
+                                    შედით სისტემაში
                                 </Modal.Title>
                             </Modal.Header>
                             <Modal.Body>
                                 <Form className='text-center'>
                                     <Form.Group as={Row} className="mb-3" controlId="formPlaintextEmail">
-                                        <Form.Label column sm="2">
-                                            Email
+                                        <Form.Label column sm="3">
+                                            მომხმარებელი
                                         </Form.Label>
-                                        <Col sm="10">
-                                            <Form.Control type='email' placeholder='Email' />
+                                        <Col sm="12">
+                                            <Form.Control ref={userName} />
                                         </Col>
                                     </Form.Group>
                                     <Form.Group as={Row} className="mb-3" controlId="formPlaintextPassword">
-                                        <Form.Label column sm="2">
-                                            Password
+                                        <Form.Label column sm="3">
+                                            პაროლი
                                         </Form.Label>
-                                        <Col sm="10">
-                                            <Form.Control type="password" placeholder="Password" />
+                                        <Col sm="12">
+                                            <Form.Control ref={userPass} type="password" placeholder="Password" />
                                         </Col>
                                     </Form.Group>
+                                    <div className="w-100 mb-3" style={{ display: 'flex' }}>
+                                        <Button onClick={check}>შესვლა</Button>
+                                    </div>
                                     <Link to={'/register'} className='text-center' onClick={() => setShow(false)}>Register</Link>
                                 </Form>
                             </Modal.Body>

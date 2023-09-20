@@ -159,7 +159,8 @@
         input {
             display: none;
         }
-        .search-icon{
+
+        .search-icon {
             display: none;
         }
 
@@ -167,10 +168,24 @@
             display: block;
         }
     }
+
     @media screen and (max-width: 500px) {
-        .brand{
+        .brand {
             padding: 0 !important;
         }
+
+        .profile {
+            a {
+                p {
+                    display: none;
+                }
+            }
+
+            .wrap::after {
+                display: block !important;
+            }
+        }
+
     }
 
 
@@ -196,6 +211,22 @@
                 border: none;
             }
         }
+
+        .profile {
+            a {
+                color: $primary-color-gray;
+                p{
+                    margin: 0 !important;    
+                }
+            }
+
+            .wrap::after {
+                content: '\f007';
+                font-family: "FontAwesome";
+                display: none;
+            }
+        }
+
     }
 }
 
@@ -218,7 +249,7 @@
     z-index: 1300;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1250px) {
     .nav {
         display: none;
     }

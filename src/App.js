@@ -76,6 +76,9 @@ import StructureOfSite from "./pages/Guide/siteStruct/StructureOfSite";
 import GrantsTypeSingle from "./pages/services/grants/GrantsTypeSingle";
 import ResearchSingle from "./pages/blog/researches/ResearchSingle";
 import Verify from "./pages/Register/Verify";
+import User from "./pages/user/User";
+import Cabinet from "./pages/user/cabinet/Cabinet";
+import Profile from "./pages/user/profile/Profile";
 
 
 
@@ -209,6 +212,10 @@ function App() {
             <Route path="/register/verify" element={<Verify  />} />
             <Route path="/register/privacy" element={<Privacy />} />
             <Route path="/test" element={<Test />} />
+            {/*userr*/}
+            <Route path="/user" element={<User />} />
+            <Route path="/user/cabinet" element={<Cabinet />} />
+            <Route path="/user/profile" element={<Profile />} />
           </Routes>
         </div>
         <div className="videos_wrapper">

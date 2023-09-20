@@ -1,0 +1,92 @@
+@import '../../../variables';
+
+.label_of_sections {
+    font-family: 'Mtavruli';
+    color: $primary-color-blue;
+}
+
+.profile {
+    background-color: #fff;
+    padding: 20px;
+
+    .MuiSelect-select,
+    input {
+        padding: 10px !important;
+    }
+
+    .profile_wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+
+        button {
+            background-color: $primary-color-blue;
+            color: $primary-color-gray;
+            padding: 5px 10px;
+            border: none;
+            align-self: flex-start;
+        }
+    }
+
+    .information {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        row-gap: 20px;
+
+        .info {
+            width: 45%;
+            margin: 0 !important;
+
+            input {
+                width: 100%;
+            }
+
+            div {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.sections {
+    width: 90%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    .profile_photo {
+        display: flex;
+        gap: 20px;
+
+        img {
+            aspect-ratio: 1/1;
+            width: 35%;
+        }
+    }
+}
+
+@media screen and (max-width:600px) {
+    .sections {
+        .profile_photo {
+            flex-direction: column;
+            align-items: center;
+            img{
+                width: 80% !important;
+            }
+        }
+
+        .information {
+            justify-content: center;
+
+            .info {
+                width: 100% !important;
+            }
+        }
+    }
+}
