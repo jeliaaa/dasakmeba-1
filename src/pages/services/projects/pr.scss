@@ -25,6 +25,16 @@ input::-webkit-inner-spin-button {
       display: none !important;
     }
   }
+
+  .MuiTabs-flexContainer {
+    overflow-x: auto;
+    display: flex;
+    width: 100% !important;
+
+    .MuiTab-root {
+      width: 20% !important;
+    }
+  }
 }
 
 .tab_wrap {

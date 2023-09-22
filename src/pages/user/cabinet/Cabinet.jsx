@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next'
 const Cabinet = () => {
   const {t} = useTranslation();
   return (
-    <Container style={{ backgroundColor: '#fff' }}>
+    <Container style={{ backgroundColor: '#fff', padding: 20 }}>
       <Breadcrumbs />
       <div className='services_wrapper' style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
         <NavBox name={t('inbox')} to={'inbox'} />
