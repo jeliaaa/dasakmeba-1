@@ -80,8 +80,8 @@ import User from "./pages/user/User";
 import Cabinet from "./pages/user/cabinet/Cabinet";
 import Profile from "./pages/user/profile/Profile";
 import Inbox from "./pages/user/cabinet/inbox/Inbox";
-
-
+import Vacancies from "./pages/user/cabinet/vacancies/Vacancies";
+import MyVacancies from "./pages/user/cabinet/MyVacancies";
 
 function App() {
   const { i18n } = useTranslation();
@@ -124,8 +124,14 @@ function App() {
             <Route path="/about/baseInfo" element={<BaseInfo />} />
             <Route path="/about/brand" element={<Brand />} />
             <Route path="/about/partners" element={<Partners />} />
-            <Route path="/about/partners/employers/:id" element={<PartnerSingle />} />
-            <Route path="/about/partners/ourPartners/:id" element={<PartnerSingle />} />
+            <Route
+              path="/about/partners/employers/:id"
+              element={<PartnerSingle />}
+            />
+            <Route
+              path="/about/partners/ourPartners/:id"
+              element={<PartnerSingle />}
+            />
             <Route path="/about/partners/employers" element={<Registered />} />
             <Route
               path="/about/partners/ourPartners"
@@ -138,13 +144,25 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/services/ourServices" element={<OurServices />} />
             <Route path="/services/grants" element={<Grants />} />
-            <Route path="/services/grants/:type" element={<GrantsTypeSingle />} />
-            <Route path="/services/grants/:type/:id" element={<GrantsSingle />} />
+            <Route
+              path="/services/grants/:type"
+              element={<GrantsTypeSingle />}
+            />
+            <Route
+              path="/services/grants/:type/:id"
+              element={<GrantsSingle />}
+            />
             <Route path="/services/projects" element={<Projects />} />
             <Route path="/services/projects/:id" element={<ProjectsSingle />} />
-            <Route path="/services/projects/shes/:id" element={<ResearchSingle />} />
+            <Route
+              path="/services/projects/shes/:id"
+              element={<ResearchSingle />}
+            />
             <Route path="/services/migration" element={<Migration />} />
-            <Route path="/services/migration/:id" element={<MigrationSIngle />} />
+            <Route
+              path="/services/migration/:id"
+              element={<MigrationSIngle />}
+            />
             <Route path="/services/ourServices/forOrgs" element={<ForOrgs />} />
             <Route
               path="/services/ourServices/forUsers"
@@ -158,7 +176,10 @@ function App() {
             <Route path="/blog/calendar" element={<Calendar />} />
             {/* ----> calendar */}
             <Route path="/blog/calendar/jan" element={<Jan />} />
-            <Route path="/blog/calendar/:month/:id" element={<CalendarSingle />} />
+            <Route
+              path="/blog/calendar/:month/:id"
+              element={<CalendarSingle />}
+            />
             <Route path="/blog/calendar/feb" element={<Feb />} />
             <Route path="/blog/calendar/mar" element={<Mar />} />
             <Route path="/blog/calendar/apr" element={<Apr />} />
@@ -167,7 +188,10 @@ function App() {
             <Route path="/blog/calendar/july" element={<July />} />
 
             <Route path="/blog/classification" element={<Classification />} />
-            <Route path="/blog/classification/:id" element={<ClassificationSingle />} />
+            <Route
+              path="/blog/classification/:id"
+              element={<ClassificationSingle />}
+            />
             <Route path="/blog/profesiograma" element={<Profesiograma />} />
             <Route
               path="/blog/profesiograma/:id"
@@ -180,8 +204,14 @@ function App() {
             <Route path="/blog/researches" element={<Researches />} />
             <Route path="/blog/researches/:id" element={<ResearchSingle />} />
             <Route path="/blog/vid-lessons" element={<VideoLessons />} />
-            <Route path="/blog/vid-lessons/:type" element={<VideoLessonsSingle />} />
-            <Route path="/blog/vid-lessons/:type/:id" element={<VideoLesson />} />
+            <Route
+              path="/blog/vid-lessons/:type"
+              element={<VideoLessonsSingle />}
+            />
+            <Route
+              path="/blog/vid-lessons/:type/:id"
+              element={<VideoLesson />}
+            />
             {/* media */}
             <Route path="/media" element={<Media />} />
             <Route path="/media/gallery" element={<Gallery />} />
@@ -199,24 +229,29 @@ function App() {
 
             {/* pubInfo */}
             <Route path="/pubInfo" element={<PublicInformation />} />
-            <Route path="/pubInfo/law" element={<Law/>} />
-            <Route path="/pubInfo/law/Kanonebi" element={<Kanonebi/>} />
-            <Route path="/pubInfo/law/Dadgenilebebi" element={<Dadgenilebebi/>} />
-            <Route path="/pubInfo/law/Konvenciebi" element={<Konvenciebi/>} />
-            <Route path="/pubInfo/law/Brdzanebebi" element={<Brdzanebebi/>} />
-            <Route path="/pubInfo/information" element={<Information/>} />
+            <Route path="/pubInfo/law" element={<Law />} />
+            <Route path="/pubInfo/law/Kanonebi" element={<Kanonebi />} />
+            <Route
+              path="/pubInfo/law/Dadgenilebebi"
+              element={<Dadgenilebebi />}
+            />
+            <Route path="/pubInfo/law/Konvenciebi" element={<Konvenciebi />} />
+            <Route path="/pubInfo/law/Brdzanebebi" element={<Brdzanebebi />} />
+            <Route path="/pubInfo/information" element={<Information />} />
 
             {/* contact */}
             <Route path="/contact" element={<Contact />} />
             {/* register */}
             <Route path="/register" element={<Register />} />
-            <Route path="/register/verify" element={<Verify  />} />
+            <Route path="/register/verify" element={<Verify />} />
             <Route path="/register/privacy" element={<Privacy />} />
             <Route path="/test" element={<Test />} />
             {/*userr*/}
             <Route path="/user" element={<User />} />
             <Route path="/user/cabinet" element={<Cabinet />} />
             <Route path="/user/cabinet/inbox" element={<Inbox />} />
+            <Route path="user/cabinet/vacancies" element={<Vacancies />} />
+            <Route path="user/cabinet/myVacancies" element={<MyVacancies />} />
             <Route path="/user/profile" element={<Profile />} />
           </Routes>
         </div>

@@ -8,6 +8,7 @@ import { AppBar, Box, Tab, Tabs, useTheme } from '@mui/material';
 import PropTypes from 'prop-types';
 import CardsWrap from '../../../ReusableComponents/CardsWrap/CardsWrap';
 import NonPaginated from '../../../ReusableComponents/CardsWrap/NonPaginated';
+import './pr.scss'
 
 const tabs = [
   {
@@ -20,7 +21,7 @@ const tabs = [
         <InfoCard id={2} date={'აგვ. 23, 2023'} heading={'პროექტები 2'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
         <InfoCard id={3} date={'აგვ. 23, 2023'} heading={'პროექტები 3'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
         <InfoCard id={3} date={'აგვ. 23, 2023'} heading={'პროექტები 3'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
-        
+
       ]
   },
   {
@@ -74,6 +75,20 @@ const yearsFilterTabs = [
         <InfoCard id={'shes/35'} date={'აგვ. 23, 2016'} heading={'პროექტები 8'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
         <InfoCard id={'shes/36'} date={'აგვ. 23, 2016'} heading={'პროექტები 9'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
       ]
+  },
+  {
+    id: 5, label: '2015', children:
+      [
+        <InfoCard id={'shes/31'} date={'აგვ. 23, 2016'} heading={'პროექტები 1'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
+        <InfoCard id={'shes/32'} date={'აგვ. 23, 2016'} heading={'პროექტები 2'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
+        <InfoCard id={'shes/33'} date={'აგვ. 23, 2016'} heading={'პროექტები 3'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
+        <InfoCard id={'shes/34'} date={'აგვ. 23, 2016'} heading={'პროექტები 4'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
+        <InfoCard id={'shes/35'} date={'აგვ. 23, 2016'} heading={'პროექტები 5'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
+        <InfoCard id={'shes/36'} date={'აგვ. 23, 2016'} heading={'პროექტები 6'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
+        <InfoCard id={'shes/34'} date={'აგვ. 23, 2016'} heading={'პროექტები 7'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
+        <InfoCard id={'shes/35'} date={'აგვ. 23, 2016'} heading={'პროექტები 8'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
+        <InfoCard id={'shes/36'} date={'აგვ. 23, 2016'} heading={'პროექტები 9'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
+      ]
   }
 ]
 function TabPanel(props) {
@@ -86,10 +101,10 @@ function TabPanel(props) {
       id={`full-width-tabpanel-${index}`}
       aria-labelledby={`full-width-tab-${index}`}
       {...other}
-      style={{width: '100%'}}
+      style={{ width: '100%' }}
     >
       {value === index && (
-        <Box sx={{ rowGap: '20px', p: 3, display: 'flex', flexDirection: 'row', justifyContent: 'space-between', flexWrap: 'wrap', width: '100%' }}>
+        <Box sx={{ rowGap: '20px', p: 3, display: 'flex', flexDirection: 'row', justifyContent: 'space-between', flexWrap: 'wrap', width: '100%', overflowX: 'auto' }}>
           {children}
         </Box>
       )}
@@ -130,7 +145,7 @@ const Projects = () => {
               aria-label="full width tabs example"
             >
               {tabs.map((tab, index) => (
-                <Tab key={index} label={tab.label} {...a11yProps(tab.id - 1)} />
+                <Tab className='tabOfYears' key={index} label={tab.label} {...a11yProps(tab.id - 1)} />
               ))}
             </Tabs>
           </AppBar>

@@ -90,7 +90,15 @@ const resources = {
       //user
       user: 'User',
       profile: 'Profile',
-      cabinet: 'Cabinet'
+      cabinet: 'Cabinet',
+      inbox: 'Inbox',
+      vacancies: 'Offers',
+      myVacancies: 'My vacancies',
+      type: 'Type',
+      employer: 'Employer',
+      municipality: 'Municipality',
+      deadline: 'Deadline',
+      sphere: 'Section'
       
     },
   },
@@ -187,7 +195,15 @@ const resources = {
       //user
       user: 'მომხმარებელი',
       profile: 'პროფილი',
-      cabinet: 'კაბინეტი'
+      cabinet: 'კაბინეტი',
+      inbox: 'შეტყობინებები',
+      vacancies: 'განცხადებები',
+      myVacancies: 'ჩემი შეთავაზებები',
+      type: 'ტიპი',
+      employer: 'დამსაქმებელი',
+      municipality: 'მუნიციპალიტეტი',
+      deadline: 'ვადა',
+      sphere: 'სფერო'
     },
   },
   // Add more languages and translations as needed
