@@ -79,6 +79,7 @@ import Verify from "./pages/Register/Verify";
 import User from "./pages/user/User";
 import Cabinet from "./pages/user/cabinet/Cabinet";
 import Profile from "./pages/user/profile/Profile";
+import Inbox from "./pages/user/cabinet/inbox/Inbox";
 
 
 
@@ -215,6 +216,7 @@ function App() {
             {/*userr*/}
             <Route path="/user" element={<User />} />
             <Route path="/user/cabinet" element={<Cabinet />} />
+            <Route path="/user/cabinet/inbox" element={<Inbox />} />
             <Route path="/user/profile" element={<Profile />} />
           </Routes>
         </div>
