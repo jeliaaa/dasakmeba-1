@@ -52,7 +52,7 @@
     .detailed_info {
         display: flex;
         flex-direction: column;
-        
+        row-gap: 20px;
         .accordions_group{
             width: 100%;
             display: flex;

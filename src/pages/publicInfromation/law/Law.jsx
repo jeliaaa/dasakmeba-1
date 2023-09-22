@@ -14,8 +14,6 @@ const Law = () => {
                 <NavBox name={t('konvenciebi')} to={'/pubInfo/law/konvenciebi'} />
                 <NavBox name={t('dadgenilebebi')} to={'/pubInfo/law/dadgenilebebi'} />
                 <NavBox name={t('brdzanebebi')} to={'/pubInfo/law/brdzanebebi'} />
-
-
             </div>
         </Container>
 
