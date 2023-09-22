@@ -39,10 +39,6 @@ function a11yProps(index) {
     };
 }
 const Register = () => {
-    const [agree, setAgree] = useState(false);
-    const changeAgree = () => {
-        setAgree(prev => !prev)
-    }
     const theme = useTheme();
     const [value, setValue] = React.useState(0);
     const handleChange = (event, newValue) => {
@@ -108,15 +104,8 @@ const Register = () => {
                             <Input type='password' aria-describedby="my-helper-text" />
                         </FormControl>
                         <div className='register_submit_wrapper'>
-                            <FormControlLabel
-                                value="start"
-                                control={<Checkbox />}
-                                label={<Link style={{ textDecoration: "underline" }} to={'privacy'}>ვეთანხმები პირობებს</Link>}
-                                checked={agree}
-                                onClick={changeAgree}
-                            />
-                            <button type='submit' className='register' disabled={!agree}>
-                                {agree ? <Link to={'verify'}>რეგისტრაცია</Link> : 'რეგისტრაცია'}
+                            <button type='submit' className='register'>
+                                <Link to={'privacy'}>შემდეგ</Link>
                             </button>
                         </div>
                     </form>
@@ -137,7 +126,8 @@ const Register = () => {
                         </FormControl>
                         <FormControl required>
                             <TextareaAutosize placeholder='კომპანიის შესახებ' />
-                        </FormControl><FormControl fullWidth>
+                        </FormControl>
+                        <FormControl fullWidth>
                             <InputLabel variant="standard" htmlFor="uncontrolled-native">
                                 სექტორი
                             </InputLabel>
@@ -220,15 +210,8 @@ const Register = () => {
                             <Input type='number' />
                         </FormControl>
                         <div className='register_submit_wrapper'>
-                            <FormControlLabel
-                                value="start"
-                                control={<Checkbox />}
-                                label={<Link style={{ textDecoration: "underline" }} to={'privacy'}>ვეთანხმები პირობებს</Link>}
-                                checked={agree}
-                                onClick={changeAgree}
-                            />
-                            <button type='submit' className='register' disabled={!agree}>
-                                {agree ? <Link to={'verify'}>რეგისტრაცია</Link> : 'რეგისტრაცია'}
+                            <button type='submit' className='register'>
+                                <Link to={'privacy'}>შემდეგ</Link>
                             </button>
                         </div>
                     </form>

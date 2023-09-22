@@ -1,12 +1,19 @@
-import React from 'react'
-import Breadcrumbs from '../../ReusableComponents/breadcrumbs/Breadcrumbs'
+import React, { useState } from 'react'
+import Breadcrumbs from '../../../ReusableComponents/breadcrumbs/Breadcrumbs'
 import { Container } from 'react-bootstrap'
+import { Checkbox, FormControlLabel } from '@mui/material'
+import { Link } from 'react-router-dom'
+import '../../Register/register.scss'
 
 const Privacy = () => {
+    const [agree, setAgree] = useState(false);
+    const changeAgree = () => {
+        setAgree(prev => !prev)
+    }
     return (
         <div className='cards_wrap' >
             <Breadcrumbs />
-            <Container style={{padding: 30}}>
+            <Container style={{ padding: 30 }}>
                 <h3>PRIVACY POLICY</h3>
                 We are committed to maintaining the accuracy, confidentiality, and security of your personally identifiable information ("Personal Information"). As part of this commitment, our privacy policy governs our actions as they relate to the collection, use and disclosure of Personal Information. Our privacy policy is based upon the values set by the Canadian Standards Association's Model Code for the Protection of Personal Information and Canada's Personal Information Protection and Electronic Documents Act.
 
@@ -88,6 +95,16 @@ const Privacy = () => {
 
 
             </Container>
+            <FormControlLabel
+                value="start"
+                control={<Checkbox />}
+                label={'ვეთანხმები პირობებს'}
+                checked={agree}
+                onClick={changeAgree}
+            />
+            <button className='nextBtn' disabled={!agree}>
+                {agree ? <Link to={'/register/verify'}>შემდეგ</Link> : 'შემდეგ'}
+            </button>
         </div>
     )
 }

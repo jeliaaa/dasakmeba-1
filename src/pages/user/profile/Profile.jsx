@@ -1,22 +1,39 @@
-import React from 'react'
-import { Card, Container, Form } from 'react-bootstrap'
+import React, { useState } from 'react'
 import Breadcrumbs from '../../../ReusableComponents/breadcrumbs/Breadcrumbs'
-import { Checkbox, FormControlLabel, Input, InputLabel, Select } from '@mui/material'
+import { Checkbox, FormControlLabel, InputLabel, NativeSelect, Select } from '@mui/material'
 import './profile.scss'
 const Profile = () => {
+    const [selectedFile, setSelectedFile] = useState(null);
+
+    const handleFileChange = (event) => {
+        const file = event.target.files[0];
+        setSelectedFile(file);
+    };
     return (
         <div className="profile" >
             <Breadcrumbs />
             <div className='profile_wrapper'>
                 <div className='sections'>
-                    <h3 className='label_of_sections'>მომხმარებელი</h3>
+                    <div className="user">
+                        <h3 className='label_of_sections'>მომხმარებელი</h3>
+                        <h6>რეგისტრირებულია 19.02.2015</h6>
+                    </div>
                     <hr />
+
                     <div className='profile_photo'>
-                        <img src="https://picsum.photos/250" alt="profile" />
-                        <div>
-                            <button>ატვირთვა</button>
-                            <p>ფოტოს რეზოლუცია სასურველია იყოს 250px (1:1) </p>
-                        </div>
+                        {selectedFile ? (
+                            <img
+                                src={URL.createObjectURL(selectedFile)}
+                                alt="Selected File Preview"
+                                style={{ maxWidth: '250px', maxHeight: '250px' }}
+                            />
+                        ) :
+                            <img
+                                src={'https://picsum.photos/250'}
+                                alt="Selected File Preview"
+                            />
+                        }
+                        <input className='button_of_profile' type="file" onChange={handleFileChange} />
                     </div>
                     <div className="information">
                         <div className='info'>
@@ -24,25 +41,45 @@ const Profile = () => {
                             <input placeholder='alekoaleko' disabled />
                         </div>
                         <div className='info'>
-                            <InputLabel>პროფილის სტატუსი</InputLabel>
-                            <Select defaultValue={0}>
-                                <option value={0}>a</option>
-                                <option>a</option>
-                                <option>b</option>
-                                <option>c</option>
-                            </Select>
+                            <InputLabel variant="standard" htmlFor="uncontrolled-native">
+                                პროფილის სტატუსი
+                            </InputLabel>
+                            <NativeSelect
+                                defaultValue={0}
+                                inputProps={{
+                                    name: 'პროფილის სტატუსი',
+                                    id: 'uncontrolled-native',
+                                }}
+                            >
+                                <option value={0}></option>
+                                <option value={20}>Twenty</option>
+                                <option value={30}>Thirty</option>
+                                <option value={10}>Ten</option>
+                                <option value={20}>Twenty</option>
+                                <option value={30}>Thirty</option>
+                            </NativeSelect>
                         </div>
                         <div className='info'>
                             <FormControlLabel control={<Checkbox />} label="ოჯახში დასაქმება" />
                         </div>
                         <div className='info'>
-                            <InputLabel>მომხმარებლის სტატუსი</InputLabel>
-                            <Select defaultValue={0}>
-                                <option value={0}>a</option>
-                                <option>a</option>
-                                <option>b</option>
-                                <option>c</option>
-                            </Select>
+                            <InputLabel variant="standard" htmlFor="uncontrolled-native">
+                                მომხმარებლის სტატუსი
+                            </InputLabel>
+                            <NativeSelect
+                                defaultValue={0}
+                                inputProps={{
+                                    name: 'მომხმარებლის სტატუსი',
+                                    id: 'uncontrolled-native',
+                                }}
+                            >
+                                <option value={0}></option>
+                                <option value={20}>Twenty</option>
+                                <option value={30}>Thirty</option>
+                                <option value={10}>Ten</option>
+                                <option value={20}>Twenty</option>
+                                <option value={30}>Thirty</option>
+                            </NativeSelect>
                         </div>
                     </div>
                 </div>
@@ -67,26 +104,46 @@ const Profile = () => {
                             <input placeholder='დაბადების თარიღი' disabled />
                         </div>
                         <div className='info'>
-                            <InputLabel>მუნიციპალიტეტი</InputLabel>
-                            <Select defaultValue={0}>
-                                <option value={0}>a</option>
-                                <option>a</option>
-                                <option>b</option>
-                                <option>c</option>
-                            </Select>
+                            <InputLabel variant="standard" htmlFor="uncontrolled-native">
+                                მუნიციპალიტეტი
+                            </InputLabel>
+                            <NativeSelect
+                                defaultValue={0}
+                                inputProps={{
+                                    name: 'მუნიციპალიტეტი',
+                                    id: 'uncontrolled-native',
+                                }}
+                            >
+                                <option value={0}></option>
+                                <option value={20}>Twenty</option>
+                                <option value={30}>Thirty</option>
+                                <option value={10}>Ten</option>
+                                <option value={20}>Twenty</option>
+                                <option value={30}>Thirty</option>
+                            </NativeSelect>
                         </div>
                         <div className='info'>
                             <InputLabel>სქესი</InputLabel>
                             <input placeholder='სქესი' disabled />
                         </div>
                         <div className='info'>
-                            <InputLabel>ოჯახური მდგომარეობა</InputLabel>
-                            <Select defaultValue={0}>
-                                <option value={0}>a</option>
-                                <option>a</option>
-                                <option>b</option>
-                                <option>c</option>
-                            </Select>
+                        <InputLabel variant="standard" htmlFor="uncontrolled-native">
+                        ოჯახური მდგომარეობა
+                            </InputLabel>
+                            <NativeSelect
+                                defaultValue={0}
+                                inputProps={{
+                                    name: 'ოჯახური მდგომარეობა',
+                                    id: 'uncontrolled-native',
+                                }}
+                            >
+                                <option value={0}></option>
+                                <option value={20}>Twenty</option>
+                                <option value={30}>Thirty</option>
+                                <option value={10}>Ten</option>
+                                <option value={20}>Twenty</option>
+                                <option value={30}>Thirty</option>
+                            </NativeSelect>
                         </div>
                     </div>
                 </div>

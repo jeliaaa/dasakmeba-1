@@ -25,6 +25,9 @@ const Verify = () => {
                 <h3>შეიყვანეთ დასტურის კოდი: </h3>
                 <input type="text" maxLength={4} />
             </div>
+            <div style={{display:'flex', flexWrap:'wrap', gap: 15}}>
+                <label>ტელ.ნომერი</label><input type="number" placeholder='555555555' />
+            </div>
             <div className='time'>
             <h4>
                 ვალიდურია :  {minutes < 10 ? '0' : ''}{minutes}:{remainingSeconds < 10 ? '0' : ''}{remainingSeconds}

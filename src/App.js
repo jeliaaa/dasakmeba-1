@@ -67,7 +67,7 @@ import CalendarSingle from "./pages/blog/calendar/CalendarSingle";
 import ClassificationSingle from "./pages/blog/profClassification/ClassificationSingle";
 import VideoLesson from "./pages/blog/videoLessons/VideoLesson";
 // import './cardAlignment.scss'
-import Privacy from "./pages/privacy/Privacy";
+import Privacy from "./pages/Register/privacy/Privacy";
 import GallerySingle from "./pages/media/gallery/GallerySingle";
 import Guide from "./pages/Guide/Guide";
 import QnA from "./pages/Guide/QnA/QnA";
@@ -141,6 +141,7 @@ function App() {
             <Route path="/services/grants/:type/:id" element={<GrantsSingle />} />
             <Route path="/services/projects" element={<Projects />} />
             <Route path="/services/projects/:id" element={<ProjectsSingle />} />
+            <Route path="/services/projects/shes/:id" element={<ResearchSingle />} />
             <Route path="/services/migration" element={<Migration />} />
             <Route path="/services/migration/:id" element={<MigrationSIngle />} />
             <Route path="/services/ourServices/forOrgs" element={<ForOrgs />} />
@@ -202,8 +203,7 @@ function App() {
             <Route path="/pubInfo/law/Dadgenilebebi" element={<Dadgenilebebi/>} />
             <Route path="/pubInfo/law/Konvenciebi" element={<Konvenciebi/>} />
             <Route path="/pubInfo/law/Brdzanebebi" element={<Brdzanebebi/>} />
-
-            <Route path="/publicInformation/information" element={<Information/>} />
+            <Route path="/pubInfo/information" element={<Information/>} />
 
             {/* contact */}
             <Route path="/contact" element={<Contact />} />

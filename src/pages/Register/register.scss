@@ -133,3 +133,20 @@ input::-webkit-inner-spin-button {
         align-items: center;
     }
 }
+.nextBtn {
+    background-color: $primary-color-blue;
+    color: $primary-color-gray;
+    padding: 10px 15px;
+    border: none;
+    font-size: 1.3rem;
+    border-radius: 15px;
+
+    a {
+        color: $primary-color-gray;
+    }
+
+    &:disabled {
+        background-color: $primary-color-gray;
+        color: $primary-color-blue;
+    }
+}

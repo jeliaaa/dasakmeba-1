@@ -24,16 +24,14 @@ const Dadgenilebebi = () => {
                         <th></th>
                         <th>{t('name')}</th>
                         <th>{t('date')}</th>
-                        <th>{t('view')}</th>
                     </tr>
                 </thead>
                 <tbody>
                     {statsData.map((file) => (
                         <tr key={file.id}>
                             <td>{file.id}</td>
-                            <td>{file.name}</td>
+                            <td><Link to={"/dummy.pdf"} target="_blank" download>{file.name}</Link></td>
                             <td>{file.date}</td>
-                            <td>{<Link to={`${file.id}`}>{file.name}</Link>}</td>
                         </tr>
                     ))}
                 </tbody>

@@ -9,15 +9,15 @@
     align-items: center;
     background-color: $primary-color-blue;
     border-radius: 10px;
-    
+    &:hover {
+        h3{transform: scale(1.2);}
+    }
     h3 {
         color: $primary-color-gray;
         text-align: center;
         text-decoration: none;
         transition-duration: 300ms;
-        &:hover {
-            transform: scale(1.2);
-        }
+        
     }
     a {
         padding: 20px;
