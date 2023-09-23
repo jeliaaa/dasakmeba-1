@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/dasakmeba-1/static/css/main.4802c9b2.css",
-    "main.js": "/dasakmeba-1/static/js/main.f1b84470.js",
+    "main.css": "/dasakmeba-1/static/css/main.550c6b9c.css",
+    "main.js": "/dasakmeba-1/static/js/main.47b4a07a.js",
     "static/js/787.2e958377.chunk.js": "/dasakmeba-1/static/js/787.2e958377.chunk.js",
     "static/media/Servicing.jpg": "/dasakmeba-1/static/media/Servicing.5c9b63afd956a891d12b.jpg",
     "static/media/IT.jpg": "/dasakmeba-1/static/media/IT.543727164ec6c930d3ff.jpg",
@@ -18,15 +18,16 @@
     "static/media/jan.png": "/dasakmeba-1/static/media/jan.23fd24dd854bbc9235c8.png",
     "static/media/feb.png": "/dasakmeba-1/static/media/feb.7147a8d586430fe9d035.png",
     "static/media/mar.png": "/dasakmeba-1/static/media/mar.2c74facaa0177a651411.png",
+    "static/media/NotoSansGeorgian-Medium.ttf": "/dasakmeba-1/static/media/NotoSansGeorgian-Medium.570d747c00e4a7163799.ttf",
     "static/media/bpg_extrasquare_mtavruli_2009.ttf": "/dasakmeba-1/static/media/bpg_extrasquare_mtavruli_2009.e30b36e07745bf1d0bfa.ttf",
     "static/media/logo.png": "/dasakmeba-1/static/media/logo.4b1fb2dd5f9b98be7bd9.png",
     "index.html": "/dasakmeba-1/index.html",
-    "main.4802c9b2.css.map": "/dasakmeba-1/static/css/main.4802c9b2.css.map",
-    "main.f1b84470.js.map": "/dasakmeba-1/static/js/main.f1b84470.js.map",
+    "main.550c6b9c.css.map": "/dasakmeba-1/static/css/main.550c6b9c.css.map",
+    "main.47b4a07a.js.map": "/dasakmeba-1/static/js/main.47b4a07a.js.map",
     "787.2e958377.chunk.js.map": "/dasakmeba-1/static/js/787.2e958377.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4802c9b2.css",
-    "static/js/main.f1b84470.js"
+    "static/css/main.550c6b9c.css",
+    "static/js/main.47b4a07a.js"
   ]
 }
