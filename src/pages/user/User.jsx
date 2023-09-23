@@ -12,6 +12,7 @@ const User = () => {
             <div className='services_wrapper' style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
                 <NavBox name={t('cabinet')} to={'cabinet'} />
                 <NavBox name={t('profile')} to={'profile'} />
+                <NavBox name={t('CV')} to={'CV'} />
             </div>
         </Container>
 

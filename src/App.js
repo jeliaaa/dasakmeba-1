@@ -82,6 +82,7 @@ import Profile from "./pages/user/profile/Profile";
 import Inbox from "./pages/user/cabinet/inbox/Inbox";
 import Vacancies from "./pages/user/cabinet/vacancies/Vacancies";
 import MyVacancies from "./pages/user/cabinet/MyVacancies";
+import CV from "./pages/user/cv/CV";
 
 function App() {
   const { i18n } = useTranslation();
@@ -249,6 +250,7 @@ function App() {
             {/*userr*/}
             <Route path="/user" element={<User />} />
             <Route path="/user/cabinet" element={<Cabinet />} />
+            <Route path="user/CV" element={<CV />} />
             <Route path="/user/cabinet/inbox" element={<Inbox />} />
             <Route path="user/cabinet/vacancies" element={<Vacancies />} />
             <Route path="user/cabinet/myVacancies" element={<MyVacancies />} />
