@@ -203,7 +203,8 @@ const resources = {
       employer: 'დამსაქმებელი',
       municipality: 'მუნიციპალიტეტი',
       deadline: 'ვადა',
-      sphere: 'სფერო'
+      sphere: 'სფერო',
+      CV : 'რეზიუმე'
     },
   },
   // Add more languages and translations as needed
