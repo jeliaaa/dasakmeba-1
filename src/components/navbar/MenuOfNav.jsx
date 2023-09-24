@@ -12,7 +12,6 @@ import { Button, Col, Form, Modal, Nav, Row } from 'react-bootstrap';
 import { AuthenticationContext } from '../../AuthenticationContext';
 const MenuOfNav = (props) => {
     const { signIn, isAuthenticated } = useContext(AuthenticationContext);
-    console.log(isAuthenticated);
     const { t, i18n } = useTranslation();
     const [val, setVal] = useState('');
     const [show, setShow] = useState(false);
@@ -36,7 +35,7 @@ const MenuOfNav = (props) => {
         } else {
             alert('არ არის სწორი');
         }
-    } 
+    }
     const userName = useRef(null);
     const userPass = useRef(null);
     const navLink1 = useRef(null);
@@ -53,24 +52,29 @@ const MenuOfNav = (props) => {
         let path = location.pathname.split('/');
         console.log(path);
         if (path[1] === 'about') {
+            navLinks.map((navLink) => navLink.current.classList.remove('active'));
             navLink1.current.classList.add('active')
         } else if (path[1] === 'services') {
+            navLinks.map((navLink) => navLink.current.classList.remove('active'));
             navLink2.current.classList.add('active')
         } else if (path[1] === 'blog') {
+            navLinks.map((navLink) => navLink.current.classList.remove('active'));
             navLink3.current.classList.add('active')
         } else if (path[1] === 'media') {
+            navLinks.map((navLink) => navLink.current.classList.remove('active'));
             navLink4.current.classList.add('active')
         } else if (path[1] === 'vacancy') {
+            navLinks.map((navLink) => navLink.current.classList.remove('active'));
             navLink5.current.classList.add('active')
         } else if (path[1] === 'guide') {
+            navLinks.map((navLink) => navLink.current.classList.remove('active'));
             navLink6.current.classList.add('active')
         } else if (path[1] === 'pubInfo') {
+            navLinks.map((navLink) => navLink.current.classList.remove('active'));
             navLink7.current.classList.add('active')
         } else if (path[1] === 'main') {
             navLinks.map((navLink) => navLink.current.classList.remove('active'))
-        } else {
-            return;
-        }
+        } 
     }, [navLinks, location])
     const handleChange = (e) => {
         navLinks.forEach((navlink) => {

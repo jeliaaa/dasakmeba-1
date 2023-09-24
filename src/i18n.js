@@ -85,7 +85,6 @@ const resources = {
       //some other things
       employers: 'Employers',
       ourPartners: 'Our Partners',
-      employement: "Employement",
       educational : "Educational",
       //user
       user: 'User',
@@ -98,7 +97,8 @@ const resources = {
       employer: 'Employer',
       municipality: 'Municipality',
       deadline: 'Deadline',
-      sphere: 'Section'
+      sphere: 'Section',
+      information: 'Information'
       
     },
   },
@@ -190,7 +190,6 @@ const resources = {
       //some other things
       employers: 'დამსაქემებელი',
       ourPartners: 'ჩვენი პარტნიორები',
-      employement: "დასაქმება",
       educational : "საგანმანათლებლო",
       //user
       user: 'მომხმარებელი',
@@ -204,7 +203,8 @@ const resources = {
       municipality: 'მუნიციპალიტეტი',
       deadline: 'ვადა',
       sphere: 'სფერო',
-      CV : 'რეზიუმე'
+      CV : 'რეზიუმე',
+      information: 'ინფორმაცია'
     },
   },
   // Add more languages and translations as needed
