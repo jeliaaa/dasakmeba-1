@@ -9,7 +9,7 @@ import '../calendar.scss'
 const Mar = () => {
   const { t } = useTranslation();
   return (
-    <Container style={{ backgroundColor: '#fff', display: 'flex', flexDirection: 'column', alignItems: 'center', padding: 80, borderRadius: '8px' }}>
+    <Container style={{ backgroundColor: '#fff', display: 'flex', flexDirection: 'column', alignItems: 'center', padding: 20, borderRadius: '8px' }}>
       <Breadcrumbs />
       <Accordion defaultActiveKey="0" flush style={{ width: '80%', border: '1px solid black' }}>
         <Accordion.Item eventKey="0">

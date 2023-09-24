@@ -83,6 +83,7 @@ import Inbox from "./pages/user/cabinet/inbox/Inbox";
 import Vacancies from "./pages/user/cabinet/vacancies/Vacancies";
 import MyVacancies from "./pages/user/cabinet/MyVacancies";
 import CV from "./pages/user/cv/CV";
+import StatisticsCab from "./pages/user/cabinet/stats/Statistics";
 
 function App() {
   const { i18n } = useTranslation();
@@ -254,6 +255,7 @@ function App() {
             <Route path="/user/cabinet/inbox" element={<Inbox />} />
             <Route path="user/cabinet/vacancies" element={<Vacancies />} />
             <Route path="user/cabinet/myVacancies" element={<MyVacancies />} />
+            <Route path="/user/cabinet/statistics" element={<StatisticsCab />} />
             <Route path="/user/profile" element={<Profile />} />
           </Routes>
         </div>
