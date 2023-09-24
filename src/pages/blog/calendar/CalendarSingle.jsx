@@ -4,7 +4,7 @@ import { Container } from 'react-bootstrap'
 
 const CalendarSingle = () => {
   return (
-    <Container style={{ backgroundColor: '#fff', padding: 30 }}>
+    <Container style={{ backgroundColor: '#fff', padding: 20 }}>
       <Breadcrumbs />
       <div className='profesiograma_single_wrapper'>
         <div className='upper'>

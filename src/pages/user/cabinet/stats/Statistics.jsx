@@ -1,9 +1,51 @@
 import React from 'react'
+import { Container, Table } from 'react-bootstrap'
+import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
+import Breadcrumbs from '../../../../ReusableComponents/breadcrumbs/Breadcrumbs'
+const vacData = [
+  { id: 1, name: 'დასახელება1', type: 'ტიპი1', employer: 'დამსაქმებელი 1', municipality: 'ბათუმი', date: '10-11-2014', deadline: '10-12-2014', sphere: 'სფერო' },
+  { id: 2, name: 'დასახელება2', type: 'ტიპი2', employer: 'დამსაქმებელი 2', municipality: 'ბათუმი', date: '10-11-2014', deadline: '10-12-2014', sphere: 'სფერო' },
+  { id: 3, name: 'დასახელება3', type: 'ტიპი3', employer: 'დამსაქმებელი 3', municipality: 'ბათუმი', date: '10-11-2014', deadline: '10-12-2014', sphere: 'სფერო' },
+  { id: 4, name: 'დასახელება4', type: 'ტიპი4', employer: 'დამსაქმებელი 4', municipality: 'ბათუმი', date: '10-11-2014', deadline: '10-12-2014', sphere: 'სფერო' },
+  { id: 5, name: 'დასახელება5', type: 'ტიპი5', employer: 'დამსაქმებელი 5', municipality: 'ბათუმი', date: '10-11-2014', deadline: '10-12-2014', sphere: 'სფერო' }
+]
+const StatisticsCab = () => {
 
-const Statistics = () => {
+  const { t } = useTranslation();
   return (
-    <div>Statistics</div>
+    <Container style={{ backgroundColor: '#fff', padding: 20 }}>
+      <Breadcrumbs />
+      <Table responsive>
+        <thead>
+          <tr>
+            <th>{t('ID')}</th>
+            <th>{t('name')}</th>
+            <th>{t('type')}</th>
+            <th>{t('employer')}</th>
+            <th>{t('municipality')}</th>
+            <th>{t('date')}</th>
+            <th>{t('deadline')}</th>
+            <th>{t('approved')}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {vacData.map((vac, _index) => (
+            <tr key={vac.id}>
+              <td>{vac.id}</td>
+              <td><Link to={`/vacancy/${vac.id}`} target="_blank" >{vac.name}</Link></td>
+              <td>{vac.type}</td>
+              <td>{vac.employer}</td>
+              <td>{vac.municipality}</td>
+              <td>{vac.date}</td>
+              <td>{vac.deadline}</td>
+              <td>{_index % 2 === 0 ? <i className='fa-solid fa-check'/> : ''}</td>
+            </tr>
+          ))}
+        </tbody>
+      </Table>
+    </Container>
   )
 }
 
-export default Statistics
+export default StatisticsCab

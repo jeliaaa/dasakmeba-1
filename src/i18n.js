@@ -98,7 +98,8 @@ const resources = {
       municipality: 'Municipality',
       deadline: 'Deadline',
       sphere: 'Section',
-      information: 'Information'
+      information: 'Information',
+      approved : 'Approved'
       
     },
   },
@@ -204,7 +205,8 @@ const resources = {
       deadline: 'ვადა',
       sphere: 'სფერო',
       CV : 'რეზიუმე',
-      information: 'ინფორმაცია'
+      information: 'ინფორმაცია',
+      approved : 'შერჩევა'
     },
   },
   // Add more languages and translations as needed
