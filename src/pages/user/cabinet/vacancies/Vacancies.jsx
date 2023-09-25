@@ -47,7 +47,6 @@ const Vacancies = () => {
   console.log(value);
   return (
     <Container style={{ backgroundColor: '#fff', padding: 20 }}>
-      <Breadcrumbs />
       <div className='active_tabs_wrapper'>
       <Box sx={{ bgcolor: 'background.paper', width: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', rowGap: '20px' }}>
         <AppBar position="static">

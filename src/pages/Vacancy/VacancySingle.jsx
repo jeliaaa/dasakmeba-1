@@ -13,7 +13,7 @@ const VacancySingle = () => {
                 <div className='vacancy_single_left'>
                     <div className="infos">
                         <div className='company_info'>
-                            <img src='https://scontent.ftbs6-2.fna.fbcdn.net/v/t39.30808-6/347871679_790515832402764_7900840080648252560_n.png?_nc_cat=1&ccb=1-7&_nc_sid=a2f6c7&_nc_ohc=NinuIDR9fNgAX_3IHm8&_nc_ht=scontent.ftbs6-2.fna&oh=00_AfC8uyaRRsqlzhaQhQECh9L1Pf7Qlx1t28LNNp7XD-WNiQ&oe=650C5D25' alt='...' />
+                            <img src='https://scontent.ftbs4-2.fna.fbcdn.net/v/t39.30808-6/347871679_790515832402764_7900840080648252560_n.png?_nc_cat=1&ccb=1-7&_nc_sid=a2f6c7&_nc_ohc=WZGgeAVYhFIAX_CbfSI&_nc_ht=scontent.ftbs4-2.fna&oh=00_AfDE2CcrrSLyZ_ceEXzcl1AIZkb6sxnlCQVmlA3ilXanxw&oe=65164065' alt='...' />
                             <h3>ავერსი ფარმა</h3>
                         </div>
                         {interest && <div className="accountant_info">
