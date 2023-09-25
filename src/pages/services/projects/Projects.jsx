@@ -134,32 +134,34 @@ const Projects = () => {
     <Container className='pr' style={{ backgroundColor: '#fff', padding: '20px 20px', borderRadius: '8px' }}>
       <Breadcrumbs></Breadcrumbs>
       <NonPaginated>
-        <Box sx={{ bgcolor: 'background.paper', width: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', rowGap: '20px' }}>
-          <AppBar position="static">
-            <Tabs
-              value={value}
-              onChange={handleChange}
-              indicatorColor="secondary"
-              textColor="inherit"
-              variant="fullWidth"
-              aria-label="full width tabs example"
-            >
-              {tabs.map((tab, index) => (
-                <Tab className='tabOfYears' key={index} label={tab.label} {...a11yProps(tab.id - 1)} />
-              ))}
-            </Tabs>
-          </AppBar>
-          <div className='tab_wrap'>
-            <TabPanel value={value} index={0} dir={theme.direction}>
-              <CardsWrap>{tabs[0].children.map((child, index) => (
-                <div className='card_wrap' key={index}>{child}</div>
-              ))}</CardsWrap>
-            </TabPanel>
-            <TabPanel value={value} index={1} dir={theme.direction}>
-              <ActiveTabs tabs={yearsFilterTabs} />
-            </TabPanel>
-          </div>
-        </Box>
+        <div className="active_tabs_wrapper">
+          <Box sx={{ bgcolor: 'background.paper', width: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', rowGap: '20px' }}>
+            <AppBar position="static">
+              <Tabs
+                value={value}
+                onChange={handleChange}
+                indicatorColor="secondary"
+                textColor="inherit"
+                variant="fullWidth"
+                aria-label="full width tabs example"
+              >
+                {tabs.map((tab, index) => (
+                  <Tab className='tabOfYears' key={index} label={tab.label} {...a11yProps(tab.id - 1)} />
+                ))}
+              </Tabs>
+            </AppBar>
+            <div className='tab_wrap'>
+              <TabPanel value={value} index={0} dir={theme.direction}>
+                <CardsWrap>{tabs[0].children.map((child, index) => (
+                  <div className='card_wrap' key={index}>{child}</div>
+                ))}</CardsWrap>
+              </TabPanel>
+              <TabPanel value={value} index={1} dir={theme.direction}>
+                <ActiveTabs tabs={yearsFilterTabs} />
+              </TabPanel>
+            </div>
+          </Box>
+        </div>
         {/* <ActiveTabs tabs={tabs} /> */}
       </NonPaginated>
     </Container>

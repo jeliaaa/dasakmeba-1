@@ -25,7 +25,6 @@ const Inbox = () => {
   const messagesReversed = messages.slice().reverse();
   return (
     <Container style={{ backgroundColor: '#fff', padding: 20 }}>
-      <Breadcrumbs />
       <div className="inbox_wrapper">
         <div className="inbox_left">
           {messagesReversed.map((item, _index) => (

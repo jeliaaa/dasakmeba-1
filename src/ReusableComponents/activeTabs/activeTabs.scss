@@ -1,9 +1,16 @@
 @import '../../variables';
+
 .active_tabs_wrapper {
-    width: 100% ;
+    width: 100%;
+
     header {
         background-color: $primary-color-gray !important;
         color: $primary-color-blue !important;
+
+        .MuiButtonBase-root {
+            font-size: larger;
+            font-family: 'Mtavruli';
+        }
     }
 
     .Mui-selected {
@@ -11,17 +18,43 @@
         color: white !important;
 
     }
-   
+
 }
-.tab_wrap{
+
+
+.tab_wrap {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     row-gap: 20px;
 }
+
+@media screen and (max-width: 1000px) {
+    .MuiTabs-flexContainer {
+        overflow-x: auto;
+        width: 100% !important;
+        display: block !important;
+    }
+    
+    .MuiButtonBase-root {
+        font-size: small !important;
+        font-family: 'Mtavruli';
+    }
+}
+
 @media screen and (max-width: 800px) {
-    .tab_wrap{
+    .MuiTab-root {
+        width: 45% !important;
+    }
+
+    .tab_wrap {
         justify-content: center !important;
         gap: 25px;
     }
+}
+@media screen and (max-width: 500px) {
+    .MuiTab-root {
+        width: 75% !important;
+    }
+
 }

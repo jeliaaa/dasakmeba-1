@@ -1,0 +1,6 @@
+@import '../../../variables';
+.cabinet{
+    .MuiTabs-indicator{
+        background-color: $primary-color-gray !important;
+    }
+}

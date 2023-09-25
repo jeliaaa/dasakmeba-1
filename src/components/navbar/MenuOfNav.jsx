@@ -72,7 +72,7 @@ const MenuOfNav = (props) => {
         } else if (path[1] === 'pubInfo') {
             navLinks.map((navLink) => navLink.current.classList.remove('active'));
             navLink7.current.classList.add('active')
-        } else if (path[1] === 'main') {
+        } else if (path[1] === 'main' || 'user') {
             navLinks.map((navLink) => navLink.current.classList.remove('active'))
         } 
     }, [navLinks, location])

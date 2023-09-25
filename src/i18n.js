@@ -99,7 +99,8 @@ const resources = {
       deadline: 'Deadline',
       sphere: 'Section',
       information: 'Information',
-      approved : 'Approved'
+      approved : 'Approved',
+      result: 'Result'
       
     },
   },
@@ -206,7 +207,8 @@ const resources = {
       sphere: 'სფერო',
       CV : 'რეზიუმე',
       information: 'ინფორმაცია',
-      approved : 'შერჩევა'
+      approved : 'შერჩევა',
+      result: 'შედეგი'
     },
   },
   // Add more languages and translations as needed

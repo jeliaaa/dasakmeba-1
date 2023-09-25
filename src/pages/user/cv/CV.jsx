@@ -6,7 +6,7 @@ import './cv.scss'
 
 const CV = () => {
     const form = useRef(null);
-
+    const [add, setAdd] = useState(false);
     // Initialize arrayOfCvForm with an array of empty objects
     const [arrayOfCvForm, setArrayOfCvForm] = useState([[], [], [], [], [], []]);
 
@@ -30,6 +30,7 @@ const CV = () => {
             newArray[id] = [...newArray[id], inputValues];
             return newArray;
         });
+        handleAdd();
     };
     const handleRemove = (id, index) => {
         setArrayOfCvForm((prevArray) => {
@@ -37,6 +38,9 @@ const CV = () => {
             newArray[id] = newArray[id].filter((_item, _index) => _index !== index); // Filter out the item at the specified index
             return newArray;
         });
+    }
+    const handleAdd = () => {
+        setAdd((prev) => !prev)
     }
     useEffect(() => {
         // Log the updated arrayOfCvForm
@@ -74,12 +78,13 @@ const CV = () => {
                 <h4>განათლება</h4>
                 <div className=" cv_wrap education">
                     <CvBox id={0} inputs={true} inputsVal1={"სასწავლებელი :"} inputsVal2={"ფაკულტეტი :"} inputsVal3={"პერიოდი :"} />
-                    <form action="POST" ref={form} onSubmit={(e) => handleFormSubmit(e, 0)}>
+                    {add && <form action="POST" ref={form} onSubmit={(e) => handleFormSubmit(e, 0)}>
                         <input required name="field1" type="text" placeholder="სასწავლებელი" />
                         <input required name="field2" type="text" placeholder="ფაკულტეტი" />
                         <input required name="field3" type="text" placeholder="პერიოდი" />
                         <button type="submit">შენახვა</button>
-                    </form>
+                    </form>}
+                    <button onClick={() => handleAdd()}>დამატება +</button>
                 </div>
                 <h4>გამოცდილება</h4>
                 <div className="cv_wrap experience">
@@ -93,6 +98,7 @@ const CV = () => {
                 </div>
                 <div className="cv_wrap languages">
                     <CvBox id={2} select={true} selectVal1={"ენა :"} selectVal2={"დონე :"} />
+
                     <form action="POST" ref={form} onSubmit={(e) => handleFormSubmit(e, 2)}>
                         <select name="field1" defaultValue={0} required placeholder='ენა'>
                             <option value={''}>ენა</option>
@@ -106,7 +112,6 @@ const CV = () => {
                             <option value={"კარგად"}>კარგად</option>
                             <option value={"საშუალოდ"}>საშუალოდ</option>
                         </select>
-
                         <button type="submit">შენახვა</button>
                     </form>
                 </div>

@@ -2,8 +2,10 @@ import React from 'react'
 import { Container, Table } from 'react-bootstrap'
 import Breadcrumbs from '../../../ReusableComponents/breadcrumbs/Breadcrumbs'
 import { useTranslation } from 'react-i18next'
-import { Button, Popover, Typography } from '@mui/material'
+import { Button, InputLabel, Popover, Typography } from '@mui/material'
 import { Link } from 'react-router-dom'
+import ReactSelect from 'react-select'
+import { Input } from '@mui/base'
 const vacData = [
   { id: 1, name: 'დასახელება1', type: 'ტიპი1', employer: 'დამსაქმებელი 1', municipality: 'ბათუმი', date: '10-11-2014', deadline: '10-12-2014', sphere: 'სფერო' },
   { id: 2, name: 'დასახელება2', type: 'ტიპი2', employer: 'დამსაქმებელი 2', municipality: 'ბათუმი', date: '10-11-2014', deadline: '10-12-2014', sphere: 'სფერო' },
@@ -11,6 +13,12 @@ const vacData = [
   { id: 4, name: 'დასახელება4', type: 'ტიპი4', employer: 'დამსაქმებელი 4', municipality: 'ბათუმი', date: '10-11-2014', deadline: '10-12-2014', sphere: 'სფერო' },
   { id: 5, name: 'დასახელება5', type: 'ტიპი5', employer: 'დამსაქმებელი 5', municipality: 'ბათუმი', date: '10-11-2014', deadline: '10-12-2014', sphere: 'სფერო' }
 ]
+const options = [
+  { value: 'chocolate', label: 'Chocolate' },
+  { value: 'strawberry', label: 'Strawberry' },
+  { value: 'vanilla', label: 'Vanilla' }
+]
+const colors = ['success', 'danger', 'info', 'warning']
 const MyVacancies = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -24,10 +32,32 @@ const MyVacancies = () => {
 
   const open = Boolean(anchorEl);
   const id = open ? 'simple-popover' : undefined;
-  const {t} = useTranslation();
+  const { t } = useTranslation();
   return (
     <Container style={{ backgroundColor: '#fff', padding: 20 }}>
-      <Breadcrumbs />
+      <div className="filter">
+        <ReactSelect
+          isMulti
+          options={options}
+          className="basic-multi-select"
+          classNamePrefix="select"
+          isSearchable={false}
+          placeholder="აირჩიეთ ტიპი"
+        />
+        <div className='dateElements'>
+          <Input type='date' />
+          <InputLabel>
+            -დან
+          </InputLabel>
+        </div>
+        <div className='dateElements'>
+          <Input type='date' />
+          <InputLabel>
+            -მდე
+          </InputLabel>
+        </div>
+        <button>ფილტრი</button>
+      </div>
       <Table responsive>
         <thead>
           <tr>
@@ -51,7 +81,7 @@ const MyVacancies = () => {
               <td>{vac.municipality}</td>
               <td>{vac.date}</td>
               <td>{vac.deadline}</td>
-              <td><i style={{cursor: 'pointer'}} className='fa-solid fa-circle-info'onClick={handleClick} /></td>
+              <td><div className={`bg-${colors[vac.id - 1] ? colors[vac.id - 1] : 'primary'} text-white`} style={{padding: 5, borderRadius: 5, display:'flex', justifyContent:'space-between', alignItems:'center'}}>ტექსტი <i className='fa-solid fa-check'/></div></td>
             </tr>
           ))}
         </tbody>

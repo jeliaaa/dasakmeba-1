@@ -1,0 +1,47 @@
+@import '../../../../variables';
+.filter {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    .react-select {
+        width: 30%;
+    }
+
+    .dateElements {
+        width: 20%;
+        display: flex;
+        justify-content: space-between;
+        .MuiInput-root{
+            width: 70%;
+            input{
+                width: 100%;
+            }
+        }
+        label{
+            width: 25%;
+        }
+    }
+
+    button{
+        width: 15%;
+        background-color: $primary-color-blue;
+        color: $primary-color-gray;
+        border: none;
+        padding: 5px 10px;
+    }
+}
+@media screen and (max-width: 1050px) {
+    .filter{
+        width: 100% !important;
+        flex-wrap: wrap;
+        gap: 15px;
+        div{
+            width: auto !important;
+        }
+        button{
+            width: auto !important;
+        }
+    }
+}
