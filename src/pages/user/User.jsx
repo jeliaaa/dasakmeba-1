@@ -13,6 +13,7 @@ const User = () => {
                 <NavBox name={t('cabinet')} to={'cabinet'} />
                 <NavBox name={t('profile')} to={'profile'} />
                 <NavBox name={t('CV')} to={'CV'} />
+                <NavBox name={t('რაღაც')} to={'otherDetails'} />
             </div>
         </Container>
 

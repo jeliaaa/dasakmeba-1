@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import React from 'react'
 import '../../../../ReusableComponents/activeTabs/activeTabs.scss'
 import { Container } from 'react-bootstrap';
-import Breadcrumbs from '../../../../ReusableComponents/breadcrumbs/Breadcrumbs';
 import VacancyPanel from './VacancyPanel';
 import EducationalPanel from './EducationalPanel';
 
@@ -44,7 +43,6 @@ const Vacancies = () => {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-  console.log(value);
   return (
     <Container style={{ backgroundColor: '#fff', padding: 20 }}>
       <div className='active_tabs_wrapper'>

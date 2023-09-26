@@ -50,7 +50,6 @@ const MenuOfNav = (props) => {
     ], []);
     useEffect(() => {
         let path = location.pathname.split('/');
-        console.log(path);
         if (path[1] === 'about') {
             navLinks.map((navLink) => navLink.current.classList.remove('active'));
             navLink1.current.classList.add('active')

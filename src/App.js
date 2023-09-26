@@ -84,6 +84,7 @@ import Vacancies from "./pages/user/cabinet/vacancies/Vacancies";
 import MyVacancies from "./pages/user/cabinet/MyVacancies";
 import CV from "./pages/user/cv/CV";
 import StatisticsCab from "./pages/user/cabinet/stats/Statistics";
+import OtherDetails from "./pages/user/otherDetailsCv/OtherDetails";
 
 function App() {
   const { i18n } = useTranslation();
@@ -95,7 +96,6 @@ function App() {
   const [isOpen, setIsOpen] = useState(true);
   const location = useLocation();
   useEffect(() => {
-    console.log(location.search);
     if (location.pathname === "/main") {
       setIsOpen(true);
     } else {
@@ -252,6 +252,7 @@ function App() {
             <Route path="/user" element={<User />} />
             <Route path="/user/cabinet" element={<Cabinet />} />
             <Route path="user/CV" element={<CV />} />
+            <Route path="user/otherDetails" element={<OtherDetails />} />
             <Route path="/user/cabinet/inbox" element={<Inbox />} />
             <Route path="user/cabinet/vacancies" element={<Vacancies />} />
             <Route path="user/cabinet/myVacancies" element={<MyVacancies />} />
