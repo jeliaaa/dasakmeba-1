@@ -3,4 +3,19 @@
     .MuiTabs-indicator{
         background-color: $primary-color-gray !important;
     }
+    .MuiTabs-flexContainer {
+        .MuiTab-root {
+          width: 20% !important;
+        }
+      }
+}
+@media screen and (max-width: 400px) {
+    .cabinet{
+        .MuiBox-root{
+            padding: 0 !important;
+        }
+        .contianer{
+            padding: 0 !important;
+        }
+    }
 }

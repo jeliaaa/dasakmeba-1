@@ -28,7 +28,7 @@ const Inbox = () => {
       <div className="inbox_wrapper">
         <div className="inbox_left">
           {messagesReversed.map((item, _index) => (
-            <div className={`message_left ${item.id === choosen ? 'active' : ''}`} key={_index} onClick={() => { handleActive(item.id) }}>
+            <div className={`message_left ${item.id === choosen ? 'active' : ''} ${item.id % 2 === 0 && 'choosen'}`} key={_index} onClick={() => { handleActive(item.id) }}>
               <p>{item.heading}</p>
               <p>{item.date}</p>
             </div>

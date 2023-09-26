@@ -10,6 +10,7 @@ import { AppBar, Box, Tab, Tabs, useTheme } from '@mui/material'
 import PropTypes from 'prop-types'
 import '../../../ReusableComponents/activeTabs/activeTabs.scss'
 import './cabinet.scss'
+import VacancyAdd from './vacancyAdd/VacancyAdd'
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -67,6 +68,7 @@ const Cabinet = () => {
               <Tab label={t('vacancies')} {...a11yProps(1)} />
               <Tab label={t('myVacancies')} {...a11yProps(2)} />
               <Tab label={t('statistics')} {...a11yProps(3)} />
+              <Tab label={t('დამატება')} {...a11yProps(4)} />
             </Tabs>
           </AppBar>
           <TabPanel value={value} index={0} dir={theme.direction}>
@@ -80,6 +82,9 @@ const Cabinet = () => {
           </TabPanel>
           <TabPanel value={value} index={3} dir={theme.direction}>
             <Statistics />
+          </TabPanel>
+          <TabPanel value={value} index={4} dir={theme.direction}>
+            <VacancyAdd />
           </TabPanel>
         </Box>
       </div>

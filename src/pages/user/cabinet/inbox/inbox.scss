@@ -24,8 +24,9 @@
         }
 
         .active {
-            background-color: $primary-color-gray;
+            border: 1px solid $primary-color-blue ;
             color: $primary-color-blue;
+            background-color: yellow;
         }
     }
 
@@ -71,4 +72,7 @@
             padding: 0 !important;
         }
     }
+}
+.choosen{
+    background-color: gainsboro;
 }

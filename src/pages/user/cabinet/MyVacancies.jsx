@@ -1,8 +1,7 @@
 import React from 'react'
 import { Container, Table } from 'react-bootstrap'
-import Breadcrumbs from '../../../ReusableComponents/breadcrumbs/Breadcrumbs'
 import { useTranslation } from 'react-i18next'
-import { Button, InputLabel, Popover, Typography } from '@mui/material'
+import { InputLabel, NativeSelect, Popover, Typography } from '@mui/material'
 import { Link } from 'react-router-dom'
 import ReactSelect from 'react-select'
 import { Input } from '@mui/base'
@@ -21,20 +20,14 @@ const options = [
 const colors = ['success', 'danger', 'info', 'warning']
 const MyVacancies = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
-
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
   const handleClose = () => {
     setAnchorEl(null);
   };
-
   const open = Boolean(anchorEl);
   const id = open ? 'simple-popover' : undefined;
   const { t } = useTranslation();
   return (
-    <Container style={{ backgroundColor: '#fff', padding: 20 }}>
+    <Container className='stats_container myVacancies' style={{ backgroundColor: '#fff', padding: 20 }}>
       <div className="filter">
         <ReactSelect
           isMulti
@@ -58,7 +51,45 @@ const MyVacancies = () => {
         </div>
         <button>ფილტრი</button>
       </div>
-      <Table responsive>
+      <div className='sortAmount_filter'>
+        <div className='amount_wrapper'>
+          <NativeSelect
+            defaultValue={10}
+            inputProps={{
+              name: 'filterAmount',
+              id: 'uncontrolled-native',
+            }}
+          >
+            <option value={10}>10</option>
+            <option value={20}>20</option>
+            <option value={30}>30</option>
+            <option value={40}>40</option>
+            <option value={50}>50</option>
+          </NativeSelect>
+        </div>
+        <div className='sort_wrapper'>
+          <InputLabel>
+            სორტირება
+          </InputLabel>
+          <NativeSelect
+            defaultValue={10}
+            inputProps={{
+              name: 'sort',
+              id: 'uncontrolled-native',
+            }}
+          >
+            <option value={10}>ID</option>
+            <option value={20}>სახელი</option>
+            <option value={30}>ტიპი</option>
+            <option value={40}>დამსაქმებელი</option>
+            <option value={50}>მუნიციპალიტეტი</option>
+            <option value={60}>ვადა</option>
+            <option value={70}>თარიღი</option>
+          </NativeSelect>
+        </div>
+
+      </div>
+      <Table striped responsive>
         <thead>
           <tr>
             <th>{t('ID')}</th>
