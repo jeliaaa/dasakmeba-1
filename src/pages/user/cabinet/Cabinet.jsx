@@ -69,6 +69,7 @@ const Cabinet = () => {
               <Tab label={t('myVacancies')} {...a11yProps(2)} />
               <Tab label={t('statistics')} {...a11yProps(3)} />
               <Tab label={t('დამატება')} {...a11yProps(4)} />
+              <Tab label={t('ინტერესები')} {...a11yProps(5)} />
             </Tabs>
           </AppBar>
           <TabPanel value={value} index={0} dir={theme.direction}>
@@ -85,6 +86,9 @@ const Cabinet = () => {
           </TabPanel>
           <TabPanel value={value} index={4} dir={theme.direction}>
             <VacancyAdd />
+          </TabPanel>
+          <TabPanel value={value} index={5} dir={theme.direction}>
+            <Statistics />
           </TabPanel>
         </Box>
       </div>

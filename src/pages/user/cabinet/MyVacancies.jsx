@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Container, Table } from 'react-bootstrap'
 import { useTranslation } from 'react-i18next'
-import { InputLabel, NativeSelect, Popover, Typography } from '@mui/material'
+import { InputLabel, NativeSelect} from '@mui/material'
 import { Link } from 'react-router-dom'
 import ReactSelect from 'react-select'
 import { Input } from '@mui/base'
+import Pagination from '../../../ReusableComponents/CardsWrap/Paginated/Pagination'
 const vacData = [
   { id: 1, name: 'დასახელება1', type: 'ტიპი1', employer: 'დამსაქმებელი 1', municipality: 'ბათუმი', date: '10-11-2014', deadline: '10-12-2014', sphere: 'სფერო' },
   { id: 2, name: 'დასახელება2', type: 'ტიპი2', employer: 'დამსაქმებელი 2', municipality: 'ბათუმი', date: '10-11-2014', deadline: '10-12-2014', sphere: 'სფერო' },
@@ -17,15 +18,15 @@ const options = [
   { value: 'strawberry', label: 'Strawberry' },
   { value: 'vanilla', label: 'Vanilla' }
 ]
+const itemsPerPage = 5;
 const colors = ['success', 'danger', 'info', 'warning']
 const MyVacancies = () => {
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
-  const open = Boolean(anchorEl);
-  const id = open ? 'simple-popover' : undefined;
   const { t } = useTranslation();
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = vacData.slice(indexOfFirstItem, indexOfLastItem);
   return (
     <Container className='stats_container myVacancies' style={{ backgroundColor: '#fff', padding: 20 }}>
       <div className="filter">
@@ -103,7 +104,7 @@ const MyVacancies = () => {
           </tr>
         </thead>
         <tbody>
-          {vacData.map((vac) => (
+          {currentItems.map((vac) => (
             <tr key={vac.id}>
               <td>{vac.id}</td>
               <td><Link to={`/vacancy/${vac.id}`} target="_blank" >{vac.name}</Link></td>
@@ -112,25 +113,17 @@ const MyVacancies = () => {
               <td>{vac.municipality}</td>
               <td>{vac.date}</td>
               <td>{vac.deadline}</td>
-              <td><div className={`bg-${colors[vac.id - 1] ? colors[vac.id - 1] : 'primary'} text-white`} style={{padding: 5, borderRadius: 5, display:'flex', justifyContent:'space-between', alignItems:'center'}}>ტექსტი <i className='fa-solid fa-check'/></div></td>
+              <td><div className={`bg-${colors[vac.id - 1] ? colors[vac.id - 1] : 'primary'} text-white`} style={{ padding: 5, borderRadius: 5, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>ტექსტი <i className='fa-solid fa-check' /></div></td>
             </tr>
           ))}
         </tbody>
       </Table>
-      <div>
-        <Popover
-          id={id}
-          open={open}
-          anchorEl={anchorEl}
-          onClose={handleClose}
-          anchorOrigin={{
-            vertical: 'bottom',
-            horizontal: 'left',
-          }}
-        >
-          <Typography sx={{ p: 2 }}>The content of the Popover.</Typography>
-        </Popover>
-      </div>
+      <Pagination
+        totalPosts={vacData.length}
+        postsPerPage={itemsPerPage}
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
+      />
     </Container>
   )
 }

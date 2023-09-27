@@ -37,3 +37,11 @@
         }
     }
 }
+
+.vacs {
+    @media screen and (max-width: 1000px) {
+        .MuiButtonBase-root {
+            width: 50% !important;
+        }
+    }
+}

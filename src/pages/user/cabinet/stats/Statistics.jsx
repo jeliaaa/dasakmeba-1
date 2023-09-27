@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Container, Table } from 'react-bootstrap'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
@@ -6,18 +6,26 @@ import ReactSelect from 'react-select'
 import { Input } from '@mui/base'
 import { InputLabel, NativeSelect, Popover } from '@mui/material'
 import './stats.scss'
+import Pagination from '../../../../ReusableComponents/CardsWrap/Paginated/Pagination'
 const vacData = [
   { id: 1, name: 'დასახელება1', type: 'ტიპი1', employer: 'დამსაქმებელი 1', municipality: 'ბათუმი', date: '10-11-2014', deadline: '10-12-2014', sphere: 'სფერო' },
   { id: 2, name: 'დასახელება2', type: 'ტიპი2', employer: 'დამსაქმებელი 2', municipality: 'ბათუმი', date: '10-11-2014', deadline: '10-12-2014', sphere: 'სფერო' },
   { id: 3, name: 'დასახელება3', type: 'ტიპი3', employer: 'დამსაქმებელი 3', municipality: 'ბათუმი', date: '10-11-2014', deadline: '10-12-2014', sphere: 'სფერო' },
   { id: 4, name: 'დასახელება4', type: 'ტიპი4', employer: 'დამსაქმებელი 4', municipality: 'ბათუმი', date: '10-11-2014', deadline: '10-12-2014', sphere: 'სფერო' },
-  { id: 5, name: 'დასახელება5', type: 'ტიპი5', employer: 'დამსაქმებელი 5', municipality: 'ბათუმი', date: '10-11-2014', deadline: '10-12-2014', sphere: 'სფერო' }
+  { id: 5, name: 'დასახელება5', type: 'ტიპი5', employer: 'დამსაქმებელი 5', municipality: 'ბათუმი', date: '10-11-2014', deadline: '10-12-2014', sphere: 'სფერო' },
+  { id: 6, name: 'დასახელება4', type: 'ტიპი4', employer: 'დამსაქმებელი 4', municipality: 'ბათუმი', date: '10-11-2014', deadline: '10-12-2014', sphere: 'სფერო' },
+  { id: 7, name: 'დასახელება5', type: 'ტიპი5', employer: 'დამსაქმებელი 5', municipality: 'ბათუმი', date: '10-11-2014', deadline: '10-12-2014', sphere: 'სფერო' },
+  { id: 8, name: 'დასახელება4', type: 'ტიპი4', employer: 'დამსაქმებელი 4', municipality: 'ბათუმი', date: '10-11-2014', deadline: '10-12-2014', sphere: 'სფერო' },
+  { id: 9, name: 'დასახელება5', type: 'ტიპი5', employer: 'დამსაქმებელი 5', municipality: 'ბათუმი', date: '10-11-2014', deadline: '10-12-2014', sphere: 'სფერო' },
+  { id: 10, name: 'დასახელება4', type: 'ტიპი4', employer: 'დამსაქმებელი 4', municipality: 'ბათუმი', date: '10-11-2014', deadline: '10-12-2014', sphere: 'სფერო' },
+  { id: 11, name: 'დასახელება5', type: 'ტიპი5', employer: 'დამსაქმებელი 5', municipality: 'ბათუმი', date: '10-11-2014', deadline: '10-12-2014', sphere: 'სფერო' }
 ]
 const options = [
   { value: 'chocolate', label: 'Chocolate' },
   { value: 'strawberry', label: 'Strawberry' },
   { value: 'vanilla', label: 'Vanilla' }
 ]
+const itemsPerPage = 7;
 const StatisticsCab = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const handleClick = (event) => {
@@ -28,6 +36,12 @@ const StatisticsCab = () => {
   };
   const open = Boolean(anchorEl);
   const { t } = useTranslation();
+
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = vacData.slice(indexOfFirstItem, indexOfLastItem);
   return (
     <Container className='stats_container' style={{ backgroundColor: '#fff', padding: 20 }}>
       <div className="filter">
@@ -91,46 +105,55 @@ const StatisticsCab = () => {
         </div>
 
       </div>
-      <Table striped responsive>
-        <thead>
-          <tr>
-            <th>{t('ID')}</th>
-            <th>{t('name')}</th>
-            <th>{t('type')}</th>
-            <th>{t('employer')}</th>
-            <th>{t('municipality')}</th>
-            <th>{t('deadline')}</th>
-            <th>{t('date')}</th>
-            <th>{t('result')}</th>
-          </tr>
-        </thead>
-        <tbody>
-          {vacData.map((vac, _index) => (
-            <tr key={vac.id}>
-              <td>{vac.id}</td>
-              <td><Link to={`/vacancy/${vac.id}`} target="_blank" >{vac.name}</Link></td>
-              <td>{vac.type}</td>
-              <td>{vac.employer}</td>
-              <td>{vac.municipality}</td>
-              <td>{vac.deadline}</td>
-              <td>{vac.date}</td>
-              <td><i style={{ cursor: 'pointer' }} className='fa-solid fa-circle-info' onClick={handleClick} /></td>
+      <div>
+        <Table striped responsive>
+          {/* Table headers */}
+          <thead>
+            <tr>
+              <th>{t('ID')}</th>
+              <th>{t('name')}</th>
+              <th>{t('type')}</th>
+              <th>{t('employer')}</th>
+              <th>{t('municipality')}</th>
+              <th>{t('deadline')}</th>
+              <th>{t('date')}</th>
+              <th>{t('result')}</th>
             </tr>
-          ))}
-        </tbody>
-      </Table>
+          </thead>
+          <tbody>
+            {currentItems.map((vac, index) => (
+              <tr key={vac.id}>
+                <td>{vac.id}</td>
+                <td><Link to={`/vacancy/${vac.id}`} target="_blank" >{vac.name}</Link></td>
+                <td>{vac.type}</td>
+                <td>{vac.employer}</td>
+                <td>{vac.municipality}</td>
+                <td>{vac.deadline}</td>
+                <td>{vac.date}</td>
+                <td><i style={{ cursor: 'pointer' }} className='fa-solid fa-circle-info' onClick={handleClick} /></td>
+              </tr>
+            ))}
+          </tbody>
+        </Table>
+        <Pagination
+          totalPosts={vacData.length}
+          postsPerPage={itemsPerPage}
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
+        />
+      </div>
       <div className="overall_stats">
-          <ul>
-            <li>მოგეწოდათ ინფორმაცია : 201</li>
-            <li>მაძიებლის თანხმობა : 201</li>
-            <li>მაძიებლის უარყოფა : 201</li>
-            <li>გაიგზავნა რეზიუმე : 201</li>
-            <li>გაიგზავნა გასაუბრებაზე : 201</li>
-            <li>გამოცხადდა გასაუბრებაზე : 201</li>
-            <li>არ გამოცხადდა გასაუბრებაზე : 201</li>
-            <li>დასაქმდა : 201</li>
-            <li>გამოხატა ინტერესი : 201</li>
-          </ul>
+        <ul>
+          <li>მოგეწოდათ ინფორმაცია : 201</li>
+          <li>მაძიებლის თანხმობა : 201</li>
+          <li>მაძიებლის უარყოფა : 201</li>
+          <li>გაიგზავნა რეზიუმე : 201</li>
+          <li>გაიგზავნა გასაუბრებაზე : 201</li>
+          <li>გამოცხადდა გასაუბრებაზე : 201</li>
+          <li>არ გამოცხადდა გასაუბრებაზე : 201</li>
+          <li>დასაქმდა : 201</li>
+          <li>გამოხატა ინტერესი : 201</li>
+        </ul>
       </div>
       <Popover
         open={open}

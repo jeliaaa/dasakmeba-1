@@ -85,6 +85,8 @@ import MyVacancies from "./pages/user/cabinet/MyVacancies";
 import CV from "./pages/user/cv/CV";
 import StatisticsCab from "./pages/user/cabinet/stats/Statistics";
 import OtherDetails from "./pages/user/otherDetailsCv/OtherDetails";
+import VacAdd from "./pages/user/cabinet/vacancyAdd/vac/VacAdd";
+import EduAdd from "./pages/user/cabinet/vacancyAdd/edu/EduAdd";
 
 function App() {
   const { i18n } = useTranslation();
@@ -255,6 +257,8 @@ function App() {
             <Route path="user/otherDetails" element={<OtherDetails />} />
             <Route path="/user/cabinet/inbox" element={<Inbox />} />
             <Route path="user/cabinet/vacancies" element={<Vacancies />} />
+            <Route path="user/cabinet/vacAdd" element={<VacAdd />} />
+            <Route path="user/cabinet/eduAdd" element={<EduAdd />} />
             <Route path="user/cabinet/myVacancies" element={<MyVacancies />} />
             <Route path="/user/cabinet/statistics" element={<StatisticsCab />} />
             <Route path="/user/profile" element={<Profile />} />
