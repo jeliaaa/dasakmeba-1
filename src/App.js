@@ -87,6 +87,9 @@ import StatisticsCab from "./pages/user/cabinet/stats/Statistics";
 import OtherDetails from "./pages/user/otherDetailsCv/OtherDetails";
 import VacAdd from "./pages/user/cabinet/vacancyAdd/vac/VacAdd";
 import EduAdd from "./pages/user/cabinet/vacancyAdd/edu/EduAdd";
+import Skeletons from "./ReusableComponents/Skeletons";
+import Loading from "./ReusableComponents/loadingPage/Loading";
+import Err from "./ReusableComponents/Err";
 
 function App() {
   const { i18n } = useTranslation();
@@ -262,6 +265,12 @@ function App() {
             <Route path="user/cabinet/myVacancies" element={<MyVacancies />} />
             <Route path="/user/cabinet/statistics" element={<StatisticsCab />} />
             <Route path="/user/profile" element={<Profile />} />
+
+
+            {/* components */}
+            <Route path="/skeletons" element={<Skeletons />}/>
+            <Route path="/loading" element={<Loading />}/>
+            <Route path="*" element={<Err />}/>
           </Routes>
         </div>
         <div className="videos_wrapper">
