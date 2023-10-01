@@ -15,15 +15,15 @@ input::-webkit-inner-spin-button {
         gap: 40px;
         justify-content: center;
 
-        .MuiFormControl-root {
-            width: 80%;
+        .sectionOfInput {
+            width: 45%;
         }
     }
 
     .register_submit_wrapper {
-        width: 80%;
+        width: 100%;
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
         align-items: center;
 
         button {

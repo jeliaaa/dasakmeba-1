@@ -94,7 +94,7 @@ import Err from "./ReusableComponents/Err";
 function App() {
   const { i18n } = useTranslation();
   const selectedLanguage = i18n.language;
-  let fontPrimary = "Noto Sans Georgian"; // Default font
+  let fontPrimary = "Georgian Primary"; // Default font
   if (selectedLanguage === "en") {
     fontPrimary = "Poppins";
   }
@@ -210,13 +210,13 @@ function App() {
             />
             <Route path="/blog/researches" element={<Researches />} />
             <Route path="/blog/researches/:id" element={<ResearchSingle />} />
-            <Route path="/blog/vid-lessons" element={<VideoLessons />} />
+            <Route path="/blog/lessons" element={<VideoLessons />} />
             <Route
-              path="/blog/vid-lessons/:type"
+              path="/blog/lessons/:type"
               element={<VideoLessonsSingle />}
             />
             <Route
-              path="/blog/vid-lessons/:type/:id"
+              path="/blog/lessons/:type/:id"
               element={<VideoLesson />}
             />
             {/* media */}

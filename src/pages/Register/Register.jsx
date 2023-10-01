@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './register.scss'
-import { Container } from 'react-bootstrap'
-import { AppBar, Box, Checkbox, FormControl, FormControlLabel, FormHelperText, Input, InputLabel, NativeSelect, Tab, Tabs, TextareaAutosize } from '@mui/material'
+import { Container, FormControl } from 'react-bootstrap'
+import { AppBar, Box, Checkbox, FormControlLabel, FormHelperText, Input, InputLabel, NativeSelect, Tab, Tabs, TextareaAutosize } from '@mui/material'
 import { Link } from 'react-router-dom'
 import Breadcrumbs from '../../ReusableComponents/breadcrumbs/Breadcrumbs'
 import PropTypes from 'prop-types';
@@ -64,19 +64,20 @@ const Register = () => {
                 </AppBar>
                 <TabPanel value={value} index={0} dir={theme.direction}>
                     <form style={{ width: '100%' }}>
-                        <FormControl required>
+                        <div className='sectionOfInput'>
                             <InputLabel>პირადი ნომერი</InputLabel>
-                            <Input type='number' />
-                        </FormControl>
-                        <FormControl required>
+                            <FormControl required type='number' />
+                        </div>
+                        <div className='sectionOfInput'>
                             <InputLabel>დაბადების თარიღი</InputLabel>
-                            <Input style={{ marginTop: '40px' }} type='date' />
-                        </FormControl>
-                        <FormControl fullWidth>
+                            <FormControl type='date' />
+                        </div>
+                        <div className='sectionOfInput'>
                             <InputLabel variant="standard" htmlFor="uncontrolled-native">
                                 მუნიციპალიტეტი
                             </InputLabel>
                             <NativeSelect
+                                fullWidth
                                 defaultValue={0}
                                 inputProps={{
                                     name: 'მუნიციპალიტეტი',
@@ -90,19 +91,19 @@ const Register = () => {
                                 <option value={20}>Twenty</option>
                                 <option value={30}>Thirty</option>
                             </NativeSelect>
-                        </FormControl>
-                        <FormControl>
+                        </div>
+                        <div className='sectionOfInput'>
                             <InputLabel>ელექტრონული ფოსტა</InputLabel>
-                            <Input type='email' />
-                        </FormControl>
-                        <FormControl required>
+                            <FormControl type='email' />
+                        </div>
+                        <div className='sectionOfInput'>
                             <InputLabel>მომხმარებლის სახელი</InputLabel>
-                            <Input />
-                        </FormControl>
-                        <FormControl required>
+                            <FormControl />
+                        </div>
+                        <div className='sectionOfInput'>
                             <InputLabel>პაროლი</InputLabel>
-                            <Input type='password' aria-describedby="my-helper-text" />
-                        </FormControl>
+                            <FormControl type='password' aria-describedby="my-helper-text" />
+                        </div>
                         <div className='register_submit_wrapper'>
                             <button type='submit' className='register'>
                                 <Link to={'privacy'}>შემდეგ</Link>
@@ -112,26 +113,30 @@ const Register = () => {
                 </TabPanel>
                 <TabPanel value={value} index={1} dir={theme.direction}>
                     <form style={{ width: '100%' }}>
-                        <FormControl required>
+                        <div className='sectionOfInput'>
                             <InputLabel>საიდენტიფიკაციო კოდი</InputLabel>
-                            <Input type='number' />
-                        </FormControl>
-                        <FormControl required>
+                            <FormControl type='number' />
+                        </div>
+                        <div className='sectionOfInput'>
                             <InputLabel>დასახელება</InputLabel>
-                            <Input/>
-                        </FormControl>
-                        <FormControl required>
+                            <FormControl />
+                        </div>
+                        <div className='sectionOfInput'>
                             <InputLabel>ობიექტის სახელი</InputLabel>
-                            <Input />
-                        </FormControl>
-                        <FormControl required>
-                            <TextareaAutosize placeholder='კომპანიის შესახებ' />
-                        </FormControl>
-                        <FormControl fullWidth>
+                            <FormControl />
+                        </div>
+                        <div className='sectionOfInput'>
+                            <InputLabel variant="standard" htmlFor="uncontrolled-native">
+                                კომპანიის შესახებ
+                            </InputLabel>
+                            <TextareaAutosize className='w-100' placeholder='კომპანიის შესახებ' />
+                        </div>
+                        <div className='sectionOfInput'>
                             <InputLabel variant="standard" htmlFor="uncontrolled-native">
                                 სექტორი
                             </InputLabel>
                             <NativeSelect
+                                fullWidth
                                 defaultValue={0}
                                 inputProps={{
                                     name: 'მუნიციპალიტეტი',
@@ -145,12 +150,13 @@ const Register = () => {
                                 <option value={20}>Twenty</option>
                                 <option value={30}>Thirty</option>
                             </NativeSelect>
-                        </FormControl>
-                        <FormControl fullWidth>
+                        </div>
+                        <div className='sectionOfInput'>
                             <InputLabel variant="standard" htmlFor="uncontrolled-native">
                                 მუნიციპალიტეტი
                             </InputLabel>
                             <NativeSelect
+                                fullWidth
                                 defaultValue={0}
                                 inputProps={{
                                     name: 'მუნიციპალიტეტი',
@@ -164,16 +170,17 @@ const Register = () => {
                                 <option value={20}>Twenty</option>
                                 <option value={30}>Thirty</option>
                             </NativeSelect>
-                        </FormControl>
-                        <FormControl required>
+                        </div>
+                        <div className='sectionOfInput'>
                             <InputLabel>ფაქტობრივი მისამართი</InputLabel>
-                            <Input />
-                        </FormControl>
-                        <FormControl fullWidth>
+                            <FormControl />
+                        </div>
+                        <div className='sectionOfInput'>
                             <InputLabel variant="standard" htmlFor="uncontrolled-native">
                                 საქმიანობის სფერო
                             </InputLabel>
                             <NativeSelect
+                                fullWidth
                                 defaultValue={0}
                                 inputProps={{
                                     name: 'მუნიციპალიტეტი',
@@ -187,28 +194,28 @@ const Register = () => {
                                 <option value={20}>Twenty</option>
                                 <option value={30}>Thirty</option>
                             </NativeSelect>
-                        </FormControl>
-                        <h3 style={{textAlign:'center'}}>საკონტაქტო პირი</h3>
-                        <FormControl>
+                        </div>
+                        <h3 className='w-100' style={{ textAlign: 'center' }}>საკონტაქტო პირი</h3>
+                        <div className='sectionOfInput'>
                             <InputLabel>სახელი</InputLabel>
-                            <Input />
-                        </FormControl>
-                        <FormControl>
+                            <FormControl />
+                        </div>
+                        <div className='sectionOfInput'>
                             <InputLabel>გვარი</InputLabel>
-                            <Input />
-                        </FormControl>
-                        <FormControl>
+                            <FormControl />
+                        </div>
+                        <div className='sectionOfInput'>
                             <InputLabel>პოზიცია</InputLabel>
-                            <Input />
-                        </FormControl>
-                        <FormControl>
+                            <FormControl />
+                        </div>
+                        <div className='sectionOfInput'>
                             <InputLabel>ელექტრონული ფოსტა</InputLabel>
-                            <Input type='email' />
-                        </FormControl>
-                        <FormControl>
+                            <FormControl type='email' />
+                        </div>
+                        <div className='sectionOfInput'>
                             <InputLabel>მობ. ნომერი</InputLabel>
-                            <Input type='number' />
-                        </FormControl>
+                            <FormControl type='number' />
+                        </div>
                         <div className='register_submit_wrapper'>
                             <button type='submit' className='register'>
                                 <Link to={'privacy'}>შემდეგ</Link>
