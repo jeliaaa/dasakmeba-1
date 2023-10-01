@@ -20,7 +20,7 @@ const Test = () => {
 
     return (
         <>
-            <Err />
+        <Err />
             {/* <PdfViewer  /> */}
         </>
     )
