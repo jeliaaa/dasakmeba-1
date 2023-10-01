@@ -90,6 +90,7 @@ import EduAdd from "./pages/user/cabinet/vacancyAdd/edu/EduAdd";
 import Skeletons from "./ReusableComponents/Skeletons";
 import Loading from "./ReusableComponents/loadingPage/Loading";
 import Err from "./ReusableComponents/Err";
+import ProjectsSingleForm from "./pages/services/projects/ProjectsSingleForm";
 
 function App() {
   const { i18n } = useTranslation();
@@ -161,6 +162,7 @@ function App() {
             />
             <Route path="/services/projects" element={<Projects />} />
             <Route path="/services/projects/:id" element={<ProjectsSingle />} />
+            <Route path="/services/projects/:id/form" element={<ProjectsSingleForm />} />
             <Route
               path="/services/projects/shes/:id"
               element={<ResearchSingle />}

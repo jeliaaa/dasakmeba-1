@@ -30,7 +30,8 @@ input::-webkit-inner-spin-button {
     overflow-x: auto;
     display: flex;
     width: 100% !important;
-    .MuiButtonBase-root{
+
+    .MuiButtonBase-root {
       width: 50% !important;
     }
   }
@@ -41,6 +42,369 @@ input::-webkit-inner-spin-button {
   flex-wrap: wrap;
   row-gap: 20px;
 }
+
+.project_single_landing_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+
+  .heading {
+    width: 100%;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0974ed;
+
+    h1 {
+      font-family: "Mtavruli";
+      color: white;
+    }
+  }
+
+  .AppBar {
+    width: 60%;
+    border-radius: 12px;
+    background-color: $primary-color-gray;
+    color: #0974ed;
+
+    .Mui-selected {
+      background-color: #0974ed !important;
+      color: white !important;
+      border-radius: 12px;
+    }
+
+    span {
+      display: none !important;
+    }
+
+    .MuiTabs-flexContainer {
+      overflow-x: auto;
+      display: flex;
+      width: 100% !important;
+      border-radius: 12px;
+
+      .MuiButtonBase-root {
+        width: 50% !important;
+        font-family: "Mtavruli";
+      }
+    }
+  }
+
+
+  .secondAppBar {
+    width: 80%;
+    border-radius: 12px;
+    background-color: $primary-color-gray;
+    color: #0974ed;
+
+    .Mui-selected {
+      background-color: #0974ed !important;
+      color: white !important;
+      border-radius: 12px;
+    }
+
+    span {
+      display: none !important;
+    }
+
+    .MuiTabs-flexContainer {
+      overflow-x: auto;
+      display: flex;
+      width: 100% !important;
+      border-radius: 12px;
+
+      .MuiButtonBase-root {
+        width: 50% !important;
+        font-family: "Mtavruli";
+      }
+    }
+  }
+
+  .about {
+    width: 80%;
+
+    div {
+      display: flex;
+      gap: 30px;
+
+      img {
+        height: 200px;
+      }
+    }
+  }
+
+  .advantages {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 40px;
+
+    .advantage {
+      width: 30%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      img {
+        width: 20%;
+        border-radius: 50%;
+      }
+
+      div {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+
+        p {
+          margin: 0 !important;
+        }
+      }
+
+    }
+  }
+
+  .secondAdvantages {
+    .advantage {
+      width: 45% !important;
+      background-color: $primary-color-gray;
+      border-radius: 40px;
+    }
+  }
+
+  .policy {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    h5 {
+      color: #0974ed;
+    }
+
+    .time {
+      width: 30%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      img {
+        width: 20%;
+        border-radius: 50%;
+      }
+
+      div {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+
+        p {
+          margin: 0 !important;
+        }
+      }
+    }
+
+    .programme_accordion {
+      width: 100%;
+      border-radius: 20px;
+
+      .accordion-button {
+        border-radius: 12px;
+        background-color: #0974ed;
+        color: white;
+
+        &::after {
+          color: white !important;
+        }
+      }
+    }
+  }
+
+  .secondPolicies {
+
+    .policiesSecond {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      section {
+        width: 45% !important;
+
+        .programme_accordion {
+          width: 100% !important;
+        }
+      }
+
+    }
+  }
+
+  .professions {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    .programme_accordion {
+      width: 100%;
+      border-radius: 20px;
+
+      .accordion-body {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        div {
+          width: 60%;
+        }
+      }
+
+      .accordion-button {
+        border-radius: 12px;
+        background-color: #0974ed;
+        color: white;
+
+        &::after {
+          color: white !important;
+        }
+      }
+    }
+  }
+
+  .secondProfessions {
+    row-gap: 30px;
+
+    section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      img {
+        border-radius: 50%;
+      }
+
+      .textOfProfession {
+        padding: 40px;
+        width: 70%;
+        background-color: $primary-color-gray;
+      }
+    }
+  }
+
+  .call {
+    background-color: #0974ed;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+
+    h1 {
+      color: white;
+      font-family: 'Poppins', sans-serif !important;
+      font-weight: bolder;
+    }
+  }
+
+  .partners {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    div {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+  }
+
+  .partnersSecond {
+    div {
+      img {
+        width: 23% !important;
+      }
+    }
+  }
+
+  .faq {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    gap: 25px;
+
+    .inpGroup {
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .accordion {
+        width: 100%;
+        border-radius: 12px;
+
+        .accordion-button {
+          border-radius: 12px;
+          background-color: #0974ed;
+          color: white;
+
+          .q_wrap {
+            .MuiSvgIcon-root {
+              color: #0974ed;
+            }
+          }
+
+          &::after {
+            color: white !important;
+          }
+        }
+      }
+    }
+
+  }
+
+  .faqSecond {
+    .inpGroup {
+      gap: 0 !important;
+    }
+
+    .accordion-button {
+      background-color: $primary-color-blue !important;
+    }
+
+    .q_wrap {
+      .MuiSvgIcon-root {
+        color: $primary-color-blue !important;
+      }
+    }
+  }
+
+  .formSubmit {
+    display: flex;
+    justify-content: center;
+
+    button {
+      background-color: #0974ed;
+      color: white;
+      font-family: "Mtavruli";
+      padding: 10px 30px;
+      border-radius: 12px;
+      border: none;
+    }
+  }
+
+  .secondFormSubmit {
+    button {
+      background-color: $primary-color-blue !important;
+    }
+  }
+}
+
 
 @media screen and (max-width: 800px) {
   .tab_wrap {
