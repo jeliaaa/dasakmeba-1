@@ -12,7 +12,7 @@ const NewsSingle = () => {
             <div className='news_head'>
                 <img src="https://picsum.photos/500/200" alt="" />
                 <div>
-                    <h2>satauri satauri satauri</h2>
+                    <h2>სათაური სათაური სათაური</h2>
                     <h6>21.05.2023</h6>
                 </div>
             </div>

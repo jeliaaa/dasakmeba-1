@@ -5,7 +5,7 @@ import './navbox.scss'
 const NavBox = ({ name, to }) => {
     return (
         <div className="nav-box">
-            <Link to={to}><h3>{name}</h3></Link>
+            <Link to={to}><p>{name}</p></Link>
         </div >
     )
 }

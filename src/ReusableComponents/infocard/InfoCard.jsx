@@ -20,7 +20,6 @@ const InfoCard = ({ date, heading, thumbText,id, active }) => {
                 </div>
             </Card>
         </Link>
-
     )
 }
 
