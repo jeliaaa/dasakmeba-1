@@ -7,12 +7,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: $primary-color-blue;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // background-color: $primary-color-blue;
     border-radius: 10px;
     &:hover {
-        p{transform: scale(1.2);}
+        h3{transform: scale(1.2);}
     }
-    p {
+    h3 {
         color: $primary-color-gray;
         text-align: center;
         text-decoration: none;

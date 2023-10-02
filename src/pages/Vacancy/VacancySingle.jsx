@@ -3,6 +3,7 @@ import { Container } from 'react-bootstrap';
 import { useParams } from 'react-router-dom'
 import Breadcrumbs from '../../ReusableComponents/breadcrumbs/Breadcrumbs';
 import './vacancy.scss'
+import svg from '../../assets/logos/genetic-data-svgrepo-com.svg'
 const VacancySingle = () => {
     const { id } = useParams();
     const [interest, setInterest] = useState(false);
@@ -17,7 +18,7 @@ const VacancySingle = () => {
                             <h3>ავერსი ფარმა</h3>
                         </div>
                         {interest && <div className="accountant_info">
-                            <div><i className='fa-solid fa-phone' /><p>555-54-78-36</p></div>
+                            <div><img style={{ width: 20 }} src={svg} /><p>555-54-78-36</p></div>
                             <div><i className='fa-solid fa-envelope' /><p>natia.chochua@aversi.ge</p></div>
                             <div><i className='fa-solid fa-address-book' /><p>ოპერატორის სახელი</p></div>
                         </div>}
@@ -35,7 +36,8 @@ const VacancySingle = () => {
                         <div className="two">
                             <span><i className='fa-solid fa-id-card'></i>ID:{id}</span>
                             <p></p>
-                            <p><i className='fa-solid fa-business-time'></i>სრული განაკვეთი</p>
+                            <p><img style={{ width: 20 }} src={svg} />სრული განაკვეთი</p>
+                            {/*ase unda sxvaganac*/}
                         </div>
                     </div>
                     <h4 className='address'>ქ.ბათუმი ჯავახიშვილის 94</h4>
