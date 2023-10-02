@@ -34,6 +34,7 @@ const Grants = () => {
         <ProfesiogramaCard a={true} img={'https://picsum.photos/300/200'} name={t('სახელმწიფო')} id={'type1'} />
         <ProfesiogramaCard a={true} img={'https://picsum.photos/300/200'} name={t('საგანმანათლებლო')} id={'type2'} />
         <ProfesiogramaCard a={true} img={'https://picsum.photos/300/200'} name={t('რაღაც')} id={'type3'} />
+        <ProfesiogramaCard a={true} img={'https://picsum.photos/300/200'} name={t('რაღაც')} id={'type4'} />
       </NonPaginated>
     </Container>
 

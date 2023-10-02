@@ -1,5 +1,15 @@
 @import '../../../variables';
 
+.structure_table{
+    tr{
+        &:hover{
+            color: gray;
+        }
+        a{
+            color: #0974ed;
+        }
+    }
+}
 .worker_wrapper {
     display: flex;
     flex-direction: column;
@@ -64,6 +74,9 @@
                 height: fit-content !important;
                 li{
                     word-break: break-all;
+                }
+                h2{
+                    margin: 0 !important;
                 }
             }
         }

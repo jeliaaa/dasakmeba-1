@@ -8,8 +8,25 @@ import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
-import { Button, Col, Form, Modal, Nav, Row } from 'react-bootstrap';
+import { Col, Form, Modal, Nav, Row } from 'react-bootstrap';
 import { AuthenticationContext } from '../../AuthenticationContext';
+import {
+    Box,
+    Button,
+    ChakraProvider,
+    Checkbox,
+    Container,
+    Divider,
+    FormControl,
+    FormLabel,
+    Heading,
+    HStack,
+    Input,
+    InputGroup,
+    InputRightElement,
+    Stack,
+    Text,
+} from '@chakra-ui/react'
 const MenuOfNav = (props) => {
     const { signIn, isAuthenticated } = useContext(AuthenticationContext);
     const { t, i18n } = useTranslation();
@@ -73,7 +90,7 @@ const MenuOfNav = (props) => {
             navLink7.current.classList.add('active')
         } else if (path[1] === 'main' || 'user') {
             navLinks.map((navLink) => navLink.current.classList.remove('active'))
-        } 
+        }
     }, [navLinks, location])
     const handleChange = (e) => {
         navLinks.forEach((navlink) => {
@@ -161,61 +178,90 @@ const MenuOfNav = (props) => {
                                 </Modal.Title>
                             </Modal.Header>
                             <Modal.Body>
-                                <Form className='text-center'>
-                                    <Form.Group as={Row} className="mb-3" controlId="formPlaintextEmail">
-                                        <Form.Label column sm="3">
-                                            მომხმარებელი
-                                        </Form.Label>
-                                        <Col sm="12">
-                                            <Form.Control ref={userName} />
-                                        </Col>
-                                    </Form.Group>
-                                    <Form.Group as={Row} className="mb-3" controlId="formPlaintextPassword">
-                                        <Form.Label column sm="3">
-                                            პაროლი
-                                        </Form.Label>
-                                        <Col sm="12">
-                                            <Form.Control ref={userPass} type="password" placeholder="Password" />
-                                        </Col>
-                                    </Form.Group>
-                                    <div className="w-100 mb-3" style={{ display: 'flex' }}>
-                                        <Button onClick={check}>შესვლა</Button>
-                                    </div>
-                                    <Link to={'/register'} className='text-center' onClick={() => setShow(false)}>Register</Link>
-                                </Form>
-                            </Modal.Body>
-                        </Modal>
-                    </div>
-                    <select value={val} onChange={changeLanguage} className='lang_change'>
-                        <option value="ge">GE</option>
-                        <option value="en">EN</option>
-                    </select>
-                </section>
+                            <ChakraProvider>
+                            <Container maxW="lg" py={{ base: '12', md: '24' }} px={{ base: '0', sm: '8' }}>
+                                <Stack spacing="8">
+                                    <Stack spacing="6">
+                                        <Stack spacing={{ base: '2', md: '3' }} textAlign="center">
+                                            <Heading size={{ base: 'xs', md: 'sm' }}>შედით სისტემაში</Heading>
+                                            <Text color="fg.muted">
+                                                არ გაქვთ აქაუნთი? <Link onClick={() => setShow(false)} to={'/register'}>რეგისტრაცია</Link>
+                                            </Text>
+                                        </Stack>
+                                    </Stack>
+                                    <Box
+                                        py={{ base: '0', sm: '8' }}
+                                        px={{ base: '4', sm: '10' }}
+                                        bg={{ base: 'transparent', sm: 'bg.surface' }}
+                                        boxShadow={{ base: 'none', sm: 'md' }}
+                                        borderRadius={{ base: 'none', sm: 'xl' }}
+                                    >
+                                        <Stack spacing="6">
+                                            <Stack spacing="5">
+                                                <FormControl>
+                                                    <FormLabel htmlFor="email">Email</FormLabel>
+                                                    <Input id="email" type="email" />
+                                                </FormControl>
+                                                <FormControl>
+                                                    <FormLabel htmlFor="password">Password</FormLabel>
+                                                    <InputGroup>
+                                                        <InputRightElement>
+                                                        </InputRightElement>
+                                                        <Input
+                                                            id="password"
+                                                            name="password"
+                                                            type={'password'}
+                                                            autoComplete="current-password"
+                                                            required
+                                                            {...props}
+                                                        />
+                                                    </InputGroup>
+                                                </FormControl>
+                                            </Stack>
+                                            <HStack justify="space-between">
+                                                <Checkbox defaultChecked>Remember me</Checkbox>
+                                            </HStack>
+                                            <Stack spacing="6">
+                                                <Button>შესვლა</Button>
+                                            </Stack>
+                                        </Stack>
+                                    </Box>
+                                </Stack>
+                            </Container>
+                        </ChakraProvider>
+                    </Modal.Body>
+                </Modal>
             </div>
-            <Nav justify variant="tabs" className='col-md-8'>
-                <Nav.Item>
-                    <Link ref={navLink1} className='nav-link' onClick={handleChange} to={'/about'}>{t('about')}</Link>
-                </Nav.Item>
-                <Nav.Item >
-                    <Link ref={navLink2} onClick={handleChange} className='nav-link' to={'/services'}>{t('services')}</Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Link ref={navLink3} onClick={handleChange} className='nav-link' to={'/blog'}>{t('blog')}</Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Link ref={navLink4} onClick={handleChange} className='nav-link' to={'/media'} ac>{t('media')}</Link>
-                </Nav.Item>
-                <Nav.Item >
-                    <Link ref={navLink5} onClick={handleChange} className='nav-link' to={'/vacancy'}>{t('vacancy')}</Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Link ref={navLink6} onClick={handleChange} className='nav-link' to={'/guide'}>{t('guide')}</Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Link ref={navLink7} onClick={handleChange} className='nav-link' to={'/pubInfo'}>{t('pubInfo')}</Link>
-                </Nav.Item>
-            </Nav>
-        </div>
+            <select value={val} onChange={changeLanguage} className='lang_change'>
+                <option value="ge">GE</option>
+                <option value="en">EN</option>
+            </select>
+        </section>
+            </div >
+    <Nav justify variant="tabs" className='col-md-8'>
+        <Nav.Item>
+            <Link ref={navLink1} className='nav-link' onClick={handleChange} to={'/about'}>{t('about')}</Link>
+        </Nav.Item>
+        <Nav.Item >
+            <Link ref={navLink2} onClick={handleChange} className='nav-link' to={'/services'}>{t('services')}</Link>
+        </Nav.Item>
+        <Nav.Item>
+            <Link ref={navLink3} onClick={handleChange} className='nav-link' to={'/blog'}>{t('blog')}</Link>
+        </Nav.Item>
+        <Nav.Item>
+            <Link ref={navLink4} onClick={handleChange} className='nav-link' to={'/media'} ac>{t('media')}</Link>
+        </Nav.Item>
+        <Nav.Item >
+            <Link ref={navLink5} onClick={handleChange} className='nav-link' to={'/vacancy'}>{t('vacancy')}</Link>
+        </Nav.Item>
+        <Nav.Item>
+            <Link ref={navLink6} onClick={handleChange} className='nav-link' to={'/guide'}>{t('guide')}</Link>
+        </Nav.Item>
+        <Nav.Item>
+            <Link ref={navLink7} onClick={handleChange} className='nav-link' to={'/pubInfo'}>{t('pubInfo')}</Link>
+        </Nav.Item>
+    </Nav>
+        </div >
     )
 }
 export default MenuOfNav;
