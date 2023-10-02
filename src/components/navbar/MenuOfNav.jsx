@@ -178,89 +178,92 @@ const MenuOfNav = (props) => {
                                 </Modal.Title>
                             </Modal.Header>
                             <Modal.Body>
-                            <ChakraProvider>
-                            <Container maxW="lg" py={{ base: '12', md: '24' }} px={{ base: '0', sm: '8' }}>
-                                <Stack spacing="8">
-                                    <Stack spacing="6">
-                                        <Stack spacing={{ base: '2', md: '3' }} textAlign="center">
-                                            <Heading size={{ base: 'xs', md: 'sm' }}>შედით სისტემაში</Heading>
-                                            <Text color="fg.muted">
-                                                არ გაქვთ აქაუნთი? <Link onClick={() => setShow(false)} to={'/register'}>რეგისტრაცია</Link>
-                                            </Text>
-                                        </Stack>
-                                    </Stack>
-                                    <Box
-                                        py={{ base: '0', sm: '8' }}
-                                        px={{ base: '4', sm: '10' }}
-                                        bg={{ base: 'transparent', sm: 'bg.surface' }}
-                                        boxShadow={{ base: 'none', sm: 'md' }}
-                                        borderRadius={{ base: 'none', sm: 'xl' }}
-                                    >
-                                        <Stack spacing="6">
-                                            <Stack spacing="5">
-                                                <FormControl>
-                                                    <FormLabel htmlFor="email">Email</FormLabel>
-                                                    <Input id="email" type="email" />
-                                                </FormControl>
-                                                <FormControl>
-                                                    <FormLabel htmlFor="password">Password</FormLabel>
-                                                    <InputGroup>
-                                                        <InputRightElement>
-                                                        </InputRightElement>
-                                                        <Input
-                                                            id="password"
-                                                            name="password"
-                                                            type={'password'}
-                                                            autoComplete="current-password"
-                                                            required
-                                                            {...props}
-                                                        />
-                                                    </InputGroup>
-                                                </FormControl>
-                                            </Stack>
-                                            <HStack justify="space-between">
-                                                <Checkbox defaultChecked>Remember me</Checkbox>
-                                            </HStack>
+                                <ChakraProvider>
+                                    <Container maxW="lg" py={{ base: '12', md: '24' }} px={{ base: '0', sm: '8' }}>
+                                        <Stack spacing="8">
                                             <Stack spacing="6">
-                                                <Button>შესვლა</Button>
+                                                <Stack spacing={{ base: '2', md: '3' }} textAlign="center">
+                                                    <Heading size={{ base: 'xs', md: 'sm' }}>შედით სისტემაში</Heading>
+                                                    <Text color="fg.muted">
+                                                        არ გაქვთ აქაუნთი? <Link onClick={() => setShow(false)} to={'/register'}>რეგისტრაცია</Link>
+                                                    </Text>
+                                                </Stack>
                                             </Stack>
+                                            <Box
+                                                py={{ base: '0', sm: '8' }}
+                                                px={{ base: '4', sm: '10' }}
+                                                bg={{ base: 'transparent', sm: 'bg.surface' }}
+                                                boxShadow={{ base: 'none', sm: 'md' }}
+                                                borderRadius={{ base: 'none', sm: 'xl' }}
+                                            >
+                                                <Stack spacing="6">
+                                                    <Stack spacing="5">
+                                                        <form onSubmit={(e) => check(e)}>
+                                                            <FormControl>
+                                                                <FormLabel htmlFor="email">Email</FormLabel>
+                                                                <Input ref={userName} id="email" type="email" />
+                                                            </FormControl>
+                                                            <FormControl>
+                                                                <FormLabel htmlFor="password">Password</FormLabel>
+                                                                <InputGroup>
+                                                                    <InputRightElement>
+                                                                    </InputRightElement>
+                                                                    <Input
+                                                                        ref={userPass}
+                                                                        id="password"
+                                                                        name="password"
+                                                                        type={'password'}
+                                                                        autoComplete="current-password"
+                                                                        required
+                                                                        {...props}
+                                                                    />
+                                                                </InputGroup>
+                                                            </FormControl>
+                                                        </form>
+                                                    </Stack>
+                                                    <HStack justify="space-between">
+                                                        <Checkbox defaultChecked>Remember me</Checkbox>
+                                                    </HStack>
+                                                    <Stack spacing="6">
+                                                        <Button type='submit'><div onClick={(e) => check(e)}>შესვლა</div></Button>
+                                                    </Stack>
+                                                </Stack>
+                                            </Box>
                                         </Stack>
-                                    </Box>
-                                </Stack>
-                            </Container>
-                        </ChakraProvider>
-                    </Modal.Body>
-                </Modal>
-            </div>
-            <select value={val} onChange={changeLanguage} className='lang_change'>
-                <option value="ge">GE</option>
-                <option value="en">EN</option>
-            </select>
-        </section>
+                                    </Container>
+                                </ChakraProvider>
+                            </Modal.Body>
+                        </Modal>
+                    </div>
+                    <select value={val} onChange={changeLanguage} className='lang_change'>
+                        <option value="ge">GE</option>
+                        <option value="en">EN</option>
+                    </select>
+                </section>
             </div >
-    <Nav justify variant="tabs" className='col-md-8'>
-        <Nav.Item>
-            <Link ref={navLink1} className='nav-link' onClick={handleChange} to={'/about'}>{t('about')}</Link>
-        </Nav.Item>
-        <Nav.Item >
-            <Link ref={navLink2} onClick={handleChange} className='nav-link' to={'/services'}>{t('services')}</Link>
-        </Nav.Item>
-        <Nav.Item>
-            <Link ref={navLink3} onClick={handleChange} className='nav-link' to={'/blog'}>{t('blog')}</Link>
-        </Nav.Item>
-        <Nav.Item>
-            <Link ref={navLink4} onClick={handleChange} className='nav-link' to={'/media'} ac>{t('media')}</Link>
-        </Nav.Item>
-        <Nav.Item >
-            <Link ref={navLink5} onClick={handleChange} className='nav-link' to={'/vacancy'}>{t('vacancy')}</Link>
-        </Nav.Item>
-        <Nav.Item>
-            <Link ref={navLink6} onClick={handleChange} className='nav-link' to={'/guide'}>{t('guide')}</Link>
-        </Nav.Item>
-        <Nav.Item>
-            <Link ref={navLink7} onClick={handleChange} className='nav-link' to={'/pubInfo'}>{t('pubInfo')}</Link>
-        </Nav.Item>
-    </Nav>
+            <Nav justify variant="tabs" className='col-md-8'>
+                <Nav.Item>
+                    <Link ref={navLink1} className='nav-link' onClick={handleChange} to={'/about'}>{t('about')}</Link>
+                </Nav.Item>
+                <Nav.Item >
+                    <Link ref={navLink2} onClick={handleChange} className='nav-link' to={'/services'}>{t('services')}</Link>
+                </Nav.Item>
+                <Nav.Item>
+                    <Link ref={navLink3} onClick={handleChange} className='nav-link' to={'/blog'}>{t('blog')}</Link>
+                </Nav.Item>
+                <Nav.Item>
+                    <Link ref={navLink4} onClick={handleChange} className='nav-link' to={'/media'} ac>{t('media')}</Link>
+                </Nav.Item>
+                <Nav.Item >
+                    <Link ref={navLink5} onClick={handleChange} className='nav-link' to={'/vacancy'}>{t('vacancy')}</Link>
+                </Nav.Item>
+                <Nav.Item>
+                    <Link ref={navLink6} onClick={handleChange} className='nav-link' to={'/guide'}>{t('guide')}</Link>
+                </Nav.Item>
+                <Nav.Item>
+                    <Link ref={navLink7} onClick={handleChange} className='nav-link' to={'/pubInfo'}>{t('pubInfo')}</Link>
+                </Nav.Item>
+            </Nav>
         </div >
     )
 }
