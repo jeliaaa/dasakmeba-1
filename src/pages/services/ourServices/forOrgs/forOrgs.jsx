@@ -9,68 +9,61 @@ const ForOrgs = () => {
       <Breadcrumbs></Breadcrumbs>
       <div style={{display:'flex', flexDirection:'column', alignItems:'center', gap:50}}>
         <Container style={{width: '80%', padding: 30}}>
-          <Typography>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod cum pariatur magni et modi placeat tempora quas neque architecto nulla fugiat rerum quaerat, ratione a culpa ad voluptatibus magnam debitis?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod cum pariatur magni et modi placeat tempora quas neque architecto nulla fugiat rerum quaerat, ratione a culpa ad voluptatibus magnam debitis?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod cum pariatur magni et modi placeat tempora quas neque architecto nulla fugiat rerum quaerat, ratione a culpa ad voluptatibus magnam debitis?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod cum pariatur magni et modi placeat tempora quas neque architecto nulla fugiat rerum quaerat, ratione a culpa ad voluptatibus magnam debitis?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod cum pariatur magni et modi placeat tempora quas neque architecto nulla fugiat rerum quaerat, ratione a culpa ad voluptatibus magnam debitis?
+        <Typography>
+            <h3>ელექტრონული სერვისების განვითარების მიზანი</h3>
+            <p>სააგენტოს ელექტრონული სერვისების შემუშავება განხორციელდა მომსახურების ხარისხის გაზრდის მიზნით და ემსახურება დასაქმების სააგენტოში მოსახლეობის პირადი მომართვიანობის საჭიროების  შემცირებას,  თვითმომსახურების განვითარებას და მომსახურების ხარისხის ამაღლებას.
+              სააგენტოს მიერ ადმინისტრირებადი შრომის ბაზრის მართვის ელექტრონული სისტემის დანერგვით სააგენტოს მიზანია დასაქმების ხელშეწყობის მიმართულებით სახელმწიფო სერვისების განვითარება, მოქალაქის/სამუშაოს მაძიებელთა, დამსაქმებელთა და საგანმანათლებლო  პროვაიდერ ორგანიზაციათა რეესტრის წარმოება და მუდმივი სრულყოფა,  აღნიშნული სისტემის მეშვეობით თვითმომსახურების განვითარება და სერვისების მარტივად სარგებლობის შესაძლებლობა.
+              შრომის ბაზრის მართვის ელექტრონული სისტემის მეშვეობით დასაქმების სააგენტოს შესაძლებლობა ექნება განახორციელოს პროცესების დიაგნოსტიკა და მოახდინოს საჭიროების იდენტიფიცირება, რაც არსებული მომსახურების სრულყოფასა და განვითარებას შუწყობს ხელს.
+            </p>
           </Typography>
         </Container>
         <Accordion defaultActiveKey="0" flush style={{ width: '80%', border: '1px solid black' }}>
           <Accordion.Item eventKey="0">
-            <Accordion.Header>bla</Accordion.Header>
+            <Accordion.Header>ვაკანსია/სტაჟირება/მოხალისეობის შესახებ განაცხადის (ინფორმაციის) განთავსება</Accordion.Header>
             <Accordion.Body>
-              ქართული თეატრის დღეს საფუძველი ჩაეყარა 1850 წლის 14 იანვარს, როდესაც თბილისში პირველი სპექტაკლი გიორგი ერისთავის „გაყრა“ დაიდგა.
-              ეს იყო პირველი და იმ დროისთვის ერთადერათი პროფესიული თეატრი საქართველოში.
+              <p>შრომის ბაზრის მართვის ელექტრონული სისტემა, სააგენტოს სერვისებით მოსარგებლე მოქალაქე/სამუშაოს მაძიებლებს, აძლევს შესაძლებლობას:</p>
+              <ul>
+                <li>შექმნას და დისტანციურად მართოს საკუთარი პროფილი</li>
+                <li>სერვისების სარგებლობისათვის გამოიყენოს  ელექტრონული რესურსი</li>
+                <li>მოიძიოს ვაკანსიის/სტაჟირების/მოხალისეობის, საგანმანათლებლო პროგრამების შესახებ განაცხადი</li>
+                <li>განათავსოს/მოიძიოს სამუშაო ოჯახში გაანცხადი</li>
+                <li>გაეცნოს საქართველოს შრომის ბაზარზე არსებული მდგომარეობის შესახებ ინფორმაციასა და ჩატარებული კვლევების შედეგებს და სურვილის შემთხვევაში მიიღოს მონაწილეობა  მსგავსი კვლევების ორგანიზება/ინიცირება/განხორციელებაში </li>
+                <li>კვალიფიკაციის ამაღლების ან/და ახალი პროფესიის დაუფლების მიზნით  ჩაერთოს დასაქმების ხელშეწყობის მიზნობრივ პროგრამებში</li>
+                <li>ონლაინ კონსულტაციის მეშვეობით მიიღოს საჭირო ინფორმაცია ან დახმარება</li>
+              </ul>
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey='1'>
-            <Accordion.Header>blablal</Accordion.Header>
+            <Accordion.Header>საგანმანათლებო პროგრამების შესახებ ინფორმაციის განთავსება</Accordion.Header>
             <Accordion.Body>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-              minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-              aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-              pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum.
+              <p>შრომის ბაზრის მართვის ელექტრონულ სისტემაში რეგისტრირებულ   სამუშაოს მაძიებლებს  შეუძლიათ შეუძლიათ განაცხადი:</p>
+              <ul>
+                <li>ვაკანსიის შესახებ- კონკრეტული მახასიათებლის მქონე თავისუფალ სამუშაოს ადგილის შესახებ ინფორმაციის ხელმისაწვდომობა სისტემაში რეგისტრირებულ აქტიურ სამუშაოს მაძიებლის შესაძლელობას ზრდის სასურველი სამუშაო ადგილის მოძიებისა და დასაქმების კუთხით.  შრომის ბაზრის მართვის ელექტრონული სისტემის მეშვეობით სასურველი სამუშაო ადგილის მოძიების მიზნით  ძებნის პროცესი არის უფრო კომფორტული და ნაკლებად სტრესული, მოითხოვს ნაკლებ  დროსა  და ენერგიას, რადგან დაინტერესებულ მოქლაქეს შეუძლია მარტივი პროცედურების გავლით, სახლიდან გაუსვლელად იპოვოს სასურველი სამუშაო.</li>
+                <li>სტაჟირების შესახებ- შრომის ბაზრის მართვის  ელექტრონული სისტემა აძლევს პრაქტიკული გამოცდილების შეძენის მსურველ მოქალაქეებს მათთვის საინტერესო სტაჟირების შესახებ ინფორმაციის მოძიების შესაძლებლობას; სტაჟირება სასურველ სფეროში კი მათ ახალ შესაძლებლობებს გაუხსნის - შეძლებენ თეორიული ცოდნის გამყარებას, საჭირო პროფესიული გამოცდილების შეგროვებას, რაც სამომავლოდ მათთვის კარიერული დაგეგმვის და პროფესიული განვითარების მნიშვნელოვანი ფუნდამენტის შექმნის საფუძვლად შეიძლება იქცეს.</li>
+                <li>მოხალისეობის შესახებ- სააგენტოს სერვისები არა მარტო სამუშაოს და პრაქტიკის მაძიებელთათვის არის საინტერესო, არამედ საზოგადოებრივ საქმიანობაში აქტიური მონაწილეობის მსურველი მოქალაქეებისათვისაც, რომლებიც მზად არიან მონაწილეობა მიიღონ სხვადასხვა მოხალისეობრივ პროექტებში. მოხალისეობრივი საქმიანობა კი მოქალაქეებისთვის პიროვნული განვითარების, საკუთარი უნარ ჩვევების უკეთ შეცნობის, სამოქალაქო საზოგადოების განვითარებაში წვლილის შეტანის და მნიშვნელოვანი სოციალური კაპიტალის დაგროვების შესაძლებლობას მიცემს.</li>
+              </ul>
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey='2'>
-            <Accordion.Header>blblbl</Accordion.Header>
+            <Accordion.Header>განაცხადის შესაბამისი ადამიანური რესურსების მოძიებაში ხელშეწყობა</Accordion.Header>
             <Accordion.Body>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-              minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-              aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-              pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum.
+              <p>შრომის ბაზრის ელექტრონული სისტემის მეშვეობით სააგენტო ხელს უწყობს  ,,სამუშაო  ოჯახში’’ პოპულარიზაციას, </p>
+              <ul>
+                <li>სასურველი სამუშაოს მოლოდინში ერთჯერადი დასაქმების მსურველს  შესაძლებლობა აქვს ოჯახში ერთჯერადი თუ დროებითი სამუშაოს შესრულებით მიიღოს შემოსავალი  </li>
+                <li>სისტემაში რეგისტრირებულ ნებისმიერ მოქალაქეს ეძლევა  საშუალება სამუშაოს მაძიებლისგან გახდეს დამსაქმებელი და  განათავსოს  განცხადება “სამუშაო ოჯახში“ შესახებ  და დროის დაზოგვით ადვილად  მოიძიოს სასურველი კანდიდატები ოჯახში ერთჯერადი ან გრძელვადიანი დასაქმების მიზნით.</li>
+              </ul>
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey='3'>
-            <Accordion.Header>hooho</Accordion.Header>
+            <Accordion.Header>ინფორმირებულობა ქვეყნის ფარგლებს გარეთ დასაქმების შესახებ</Accordion.Header>
             <Accordion.Body>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-              minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-              aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-              pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum.
+              <p>შრომის ბაზრის მართვის  ელექტრონული  სისტემის მეშვეობით სააგენტო ხელს უწყობს შრომის ბაზარზე კონკურენტუნარიანი ადამიანური რესურსის დამკვიდრების მიზნით, დაინტერესებული პირების პროფესიულ განვითარებას ფორმალური და არაფორმალური განათლების მიღების მხრივ. სისტემაში რეგისტრირებულ პირებს შესაძლებლობა ეძლევათ სააგენტოს ვებ პორტალის მეშვეობით მიიღონ ინფორმაცია საგანმანათლებლო პროვაიდერების და სხვადასხვა ორგანიზაციების მიერ ორგანიზებული ტრენინგების, სემინარების, კონფერენციების შესახებ. მსგავს საგანმანათლებლო პროგრამებში მონაწილეობა, ხელს შეუწყობს მოქალაქეებს აიმაღლონ კვალიფიკაცია ადგილობრივი დასაქმების ბაზრის მოთხოვნების შესაბამისად. მრავალმხვრივი პროფესიული ზრდა მნიშვნელოვანი წინაპირობაა წარმატებული კარიერისთვის, როგორც საქართველოში ასევე ჩვენი ქვეყნის ფარგლებს გარეთ, შესაბამისად მრავალმხვრივი საგანმანათლებლობლო პროექტების შეთავაზება და ამ პროექტებში  მოქალაქეების ჩართულობის უზრუნველყოფა, დასაქმების სააგენტოს ერთ ერთი პრიორიტეტული ამოცანაა.</p>
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey='4'>
-            <Accordion.Header>ikisaqve</Accordion.Header>
+            <Accordion.Header>გრანტებისა და დაფინანსების შესახებ ინფორმაციის განთავსება</Accordion.Header>
             <Accordion.Body>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-              minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-              aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-              pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum.
+              <p>შრომის ბაზრის ელექტრონული სისტემის მეშვეობით, ერთის მხრივ  ხდება სისტემაში განთავსებულ  ვაკანსიაზე, ვაკანსიის პირობების გათვალისწინებით შესაბამისი ადამიანური რესურსის შერჩევა, და ამასთანავე სისტემაში რეგისტრირებულ მოქალაქე/სამუშაოს მაძიებელს აქვს შესაძლებლობა გამოხატოს ინტერესი მისთვის სასურველ ვაკანსიაზე. მთლიანობაში სამუშაოს ძებნა ჩვენი სისტემის მეშვეობით ხდება უფრო მოქნილი და შედეგზე ორიენტირებული.</p>
             </Accordion.Body>
           </Accordion.Item>
         </Accordion>
