@@ -33,6 +33,13 @@ import Gallery from "./pages/media/gallery/Gallery";
 import News from "./pages/media/news/News";
 import Vacancy from "./pages/Vacancy/Vacancy";
 import PublicInformation from "./pages/publicInfromation/PublicInformation";
+import Law from "./pages/publicInfromation/law/Law";
+import Kanonebi from "./pages/publicInfromation/law/Kanonebi";
+import Dadgenilebebi from "./pages/publicInfromation/law/Dadgenilebebi";
+import Konvenciebi from "./pages/publicInfromation/law/Kovenciebi";
+import Brdzanebebi from "./pages/publicInfromation/law/Brdzanebebi";
+import Information from "./pages/publicInfromation/information/Information";
+
 import Contact from "./pages/contactUs/Contact";
 import Registered from "./pages/about/partners/registered/Registrered";
 import NonRegistered from "./pages/about/partners/nonRegistered/NonRegistered";
@@ -60,27 +67,41 @@ import CalendarSingle from "./pages/blog/calendar/CalendarSingle";
 import ClassificationSingle from "./pages/blog/profClassification/ClassificationSingle";
 import VideoLesson from "./pages/blog/videoLessons/VideoLesson";
 // import './cardAlignment.scss'
-import Privacy from "./pages/privacy/Privacy";
+import Privacy from "./pages/Register/privacy/Privacy";
 import GallerySingle from "./pages/media/gallery/GallerySingle";
 import Guide from "./pages/Guide/Guide";
 import QnA from "./pages/Guide/QnA/QnA";
 import Manual from "./pages/Guide/userManual/Manual";
 import StructureOfSite from "./pages/Guide/siteStruct/StructureOfSite";
 import GrantsTypeSingle from "./pages/services/grants/GrantsTypeSingle";
-
-
+import ResearchSingle from "./pages/blog/researches/ResearchSingle";
+import Verify from "./pages/Register/Verify";
+import User from "./pages/user/User";
+import Cabinet from "./pages/user/cabinet/Cabinet";
+import Profile from "./pages/user/profile/Profile";
+import Inbox from "./pages/user/cabinet/inbox/Inbox";
+import Vacancies from "./pages/user/cabinet/vacancies/Vacancies";
+import MyVacancies from "./pages/user/cabinet/MyVacancies";
+import CV from "./pages/user/cv/CV";
+import StatisticsCab from "./pages/user/cabinet/stats/Statistics";
+import OtherDetails from "./pages/user/otherDetailsCv/OtherDetails";
+import VacAdd from "./pages/user/cabinet/vacancyAdd/vac/VacAdd";
+import EduAdd from "./pages/user/cabinet/vacancyAdd/edu/EduAdd";
+import Skeletons from "./ReusableComponents/Skeletons";
+import Loading from "./ReusableComponents/loadingPage/Loading";
+import Err from "./ReusableComponents/Err";
+import ProjectsSingleForm from "./pages/services/projects/ProjectsSingleForm";
 
 function App() {
   const { i18n } = useTranslation();
   const selectedLanguage = i18n.language;
-  let fontPrimary = "Noto Sans Georgian"; // Default font
+  let fontPrimary = "Georgian Primary"; // Default font
   if (selectedLanguage === "en") {
     fontPrimary = "Poppins";
   }
   const [isOpen, setIsOpen] = useState(true);
   const location = useLocation();
   useEffect(() => {
-    console.log(location.search);
     if (location.pathname === "/main") {
       setIsOpen(true);
     } else {
@@ -111,8 +132,14 @@ function App() {
             <Route path="/about/baseInfo" element={<BaseInfo />} />
             <Route path="/about/brand" element={<Brand />} />
             <Route path="/about/partners" element={<Partners />} />
-            <Route path="/about/partners/employers/:id" element={<PartnerSingle />} />
-            <Route path="/about/partners/ourPartners/:id" element={<PartnerSingle />} />
+            <Route
+              path="/about/partners/employers/:id"
+              element={<PartnerSingle />}
+            />
+            <Route
+              path="/about/partners/ourPartners/:id"
+              element={<PartnerSingle />}
+            />
             <Route path="/about/partners/employers" element={<Registered />} />
             <Route
               path="/about/partners/ourPartners"
@@ -125,12 +152,29 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/services/ourServices" element={<OurServices />} />
             <Route path="/services/grants" element={<Grants />} />
-            <Route path="/services/grants/:type" element={<GrantsTypeSingle />} />
-            <Route path="/services/grants/:type/:id" element={<GrantsSingle />} />
+            <Route
+              path="/services/grants/:type"
+              element={<GrantsTypeSingle />}
+            />
+            <Route
+              path="/services/grants/:type/:id"
+              element={<GrantsSingle />}
+            />
             <Route path="/services/projects" element={<Projects />} />
             <Route path="/services/projects/:id" element={<ProjectsSingle />} />
+            <Route
+              path="/services/projects/:id/form"
+              element={<ProjectsSingleForm />}
+            />
+            <Route
+              path="/services/projects/shes/:id"
+              element={<ResearchSingle />}
+            />
             <Route path="/services/migration" element={<Migration />} />
-            <Route path="/services/migration/:id" element={<MigrationSIngle />} />
+            <Route
+              path="/services/migration/:id"
+              element={<MigrationSIngle />}
+            />
             <Route path="/services/ourServices/forOrgs" element={<ForOrgs />} />
             <Route
               path="/services/ourServices/forUsers"
@@ -143,17 +187,24 @@ function App() {
             <Route path="/blog/articles/:type/:id" element={<Article />} />
             <Route path="/blog/calendar" element={<Calendar />} />
             {/* ----> calendar */}
-            <Route path="/blog/calendar/jan" element={<Jan />} />
-            <Route path="/blog/calendar/:month/:id" element={<CalendarSingle />} />
-            <Route path="/blog/calendar/feb" element={<Feb />} />
-            <Route path="/blog/calendar/mar" element={<Mar />} />
+            <Route
+              path="/blog/calendar/:month/:id"
+              element={<CalendarSingle />}
+            />
+
+            <Route path="/blog/calendar/jan" element={<Apr />} />
+            <Route path="/blog/calendar/feb" element={<Apr />} />
+            <Route path="/blog/calendar/mar" element={<Apr />} />
             <Route path="/blog/calendar/apr" element={<Apr />} />
-            <Route path="/blog/calendar/may" element={<May />} />
-            <Route path="/blog/calendar/june" element={<June />} />
-            <Route path="/blog/calendar/july" element={<July />} />
+            <Route path="/blog/calendar/may" element={<Apr />} />
+            <Route path="/blog/calendar/june" element={<Apr />} />
+            <Route path="/blog/calendar/july" element={<Apr />} />
 
             <Route path="/blog/classification" element={<Classification />} />
-            <Route path="/blog/classification/:id" element={<ClassificationSingle />} />
+            <Route
+              path="/blog/classification/:id"
+              element={<ClassificationSingle />}
+            />
             <Route path="/blog/profesiograma" element={<Profesiograma />} />
             <Route
               path="/blog/profesiograma/:id"
@@ -164,9 +215,13 @@ function App() {
               element={<ProfesiogramaSingle />}
             />
             <Route path="/blog/researches" element={<Researches />} />
-            <Route path="/blog/vid-lessons" element={<VideoLessons />} />
-            <Route path="/blog/vid-lessons/:type" element={<VideoLessonsSingle />} />
-            <Route path="/blog/vid-lessons/:type/:id" element={<VideoLesson />} />
+            <Route path="/blog/researches/:id" element={<ResearchSingle />} />
+            <Route path="/blog/lessons" element={<VideoLessons />} />
+            <Route
+              path="/blog/lessons/:type"
+              element={<VideoLessonsSingle />}
+            />
+            <Route path="/blog/lessons/:type/:id" element={<VideoLesson />} />
             {/* media */}
             <Route path="/media" element={<Media />} />
             <Route path="/media/gallery" element={<Gallery />} />
@@ -184,12 +239,43 @@ function App() {
 
             {/* pubInfo */}
             <Route path="/pubInfo" element={<PublicInformation />} />
+            <Route path="/pubInfo/law" element={<Law />} />
+            <Route path="/pubInfo/law/Kanonebi" element={<Kanonebi />} />
+            <Route
+              path="/pubInfo/law/Dadgenilebebi"
+              element={<Dadgenilebebi />}
+            />
+            <Route path="/pubInfo/law/Konvenciebi" element={<Konvenciebi />} />
+            <Route path="/pubInfo/law/Brdzanebebi" element={<Brdzanebebi />} />
+            <Route path="/pubInfo/information" element={<Information />} />
+
             {/* contact */}
             <Route path="/contact" element={<Contact />} />
             {/* register */}
             <Route path="/register" element={<Register />} />
+            <Route path="/register/verify" element={<Verify />} />
             <Route path="/register/privacy" element={<Privacy />} />
             <Route path="/test" element={<Test />} />
+            {/*userr*/}
+            <Route path="/user" element={<User />} />
+            <Route path="/user/cabinet" element={<Cabinet />} />
+            <Route path="user/CV" element={<CV />} />
+            <Route path="user/otherDetails" element={<OtherDetails />} />
+            <Route path="/user/cabinet/inbox" element={<Inbox />} />
+            <Route path="user/cabinet/vacancies" element={<Vacancies />} />
+            <Route path="user/cabinet/vacAdd" element={<VacAdd />} />
+            <Route path="user/cabinet/eduAdd" element={<EduAdd />} />
+            <Route path="user/cabinet/myVacancies" element={<MyVacancies />} />
+            <Route
+              path="/user/cabinet/statistics"
+              element={<StatisticsCab />}
+            />
+            <Route path="/user/profile" element={<Profile />} />
+
+            {/* components */}
+            <Route path="/skeletons" element={<Skeletons />} />
+            <Route path="/loading" element={<Loading />} />
+            <Route path="*" element={<Err />} />
           </Routes>
         </div>
         <div className="videos_wrapper">

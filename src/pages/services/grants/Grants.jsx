@@ -3,10 +3,9 @@ import { Container } from 'react-bootstrap';
 import Breadcrumbs from '../../../ReusableComponents/breadcrumbs/Breadcrumbs';
 import InfoCard from '../../../ReusableComponents/infocard/InfoCard';
 import "../../media/news/News.scss"
-import ActiveTabs from '../../../ReusableComponents/activeTabs/ActiveTabs';
-import CardsWrap from '../../../ReusableComponents/CardsWrap/CardsWrap';
 import { useTranslation } from 'react-i18next';
 import ProfesiogramaCard from '../../../ReusableComponents/profesiograma/ProfesiogramaCard';
+import NonPaginated from '../../../ReusableComponents/CardsWrap/NonPaginated';
 const tabs = [
   {
     id: 1, label: 'აქტიური', children:
@@ -31,11 +30,12 @@ const Grants = () => {
   return (
     <Container style={{ backgroundColor: '#fff', padding: '20px 20px', borderRadius: '8px' }}>
       <Breadcrumbs></Breadcrumbs>
-      <CardsWrap>
+      <NonPaginated>
         <ProfesiogramaCard a={true} img={'https://picsum.photos/300/200'} name={t('სახელმწიფო')} id={'type1'} />
         <ProfesiogramaCard a={true} img={'https://picsum.photos/300/200'} name={t('საგანმანათლებლო')} id={'type2'} />
         <ProfesiogramaCard a={true} img={'https://picsum.photos/300/200'} name={t('რაღაც')} id={'type3'} />
-      </CardsWrap>
+        <ProfesiogramaCard a={true} img={'https://picsum.photos/300/200'} name={t('რაღაც')} id={'type4'} />
+      </NonPaginated>
     </Container>
 
   )

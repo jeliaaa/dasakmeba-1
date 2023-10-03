@@ -1,14 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './navbox.scss'
-
-const NavBox = ({ name, to }) => {
+const NavBox = ({ name, to, img }) => {
     return (
-        <div className="nav-box">
-            <div className='font-face-gm'>
-                <Link to={to}><h3>{name}</h3></Link>
-            </div>
-        </div>
+        <div className="nav-box" style={{backgroundImage:`url(${img})`}}>
+            <Link to={to}><h3>{name}</h3></Link>
+        </div >
     )
 }
 

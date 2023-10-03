@@ -41,7 +41,15 @@ const resources = {
       userManual: 'User Manual',
       siteStructure: 'Stie Structure',
       contacts: "Contact us",
-      pubInfo: "Public info",
+      pubInfo: "Public Information",
+      publicInformation: "Public Information",
+      Information: "Public Information",
+      law: 'Law',
+      kanonebi: 'Laws',
+      dadgenilebebi: 'Resolutions',
+      brdzanebebi: 'Orders',
+      konvenciebi: 'Ratified Conventions',
+
       conference: 'Conference',
       lectures: 'Lectures',
       professional: 'Professional knowledge',
@@ -60,6 +68,10 @@ const resources = {
       position : "Position",
       nameSurname: "Name, Surname",
       username: "Username",
+      //researches
+      name: 'Name',
+      view: 'View',
+      date : 'Date',
       //months
       jan:'January',
       feb:'February',
@@ -73,8 +85,24 @@ const resources = {
       //some other things
       employers: 'Employers',
       ourPartners: 'Our Partners',
-      employement: "Employement",
-      educational : "Educational"
+      educational : "Educational",
+      //user
+      user: 'User',
+      profile: 'Profile',
+      cabinet: 'Cabinet',
+      inbox: 'Inbox',
+      vacancies: 'Offers',
+      myVacancies: 'My vacancies',
+      type: 'Type',
+      employer: 'Employer',
+      municipality: 'Municipality',
+      deadline: 'Deadline',
+      sphere: 'Section',
+      information: 'Information',
+      approved : 'Approved',
+      result: 'Result',
+      register : 'Register'
+      
     },
   },
   ge: {
@@ -117,6 +145,14 @@ const resources = {
       userManual: 'სარგებლობის ინსტრუქცია',
       contacts: "კონტაქტები",
       pubInfo: "საჯარო ინფორმაცია",
+      publicInformation: "საჯარო ინფორმაცია",
+      Information: 'საჯარო ინფორმაცია',
+      Law: 'კანონმდებლობა',
+      law: 'კანონმდებლობა',
+      kanonebi: 'კანონები',
+      dadgenilebebi: 'დადგენილებები',
+      brdzanebebi: 'ბრძანებები',
+      konvenciebi: 'რატიფიცირებული კონვენციები',
       conference: 'კონფერენცია',
       lectures: 'სემინარები',
       professional: 'პროფესიული სასწავლებელი',
@@ -140,6 +176,10 @@ const resources = {
       position : "პოზიცია",
       nameSurname: "სახელი, გვარი",
       username: "მეტსახელი",
+      //researches
+      name: 'სახელი',
+      view: 'ნახვა',
+      date : 'თარიღი',
       //months
       jan:'იანვარი',
       feb:'თებერვალი',
@@ -153,8 +193,24 @@ const resources = {
       //some other things
       employers: 'დამსაქემებელი',
       ourPartners: 'ჩვენი პარტნიორები',
-      employement: "დასაქმება",
-      educational : "საგანმანათლებლო"
+      educational : "საგანმანათლებლო",
+      //user
+      user: 'მომხმარებელი',
+      profile: 'პროფილი',
+      cabinet: 'კაბინეტი',
+      inbox: 'შეტყობინებები',
+      vacancies: 'განცხადებები',
+      myVacancies: 'ჩემი შეთავაზებები',
+      type: 'ტიპი',
+      employer: 'დამსაქმებელი',
+      municipality: 'მუნიციპალიტეტი',
+      deadline: 'ვადა',
+      sphere: 'სფერო',
+      CV : 'რეზიუმე',
+      information: 'ინფორმაცია',
+      approved : 'შერჩევა',
+      result: 'შედეგი',
+      register : 'რეგისტრაცია'
     },
   },
   // Add more languages and translations as needed

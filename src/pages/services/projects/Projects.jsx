@@ -7,6 +7,8 @@ import ActiveTabs from '../../../ReusableComponents/activeTabs/ActiveTabs';
 import { AppBar, Box, Tab, Tabs, useTheme } from '@mui/material';
 import PropTypes from 'prop-types';
 import CardsWrap from '../../../ReusableComponents/CardsWrap/CardsWrap';
+import NonPaginated from '../../../ReusableComponents/CardsWrap/NonPaginated';
+import './pr.scss'
 
 const tabs = [
   {
@@ -16,15 +18,19 @@ const tabs = [
         <InfoCard id={2} date={'აგვ. 23, 2023'} heading={'პროექტები 2'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
         <InfoCard id={3} date={'აგვ. 23, 2023'} heading={'პროექტები 3'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
         <InfoCard id={3} date={'აგვ. 23, 2023'} heading={'პროექტები 3'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
+        <InfoCard id={2} date={'აგვ. 23, 2023'} heading={'პროექტები 2'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
+        <InfoCard id={3} date={'აგვ. 23, 2023'} heading={'პროექტები 3'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
+        <InfoCard id={3} date={'აგვ. 23, 2023'} heading={'პროექტები 3'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
+
       ]
   },
   {
     id: 2, label: 'შესრულებული', children:
       [
-        <InfoCard id={4} date={'აგვ. 23, 2023'} heading={'პროექტები 4'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
-        <InfoCard id={5} date={'აგვ. 23, 2023'} heading={'პროექტები 5'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
-        <InfoCard id={6} date={'აგვ. 23, 2023'} heading={'პროექტები 6'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
-        <InfoCard id={7} date={'აგვ. 23, 2023'} heading={'პროექტები 7'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />
+        <InfoCard id={'shes/4'} date={'აგვ. 23, 2023'} heading={'პროექტები 4'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
+        <InfoCard id={'shes/5'} date={'აგვ. 23, 2023'} heading={'პროექტები 5'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
+        <InfoCard id={'shes/6'} date={'აგვ. 23, 2023'} heading={'პროექტები 6'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
+        <InfoCard id={'shes/7'} date={'აგვ. 23, 2023'} heading={'პროექტები 7'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />
       ]
   },
 
@@ -34,37 +40,54 @@ const yearsFilterTabs = [
   {
     id: 1, label: '2019', children:
       [
-        <InfoCard id={1} date={'აგვ. 23, 2019'} heading={'პროექტები 1'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
-        <InfoCard id={2} date={'აგვ. 23, 2019'} heading={'პროექტები 2'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
-        <InfoCard id={3} date={'აგვ. 23, 2019'} heading={'პროექტები 3'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
-        <InfoCard id={4} date={'აგვ. 23, 2019'} heading={'პროექტები 3'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
+        <InfoCard id={'shes/8'} date={'აგვ. 23, 2019'} heading={'პროექტები 1'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
+        <InfoCard id={'shes/9'} date={'აგვ. 23, 2019'} heading={'პროექტები 2'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
+        <InfoCard id={'shes/10'} date={'აგვ. 23, 2019'} heading={'პროექტები 3'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
+        <InfoCard id={'shes/11'} date={'აგვ. 23, 2019'} heading={'პროექტები 3'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
       ]
   },
   {
     id: 2, label: '2018', children:
       [
-        <InfoCard id={11} date={'აგვ. 23, 2018'} heading={'პროექტები 1'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
-        <InfoCard id={21} date={'აგვ. 23, 2018'} heading={'პროექტები 2'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
-        <InfoCard id={31} date={'აგვ. 23, 2018'} heading={'პროექტები 3'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
-        <InfoCard id={41} date={'აგვ. 23, 2018'} heading={'პროექტები 3'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
+        <InfoCard id={'shes/11'} date={'აგვ. 23, 2018'} heading={'პროექტები 1'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
+        <InfoCard id={'shes/21'} date={'აგვ. 23, 2018'} heading={'პროექტები 2'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
+        <InfoCard id={'shes/31'} date={'აგვ. 23, 2018'} heading={'პროექტები 3'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
+        <InfoCard id={'shes/41'} date={'აგვ. 23, 2018'} heading={'პროექტები 3'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
       ]
   },
   {
     id: 3, label: '2017', children:
       [
-        <InfoCard id={31} date={'აგვ. 23, 2017'} heading={'პროექტები 1'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
-        <InfoCard id={32} date={'აგვ. 23, 2017'} heading={'პროექტები 2'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />
+        <InfoCard id={'shes/31'} date={'აგვ. 23, 2017'} heading={'პროექტები 1'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
+        <InfoCard id={'shes/32'} date={'აგვ. 23, 2017'} heading={'პროექტები 2'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />
       ]
   },
   {
     id: 4, label: '2016', children:
       [
-        <InfoCard id={31} date={'აგვ. 23, 2016'} heading={'პროექტები 1'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
-        <InfoCard id={32} date={'აგვ. 23, 2016'} heading={'პროექტები 2'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
-        <InfoCard id={33} date={'აგვ. 23, 2016'} heading={'პროექტები 3'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
-        <InfoCard id={34} date={'აგვ. 23, 2016'} heading={'პროექტები 3'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
-        <InfoCard id={35} date={'აგვ. 23, 2016'} heading={'პროექტები 3'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
-        <InfoCard id={36} date={'აგვ. 23, 2016'} heading={'პროექტები 3'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
+        <InfoCard id={'shes/31'} date={'აგვ. 23, 2016'} heading={'პროექტები 1'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
+        <InfoCard id={'shes/32'} date={'აგვ. 23, 2016'} heading={'პროექტები 2'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
+        <InfoCard id={'shes/33'} date={'აგვ. 23, 2016'} heading={'პროექტები 3'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
+        <InfoCard id={'shes/34'} date={'აგვ. 23, 2016'} heading={'პროექტები 4'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
+        <InfoCard id={'shes/35'} date={'აგვ. 23, 2016'} heading={'პროექტები 5'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
+        <InfoCard id={'shes/36'} date={'აგვ. 23, 2016'} heading={'პროექტები 6'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
+        <InfoCard id={'shes/34'} date={'აგვ. 23, 2016'} heading={'პროექტები 7'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
+        <InfoCard id={'shes/35'} date={'აგვ. 23, 2016'} heading={'პროექტები 8'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
+        <InfoCard id={'shes/36'} date={'აგვ. 23, 2016'} heading={'პროექტები 9'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
+      ]
+  },
+  {
+    id: 5, label: '2015', children:
+      [
+        <InfoCard id={'shes/31'} date={'აგვ. 23, 2016'} heading={'პროექტები 1'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
+        <InfoCard id={'shes/32'} date={'აგვ. 23, 2016'} heading={'პროექტები 2'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
+        <InfoCard id={'shes/33'} date={'აგვ. 23, 2016'} heading={'პროექტები 3'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
+        <InfoCard id={'shes/34'} date={'აგვ. 23, 2016'} heading={'პროექტები 4'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
+        <InfoCard id={'shes/35'} date={'აგვ. 23, 2016'} heading={'პროექტები 5'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
+        <InfoCard id={'shes/36'} date={'აგვ. 23, 2016'} heading={'პროექტები 6'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
+        <InfoCard id={'shes/34'} date={'აგვ. 23, 2016'} heading={'პროექტები 7'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
+        <InfoCard id={'shes/35'} date={'აგვ. 23, 2016'} heading={'პროექტები 8'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
+        <InfoCard id={'shes/36'} date={'აგვ. 23, 2016'} heading={'პროექტები 9'} thumbText={'დაინტერესების შემთხვევაში, გთხოვთ, ელექტრონული ფოსტის მისამართზე'} />,
       ]
   }
 ]
@@ -78,9 +101,10 @@ function TabPanel(props) {
       id={`full-width-tabpanel-${index}`}
       aria-labelledby={`full-width-tab-${index}`}
       {...other}
+      style={{ width: '100%' }}
     >
       {value === index && (
-        <Box sx={{ rowGap: '20px', p: 3, display: 'flex', flexDirection: 'row', justifyContent: 'space-between', flexWrap: 'wrap' }}>
+        <Box sx={{ rowGap: '20px', p: 3, display: 'flex', flexDirection: 'row', justifyContent: 'space-between', flexWrap: 'wrap', width: '100%', overflowX: 'auto' }}>
           {children}
         </Box>
       )}
@@ -109,35 +133,37 @@ const Projects = () => {
   return (
     <Container className='pr' style={{ backgroundColor: '#fff', padding: '20px 20px', borderRadius: '8px' }}>
       <Breadcrumbs></Breadcrumbs>
-      <CardsWrap>
-        <Box sx={{ bgcolor: 'background.paper', width: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', rowGap: '20px' }}>
-          <AppBar position="static">
-            <Tabs
-              value={value}
-              onChange={handleChange}
-              indicatorColor="secondary"
-              textColor="inherit"
-              variant="fullWidth"
-              aria-label="full width tabs example"
-            >
-              {tabs.map((tab, index) => (
-                <Tab key={index} label={tab.label} {...a11yProps(tab.id - 1)} />
-              ))}
-            </Tabs>
-          </AppBar>
-          <div className='tab_wrap'>
-            <TabPanel value={value} index={0} dir={theme.direction}>
-              {tabs[0].children.map((child, index) => (
-                <div className='card_wrap' key={index}>{child}</div>
-              ))}
-            </TabPanel>
-            <TabPanel value={value} index={1} dir={theme.direction}>
+      <NonPaginated>
+        <div className="active_tabs_wrapper">
+          <Box sx={{ bgcolor: 'background.paper', width: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', rowGap: '20px' }}>
+            <AppBar position="static">
+              <Tabs
+                value={value}
+                onChange={handleChange}
+                indicatorColor="secondary"
+                textColor="inherit"
+                variant="fullWidth"
+                aria-label="full width tabs example"
+              >
+                {tabs.map((tab, index) => (
+                  <Tab className='tabOfYears' key={index} label={tab.label} {...a11yProps(tab.id - 1)} />
+                ))}
+              </Tabs>
+            </AppBar>
+            <div className='tab_wrap'>
+              <TabPanel value={value} index={0} dir={theme.direction}>
+                <CardsWrap>{tabs[0].children.map((child, index) => (
+                  <div className='card_wrap' key={index}>{child}</div>
+                ))}</CardsWrap>
+              </TabPanel>
+              <TabPanel value={value} index={1} dir={theme.direction}>
                 <ActiveTabs tabs={yearsFilterTabs} />
-            </TabPanel>
-          </div>
-        </Box>
+              </TabPanel>
+            </div>
+          </Box>
+        </div>
         {/* <ActiveTabs tabs={tabs} /> */}
-      </CardsWrap>
+      </NonPaginated>
     </Container>
 
   )

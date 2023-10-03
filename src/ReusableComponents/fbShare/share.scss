@@ -1,0 +1,19 @@
+@import '../../variables';
+.share{
+    width: 20%;
+    padding: 5px 10px;
+    background-color: $primary-color-blue;
+    color: $primary-color-gray;
+    border-radius: 8px;
+    font-family: "Mtavruli";
+    border: none;
+    i{
+        margin-left: 10px;
+    }
+}
+@media screen and (max-width : 1000px) {
+    .share{
+        width: 70% !important;
+        margin: auto;
+    }
+}

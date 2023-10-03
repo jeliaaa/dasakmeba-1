@@ -1,15 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @font-face {
     font-family: 'MTAVRULI';
-    src: url('./assets//fonts/bpg_extrasquare_mtavruli_2009.ttf');
+    src: url('./assets/fonts/bpg_nino_mtavruli_bold.ttf');
 }
+
+;
+
+@font-face {
+    font-family: "Georgian Primary";
+    src: url('./assets/fonts/FiraGO-Medium.ttf');
+}
+
+;
 $font-primary-ge: 'MTAVRULI';
 $font-primary-en: 'Poppins';
 $primary-color-blue: #00235B;
 $primary-color-gray: #EEEDED;
 
-:root{
+:root {
     --font-primary-ge: $font-primary-ge;
     --font-primary-en: $font-primary-en;
 }

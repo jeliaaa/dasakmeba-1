@@ -1,5 +1,11 @@
 @import 'variables.scss';
 
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Mtavruli";
+}
+
 .bt{
     position: absolute;
     z-index: 10;
@@ -11,11 +17,7 @@
     flex-direction: column;
     align-items: center;
     background-color: #ebedff;
-    // background: rgb(8,8,113);
-    // background: linear-gradient(0deg, rgba(8,8,113,0) 0%, rgba(0,159,255,0.4290091036414566) 100%);
-
     border-radius: 25px 25px 0 0;
-    padding-bottom: 50px;
     justify-content: flex-start;
     min-height: 90dvh;
 }
@@ -50,7 +52,7 @@
         }
     }
     .nav_wrapper {
-        width: 50% !important;
+        width: 70% !important;
     }
     
     .bottom_footer, .upper_footer {

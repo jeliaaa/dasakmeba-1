@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import { Accordion, Container } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import Breadcrumbs from '../../../ReusableComponents/breadcrumbs/Breadcrumbs';
 import { useTranslation } from 'react-i18next';
 import './worker.scss'
+import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Box, ChakraBaseProvider, ChakraProvider } from '@chakra-ui/react';
+import svg from '../../../assets/logos/genetic-data-svgrepo-com.svg'
 
 const WorkerSingle = () => {
     const [worker, setWorker] = useState([]);
@@ -19,79 +21,101 @@ const WorkerSingle = () => {
         <Container style={{ backgroundColor: '#fff', padding: '20px 20px', borderRadius: '8px' }}>
             <Breadcrumbs />
             <Container className='worker_wrapper p-4'>
-                <div className='worker_card'>
-                    <div className='img_wrap'><img src='https://placehold.co/150' alt='...' /></div>
-                    <div className='info'>
-                        <div><h6>{t('nameSurname')}:</h6><h6>{worker.name}</h6><h6>პოზიცია : პოზიცია</h6></div>
-                        <Container>
-                            <div><i className="fa-solid fa-phone"></i>555-555-555</div>
-                            <div><i className="fa-solid fa-envelope"></i>{worker.name}@hradjara.gov.ge</div>
-                        </Container>
+                <ChakraProvider>
+                    <div className='worker_card'>
+                        <div className='img_wrap'><img src='https://placehold.co/150' alt='...' /></div>
+                        <div className='info'>
+                            <div><h6>{t('nameSurname')}:</h6><h6>{worker.name}</h6><h6>პოზიცია : პოზიცია</h6></div>
+                            <Container>
+                                <div><i className="fa-solid fa-phone"></i>555-555-555</div>
+                                <div><i className="fa-solid fa-envelope"></i>{worker.name}@hradjara.gov.ge</div>
+                            </Container>
+                        </div>
                     </div>
-                </div>
-                <div className='detailed_info'>
-                    <div className='accordions_group'>
-                        <Accordion defaultActiveKey="0" flush>
-                            <Accordion.Item eventKey="0">
-                                <Accordion.Header>გამოცდილება</Accordion.Header>
-                                <Accordion.Body>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                    aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                                    culpa qui officia deserunt mollit anim id est laborum.
-                                </Accordion.Body>
-                            </Accordion.Item>
-                        </Accordion>
-                        <Accordion defaultActiveKey="0" flush>
-                            <Accordion.Item eventKey="1">
-                                <Accordion.Header>განათლება</Accordion.Header>
-                                <Accordion.Body>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                    aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                                    culpa qui officia deserunt mollit anim id est laborum.
-                                </Accordion.Body>
-                            </Accordion.Item>
-                        </Accordion>
+                    <div className='detailed_info'>
+                        <div className='accordions_group'>
+                            <Accordion className='accordion' allowMultiple>
+                                <AccordionItem>
+                                    <h2>
+                                        <AccordionButton>
+                                            <img style={{ width: 35 }} src={svg} />
+                                            <Box as="span" flex='1' textAlign='left' className='p-1'>
+                                                უფლებამოვალეობები
+                                            </Box>
+                                            <AccordionIcon />
+                                        </AccordionButton>
+                                    </h2>
+                                    <AccordionPanel pb={4}>
+                                        <ul>
+                                            <li>amslmlklkdsfamaf;mam</li>
+                                            <li>amslmlklkdsfamaf;mam</li>
+                                            <li>amslmlklkdsfamaf;mam</li>
+                                            <li>amslmlklkdsfamaf;mam</li>
+                                        </ul>
+                                    </AccordionPanel>
+                                </AccordionItem>
+                            </Accordion>
+                            <Accordion className='accordion' allowMultiple>
+                                <AccordionItem>
+                                    <h2>
+                                        <AccordionButton>
+                                            <Box as="span" flex='1' textAlign='left' className='p-1'>
+                                                ბიოგრაფიული ცნობები
+                                            </Box>
+                                            <AccordionIcon />
+                                        </AccordionButton>
+                                    </h2>
+                                    <AccordionPanel pb={4}>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                        commodo consequat.
+                                    </AccordionPanel>
+                                </AccordionItem>
+                            </Accordion>
+                        </div>
+                        <div className='accordions_group'>
+                            <Accordion className='accordion' allowMultiple>
+                                <AccordionItem>
+                                    <h2>
+                                        <AccordionButton>
+                                            <Box as="span" flex='1' textAlign='left' className='p-1'>
+                                                განათლება
+                                            </Box>
+                                            <AccordionIcon />
+                                        </AccordionButton>
+                                    </h2>
+                                    <AccordionPanel pb={4}>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                        commodo consequat.
+                                    </AccordionPanel>
+                                </AccordionItem>
+                            </Accordion>
+                            <Accordion className='accordion' allowMultiple>
+                                <AccordionItem>
+                                    <h2>
+                                        <AccordionButton>
+                                            <Box as="span" flex='1' textAlign='left' className='p-1'>
+                                                გამოცდილება
+                                            </Box>
+                                            <AccordionIcon />
+                                        </AccordionButton>
+                                    </h2>
+                                    <AccordionPanel pb={4}>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                        commodo consequat.
+                                    </AccordionPanel>
+                                </AccordionItem>
+                            </Accordion>
+                        </div>
                     </div>
-                    <div className='accordions_group'>
-                        <Accordion defaultActiveKey="0" flush>
-                            <Accordion.Item eventKey="2">
-                                <Accordion.Header>უფლებამოვალეობები</Accordion.Header>
-                                <Accordion.Body>
-                                    <ul>
-                                        <li>ააა</li>
-                                        <li>აააბბ</li>
-                                        <li>აააგგგგგგ</li>
-                                        <li>აააალაფნსდჯფაკფჰლკაფჰ.აკნემსს</li>
-                                    </ul>
-                                </Accordion.Body>
-                            </Accordion.Item>
-                        </Accordion>
-                        <Accordion defaultActiveKey="0" flush>
-                            <Accordion.Item eventKey="3">
-                                <Accordion.Header>ბიოგრაფიული ცნობები</Accordion.Header>
-                                <Accordion.Body>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                    aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                                    culpa qui officia deserunt mollit anim id est laborum.
-                                </Accordion.Body>
-                            </Accordion.Item>
-                        </Accordion>
-                    </div>
-                </div>
+                </ChakraProvider>
             </Container>
-        </Container>
+        </Container >
     )
 }
 

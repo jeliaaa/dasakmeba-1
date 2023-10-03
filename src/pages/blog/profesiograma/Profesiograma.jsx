@@ -6,7 +6,7 @@ import ProfesiogramaCard from '../../../ReusableComponents/profesiograma/Profesi
 import itPhoto from "../../../assets/ProfesiogramAssets/IT.jpg"
 import construction from "../../../assets/ProfesiogramAssets/Construct.jpg"
 import servicing from "../../../assets/ProfesiogramAssets/Servicing.jpg"
-import CardsWrap from '../../../ReusableComponents/CardsWrap/CardsWrap';
+import NonPaginated from '../../../ReusableComponents/CardsWrap/NonPaginated';
 
 
 
@@ -16,13 +16,13 @@ const Profesiograma = () => {
   return (
     <Container style={{ backgroundColor: '#fff', padding: '20px 20px', borderRadius: '8px' }}>
       <Breadcrumbs></Breadcrumbs>
-      <CardsWrap>
+      <NonPaginated>
         <ProfesiogramaCard a={true} img={itPhoto} name={t('it')} id={'type1'} />
         <ProfesiogramaCard a={true} img={construction} name={t('physical')} id={'type2'} />
         <ProfesiogramaCard a={true} img={servicing} name={t('servicing')} id={'type3'} />
         <ProfesiogramaCard a={true} img={'https://picsum.photos/300/200'} name={t('lorem')} id={'type4'} />
         <ProfesiogramaCard a={true} img={'https://picsum.photos/300/200'} name={t('ipsum')} id={'type5'} />
-      </CardsWrap>
+      </NonPaginated>
     </Container>
 
   )

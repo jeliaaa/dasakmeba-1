@@ -104,6 +104,7 @@ const TabMenu = () => {
 
                 <TabPanel value={valueOfMonth} index={'2016'} dir={theme.direction}>
                     2016
+                    <img className='w-100' src='https://picsum.photos/1000/500' alt='...' />
                 </TabPanel>
                 {/*2016*/}
                 <TabPanel value={valueOfMonth} index={'201601'} dir={theme.direction}>

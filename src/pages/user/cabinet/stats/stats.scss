@@ -1,0 +1,65 @@
+@import '../../../../variables';
+.stats_container{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.filter {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    .react-select {
+        width: 30%;
+    }
+
+    .dateElements {
+        width: 20%;
+        display: flex;
+        justify-content: space-between;
+        .MuiInput-root{
+            width: 70%;
+            input{
+                width: 100%;
+            }
+        }
+        label{
+            width: 25%;
+        }
+    }
+
+    button{
+        width: 15%;
+        background-color: $primary-color-blue;
+        color: $primary-color-gray;
+        border: none;
+        padding: 5px 10px;
+    }
+}
+.sortAmount_filter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    .amount_wrapper, .sort_wrapper{
+        width: 20%;
+        margin: 0 !important;
+        .MuiInputBase-root {
+            width: 100% !important;
+        }
+    }
+}
+@media screen and (max-width: 1050px) {
+    .filter{
+        width: 100% !important;
+        flex-wrap: wrap;
+        gap: 15px;
+        div{
+            width: auto !important;
+        }
+        button{
+            width: auto !important;
+        }
+    }
+}
