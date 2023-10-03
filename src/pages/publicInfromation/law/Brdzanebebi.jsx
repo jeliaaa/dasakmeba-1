@@ -1,8 +1,9 @@
 import React from 'react'
-import { Container, Table } from 'react-bootstrap';
+import { Container} from 'react-bootstrap';
 import Breadcrumbs from '../../../ReusableComponents/breadcrumbs/Breadcrumbs';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import { ChakraProvider, Table, TableContainer, Tbody, Td, Th, Thead, Tr } from '@chakra-ui/react';
 
 
 const statsData = [
@@ -18,24 +19,28 @@ const Brdzanebebi = () => {
     return (
         <Container style={{ backgroundColor: '#fff', padding: '20px 20px', borderRadius: '8px' }}>
             <Breadcrumbs></Breadcrumbs>
-            <Table responsive>
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th>{t('name')}</th>
-                        <th>{t('date')}</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {statsData.map((file) => (
-                        <tr key={file.id}>
-                            <td>{file.id}</td>
-                            <td><Link to={"/dummy.pdf"} target="_blank" download>{file.name}</Link></td>
-                            <td>{file.date}</td>
-                        </tr>
-                    ))}
-                </tbody>
-            </Table>
+            <ChakraProvider>
+                <TableContainer>
+                    <Table variant={'striped'} >
+                        <Thead>
+                            <Tr>
+                                <Th></Th>
+                                <Th>{t('name')}</Th>
+                                <Th>{t('date')}</Th>
+                            </Tr>
+                        </Thead>
+                        <Tbody>
+                            {statsData.map((file) => (
+                                <Tr key={file.id}>
+                                    <Td>{file.id}</Td>
+                                    <Td><Link to={"/dummy.pdf"} target="_blank" download>{file.name}</Link></Td>
+                                    <Td>{file.date}</Td>
+                                </Tr>
+                            ))}
+                        </Tbody>
+                    </Table>
+                </TableContainer>
+            </ChakraProvider>
         </Container>
 
     )

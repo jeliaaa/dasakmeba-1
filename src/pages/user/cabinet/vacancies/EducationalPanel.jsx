@@ -2,9 +2,10 @@ import { Checkbox, FormControlLabel, Input, NativeSelect } from '@mui/material'
 import React from 'react'
 import ReactSelect from 'react-select'
 import './vacancies.scss'
-import { FormControl, Table } from 'react-bootstrap'
+import { FormControl } from 'react-bootstrap'
 import { t } from 'i18next'
 import { Link } from 'react-router-dom'
+import { ChakraProvider, Table, TableContainer, Tbody, Td, Th, Thead, Tr } from '@chakra-ui/react';
 
 const options = [
     { value: 'chocolate', label: 'Chocolate' },
@@ -13,11 +14,11 @@ const options = [
 ]
 
 const vacData = [
-    {id: 1, name : 'დასახელება1', type: 'ტიპი1', employer: 'დამსაქმებელი 1', municipality: 'ბათუმი', date: '10-11-2014', deadline: '10-12-2014', sphere: 'სფერო'},
-    {id: 2, name : 'დასახელება2', type: 'ტიპი2', employer: 'დამსაქმებელი 2', municipality: 'ბათუმი', date: '10-11-2014', deadline: '10-12-2014', sphere: 'სფერო'},
-    {id: 3, name : 'დასახელება3', type: 'ტიპი3', employer: 'დამსაქმებელი 3', municipality: 'ბათუმი', date: '10-11-2014', deadline: '10-12-2014', sphere: 'სფერო'},
-    {id: 4, name : 'დასახელება4', type: 'ტიპი4', employer: 'დამსაქმებელი 4', municipality: 'ბათუმი', date: '10-11-2014', deadline: '10-12-2014', sphere: 'სფერო'},
-    {id: 5, name : 'დასახელება5', type: 'ტიპი5', employer: 'დამსაქმებელი 5', municipality: 'ბათუმი', date: '10-11-2014', deadline: '10-12-2014', sphere: 'სფერო'}
+    { id: 1, name: 'დასახელება1', type: 'ტიპი1', employer: 'დამსაქმებელი 1', municipality: 'ბათუმი', date: '10-11-2014', deadline: '10-12-2014', sphere: 'სფერო' },
+    { id: 2, name: 'დასახელება2', type: 'ტიპი2', employer: 'დამსაქმებელი 2', municipality: 'ბათუმი', date: '10-11-2014', deadline: '10-12-2014', sphere: 'სფერო' },
+    { id: 3, name: 'დასახელება3', type: 'ტიპი3', employer: 'დამსაქმებელი 3', municipality: 'ბათუმი', date: '10-11-2014', deadline: '10-12-2014', sphere: 'სფერო' },
+    { id: 4, name: 'დასახელება4', type: 'ტიპი4', employer: 'დამსაქმებელი 4', municipality: 'ბათუმი', date: '10-11-2014', deadline: '10-12-2014', sphere: 'სფერო' },
+    { id: 5, name: 'დასახელება5', type: 'ტიპი5', employer: 'დამსაქმებელი 5', municipality: 'ბათუმი', date: '10-11-2014', deadline: '10-12-2014', sphere: 'სფერო' }
 ]
 const EducationalPanel = () => {
     return (
@@ -70,34 +71,38 @@ const EducationalPanel = () => {
                 />
             </div>
             <div className="vacancyPanel_body">
-                <Table responsive>
-                    <thead>
-                        <tr>
-                            <th>{t('ID')}</th>
-                            <th>{t('name')}</th>
-                            <th>{t('type')}</th>
-                            <th>{t('employer')}</th>
-                            <th>{t('municipality')}</th>
-                            <th>{t('date')}</th>
-                            <th>{t('deadline')}</th>
-                            <th>{t('sphere')}</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {vacData.map((vac) => (
-                            <tr key={vac.id}>
-                                <td>{vac.id}</td>
-                                <td><Link to={`/vacancy/${vac.id}`} target="_blank" >{vac.name}</Link></td>
-                                <td>{vac.type}</td>
-                                <td>{vac.employer}</td>
-                                <td>{vac.municipality}</td>
-                                <td>{vac.date}</td>
-                                <td>{vac.deadline}</td>
-                                <td>{vac.sphere}</td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </Table>
+                <ChakraProvider>
+                    <TableContainer>
+                        <Table variant={'striped'}>
+                            <Thead>
+                                <Tr>
+                                    <Th>{t('ID')}</Th>
+                                    <Th>{t('name')}</Th>
+                                    <Th>{t('type')}</Th>
+                                    <Th>{t('employer')}</Th>
+                                    <Th>{t('municipality')}</Th>
+                                    <Th>{t('date')}</Th>
+                                    <Th>{t('deadline')}</Th>
+                                    <Th>{t('sphere')}</Th>
+                                </Tr>
+                            </Thead>
+                            <Tbody>
+                                {vacData.map((vac) => (
+                                    <Tr key={vac.id}>
+                                        <Td>{vac.id}</Td>
+                                        <Td><Link to={`/vacancy/${vac.id}`} target="_blank" >{vac.name}</Link></Td>
+                                        <Td>{vac.type}</Td>
+                                        <Td>{vac.employer}</Td>
+                                        <Td>{vac.municipality}</Td>
+                                        <Td>{vac.date}</Td>
+                                        <Td>{vac.deadline}</Td>
+                                        <Td>{vac.sphere}</Td>
+                                    </Tr>
+                                ))}
+                            </Tbody>
+                        </Table>
+                    </TableContainer>
+                </ChakraProvider>
             </div>
         </div>
     )

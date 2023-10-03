@@ -1,8 +1,9 @@
 import React from 'react'
-import { Accordion, Container } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import Breadcrumbs from '../../../../ReusableComponents/breadcrumbs/Breadcrumbs';
 import "../../../media/news/News.scss"
 import { Typography } from '@mui/material';
+import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Box, ChakraProvider } from '@chakra-ui/react';
 
 const ForUsers = () => {
   return (
@@ -18,56 +19,74 @@ const ForUsers = () => {
             </p>
           </Typography>
         </Container>
-        <Accordion defaultActiveKey="0" flush style={{ width: '80%', border: '1px solid black' }}>
-          <Accordion.Item eventKey="0">
-            <Accordion.Header>ელექტრონული რეგისტრაცია და საკუთარი პროფილის დამოუკიდებლად მართვის შესაძლებლობა</Accordion.Header>
-            <Accordion.Body>
-              <p>შრომის ბაზრის მართვის ელექტრონული სისტემა, სააგენტოს სერვისებით მოსარგებლე მოქალაქე/სამუშაოს მაძიებლებს, აძლევს შესაძლებლობას:</p>
-              <ul>
-                <li>შექმნას და დისტანციურად მართოს საკუთარი პროფილი</li>
-                <li>სერვისების სარგებლობისათვის გამოიყენოს  ელექტრონული რესურსი</li>
-                <li>მოიძიოს ვაკანსიის/სტაჟირების/მოხალისეობის, საგანმანათლებლო პროგრამების შესახებ განაცხადი</li>
-                <li>განათავსოს/მოიძიოს სამუშაო ოჯახში გაანცხადი</li>
-                <li>გაეცნოს საქართველოს შრომის ბაზარზე არსებული მდგომარეობის შესახებ ინფორმაციასა და ჩატარებული კვლევების შედეგებს და სურვილის შემთხვევაში მიიღოს მონაწილეობა  მსგავსი კვლევების ორგანიზება/ინიცირება/განხორციელებაში </li>
-                <li>კვალიფიკაციის ამაღლების ან/და ახალი პროფესიის დაუფლების მიზნით  ჩაერთოს დასაქმების ხელშეწყობის მიზნობრივ პროგრამებში</li>
-                <li>ონლაინ კონსულტაციის მეშვეობით მიიღოს საჭირო ინფორმაცია ან დახმარება</li>
-              </ul>
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey='1'>
-            <Accordion.Header>ვაკანსია/სტაჟირება/მოხალისეობის შესახებ ინფორმაციის მოძიება</Accordion.Header>
-            <Accordion.Body>
-              <p>შრომის ბაზრის მართვის ელექტრონულ სისტემაში რეგისტრირებულ   სამუშაოს მაძიებლებს  შეუძლიათ შეუძლიათ განაცხადი:</p>
-              <ul>
-                <li>ვაკანსიის შესახებ- კონკრეტული მახასიათებლის მქონე თავისუფალ სამუშაოს ადგილის შესახებ ინფორმაციის ხელმისაწვდომობა სისტემაში რეგისტრირებულ აქტიურ სამუშაოს მაძიებლის შესაძლელობას ზრდის სასურველი სამუშაო ადგილის მოძიებისა და დასაქმების კუთხით.  შრომის ბაზრის მართვის ელექტრონული სისტემის მეშვეობით სასურველი სამუშაო ადგილის მოძიების მიზნით  ძებნის პროცესი არის უფრო კომფორტული და ნაკლებად სტრესული, მოითხოვს ნაკლებ  დროსა  და ენერგიას, რადგან დაინტერესებულ მოქლაქეს შეუძლია მარტივი პროცედურების გავლით, სახლიდან გაუსვლელად იპოვოს სასურველი სამუშაო.</li>
-                <li>სტაჟირების შესახებ- შრომის ბაზრის მართვის  ელექტრონული სისტემა აძლევს პრაქტიკული გამოცდილების შეძენის მსურველ მოქალაქეებს მათთვის საინტერესო სტაჟირების შესახებ ინფორმაციის მოძიების შესაძლებლობას; სტაჟირება სასურველ სფეროში კი მათ ახალ შესაძლებლობებს გაუხსნის - შეძლებენ თეორიული ცოდნის გამყარებას, საჭირო პროფესიული გამოცდილების შეგროვებას, რაც სამომავლოდ მათთვის კარიერული დაგეგმვის და პროფესიული განვითარების მნიშვნელოვანი ფუნდამენტის შექმნის საფუძვლად შეიძლება იქცეს.</li>
-                <li>მოხალისეობის შესახებ- სააგენტოს სერვისები არა მარტო სამუშაოს და პრაქტიკის მაძიებელთათვის არის საინტერესო, არამედ საზოგადოებრივ საქმიანობაში აქტიური მონაწილეობის მსურველი მოქალაქეებისათვისაც, რომლებიც მზად არიან მონაწილეობა მიიღონ სხვადასხვა მოხალისეობრივ პროექტებში. მოხალისეობრივი საქმიანობა კი მოქალაქეებისთვის პიროვნული განვითარების, საკუთარი უნარ ჩვევების უკეთ შეცნობის, სამოქალაქო საზოგადოების განვითარებაში წვლილის შეტანის და მნიშვნელოვანი სოციალური კაპიტალის დაგროვების შესაძლებლობას მიცემს.</li>
-              </ul>
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey='2'>
-            <Accordion.Header>სამუშაო ოჯახში - განთავსება და მოძიება</Accordion.Header>
-            <Accordion.Body>
-              <p>შრომის ბაზრის ელექტრონული სისტემის მეშვეობით სააგენტო ხელს უწყობს  ,,სამუშაო  ოჯახში’’ პოპულარიზაციას, </p>
-              <ul>
-                <li>სასურველი სამუშაოს მოლოდინში ერთჯერადი დასაქმების მსურველს  შესაძლებლობა აქვს ოჯახში ერთჯერადი თუ დროებითი სამუშაოს შესრულებით მიიღოს შემოსავალი  </li>
-                <li>სისტემაში რეგისტრირებულ ნებისმიერ მოქალაქეს ეძლევა  საშუალება სამუშაოს მაძიებლისგან გახდეს დამსაქმებელი და  განათავსოს  განცხადება “სამუშაო ოჯახში“ შესახებ  და დროის დაზოგვით ადვილად  მოიძიოს სასურველი კანდიდატები ოჯახში ერთჯერადი ან გრძელვადიანი დასაქმების მიზნით.</li>
-              </ul>
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey='3'>
-            <Accordion.Header>საგანმანათლებო პროგრამების შესახებ ინფორმაციის მოძიება</Accordion.Header>
-            <Accordion.Body>
-              <p>შრომის ბაზრის მართვის  ელექტრონული  სისტემის მეშვეობით სააგენტო ხელს უწყობს შრომის ბაზარზე კონკურენტუნარიანი ადამიანური რესურსის დამკვიდრების მიზნით, დაინტერესებული პირების პროფესიულ განვითარებას ფორმალური და არაფორმალური განათლების მიღების მხრივ. სისტემაში რეგისტრირებულ პირებს შესაძლებლობა ეძლევათ სააგენტოს ვებ პორტალის მეშვეობით მიიღონ ინფორმაცია საგანმანათლებლო პროვაიდერების და სხვადასხვა ორგანიზაციების მიერ ორგანიზებული ტრენინგების, სემინარების, კონფერენციების შესახებ. მსგავს საგანმანათლებლო პროგრამებში მონაწილეობა, ხელს შეუწყობს მოქალაქეებს აიმაღლონ კვალიფიკაცია ადგილობრივი დასაქმების ბაზრის მოთხოვნების შესაბამისად. მრავალმხვრივი პროფესიული ზრდა მნიშვნელოვანი წინაპირობაა წარმატებული კარიერისთვის, როგორც საქართველოში ასევე ჩვენი ქვეყნის ფარგლებს გარეთ, შესაბამისად მრავალმხვრივი საგანმანათლებლობლო პროექტების შეთავაზება და ამ პროექტებში  მოქალაქეების ჩართულობის უზრუნველყოფა, დასაქმების სააგენტოს ერთ ერთი პრიორიტეტული ამოცანაა.</p>
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey='4'>
-            <Accordion.Header>შესაბამისი სამუშაოს მოძიებაში ხელშეწყობა</Accordion.Header>
-            <Accordion.Body>
-              <p>შრომის ბაზრის ელექტრონული სისტემის მეშვეობით, ერთის მხრივ  ხდება სისტემაში განთავსებულ  ვაკანსიაზე, ვაკანსიის პირობების გათვალისწინებით შესაბამისი ადამიანური რესურსის შერჩევა, და ამასთანავე სისტემაში რეგისტრირებულ მოქალაქე/სამუშაოს მაძიებელს აქვს შესაძლებლობა გამოხატოს ინტერესი მისთვის სასურველ ვაკანსიაზე. მთლიანობაში სამუშაოს ძებნა ჩვენი სისტემის მეშვეობით ხდება უფრო მოქნილი და შედეგზე ორიენტირებული.</p>
-            </Accordion.Body>
-          </Accordion.Item>
-        </Accordion>
+        <ChakraProvider>
+          <Accordion allowToggle className='accordion' style={{ width: '80%' }}>
+            <AccordionItem>
+              <h2>
+                <AccordionButton>
+                  <Box as="span" flex='1' textAlign='left' className='p-1'>
+                    ბიოგრაფიული ცნობები
+                  </Box>
+                  <AccordionIcon />
+                </AccordionButton>
+              </h2>
+              <AccordionPanel pb={4}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo consequat.
+              </AccordionPanel>
+            </AccordionItem>
+            <AccordionItem>
+              <h2>
+                <AccordionButton>
+                  <Box as="span" flex='1' textAlign='left' className='p-1'>
+                    ბიოგრაფიული ცნობები
+                  </Box>
+                  <AccordionIcon />
+                </AccordionButton>
+              </h2>
+              <AccordionPanel pb={4}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo consequat.
+              </AccordionPanel>
+            </AccordionItem>
+            <AccordionItem>
+              <h2>
+                <AccordionButton>
+                  <Box as="span" flex='1' textAlign='left' className='p-1'>
+                    ბიოგრაფიული ცნობები
+                  </Box>
+                  <AccordionIcon />
+                </AccordionButton>
+              </h2>
+              <AccordionPanel pb={4}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo consequat.
+              </AccordionPanel>
+            </AccordionItem>
+            <AccordionItem>
+              <h2>
+                <AccordionButton>
+                  <Box as="span" flex='1' textAlign='left' className='p-1'>
+                    ბიოგრაფიული ცნობები
+                  </Box>
+                  <AccordionIcon />
+                </AccordionButton>
+              </h2>
+              <AccordionPanel pb={4}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo consequat.
+              </AccordionPanel>
+            </AccordionItem>
+          </Accordion>
+        </ChakraProvider>
       </div>
     </Container>
   )

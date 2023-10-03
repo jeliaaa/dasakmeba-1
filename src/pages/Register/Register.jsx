@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 import Breadcrumbs from '../../ReusableComponents/breadcrumbs/Breadcrumbs'
 import PropTypes from 'prop-types';
 import { useTheme } from '@emotion/react'
+import svg from '../../assets/logos/genetic-data-svgrepo-com.svg'
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
 
@@ -64,9 +65,14 @@ const Register = () => {
                 </AppBar>
                 <TabPanel value={value} index={0} dir={theme.direction}>
                     <form style={{ width: '100%' }}>
-                        <div className='sectionOfInput'>
+                        <div className='sectionOfInput' style={{ position: 'relative' }}>
                             <InputLabel>პირადი ნომერი</InputLabel>
                             <FormControl required type='number' />
+                            <img
+                                src={svg} // Replace with the actual path to your image
+                                alt="Icon"
+                                style={{ position: 'absolute', width: 25, left: '93%', top: '46%' }} // Adjust positioning as needed
+                            />
                         </div>
                         <div className='sectionOfInput'>
                             <InputLabel>დაბადების თარიღი</InputLabel>
@@ -113,9 +119,14 @@ const Register = () => {
                 </TabPanel>
                 <TabPanel value={value} index={1} dir={theme.direction}>
                     <form style={{ width: '100%' }}>
-                        <div className='sectionOfInput'>
+                        <div className='sectionOfInput' style={{position:'relative'}}>
                             <InputLabel>საიდენტიფიკაციო კოდი</InputLabel>
                             <FormControl type='number' />
+                            <img
+                                src={svg} // Replace with the actual path to your image
+                                alt="Icon"
+                                style={{ position: 'absolute', width: 25, left: '93%', top: '46%' }} // Adjust positioning as needed
+                            />
                         </div>
                         <div className='sectionOfInput'>
                             <InputLabel>დასახელება</InputLabel>

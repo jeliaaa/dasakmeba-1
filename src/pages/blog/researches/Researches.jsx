@@ -1,9 +1,10 @@
 import React from 'react'
-import { Container, Table } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import Breadcrumbs from '../../../ReusableComponents/breadcrumbs/Breadcrumbs';
 import "../../media/news/News.scss"
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import { ChakraProvider, Table, TableContainer, Tbody, Td, Th, Thead, Tr } from '@chakra-ui/react';
 const statsData = [
   { id: 1, name: 'კვლევა N1', date: '12.01.2021' },
   { id: 2, name: 'კვლევა N2', date: '21.02.2021' },
@@ -19,27 +20,31 @@ const statsData = [
 const Researches = () => {
   const { t } = useTranslation();
   return (
-    <div className='researches_wrapper' style={{backgroundColor:'#fff', padding:'40px'}}>
+    <div className='researches_wrapper' style={{ backgroundColor: '#fff', padding: '40px' }}>
       <Breadcrumbs />
       <Container style={{ backgroundColor: '#fff' }}>
-        <Table responsive>
-          <thead>
-            <tr>
-              <th></th>
-              <th>{t('name')}</th>
-              <th>{t('date')}</th>
-            </tr>
-          </thead>
-          <tbody>
-            {statsData.map((file) => (
-              <tr key={file.id}>
-                <td>{file.id}</td>
-                <td>{<Link to={`${file.id}`}>{file.name}</Link>}</td>
-                <td>{file.date}</td>
-              </tr>
-            ))}
-          </tbody>
-        </Table>
+        <ChakraProvider>
+          <TableContainer>
+            <Table variant={'striped'}>
+              <Thead>
+                <Tr>
+                  <Th></Th>
+                  <Th>{t('name')}</Th>
+                  <Th>{t('date')}</Th>
+                </Tr>
+              </Thead>
+              <Tbody>
+                {statsData.map((file) => (
+                  <Tr key={file.id}>
+                    <Td>{file.id}</Td>
+                    <Td>{<Link to={`${file.id}`}>{file.name}</Link>}</Td>
+                    <Td>{file.date}</Td>
+                  </Tr>
+                ))}
+              </Tbody>
+            </Table>
+          </TableContainer>
+        </ChakraProvider>
       </Container>
     </div>
   )

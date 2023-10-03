@@ -162,7 +162,10 @@ function App() {
             />
             <Route path="/services/projects" element={<Projects />} />
             <Route path="/services/projects/:id" element={<ProjectsSingle />} />
-            <Route path="/services/projects/:id/form" element={<ProjectsSingleForm />} />
+            <Route
+              path="/services/projects/:id/form"
+              element={<ProjectsSingleForm />}
+            />
             <Route
               path="/services/projects/shes/:id"
               element={<ResearchSingle />}
@@ -184,17 +187,18 @@ function App() {
             <Route path="/blog/articles/:type/:id" element={<Article />} />
             <Route path="/blog/calendar" element={<Calendar />} />
             {/* ----> calendar */}
-            <Route path="/blog/calendar/jan" element={<Jan />} />
             <Route
               path="/blog/calendar/:month/:id"
               element={<CalendarSingle />}
             />
-            <Route path="/blog/calendar/feb" element={<Feb />} />
-            <Route path="/blog/calendar/mar" element={<Mar />} />
+
+            <Route path="/blog/calendar/jan" element={<Apr />} />
+            <Route path="/blog/calendar/feb" element={<Apr />} />
+            <Route path="/blog/calendar/mar" element={<Apr />} />
             <Route path="/blog/calendar/apr" element={<Apr />} />
-            <Route path="/blog/calendar/may" element={<May />} />
-            <Route path="/blog/calendar/june" element={<June />} />
-            <Route path="/blog/calendar/july" element={<July />} />
+            <Route path="/blog/calendar/may" element={<Apr />} />
+            <Route path="/blog/calendar/june" element={<Apr />} />
+            <Route path="/blog/calendar/july" element={<Apr />} />
 
             <Route path="/blog/classification" element={<Classification />} />
             <Route
@@ -217,10 +221,7 @@ function App() {
               path="/blog/lessons/:type"
               element={<VideoLessonsSingle />}
             />
-            <Route
-              path="/blog/lessons/:type/:id"
-              element={<VideoLesson />}
-            />
+            <Route path="/blog/lessons/:type/:id" element={<VideoLesson />} />
             {/* media */}
             <Route path="/media" element={<Media />} />
             <Route path="/media/gallery" element={<Gallery />} />
@@ -265,14 +266,16 @@ function App() {
             <Route path="user/cabinet/vacAdd" element={<VacAdd />} />
             <Route path="user/cabinet/eduAdd" element={<EduAdd />} />
             <Route path="user/cabinet/myVacancies" element={<MyVacancies />} />
-            <Route path="/user/cabinet/statistics" element={<StatisticsCab />} />
+            <Route
+              path="/user/cabinet/statistics"
+              element={<StatisticsCab />}
+            />
             <Route path="/user/profile" element={<Profile />} />
 
-
             {/* components */}
-            <Route path="/skeletons" element={<Skeletons />}/>
-            <Route path="/loading" element={<Loading />}/>
-            <Route path="*" element={<Err />}/>
+            <Route path="/skeletons" element={<Skeletons />} />
+            <Route path="/loading" element={<Loading />} />
+            <Route path="*" element={<Err />} />
           </Routes>
         </div>
         <div className="videos_wrapper">

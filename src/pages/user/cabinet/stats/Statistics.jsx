@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Container, Table } from 'react-bootstrap'
+import { Container } from 'react-bootstrap'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import ReactSelect from 'react-select'
@@ -7,6 +7,7 @@ import { Input } from '@mui/base'
 import { InputLabel, NativeSelect, Popover } from '@mui/material'
 import './stats.scss'
 import Pagination from '../../../../ReusableComponents/CardsWrap/Paginated/Pagination'
+import { ChakraProvider, Table, TableContainer, Tbody, Td, Th, Thead, Tr } from '@chakra-ui/react';
 const vacData = [
   { id: 1, name: 'დასახელება1', type: 'ტიპი1', employer: 'დამსაქმებელი 1', municipality: 'ბათუმი', date: '10-11-2014', deadline: '10-12-2014', sphere: 'სფერო' },
   { id: 2, name: 'დასახელება2', type: 'ტიპი2', employer: 'დამსაქმებელი 2', municipality: 'ბათუმი', date: '10-11-2014', deadline: '10-12-2014', sphere: 'სფერო' },
@@ -106,41 +107,45 @@ const StatisticsCab = () => {
 
       </div>
       <div>
-        <Table striped responsive>
-          {/* Table headers */}
-          <thead>
-            <tr>
-              <th>{t('ID')}</th>
-              <th>{t('name')}</th>
-              <th>{t('type')}</th>
-              <th>{t('employer')}</th>
-              <th>{t('municipality')}</th>
-              <th>{t('deadline')}</th>
-              <th>{t('date')}</th>
-              <th>{t('result')}</th>
-            </tr>
-          </thead>
-          <tbody>
-            {currentItems.map((vac, index) => (
-              <tr key={vac.id}>
-                <td>{vac.id}</td>
-                <td><Link to={`/vacancy/${vac.id}`} target="_blank" >{vac.name}</Link></td>
-                <td>{vac.type}</td>
-                <td>{vac.employer}</td>
-                <td>{vac.municipality}</td>
-                <td>{vac.deadline}</td>
-                <td>{vac.date}</td>
-                <td><i style={{ cursor: 'pointer' }} className='fa-solid fa-circle-info' onClick={handleClick} /></td>
-              </tr>
-            ))}
-          </tbody>
-        </Table>
-        <Pagination
-          totalPosts={vacData.length}
-          postsPerPage={itemsPerPage}
-          currentPage={currentPage}
-          setCurrentPage={setCurrentPage}
-        />
+        <ChakraProvider>
+          <TableContainer>
+            <Table variant={'striped'}>
+              {/* Table headers */}
+              <Thead>
+                <Tr>
+                  <Th>{t('ID')}</Th>
+                  <Th>{t('name')}</Th>
+                  <Th>{t('type')}</Th>
+                  <Th>{t('employer')}</Th>
+                  <Th>{t('municipality')}</Th>
+                  <Th>{t('deadline')}</Th>
+                  <Th>{t('date')}</Th>
+                  <Th>{t('result')}</Th>
+                </Tr>
+              </Thead>
+              <Tbody>
+                {currentItems.map((vac, index) => (
+                  <Tr key={vac.id}>
+                    <Td>{vac.id}</Td>
+                    <Td><Link to={`/vacancy/${vac.id}`} target="_blank" >{vac.name}</Link></Td>
+                    <Td>{vac.type}</Td>
+                    <Td>{vac.employer}</Td>
+                    <Td>{vac.municipality}</Td>
+                    <Td>{vac.deadline}</Td>
+                    <Td>{vac.date}</Td>
+                    <Td><i style={{ cursor: 'pointer' }} className='fa-solid fa-circle-info' onClick={handleClick} /></Td>
+                  </Tr>
+                ))}
+              </Tbody>
+            </Table>
+            <Pagination
+              totalPosts={vacData.length}
+              postsPerPage={itemsPerPage}
+              currentPage={currentPage}
+              setCurrentPage={setCurrentPage}
+            />
+          </TableContainer>
+        </ChakraProvider>
       </div>
       <div className="overall_stats">
         <ul>
