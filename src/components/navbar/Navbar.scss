@@ -239,6 +239,9 @@
     align-items: center;
     justify-content: center;
     z-index: 1300;
+    .modal-body, .modal-content{
+        z-index: 1300;
+    }
 }
 
 .modal-dialog {
