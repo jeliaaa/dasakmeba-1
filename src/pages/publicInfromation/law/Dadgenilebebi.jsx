@@ -22,11 +22,12 @@ const Dadgenilebebi = () => {
             <ChakraProvider>
                 <TableContainer>
                     <Table variant={'striped'} >
-                        <Thead>
+                    <Thead>
                             <Tr>
                                 <Th></Th>
                                 <Th>{t('name')}</Th>
                                 <Th>{t('date')}</Th>
+                                <Th>{t('download')}</Th>
                             </Tr>
                         </Thead>
                         <Tbody>
@@ -35,6 +36,7 @@ const Dadgenilebebi = () => {
                                     <Td>{file.id}</Td>
                                     <Td><Link to={"/dummy.pdf"} target="_blank" download>{file.name}</Link></Td>
                                     <Td>{file.date}</Td>
+                                    <Td><Link to={"/dummy.pdf"} target="_blank" download>გადმოწერა</Link></Td>
                                 </Tr>
                             ))}
                         </Tbody>

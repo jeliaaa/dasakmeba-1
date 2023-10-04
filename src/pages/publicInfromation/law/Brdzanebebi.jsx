@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container} from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import Breadcrumbs from '../../../ReusableComponents/breadcrumbs/Breadcrumbs';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
@@ -27,6 +27,7 @@ const Brdzanebebi = () => {
                                 <Th></Th>
                                 <Th>{t('name')}</Th>
                                 <Th>{t('date')}</Th>
+                                <Th>{t('download')}</Th>
                             </Tr>
                         </Thead>
                         <Tbody>
@@ -35,6 +36,7 @@ const Brdzanebebi = () => {
                                     <Td>{file.id}</Td>
                                     <Td><Link to={"/dummy.pdf"} target="_blank" download>{file.name}</Link></Td>
                                     <Td>{file.date}</Td>
+                                    <Td><Link to={"/dummy.pdf"} target="_blank" download>გადმოწერა</Link></Td>
                                 </Tr>
                             ))}
                         </Tbody>
