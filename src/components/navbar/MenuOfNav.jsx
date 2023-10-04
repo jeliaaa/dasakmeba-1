@@ -184,9 +184,6 @@ const MenuOfNav = (props) => {
                                             <Stack spacing="6">
                                                 <Stack spacing={{ base: '2', md: '3' }} textAlign="center">
                                                     <Heading size={{ base: 'xs', md: 'sm' }}>შედით სისტემაში</Heading>
-                                                    <Text color="fg.muted">
-                                                        არ გაქვთ აქაუნთი? <Link onClick={() => setShow(false)} to={'/register'}>რეგისტრაცია</Link>
-                                                    </Text>
                                                 </Stack>
                                             </Stack>
                                             <Box
@@ -223,6 +220,9 @@ const MenuOfNav = (props) => {
                                                     </Stack>
                                                     <HStack justify="space-between">
                                                         <Checkbox defaultChecked>Remember me</Checkbox>
+                                                        
+                                                        <Link onClick={() => setShow(false)} to={'/register'}>რეგისტრაცია</Link>
+                                                        
                                                     </HStack>
                                                     <Stack spacing="6">
                                                         <Button type='submit'><div onClick={(e) => check(e)}>შესვლა</div></Button>

@@ -1,16 +1,27 @@
 @import 'variables.scss';
 
 
+.chakra-table {
+    a {
+        color: steelblue;
+    }
+}
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: "Mtavruli";
 }
 
-.bt{
+.bt {
     position: absolute;
     z-index: 10;
-    bottom: 10px ;
+    bottom: 10px;
 }
+
 .site_container {
     width: 75%;
     display: flex;
@@ -29,12 +40,14 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (min-width: 1600px) {
     .site_container {
         width: 75vw;
+
         .app_wrapper {
             padding: 50px 0;
         }
     }
 
-    .bottom_footer, .upper_footer {
+    .bottom_footer,
+    .upper_footer {
         padding-left: 12vw !important;
         padding-right: 12vw !important
     }
@@ -47,15 +60,18 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (min-width: 2000px) {
     .site_container {
         width: 50vw !important;
+
         .app_wrapper {
             padding: 50px 0;
         }
     }
+
     .nav_wrapper {
         width: 70% !important;
     }
-    
-    .bottom_footer, .upper_footer {
+
+    .bottom_footer,
+    .upper_footer {
         padding-left: 25vw !important;
         padding-right: 25vw !important
     }
@@ -90,6 +106,7 @@ h1, h2, h3, h4, h5, h6 {
         }
     }
 }
+
 @media screen and (max-width: 1440px) {
     .site_container {
         width: 90vw !important;
