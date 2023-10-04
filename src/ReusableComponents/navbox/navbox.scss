@@ -12,9 +12,20 @@
     background-size: cover;
     // background-color: $primary-color-blue;
     border-radius: 10px;
+    transition-duration: 0.3s;
+
     &:hover {
-        h3{transform: scale(1.2);}
+        filter: brightness(0.8);
+
+        h3 {
+            transform: scale(1.2);
+            filter: brightness(0.8);
+
+        }
+
+
     }
+
     h3 {
         color: $primary-color-gray;
         text-align: center;
@@ -22,13 +33,14 @@
         transition-duration: 300ms;
         font-size: 1.7rem;
     }
+
     a {
         padding: 20px;
         width: 100%;
         height: 100%;
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: flex-end;
         z-index: 10;
         text-decoration: none;
     }
@@ -37,28 +49,31 @@
 @media screen and (max-width: 1150px) {
     .nav-box {
         width: 33%;
-        
+
     }
 }
 
 @media screen and (max-width : 500px) {
     .nav-box {
         width: 60%;
+
         &:hover {
             transform: scale(1);
         }
     }
 }
+
 @media screen and (max-width : 750px) {
     .nav-box {
-        p{
+        p {
             font-size: 1.1rem;
         }
     }
 }
+
 @media screen and (max-width : 400px) {
     .nav-box {
-        p{
+        p {
             font-size: 0.9rem;
         }
     }
