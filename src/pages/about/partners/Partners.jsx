@@ -4,6 +4,10 @@ import { useTranslation } from 'react-i18next'
 import { Container } from 'react-bootstrap';
 import Breadcrumbs from '../../../ReusableComponents/breadcrumbs/Breadcrumbs';
 
+import OurPartnerBanner from '../../../assets/NavBoxBanners/About/Partners/Group 26.png';
+import EmployerBanner from '../../../assets/NavBoxBanners/About/Partners/Group 27.png';
+
+
 const Partners = () => {
   const { t } = useTranslation();
 
@@ -11,8 +15,8 @@ const Partners = () => {
     <Container style={{ backgroundColor: '#fff', padding: '20px 20px', borderRadius: '8px' }}>
       <Breadcrumbs></Breadcrumbs>
       <div className='services_wrapper' style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
-        <NavBox name={t('დამსაქმებელი ორგანიზაციები')} to={'employers'} />
-        <NavBox name={t('პარტნიორი ორგანიზაციები')} to={'ourPartners'} />
+        <NavBox img={EmployerBanner} name={t('დამსაქმებლები')} to={'employers'} />
+        <NavBox img={OurPartnerBanner} name={t('პარტნიორები')} to={'ourPartners'} />
       </div>
     </Container>
 
