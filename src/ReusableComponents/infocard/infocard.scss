@@ -63,7 +63,11 @@
 .tab_wrap{
     width: 100% !important;
 }
-
+@media screen and (min-width: 1800px) {
+    .info_card_wrapper{
+        width: 30% !important;
+    }
+}
 @media screen and (max-width: 1250px) {
     .info_card_wrapper {
         width: 49% !important;
