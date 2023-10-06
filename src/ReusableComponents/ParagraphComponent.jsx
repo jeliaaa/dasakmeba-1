@@ -12,7 +12,7 @@ const ParagraphComponent = ({ text, num }) => {
 
   return (
     <div>
-      <p>{truncateText(text, 10)}</p>
+      <p>{truncateText(text, num)}</p>
     </div>
   );
 };

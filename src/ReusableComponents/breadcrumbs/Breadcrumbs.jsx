@@ -1,5 +1,5 @@
 import React from 'react'
-import { Breadcrumb } from 'react-bootstrap'
+import { Breadcrumb, BreadcrumbItem } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import './breadcrumbs.scss'
 import { useTranslation } from 'react-i18next'
@@ -12,9 +12,9 @@ const Breadcrumbs = () => {
     return (
         <nav className='breadcrumbs_wrapper'>
             <Breadcrumb>
-                <Breadcrumb.Item><Link to={'/main'}>{t('main')}</Link></Breadcrumb.Item>
+                <BreadcrumbItem as={'li'}><Link to={'/main'}>{t('main')}</Link></BreadcrumbItem>
                 {crumbs.map((crumb, index) => (
-                    <Breadcrumb.Item key={index} active={index === crumbs.length - 1}>
+                    <BreadcrumbItem as={'li'} key={index} active={index === crumbs.length - 1}>
                         {crumbs.length === 3 && index === 0 ? (
                             <Link to={`/${crumb}`}>{t(crumb)}</Link>
                         ) : crumbs.length === 3 && index === 1 ? (
@@ -30,7 +30,7 @@ const Breadcrumbs = () => {
                         ) : index >= 3 ? (
                             ''
                         ) : t(crumb)}
-                    </Breadcrumb.Item>
+                    </BreadcrumbItem>
                 ))}
             </Breadcrumb>
             <BackBtn />

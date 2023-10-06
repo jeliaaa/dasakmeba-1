@@ -1,11 +1,12 @@
 @import '../../../variables';
+
 .news_wrapper {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     row-gap: 20px;
-    
+
 }
 
 .newsSingle_wrapper {
@@ -52,8 +53,20 @@
 
     .news_wrapper {
         justify-content: center !important;
+
         .container {
             width: 100% !important;
         }
     }
+}
+
+.animated {
+    opacity: 0;
+    transform: translateY(150px);
+    transition: 1.5s all ease;
+}
+
+.active {
+    opacity: 1;
+    transform: translateY(0px);
 }

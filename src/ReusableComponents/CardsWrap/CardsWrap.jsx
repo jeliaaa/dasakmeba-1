@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import PaginationItemss from './Paginated/PaginationItems';
 import Pagination from './Paginated/Pagination';
 import './paginatedCards.scss'
@@ -10,6 +10,7 @@ const CardsWrap = ({ children }) => {
     const lastPostIndex = (currentPage * postsPerPage);
     const firstPostIndex = (lastPostIndex - postsPerPage);
     const currentPosts = childrenss.slice(firstPostIndex, lastPostIndex);
+    
     return (
         <div className='paginated_cards'>
             <PaginationItemss itemsData={currentPosts} childCount={childCount} />

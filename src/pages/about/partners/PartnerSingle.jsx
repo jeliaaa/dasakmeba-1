@@ -4,31 +4,36 @@ import { Container } from 'react-bootstrap'
 import './partners.scss'
 import { Link } from 'react-router-dom'
 
+import ProfPif from '../../../assets/PartnerLogos/ProfMagniti.jpg'
+import MagnitiLogo from '../../../assets/PartnerLogos/Magniti.jpg'
+
+
 const PartnerSingle = () => {
   return (
     <Container style={{ backgroundColor: '#fff', padding: 30 }}>
       <Breadcrumbs />
       <div className="partners_single">
         <div className='partner_main' >
-          <img className='thumb' src="https://picsum.photos/300/50" alt="..." />
+          <img className='thumb' src={MagnitiLogo} alt="..." />
           <div className="img_wrap">
-            <img src="https://picsum.photos/100" alt="" />
+            <img src={ProfPif} alt="" />
             <div>
-              <h4>Partner</h4>
-              <p>type</p>
+              <h4>მაგნიტი</h4>
+              <p>საერთაშორისო პარტნიორი</p>
             </div>
           </div>
           <div className='info'>
             <div className="img_wrap_info">
-              <img src="https://picsum.photos/100" alt="" />
               <div>
                 <h4>Partner</h4>
                 <p>type</p>
               </div>
             </div>
             <p className='description'>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo alias saepe eveniet asperiores maiores rerum placeat voluptatum excepturi pariatur repellendus provident nisi sit rem neque ducimus dicta, cum reiciendis in?
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam delectus accusantium possimus aspernatur. Soluta, tenetur! Numquam laudantium fuga, harum vitae, debitis ipsam dolores porro minus, est quis optio in? Alias?
+              Spar Georgia მთელი ქვეყნის მასშტაბით 670-მდე მაღაზიით არის წარმოდგენილი და ერთ-ერთი უმსხვილესი დამსაქმებელია შრომის ბაზარზე, ამჟამად კომპანიას 2000 -ზე მეტი თანამშრომელი ჰყავს დასაქმებული.
+            </p>
+            <p>
+              SPAR Georgia  მომხმარებელს სთავაზობს ევროპული პროდუქტების ყველაზე დიდ არჩევანს.  სხვადასხვა ექსკლუზიური ბრენდებისა და SPAR ბრენდით წარმოებული პროდუქტებისა და  ქვებრენდების ფართო ასორტიმენტს.  და ყოველთვიურად სააქციო ფასებს 500-ზე მეტ პროდუქტზე.
             </p>
           </div>
         </div>
