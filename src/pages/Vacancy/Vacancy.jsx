@@ -4,7 +4,7 @@ import vacData from './VacancyData.json'
 import './vacancy.scss'
 import Breadcrumbs from '../../ReusableComponents/breadcrumbs/Breadcrumbs';
 import { Link } from 'react-router-dom';
-
+import svg from '../../assets/logos/genetic-data-svgrepo-com.svg'
 const Vacancy = () => {
     const { t } = useTranslation();
     const vacFilter = useRef(null);
@@ -18,9 +18,9 @@ const Vacancy = () => {
                 : [...prevState, num]
         );
         active.includes(num) && setSelectedIndustries([])
-
         let childrenOfVacFilter = Array.from(vacFilter.current.children);
         active.includes(num) && childrenOfVacFilter.forEach((child) => child.classList.remove('active'));
+
     };
     const handleCheckboxChange = (vacancyId) => {
         if (selectedIndustries.includes(vacancyId)) {
@@ -36,17 +36,88 @@ const Vacancy = () => {
             <div className='vacancy_container' style={{ alignSelf: 'center', display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap', width: '90%' }}>
                 <h3>{t('employement')}</h3>
                 <div>
-                    <div className='filter_upper' onClick={(e) => { handleClick(1); e.target.classList.toggle('active') }}>{t('conference')}</div>
-                    <div className='filter_upper' onClick={(e) => { handleClick(2); e.target.classList.toggle('active') }}>{t('employement')}</div>
-                    <div className='filter_upper' onClick={(e) => { handleClick(3); e.target.classList.toggle('active') }}>{t('familyWork')}</div>
-                    <div className='filter_upper' onClick={(e) => { handleClick(4); e.target.classList.toggle('active') }}>{t('internship')}</div>
+                    <div className='filter_upper' onClick={(e) => { handleClick(1); e.currentTarget.classList.toggle('active') }}>
+                        <div className='left_side'>
+                            <img src='https://picsum.photos/50' />
+                            <img src='https://picsum.photos/50' />
+                            <h6>{t('conference')}</h6>
+                        </div>
+                        <img className='img_of_filter img_of_filter_inactive' src={svg} alt="" />
+                        <img className='img_of_filter img_of_filter_active' src={svg} alt="" />
+
+                    </div>
+                    <div className='filter_upper' onClick={(e) => { handleClick(2); e.currentTarget.classList.toggle('active') }}>
+                        <div className='left_side'>
+                            <img src='https://picsum.photos/50' />
+                            <img src='https://picsum.photos/50' />
+                            <h6>{t('employement')}</h6>
+                        </div>
+                        <img className='img_of_filter img_of_filter_inactive' src={svg} alt="" />
+                        <img className='img_of_filter img_of_filter_active' src={svg} alt="" />
+
+                    </div>
+                    <div className='filter_upper' onClick={(e) => { handleClick(3); e.currentTarget.classList.toggle('active') }}>
+                        <div className='left_side'>
+                            <img src='https://picsum.photos/50' />
+                            <img src='https://picsum.photos/50' />
+                            <h6>{t('familyWork')}</h6>
+                        </div>
+                        <img className='img_of_filter img_of_filter_inactive' src={svg} alt="" />
+                        <img className='img_of_filter img_of_filter_active' src={svg} alt="" />
+
+                    </div>
+                    <div className='filter_upper' onClick={(e) => { handleClick(4); e.currentTarget.classList.toggle('active') }}>
+                        <div className='left_side'>
+                            <img src='https://picsum.photos/50' />
+                            <img src='https://picsum.photos/id/2/50' />
+                            <h6>{t('internship')}</h6>
+                        </div>
+                        <img className='img_of_filter img_of_filter_inactive' src={svg} alt="" />
+                        <img className='img_of_filter img_of_filter_active' src={svg} alt="" />
+
+                    </div>
                 </div>
                 <h3>{t('educational')}</h3>
                 <div>
-                    <div className='filter_upper' onClick={(e) => { handleClick(5); e.target.classList.toggle('active') }}>{t('lectures')}</div>
-                    <div className='filter_upper' onClick={(e) => { handleClick(6); e.target.classList.toggle('active') }}>{t('professional')}</div>
-                    <div className='filter_upper' onClick={(e) => { handleClick(7); e.target.classList.toggle('active') }}>{t('trainings')}</div>
-                    <div className='filter_upper' onClick={(e) => { handleClick(8); e.target.classList.toggle('active') }}>{t('volunteering')}</div>
+                    <div className='filter_upper' onClick={(e) => { handleClick(5); e.currentTarget.classList.toggle('active') }}>
+                        <div className='left_side'>
+                            <img src='https://picsum.photos/50' />
+                            <img src='https://picsum.photos/50' />
+                            <h6>{t('lectures')}</h6>
+                        </div>
+                        <img className='img_of_filter img_of_filter_inactive' src={svg} alt="" />
+                        <img className='img_of_filter img_of_filter_active' src={svg} alt="" />
+                    </div>
+                    <div className='filter_upper' onClick={(e) => { handleClick(6); e.currentTarget.classList.toggle('active') }}>
+                        <div className='left_side'>
+                            <img src='https://picsum.photos/50' />
+                            <img src='https://picsum.photos/50' />
+                            <h6>{t('professional')}</h6>
+                        </div>
+                        <img className='img_of_filter img_of_filter_inactive' src={svg} alt="" />
+                        <img className='img_of_filter img_of_filter_active' src={svg} alt="" />
+
+                    </div>
+                    <div className='filter_upper' onClick={(e) => { handleClick(7); e.currentTarget.classList.toggle('active') }}>
+                        <div className='left_side'>
+                            <img src='https://picsum.photos/50' />
+                            <img src='https://picsum.photos/50' />
+                            <h6>{t('trainings')}</h6>
+                        </div>
+                        <img className='img_of_filter img_of_filter_inactive' src={svg} alt="" />
+                        <img className='img_of_filter img_of_filter_active' src={svg} alt="" />
+
+                    </div>
+                    <div className='filter_upper' onClick={(e) => { handleClick(8); e.currentTarget.classList.toggle('active') }}>
+                        <div className='left_side'>
+                            <img src='https://picsum.photos/50' />
+                            <img src='https://picsum.photos/50' />
+                            <h6>{t('volunteering')}</h6>
+                        </div>
+                        <img className='img_of_filter img_of_filter_inactive' src={svg} alt="" />
+                        <img className='img_of_filter img_of_filter_active' src={svg} alt="" />
+
+                    </div>
                 </div>
 
             </div>
@@ -61,7 +132,6 @@ const Vacancy = () => {
                                     <div style={{ width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                                         <p>{vacancy.parent}</p>
                                         <p className='quantity'>{vacancy.industries[industryKey].quantity}</p>
-
                                     </div>
                                 </div>
 
