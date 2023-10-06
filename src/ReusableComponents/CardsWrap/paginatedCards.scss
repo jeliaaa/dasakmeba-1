@@ -1,16 +1,21 @@
-.paginated_cards{
+.paginated_cards {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    .cards_wrap{
+
+
+    .cards_wrap {
         width: 100% !important;
     }
 }
+
+
+
 @media screen and (max-width: 400px) {
-        .wrapp{
-            padding: 0 !important;
-            flex-wrap: wrap;
-            justify-content: center !important;   
-        }
+    .wrapp {
+        padding: 0 !important;
+        flex-wrap: wrap;
+        justify-content: center !important;
+    }
 }
