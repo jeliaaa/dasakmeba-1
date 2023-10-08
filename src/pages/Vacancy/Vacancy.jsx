@@ -5,6 +5,14 @@ import './vacancy.scss'
 import Breadcrumbs from '../../ReusableComponents/breadcrumbs/Breadcrumbs';
 import { Link } from 'react-router-dom';
 import svg from '../../assets/logos/genetic-data-svgrepo-com.svg'
+
+import icon5 from '../../assets/Icons/About/5chatting.png'
+import icon7 from '../../assets/Icons/About/7Trenings.png'
+import icon1 from '../../assets/Icons/About/user.png'
+import icon2 from '../../assets/Icons/About/education.png'
+
+
+
 const Vacancy = () => {
     const { t } = useTranslation();
     const vacFilter = useRef(null);
@@ -38,42 +46,30 @@ const Vacancy = () => {
                 <div>
                     <div className='filter_upper' onClick={(e) => { handleClick(1); e.currentTarget.classList.toggle('active') }}>
                         <div className='left_side'>
-                            <img src='https://picsum.photos/50' />
-                            <img src='https://picsum.photos/50' />
                             <h6>{t('conference')}</h6>
                         </div>
-                        <img className='img_of_filter img_of_filter_inactive' src={svg} alt="" />
-                        <img className='img_of_filter img_of_filter_active' src={svg} alt="" />
+                        <img className='img_of_filter img_of_filter_inactive' src={icon5} alt="" />
 
                     </div>
                     <div className='filter_upper' onClick={(e) => { handleClick(2); e.currentTarget.classList.toggle('active') }}>
                         <div className='left_side'>
-                            <img src='https://picsum.photos/50' />
-                            <img src='https://picsum.photos/50' />
                             <h6>{t('employement')}</h6>
                         </div>
-                        <img className='img_of_filter img_of_filter_inactive' src={svg} alt="" />
-                        <img className='img_of_filter img_of_filter_active' src={svg} alt="" />
+                        <img className='img_of_filter img_of_filter_inactive' src={icon7} alt="" />
 
                     </div>
                     <div className='filter_upper' onClick={(e) => { handleClick(3); e.currentTarget.classList.toggle('active') }}>
                         <div className='left_side'>
-                            <img src='https://picsum.photos/50' />
-                            <img src='https://picsum.photos/50' />
                             <h6>{t('familyWork')}</h6>
                         </div>
-                        <img className='img_of_filter img_of_filter_inactive' src={svg} alt="" />
-                        <img className='img_of_filter img_of_filter_active' src={svg} alt="" />
+                        <img className='img_of_filter img_of_filter_inactive' src={icon1} alt="" />
 
                     </div>
                     <div className='filter_upper' onClick={(e) => { handleClick(4); e.currentTarget.classList.toggle('active') }}>
                         <div className='left_side'>
-                            <img src='https://picsum.photos/50' />
-                            <img src='https://picsum.photos/id/2/50' />
                             <h6>{t('internship')}</h6>
                         </div>
-                        <img className='img_of_filter img_of_filter_inactive' src={svg} alt="" />
-                        <img className='img_of_filter img_of_filter_active' src={svg} alt="" />
+                        <img className='img_of_filter img_of_filter_inactive' src={icon2} alt="" />
 
                     </div>
                 </div>
@@ -81,41 +77,29 @@ const Vacancy = () => {
                 <div>
                     <div className='filter_upper' onClick={(e) => { handleClick(5); e.currentTarget.classList.toggle('active') }}>
                         <div className='left_side'>
-                            <img src='https://picsum.photos/50' />
-                            <img src='https://picsum.photos/50' />
                             <h6>{t('lectures')}</h6>
                         </div>
-                        <img className='img_of_filter img_of_filter_inactive' src={svg} alt="" />
-                        <img className='img_of_filter img_of_filter_active' src={svg} alt="" />
+                        <img className='img_of_filter img_of_filter_inactive' src={icon2} alt="" />
                     </div>
                     <div className='filter_upper' onClick={(e) => { handleClick(6); e.currentTarget.classList.toggle('active') }}>
                         <div className='left_side'>
-                            <img src='https://picsum.photos/50' />
-                            <img src='https://picsum.photos/50' />
                             <h6>{t('professional')}</h6>
                         </div>
-                        <img className='img_of_filter img_of_filter_inactive' src={svg} alt="" />
-                        <img className='img_of_filter img_of_filter_active' src={svg} alt="" />
+                        <img className='img_of_filter img_of_filter_inactive' src={icon1} alt="" />
 
                     </div>
                     <div className='filter_upper' onClick={(e) => { handleClick(7); e.currentTarget.classList.toggle('active') }}>
                         <div className='left_side'>
-                            <img src='https://picsum.photos/50' />
-                            <img src='https://picsum.photos/50' />
                             <h6>{t('trainings')}</h6>
                         </div>
-                        <img className='img_of_filter img_of_filter_inactive' src={svg} alt="" />
-                        <img className='img_of_filter img_of_filter_active' src={svg} alt="" />
+                        <img className='img_of_filter img_of_filter_inactive' src={icon5} alt="" />
 
                     </div>
                     <div className='filter_upper' onClick={(e) => { handleClick(8); e.currentTarget.classList.toggle('active') }}>
                         <div className='left_side'>
-                            <img src='https://picsum.photos/50' />
-                            <img src='https://picsum.photos/50' />
                             <h6>{t('volunteering')}</h6>
                         </div>
-                        <img className='img_of_filter img_of_filter_inactive' src={svg} alt="" />
-                        <img className='img_of_filter img_of_filter_active' src={svg} alt="" />
+                        <img className='img_of_filter img_of_filter_inactive' src={icon7} alt="" />
 
                     </div>
                 </div>

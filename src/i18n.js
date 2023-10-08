@@ -153,7 +153,7 @@ const resources = {
       kanonebi: 'კანონები',
       dadgenilebebi: 'დადგენილებები',
       brdzanebebi: 'ბრძანებები',
-      konvenciebi: 'რატიფიცირებული კონვენციები',
+      konvenciebi: 'კონვენციები',
       conference: 'კონფერენცია',
       lectures: 'სემინარები',
       professional: 'პროფესიული სასწავლებელი',
