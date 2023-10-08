@@ -4,6 +4,8 @@
     display: flex;
     flex-direction: column;
     gap: 50px;
+    background-color: #fff;
+    padding: 15px;
 }
 
 
@@ -102,37 +104,22 @@
     .two {
         height: 100%;
         width: 20%;
-
-        // p {
-        //     width: 100%;
-        //     text-align: center;
-        //     background-color: $primary-color-blue;
-        //     color: white;
-        //     border-radius: 10px;
-        //     padding: 5px;
-        // }
     }
 }
 
 
 .filter_upper {
     border-radius: 18px;
-    background-color: #fff;
-    border: 1px solid $primary-color-gray;
+    background-color: #e8ecfc;
+    border: none;
     width: 23%;
-    height: 100px;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
     cursor: pointer;
-
-    &::after {
-        content: '\f00c';
-        font-family: 'FontAwesome';
-        display: none;
-    }
+    padding: 10px;
 }
 
 .vacancy_container {
@@ -147,18 +134,50 @@
 
         .filter_upper {
             display: flex;
-            justify-content: center;
             align-items: center;
+            justify-content: space-between;
+            .img_of_filter{
+                width: 20%;
+            }
+            .img_of_filter_inactive{
+                display: block ;
+            }
+            .img_of_filter_active{
+                display: none;
+            }
+            .left_side{
+                display: flex;
+                flex-direction: column;
+                width: 50%;
+                row-gap: 15px;
+                img{
+                    width: 50px;
+                }
+                img:nth-child(2){
+                    display: none;
+                }
+            }
         }
     }
 
     .active {
-        border: 1px solid green;
-        background-color: lightgreen;
-        color: black;
+        border: none;
+        background-color: #0974ed;
+        color: white ;
+        .img_of_filter_inactive{
+            display: none !important;
+        }
+        .img_of_filter_active{
+            display: block !important;
+        }
+        .left_side{
 
-        &::after {
-            display: block;
+            img:nth-child(2){
+                display: block !important;
+            }
+            img:nth-child(1){
+                display: none;
+            }
         }
     }
 }
@@ -194,9 +213,8 @@
 
 .filter_bottom {
     .active {
-        border: 1px solid green;
-        background-color: lightgreen;
-        color: black;
+        background-color: #0974ed;
+        color: white;
 
         h6::after {
             display: block;
@@ -249,19 +267,22 @@
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
             gap: 20px;
 
-            
-            div{
+
+            div {
                 display: flex;
                 width: 100%;
                 flex-direction: row;
                 flex-wrap: wrap;
-                img, i {
+
+                img,
+                i {
                     color: white;
                     display: flex;
                     align-items: center;
                     margin-right: 20px;
                 }
-                p{
+
+                p {
                     width: 79%;
                     margin-bottom: 0 !important;
                     word-wrap: break-word;
@@ -316,11 +337,13 @@
         }
     }
 }
+
 @media screen and (max-width: 1200px) {
-    .accountant_info{ 
-        div{
+    .accountant_info {
+        div {
             flex-direction: column !important;
-            p{
+
+            p {
                 width: 95% !important;
                 word-wrap: break-word !important;
                 height: fit-content;
@@ -328,21 +351,21 @@
         }
     }
 }
+
 @media screen and (max-width: 1000px) {
-    .accountant_info{ 
-        div{
+    .accountant_info {
+        div {
             flex-direction: row !important;
             flex-wrap: nowrap !important;
             gap: 10px;
         }
     }
+
     .vacancy_filter {
         width: 45% !important;
     }
 
-    .filter_upper {
-        width: 45% !important;
-    }
+    
 
     .vacancy {
         h2 {
@@ -428,7 +451,8 @@
         }
 
     }
-    .industryTxt{
+
+    .industryTxt {
         display: none !important;
     }
 }
@@ -496,14 +520,17 @@
 
         .one {
             width: 100%;
-            h2{
+
+            h2 {
                 text-align: center;
             }
-            section{
+
+            section {
                 flex-direction: column;
             }
         }
-        .industryTxt{
+
+        .industryTxt {
             display: block !important;
         }
     }
@@ -516,6 +543,9 @@
 @media screen and (max-width: 400px) {
     .filter_upper {
         flex-direction: column;
+        .left_side{
+            flex-direction: unset !important;
+        }
     }
 
     .vacancy_filter {

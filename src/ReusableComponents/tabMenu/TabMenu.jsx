@@ -7,6 +7,11 @@ import Box from '@mui/material/Box';
 import './tabs.scss'
 import { Dropdown } from 'react-bootstrap';
 
+
+
+import stats1 from '../../assets/Stats.png'
+import stats2 from '../../assets/Stats2.png'
+
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
 
@@ -41,11 +46,11 @@ const TabMenu = () => {
 
     return (
         <div className='tabs_wrapper'>
-            <Box sx={{ bgcolor: 'background.paper', width: '100%', display: 'flex', flexDirection:'column', justifyContent: 'center' }}>
+            <Box sx={{ bgcolor: 'background.paper', width: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                 <AppBar position="static" className='dropsMenu'>
                     <Dropdown>
                         <Dropdown.Toggle>
-                            {value ? value : 'წელი' }
+                            {value ? value : 'წელი'}
                         </Dropdown.Toggle>
                         <Dropdown.Menu>
                             <Dropdown.Item onClick={() => { setValue('2016'); setValueOfMonth('2016') }}>2016</Dropdown.Item>
@@ -103,163 +108,258 @@ const TabMenu = () => {
                 </AppBar>
 
                 <TabPanel value={valueOfMonth} index={'2016'} dir={theme.direction}>
-                    2016
-                    <img className='w-100' src='https://picsum.photos/1000/500' alt='...' />
+                    2016 სრული წლის სტატისტიკა
+                    <img className='w-100' src={stats1} alt='...' />
                 </TabPanel>
                 {/*2016*/}
                 <TabPanel value={valueOfMonth} index={'201601'} dir={theme.direction}>
-                    2016 kv1
+                    2016 წლის პირველი კვარტალი
+                    <img className='w-100' src={stats2} alt='...' />
                 </TabPanel>
                 <TabPanel value={valueOfMonth} index={'2016jan'} dir={theme.direction}>
-                    2016 jan
+                    2016 იანვარი
+                    <img className='w-100' src={stats1} alt='...' />
                 </TabPanel>
                 <TabPanel value={valueOfMonth} index={'2016feb'} dir={theme.direction}>
-                    2016 feb
+                    2016 თებერვალი
+                    <img className='w-100' src={stats2} alt='...' />
                 </TabPanel>
                 <TabPanel value={valueOfMonth} index={'2016mar'} dir={theme.direction}>
-                    2016 mar
+                    2016 მარტი
+                    <img className='w-100' src={stats1} alt='...' />
+
                 </TabPanel>
                 <TabPanel value={valueOfMonth} index={'201602'} dir={theme.direction}>
-                    2016 kv2
+                    2016 წლის მეორე კვარტალი
+                    <img className='w-100' src={stats2} alt='...' />
+
                 </TabPanel>
                 <TabPanel value={valueOfMonth} index={'2016apr'} dir={theme.direction}>
-                    2016 apr
+                    2016 აპრილი
+                    <img className='w-100' src={stats1} alt='...' />
+
                 </TabPanel>
                 <TabPanel value={valueOfMonth} index={'2016may'} dir={theme.direction}>
-                    2016 may
+                    2016 მაისი
+                    <img className='w-100' src={stats2} alt='...' />
+
                 </TabPanel>
                 <TabPanel value={valueOfMonth} index={'2016jun'} dir={theme.direction}>
-                    2016 jun
+                    2016 ინვისი
+                    <img className='w-100' src={stats1} alt='...' />
+
                 </TabPanel>
                 <TabPanel value={valueOfMonth} index={'201603'} dir={theme.direction}>
-                    2016 kv3
+                    2016 წლის მესამე კვარტალი
+                    <img className='w-100' src={stats2} alt='...' />
+
                 </TabPanel>
                 <TabPanel value={valueOfMonth} index={'2016jul'} dir={theme.direction}>
-                    2016 jul
+                    2016 ივლისი
+                    <img className='w-100' src={stats1} alt='...' />
+
                 </TabPanel>
                 <TabPanel value={valueOfMonth} index={'2016aug'} dir={theme.direction}>
-                    2016 aug
+                    2016 აგვისტო
+                    <img className='w-100' src={stats2} alt='...' />
+
                 </TabPanel>
                 <TabPanel value={valueOfMonth} index={'2016sep'} dir={theme.direction}>
-                    2016 sep
+                    2016 სექტემბერი
+                    <img className='w-100' src={stats1} alt='...' />
+
                 </TabPanel>
                 <TabPanel value={valueOfMonth} index={'201604'} dir={theme.direction}>
-                    2016 kv4
+                    2016 მეოთხე კვარტალი
+                    <img className='w-100' src={stats2} alt='...' />
+
                 </TabPanel>
                 <TabPanel value={valueOfMonth} index={'2016oct'} dir={theme.direction}>
-                    2016 oct
+                    2016 ოქტომბერი
+                    <img className='w-100' src={stats1} alt='...' />
+
                 </TabPanel>
                 <TabPanel value={valueOfMonth} index={'2016nov'} dir={theme.direction}>
-                    2016 nov
+                    2016 ნოემბერი
+                    <img className='w-100' src={stats2} alt='...' />
+
                 </TabPanel>
                 <TabPanel value={valueOfMonth} index={'2016dec'} dir={theme.direction}>
-                    2016 dec
+                    2016 დეკემბერი
+                    <img className='w-100' src={stats1} alt='...' />
+
                 </TabPanel>
                 {/* -2016*/}
                 <TabPanel value={valueOfMonth} index={'2017'} dir={theme.direction}>
-                    2017
+                    2017 სრული წლის სტატისტიკა
+                    <img className='w-100' src={stats2} alt='...' />
+
                 </TabPanel>
                 {/* 2017 */}
                 <TabPanel value={valueOfMonth} index={'201701'} dir={theme.direction}>
-                    2017 kv1
+                    2017 წლის პირველი კვარტალი
                 </TabPanel>
                 <TabPanel value={valueOfMonth} index={'2017jan'} dir={theme.direction}>
-                    2017 jan
+                    2017 იანვარი
+                    <img className='w-100' src={stats2} alt='...' />
+
                 </TabPanel>
                 <TabPanel value={valueOfMonth} index={'2017feb'} dir={theme.direction}>
-                    2017 feb
+                    2017 თებერვალი
+                    <img className='w-100' src={stats1} alt='...' />
+
                 </TabPanel>
                 <TabPanel value={valueOfMonth} index={'2017mar'} dir={theme.direction}>
-                    2017 mar
+                    2017 მარტი
+                    <img className='w-100' src={stats2} alt='...' />
+
                 </TabPanel>
                 <TabPanel value={valueOfMonth} index={'201702'} dir={theme.direction}>
-                    2017 kv2
+                    2017 წლის მეორე კვარტალი
+                    <img className='w-100' src={stats1} alt='...' />
+
                 </TabPanel>
                 <TabPanel value={valueOfMonth} index={'2017apr'} dir={theme.direction}>
-                    2017 apr
+                    2017 აპრილი
+                    <img className='w-100' src={stats2} alt='...' />
+
                 </TabPanel>
                 <TabPanel value={valueOfMonth} index={'2017may'} dir={theme.direction}>
-                    2017 may
+                    2017 მაისი
+                    <img className='w-100' src={stats1} alt='...' />
+
                 </TabPanel>
                 <TabPanel value={valueOfMonth} index={'2017jun'} dir={theme.direction}>
-                    2017 jun
+                    2017 ივნისი
+                    <img className='w-100' src={stats2} alt='...' />
+
                 </TabPanel>
                 <TabPanel value={valueOfMonth} index={'201703'} dir={theme.direction}>
-                    2017 kv3
+                    2017 წლის მესამე კვარტალი
+                    <img className='w-100' src={stats1} alt='...' />
+
                 </TabPanel>
                 <TabPanel value={valueOfMonth} index={'2017jul'} dir={theme.direction}>
-                    2017 jul
+                    2017 ივლისი
+                    <img className='w-100' src={stats2} alt='...' />
+
                 </TabPanel>
                 <TabPanel value={valueOfMonth} index={'2017aug'} dir={theme.direction}>
-                    2017 aug
+                    2017 აგვისტო
+                    <img className='w-100' src={stats1} alt='...' />
+
                 </TabPanel>
                 <TabPanel value={valueOfMonth} index={'2017sep'} dir={theme.direction}>
-                    2017 sep
+                    2017 სექტემბერი
+                    <img className='w-100' src={stats2} alt='...' />
+
                 </TabPanel>
                 <TabPanel value={valueOfMonth} index={'201704'} dir={theme.direction}>
-                    2017 kv4
+                    2017 წლის მეოთხე კვარტალი
+                    <img className='w-100' src={stats1} alt='...' />
+
                 </TabPanel>
                 <TabPanel value={valueOfMonth} index={'2017oct'} dir={theme.direction}>
-                    2017 oct
+                    2017 ოქტომბერი
+                    <img className='w-100' src={stats2} alt='...' />
+
                 </TabPanel>
                 <TabPanel value={valueOfMonth} index={'2017nov'} dir={theme.direction}>
-                    2017 nov
+                    2017 ნოემბერი
+                    <img className='w-100' src={stats1} alt='...' />
+
                 </TabPanel>
                 <TabPanel value={valueOfMonth} index={'2017dec'} dir={theme.direction}>
-                    2017 dec
+                    2017 დეკემბერი
+                    <img className='w-100' src={stats2} alt='...' />
+
                 </TabPanel>
                 {/* -2017 */}
                 <TabPanel value={valueOfMonth} index={'2018'} dir={theme.direction}>
-                    2018
+                    2018 სრული წლის სტატისტიკა
+                    <img className='w-100' src={stats1} alt='...' />
+
                 </TabPanel>
                 {/* 2018 */}
                 <TabPanel value={valueOfMonth} index={'201801'} dir={theme.direction}>
-                    2018 kv1
+                    2018 წლის პირველი კვარტალი
+                    <img className='w-100' src={stats2} alt='...' />
+
                 </TabPanel>
                 <TabPanel value={valueOfMonth} index={'2018jan'} dir={theme.direction}>
-                    2018 jan
+                    2018 იანვარი
+                    <img className='w-100' src={stats1} alt='...' />
+
                 </TabPanel>
                 <TabPanel value={valueOfMonth} index={'2018feb'} dir={theme.direction}>
-                    2018 feb
+                    2018 თებერვალი
+                    <img className='w-100' src={stats2} alt='...' />
+
                 </TabPanel>
                 <TabPanel value={valueOfMonth} index={'2018mar'} dir={theme.direction}>
-                    2018 mar
+                    2018 მარტი
+                    <img className='w-100' src={stats1} alt='...' />
+
                 </TabPanel>
                 <TabPanel value={valueOfMonth} index={'201802'} dir={theme.direction}>
-                    2018 kv2
+                    2018 წლის მეოთხე კვარტალი
+                    <img className='w-100' src={stats2} alt='...' />
+
                 </TabPanel>
                 <TabPanel value={valueOfMonth} index={'2018apr'} dir={theme.direction}>
-                    2018 apr
+                    2018 აპრილი
+                    <img className='w-100' src={stats1} alt='...' />
+
                 </TabPanel>
                 <TabPanel value={valueOfMonth} index={'2018may'} dir={theme.direction}>
-                    2018 may
+                    2018 მაისი
+                    <img className='w-100' src={stats2} alt='...' />
+
                 </TabPanel>
                 <TabPanel value={valueOfMonth} index={'2018jun'} dir={theme.direction}>
-                    2018 jun
+                    2018 ივნისი
+                    <img className='w-100' src={stats1} alt='...' />
+
                 </TabPanel>
                 <TabPanel value={valueOfMonth} index={'201803'} dir={theme.direction}>
-                    2018 kv3
+                    2018 წლის მესამე კვარტალი
+                    <img className='w-100' src={stats2} alt='...' />
+
                 </TabPanel>
                 <TabPanel value={valueOfMonth} index={'2018jul'} dir={theme.direction}>
-                    2018 jul
+                    2018 ივლისი
+                    <img className='w-100' src={stats1} alt='...' />
+
                 </TabPanel>
                 <TabPanel value={valueOfMonth} index={'2018aug'} dir={theme.direction}>
-                    2018 aug
+                    2018 აგვისტო
+                    <img className='w-100' src={stats2} alt='...' />
+
                 </TabPanel>
                 <TabPanel value={valueOfMonth} index={'2018sep'} dir={theme.direction}>
-                    2018 sep
+                    2018 სექტემბერი
+                    <img className='w-100' src={stats1} alt='...' />
+
                 </TabPanel>
                 <TabPanel value={valueOfMonth} index={'201804'} dir={theme.direction}>
-                    2018 kv4
+                    2018 წლის მეოთხე კვარტალი
+                    <img className='w-100' src={stats2} alt='...' />
+
                 </TabPanel>
                 <TabPanel value={valueOfMonth} index={'2018oct'} dir={theme.direction}>
-                    2018 oct
+                    2018 ოქტომბერი
+                    <img className='w-100' src={stats1} alt='...' />
+
                 </TabPanel>
                 <TabPanel value={valueOfMonth} index={'2018nov'} dir={theme.direction}>
-                    2018 nov
+                    2018 ნოემბერი
+                    <img className='w-100' src={stats2} alt='...' />
+
                 </TabPanel>
                 <TabPanel value={valueOfMonth} index={'2018dec'} dir={theme.direction}>
-                    2018 dec
+                    2018 დეკემბერი
+                    <img className='w-100' src={stats1} alt='...' />
+
                 </TabPanel>
             </Box>
         </div>

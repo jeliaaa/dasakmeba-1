@@ -7,6 +7,13 @@ import './worker.scss'
 import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Box, ChakraBaseProvider, ChakraProvider } from '@chakra-ui/react';
 import svg from '../../../assets/logos/genetic-data-svgrepo-com.svg'
 
+import puzzle from '../../../assets/Icons/About/puzzle.png'
+import user from '../../../assets/Icons/About/user.png'
+import education from '../../../assets/Icons/About/education.png'
+import experience from '../../../assets/Icons/About/letter.png'
+
+
+
 const WorkerSingle = () => {
     const [worker, setWorker] = useState([]);
     const { id } = useParams();
@@ -38,7 +45,7 @@ const WorkerSingle = () => {
                                 <AccordionItem>
                                     <h2>
                                         <AccordionButton>
-                                            <img style={{ width: 35 }} src={svg} />
+                                            <img style={{ width: 30 }} src={puzzle} />
                                             <Box as="span" flex='1' textAlign='left' className='p-1'>
                                                 უფლებამოვალეობები
                                             </Box>
@@ -59,6 +66,7 @@ const WorkerSingle = () => {
                                 <AccordionItem>
                                     <h2>
                                         <AccordionButton>
+                                            <img style={{ width: 30 }} src={user} />
                                             <Box as="span" flex='1' textAlign='left' className='p-1'>
                                                 ბიოგრაფიული ცნობები
                                             </Box>
@@ -79,6 +87,8 @@ const WorkerSingle = () => {
                                 <AccordionItem>
                                     <h2>
                                         <AccordionButton>
+                                            <img style={{ width: 30 }} src={education} />
+
                                             <Box as="span" flex='1' textAlign='left' className='p-1'>
                                                 განათლება
                                             </Box>
@@ -97,6 +107,8 @@ const WorkerSingle = () => {
                                 <AccordionItem>
                                     <h2>
                                         <AccordionButton>
+                                            <img style={{ width: 30 }} src={experience} />
+
                                             <Box as="span" flex='1' textAlign='left' className='p-1'>
                                                 გამოცდილება
                                             </Box>
