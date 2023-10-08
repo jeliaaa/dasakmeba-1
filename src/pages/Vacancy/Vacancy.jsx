@@ -4,8 +4,6 @@ import vacData from './VacancyData.json'
 import './vacancy.scss'
 import Breadcrumbs from '../../ReusableComponents/breadcrumbs/Breadcrumbs';
 import { Link } from 'react-router-dom';
-import svg from '../../assets/logos/genetic-data-svgrepo-com.svg'
-
 import icon5 from '../../assets/Icons/About/5chatting.png'
 import icon7 from '../../assets/Icons/About/7Trenings.png'
 import icon1 from '../../assets/Icons/About/user.png'
@@ -49,6 +47,7 @@ const Vacancy = () => {
                             <h6>{t('conference')}</h6>
                         </div>
                         <img className='img_of_filter img_of_filter_inactive' src={icon5} alt="" />
+                        <img className='img_of_filter img_of_filter_active' src={icon7} alt="" />
 
                     </div>
                     <div className='filter_upper' onClick={(e) => { handleClick(2); e.currentTarget.classList.toggle('active') }}>
