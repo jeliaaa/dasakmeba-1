@@ -197,11 +197,11 @@ const MenuOfNav = (props) => {
                                                     <Stack spacing="5">
                                                         <form onSubmit={(e) => check(e)}>
                                                             <FormControl>
-                                                                <FormLabel htmlFor="email">Email</FormLabel>
-                                                                <Input ref={userName} id="email" type="email" />
+                                                                <FormLabel htmlFor="email">მომხმარებელი / პ.ნ / ს.კ</FormLabel>
+                                                                <Input ref={userName} id="email" />
                                                             </FormControl>
                                                             <FormControl>
-                                                                <FormLabel htmlFor="password">Password</FormLabel>
+                                                                <FormLabel htmlFor="password">პაროლი</FormLabel>
                                                                 <InputGroup>
                                                                     <InputRightElement>
                                                                     </InputRightElement>
