@@ -24,6 +24,10 @@ import {
     Input,
     InputGroup,
     InputRightElement,
+    Menu,
+    MenuButton,
+    MenuItem,
+    MenuList,
     Stack,
     Text,
 } from '@chakra-ui/react'
@@ -158,12 +162,23 @@ const MenuOfNav = (props) => {
                 <section>
                     <div className="sign_up" style={{ display: "flex" }}>
                         {!isAuthenticated ?
-                            <Button variant="primary" onClick={() => setShow(true)}>
+                            <Button className='chakra-button' variant="primary" onClick={() => setShow(true)}>
                                 შესვლა
                             </Button> :
-                            <Button variant="primary" className='profile'>
-                                <Link className='wrap' to={'/user'}><p>პროფილი</p></Link>
-                            </Button>
+                            <ChakraProvider>
+                                <Menu>
+                                    <MenuButton as={Button}>
+                                        პროფილი
+                                    </MenuButton>
+                                    <MenuList>
+                                        <MenuItem><Link to={'/user'}>მაძიებელი</Link></MenuItem>
+                                        <MenuItem><Link to={'/'}>ოჯახში დამსაქმებელი</Link></MenuItem>
+                                        <MenuItem><Link to={'/'}>პაროლის აღდგენა</Link></MenuItem>
+                                        <MenuItem><Link to={'/'}>ხელშეკრულება</Link></MenuItem>
+                                        <MenuItem><Link to={'/'}>გამოსვლა</Link></MenuItem>
+                                    </MenuList>
+                                </Menu>
+                            </ChakraProvider>
                         }
                         <Modal
                             show={show}
@@ -220,9 +235,9 @@ const MenuOfNav = (props) => {
                                                     </Stack>
                                                     <HStack justify="space-between">
                                                         <Checkbox defaultChecked>Remember me</Checkbox>
-                                                        
+
                                                         <Link onClick={() => setShow(false)} to={'/register'}>რეგისტრაცია</Link>
-                                                        
+
                                                     </HStack>
                                                     <Stack spacing="6">
                                                         <Button type='submit'><div onClick={(e) => check(e)}>შესვლა</div></Button>
