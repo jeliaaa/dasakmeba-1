@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/dasakmeba-1/static/css/main.2cfe6857.css",
-    "main.js": "/dasakmeba-1/static/js/main.c610bfa3.js",
+    "main.js": "/dasakmeba-1/static/js/main.603f7c36.js",
     "static/js/787.2e958377.chunk.js": "/dasakmeba-1/static/js/787.2e958377.chunk.js",
     "static/media/Projects3.jpg": "/dasakmeba-1/static/media/Projects3.db8058e39588abde04d9.jpg",
     "static/media/Servicing.jpg": "/dasakmeba-1/static/media/Servicing.5c9b63afd956a891d12b.jpg",
@@ -40,11 +40,11 @@
     "static/media/genetic-data-svgrepo-com.svg": "/dasakmeba-1/static/media/genetic-data-svgrepo-com.f2c3fb3d226aadd83e0bf22daa6733c0.svg",
     "index.html": "/dasakmeba-1/index.html",
     "main.2cfe6857.css.map": "/dasakmeba-1/static/css/main.2cfe6857.css.map",
-    "main.c610bfa3.js.map": "/dasakmeba-1/static/js/main.c610bfa3.js.map",
+    "main.603f7c36.js.map": "/dasakmeba-1/static/js/main.603f7c36.js.map",
     "787.2e958377.chunk.js.map": "/dasakmeba-1/static/js/787.2e958377.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2cfe6857.css",
-    "static/js/main.c610bfa3.js"
+    "static/js/main.603f7c36.js"
   ]
 }
