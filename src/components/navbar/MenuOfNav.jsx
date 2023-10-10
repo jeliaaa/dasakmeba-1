@@ -31,8 +31,9 @@ import {
     Stack,
     Text,
 } from '@chakra-ui/react'
+import { Popover } from '@mui/material';
 const MenuOfNav = (props) => {
-    const { signIn, isAuthenticated } = useContext(AuthenticationContext);
+    const { signIn, signOut, isAuthenticated } = useContext(AuthenticationContext);
     const { t, i18n } = useTranslation();
     const [val, setVal] = useState('');
     const [show, setShow] = useState(false);
@@ -46,6 +47,14 @@ const MenuOfNav = (props) => {
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
     };
+    const [anchorEl, setAnchorEl] = React.useState(null);
+    const handleClick = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
+    const open = Boolean(anchorEl);
     const check = (e) => {
         if (userName.current.value === 'aleko' && userPass.current.value === '123123') {
             signIn({
@@ -149,11 +158,12 @@ const MenuOfNav = (props) => {
                 <Navbar.Brand className='brand' >
                     <Link to={'/main'}>
                         <img src={Brand} alt='logo' />
+                        <span style={{fontFamily:'Mtavruli'}}>ს.ს.ი.პ აჭარის დასაქმების სააგენტო</span>
                     </Link>
                 </Navbar.Brand>
                 <span className='poor_sight'>
                     <i className='fa-solid fa-eye'></i>
-                    <span>{t('versionForBlind')}</span>
+                    <span>სუსტი მხედველობა</span>
                 </span>
                 <div className='search'>
                     <input type="text" placeholder='  შეიყვანეთ საძიებო სიტყვა' />
@@ -172,10 +182,10 @@ const MenuOfNav = (props) => {
                                     </MenuButton>
                                     <MenuList>
                                         <MenuItem><Link to={'/user'}>მაძიებელი</Link></MenuItem>
-                                        <MenuItem><Link to={'/'}>ოჯახში დამსაქმებელი</Link></MenuItem>
-                                        <MenuItem><Link to={'/'}>პაროლის აღდგენა</Link></MenuItem>
+                                        <MenuItem><Link to={'/familyWork'}>ოჯახში დამსაქმებელი</Link></MenuItem>
+                                        <MenuItem><Link to={'/passchange'}>პაროლის აღდგენა</Link></MenuItem>
                                         <MenuItem><Link to={'/'}>ხელშეკრულება</Link></MenuItem>
-                                        <MenuItem><Link to={'/'}>გამოსვლა</Link></MenuItem>
+                                        <MenuItem onClick={() => signOut()}>გამოსვლა</MenuItem>
                                     </MenuList>
                                 </Menu>
                             </ChakraProvider>
@@ -234,13 +244,15 @@ const MenuOfNav = (props) => {
                                                         </form>
                                                     </Stack>
                                                     <HStack justify="space-between">
-                                                        <Checkbox defaultChecked>Remember me</Checkbox>
-
-                                                        <Link onClick={() => setShow(false)} to={'/register'}>რეგისტრაცია</Link>
+                                                        <Checkbox defaultChecked>დამიმახსოვრე</Checkbox>
+                                                        <Link onClick={() => setShow(false)} to={'/recreatePass'}>პაროლის აღდგენა</Link>
 
                                                     </HStack>
                                                     <Stack spacing="6">
-                                                        <Button type='submit'><div onClick={(e) => check(e)}>შესვლა</div></Button>
+                                                        <Button className='signInRegister' type='submit' onClick={(e) => check(e)}>შესვლა</Button>
+                                                    </Stack>
+                                                    <Stack spacing="6">
+                                                        <Button className='signInRegister' type='submit'><Link onClick={() => setShow(false)} to={'/register'}>რეგისტრაცია</Link></Button>
                                                     </Stack>
                                                 </Stack>
                                             </Box>

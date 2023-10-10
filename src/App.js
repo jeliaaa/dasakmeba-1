@@ -92,6 +92,9 @@ import Loading from "./ReusableComponents/loadingPage/Loading";
 import Err from "./ReusableComponents/Err";
 import ProjectsSingleForm from "./pages/services/projects/ProjectsSingleForm";
 import { AuthenticationContext } from "./AuthenticationContext";
+import FamilyWork from "./pages/user/famWork/FamilyWork";
+import FamCabinet from "./pages/user/famWork/FamCabinet";
+import PassChange from "./pages/Register/PassChange";
 
 function App() {
   const { i18n } = useTranslation();
@@ -256,6 +259,7 @@ function App() {
             {/* register */}
             <Route path="/register" element={<Register />} />
             <Route path="/register/verify" element={<Verify />} />
+            <Route path="/passchange" element={<PassChange />} />
             <Route path="/register/privacy" element={<Privacy />} />
             <Route path="/test" element={<Test />} />
             {/*userr*/}
@@ -278,6 +282,8 @@ function App() {
                   element={<StatisticsCab />}
                 />
                 <Route path="/user/profile" element={<Profile />} />
+                <Route path="/familyWork" element={<FamilyWork />} />
+                <Route path="/familyWork/cabinet" element={<FamCabinet />} />
               </>
             )}
 
