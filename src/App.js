@@ -6,7 +6,7 @@ import BaseInfo from "./pages/about/baseInfo/BaseInfo";
 import Footer from "./components/footer/Footer";
 import { useTranslation } from "react-i18next";
 import Videos from "./ReusableComponents/vids/Videos";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Stats from "./ReusableComponents/stats/Stats";
 import About from "./pages/about/About";
 import Brand from "./pages/about/brand/Brand";
@@ -91,6 +91,7 @@ import Skeletons from "./ReusableComponents/Skeletons";
 import Loading from "./ReusableComponents/loadingPage/Loading";
 import Err from "./ReusableComponents/Err";
 import ProjectsSingleForm from "./pages/services/projects/ProjectsSingleForm";
+import { AuthenticationContext } from "./AuthenticationContext";
 
 function App() {
   const { i18n } = useTranslation();
@@ -113,6 +114,7 @@ function App() {
   useEffect(() => {
     scroll.scrollToTop();
   }, [scroll, location]);
+  const { signIn, isAuthenticated } = useContext(AuthenticationContext);
   return (
     <div
       style={{
@@ -257,20 +259,27 @@ function App() {
             <Route path="/register/privacy" element={<Privacy />} />
             <Route path="/test" element={<Test />} />
             {/*userr*/}
-            <Route path="/user" element={<User />} />
-            <Route path="/user/cabinet" element={<Cabinet />} />
-            <Route path="user/CV" element={<CV />} />
-            <Route path="user/otherDetails" element={<OtherDetails />} />
-            <Route path="/user/cabinet/inbox" element={<Inbox />} />
-            <Route path="user/cabinet/vacancies" element={<Vacancies />} />
-            <Route path="user/cabinet/vacAdd" element={<VacAdd />} />
-            <Route path="user/cabinet/eduAdd" element={<EduAdd />} />
-            <Route path="user/cabinet/myVacancies" element={<MyVacancies />} />
-            <Route
-              path="/user/cabinet/statistics"
-              element={<StatisticsCab />}
-            />
-            <Route path="/user/profile" element={<Profile />} />
+            {isAuthenticated && (
+              <>
+                <Route path="/user" element={<User />} />
+                <Route path="/user/cabinet" element={<Cabinet />} />
+                <Route path="user/CV" element={<CV />} />
+                <Route path="user/otherDetails" element={<OtherDetails />} />
+                <Route path="/user/cabinet/inbox" element={<Inbox />} />
+                <Route path="user/cabinet/vacancies" element={<Vacancies />} />
+                <Route path="user/cabinet/vacAdd" element={<VacAdd />} />
+                <Route path="user/cabinet/eduAdd" element={<EduAdd />} />
+                <Route
+                  path="user/cabinet/myVacancies"
+                  element={<MyVacancies />}
+                />
+                <Route
+                  path="/user/cabinet/statistics"
+                  element={<StatisticsCab />}
+                />
+                <Route path="/user/profile" element={<Profile />} />
+              </>
+            )}
 
             {/* components */}
             <Route path="/skeletons" element={<Skeletons />} />

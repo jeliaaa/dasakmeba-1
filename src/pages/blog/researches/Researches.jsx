@@ -39,6 +39,7 @@ const Researches = () => {
                     <Td>{file.id}</Td>
                     <Td>{<Link to={`${file.id}`}>{file.name}</Link>}</Td>
                     <Td>{file.date}</Td>
+                    <Td>{<Link to={`${file.id}`}>გადმოწერა</Link>}</Td>
                   </Tr>
                 ))}
               </Tbody>
