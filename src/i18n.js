@@ -102,7 +102,8 @@ const resources = {
       approved : 'Approved',
       result: 'Result',
       register : 'Register',
-      download: 'Download'
+      download: 'Download',
+      applicant: 'Applicant'
       
     },
   },
@@ -212,7 +213,8 @@ const resources = {
       approved : 'შერჩევა',
       result: 'შედეგი',
       register : 'რეგისტრაცია',
-      download: 'გადმოწერა'
+      download: 'გადმოწერა',
+      applicant: 'აპლიკანტი'
     },
   },
   // Add more languages and translations as needed
