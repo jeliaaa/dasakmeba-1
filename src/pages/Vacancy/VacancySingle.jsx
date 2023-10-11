@@ -3,7 +3,10 @@ import { Container } from 'react-bootstrap';
 import { useParams } from 'react-router-dom'
 import Breadcrumbs from '../../ReusableComponents/breadcrumbs/Breadcrumbs';
 import './vacancy.scss'
+
 import svg from '../../assets/logos/genetic-data-svgrepo-com.svg'
+import arrow from '../../assets/arrow.png'
+import money from '../../assets/money 1.png'
 
 
 import Logo from '../../assets/VacancyLogo.jpg'
@@ -13,7 +16,7 @@ const VacancySingle = () => {
     return (
         <Container className='vac_con' style={{ backgroundColor: '#fff' }}>
             <Breadcrumbs />
-            <div className='vacancy_single_wrapper'>
+            {/* <div className='vacancy_single_wrapper'>
                 <div className='vacancy_single_left'>
                     <div className="infos">
                         <div className='company_info'>
@@ -31,6 +34,7 @@ const VacancySingle = () => {
                 <div className='vacancy_single_right'>
                     <div className='vacancy'>
                         <h2>ბუღალტერი</h2>
+                        <h4 className='address'>ქ.ბათუმი ჯავახიშვილის 94</h4>
                         <section>
                             <p className='sal'><i className='fa-solid fa-coins'></i>1000</p>
                             <p><i className='fa-solid fa-location'></i>ხელვაჩაური</p>
@@ -40,14 +44,35 @@ const VacancySingle = () => {
                             <span><i className='fa-solid fa-id-card'></i>ID:{id}</span>
                             <p></p>
                             <p><img style={{ width: 20 }} src={svg} />სრული განაკვეთი</p>
-                            {/*ase unda sxvaganac*/}
+                        </div>
+                        
+                    </div>
+                </div>
+            </div> */}
+            <div className='companyInfo container'>
+                <div className='parent-div'>
+                    <div className='company-photo'>
+                        <div>
+                            <img src={Logo} alt='...' />
                         </div>
                     </div>
-                    <h4 className='address'>ქ.ბათუმი ჯავახიშვილის 94</h4>
+                    <div className='company-info'>
+                        <div>
+                            <p>კომპანია "MINISO" აცხადებს ვაკანსიას ექსტერიერ/მარკეტინგის პოზიციაზე</p>
+                            <h1>ძირითადი მოვალეობები</h1>
+                            <ul>
+                                <li>ინტერიერ/ექსტერიერის დიზაინი</li>
+                                <li>ავეჯის დიზაინი</li>
+                                <li>სარეკლამო სივრცის დაგეგმარება</li>
+                                <li>მასალების სელექცია და დიზაინი</li>
+                                <li>სატესტო ველი ჯობ დესქრიფშენში</li>
+                            </ul>
+                            <h3><img style={{ width: 40 }} src={money} />1500₾</h3>
+                        </div>
+                    </div>
                     <div className='description'>
                         <Container className='vac_con'>
-                            ბუღალტერი
-                            კვალიფიკაცია და მოთხოვნები
+                            <h2><img style={{ width: 40 }} src={arrow} />საკვალიფიკაციო მოთხოვნები</h2>
                             <li>უმაღლესი ეკონომიური განათლება </li>
                             <li>მსგავს პოზიციაზე მუშაობის მინიმუმ 2 წლიანი გამოცდილება </li>
                             <li>1C ERP სისტემის ცოდნა და მასში ბუღალტერიის წარმოების გამოცდილება</li>
@@ -59,6 +84,7 @@ const VacancySingle = () => {
                             <li>პუნქტუალურობა, ორგანიზებულობა, მიზანდასახულობა, თვითგანვითარებისაკენ სწრაფვა. გუნდის მართვის უნარი</li>
                             <li>კრიტიკულ სიტუაციებში ორიენტაციის და გადაწყვეტილების მიღების უნარი</li>
                             <br></br>
+                            <h2><img style={{ width: 40 }} src={arrow}/>საკვალიფიკაციო საჭირო მოთხოვნები</h2>
                             დაინტერესებულმა პირებმა გთხოვთ გამოგზავნოთ CV ელექტრონული ფოსტით
                             მისამართზე vacancy@aversi.ge ან წარმოადგინოთ საბუთები 11.00სთ-დან 15.00სთ-მდე
                             <li>ფოტოსურათი 3X4 1ც.</li>
@@ -82,9 +108,10 @@ const VacancySingle = () => {
                             შესაბამისი უფლებამოსილების მქონე პირთა/თანამშრომელთა მიერ. კანდიდატის პერსონალური
                             მონაცემების დამუშავება განხორციელდება 2 Tvის ვადით, ელექტრონული ან/და ამობეჭდილი
                             სახით.
-
                         </Container>
+
                     </div>
+
                 </div>
             </div>
         </Container>
