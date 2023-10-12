@@ -598,10 +598,22 @@
     //         }
     //     }
     // }
+    @media screen and (max-width: 768px) {
+        .parent-div {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media screen and (min-width: 769px) {
+        .parent-div {
+            // grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: 1fr 2fr;
+        }
+    }
+
     .parent-div {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 1fr);
+        // grid-template-rows: repeat(3, 1fr);
         grid-column-gap: 1rem;
         grid-row-gap: 1rem;
 
@@ -611,21 +623,25 @@
             font-weight: 800;
         }
 
-        h3 {
-            border: 0;
-            display: inline-block;
-            padding: 10px;
-            margin: 7px;
-            color: #ffffff;
-            background-color: #0f49aa;
-            border-radius: 8px;
-            font-family: "proxima-nova-soft", sans-serif;
-            font-weight: 600;
-            text-decoration: none;
-            margin-left: 550px;
+        span {
+            button {
+                border: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: .5rem 1rem;
+                color: #ffffff;
+                background-color: #0f49aa;
+                border-radius: 8px;
+                font-family: "proxima-nova-soft", sans-serif;
+                font-size: 1.5rem;
+                font-weight: 600;
+                text-decoration: none;
     
-            /* Align the internal text to the right */
-            text-align: right;
+                /* Align the internal text to the right */
+                text-align: right;
+            }
+
         }
 
 
@@ -652,13 +668,32 @@
                 background-color: rgb(243, 243, 243);
                 height: 100%;
                 border-radius: .5rem;
-
             }
         }
 
         .description {
             grid-area: 2 / 1 / 4 / 4;
             margin-bottom: 20px;
+
+            .info-div {
+                padding: 0 0 2rem 0;
+
+                button {
+                    margin: 2rem 0;
+                    padding: 1rem 1.5rem;
+                    border: none;
+                    border-radius: 1rem;
+                    background-color: #0b4da5;
+                    color: white;
+                    font-size: 1.5rem;
+                    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+                }
+            }
         }
     }
+}
+
+.left-border {
+    padding: .2rem 0 0 1rem;
+    border-left: #0b4da5 solid .8rem;
 }
