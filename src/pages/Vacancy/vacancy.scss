@@ -264,41 +264,7 @@
             }
         }
 
-        .accountant_info {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            background-color: $primary-color-blue;
-            color: white;
-            padding: 20px 25px;
-            width: 80%;
-            border-radius: 15px;
-            border: none;
-            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-            gap: 20px;
 
-
-            div {
-                display: flex;
-                width: 100%;
-                flex-direction: row;
-                flex-wrap: wrap;
-
-                img,
-                i {
-                    color: white;
-                    display: flex;
-                    align-items: center;
-                    margin-right: 20px;
-                }
-
-                p {
-                    width: 79%;
-                    margin-bottom: 0 !important;
-                    word-wrap: break-word;
-                }
-            }
-        }
 
         .interested_btn {
             width: 40%;
@@ -598,9 +564,49 @@
     //         }
     //     }
     // }
+    .accountant_info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: $primary-color-blue;
+        color: white;
+        padding: 20px 25px;
+        width: 90%;
+        max-width: 500px;
+        border-radius: 15px;
+        border: none;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        gap: 20px;
+
+
+        div {
+            display: flex;
+            width: 100%;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            img,
+            i {
+                color: white;
+                display: flex;
+                align-items: center;
+                margin-right: 20px;
+            }
+
+            p {
+                width: 79%;
+                margin-bottom: 0 !important;
+                word-wrap: break-word;
+                text-align: start;
+            }
+        }
+    }
+
     @media screen and (max-width: 768px) {
         .parent-div {
-            grid-template-columns: 1fr;
+            display: flex !important;
+            flex-direction: row;
+            flex-wrap: wrap;
         }
     }
 
@@ -637,7 +643,7 @@
                 font-size: 1.5rem;
                 font-weight: 600;
                 text-decoration: none;
-    
+
                 /* Align the internal text to the right */
                 text-align: right;
             }
