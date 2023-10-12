@@ -122,8 +122,13 @@ const VacancySingle = () => {
                                     მონაცემების დამუშავება განხორციელდება 2 Tvის ვადით, ელექტრონული ან/და ამობეჭდილი
                                     სახით.
                                 </p>
-                                <div className='text-center'>
-                                    <button type='submit'>
+                                <div className='text-center mt-5' style={{display:'flex', alignItems:'center', flexDirection:'column'}}>
+                                    {interest && <div className="accountant_info">
+                                        <div><img style={{ width: 20 }} src={svg} /><p>555-54-78-36</p></div>
+                                        <div><i className='fa-solid fa-envelope' /><p>natia.chochua@aversi.ge</p></div>
+                                        <div><i className='fa-solid fa-address-book' /><p>ოპერატორის სახელი</p></div>
+                                    </div>}
+                                    <button type='submit' style={{width:'60%'}} onClick={() => setInterest(true)}>
                                         ინტერესის გამოხატვა
                                     </button>
                                 </div>
