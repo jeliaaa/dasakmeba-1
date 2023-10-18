@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/dasakmeba-1/static/css/main.c5024ff7.css",
-    "main.js": "/dasakmeba-1/static/js/main.d8a00a29.js",
+    "main.css": "/dasakmeba-1/static/css/main.7afc9221.css",
+    "main.js": "/dasakmeba-1/static/js/main.c9a29e58.js",
     "static/js/787.2e958377.chunk.js": "/dasakmeba-1/static/js/787.2e958377.chunk.js",
     "static/media/Projects3.jpg": "/dasakmeba-1/static/media/Projects3.db8058e39588abde04d9.jpg",
     "static/media/Servicing.jpg": "/dasakmeba-1/static/media/Servicing.5c9b63afd956a891d12b.jpg",
@@ -39,12 +39,12 @@
     "static/media/pie.png": "/dasakmeba-1/static/media/pie.5318c70564de996695eb.png",
     "static/media/genetic-data-svgrepo-com.svg": "/dasakmeba-1/static/media/genetic-data-svgrepo-com.f2c3fb3d226aadd83e0bf22daa6733c0.svg",
     "index.html": "/dasakmeba-1/index.html",
-    "main.c5024ff7.css.map": "/dasakmeba-1/static/css/main.c5024ff7.css.map",
-    "main.d8a00a29.js.map": "/dasakmeba-1/static/js/main.d8a00a29.js.map",
+    "main.7afc9221.css.map": "/dasakmeba-1/static/css/main.7afc9221.css.map",
+    "main.c9a29e58.js.map": "/dasakmeba-1/static/js/main.c9a29e58.js.map",
     "787.2e958377.chunk.js.map": "/dasakmeba-1/static/js/787.2e958377.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c5024ff7.css",
-    "static/js/main.d8a00a29.js"
+    "static/css/main.7afc9221.css",
+    "static/js/main.c9a29e58.js"
   ]
 }
